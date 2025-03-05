@@ -1,0 +1,8 @@
+.containerSectionGameSnowman {
+    display: grid;
+    background-color: #824769;
+    grid-template-rows: 6fr 20fr 20fr 3fr 3fr 14fr 14fr 6fr;
+    grid-template-columns: 10fr 3fr 13fr 21fr 3fr 3fr 21fr 13fr 3fr 10fr;
+    /*grid-template-rows: 6fr 24fr 24fr 26fr 6fr;*/
+    /*grid-template-columns: 10fr 20fr 20fr 20fr 20fr 10fr;*/
+}

@@ -8,6 +8,8 @@
     <meta name="Author" content="AŁ">
     <title>Simple Games</title>
     <link rel="stylesheet" href="css/mainLayout.css">
+    <link rel="stylesheet" href="css/buttonSnowman.css">
+    <link rel="stylesheet" href="css/gameSnowman.css">
     <script src="js/indexScript.js" defer></script>
 </head>
 <body>
@@ -17,21 +19,49 @@
             <p>SIMPLE GAMES</p>
         </div>
         <div class="containerButtonTop">
-            <button class="buttonHome"> HOME</button>
-            <button class="buttonSnowman"> SNOWMAN</button>
-            <button class="buttonTicTacToe"> TIC-TAC-TOE</button>
+            <button id="btMenuHome" class="menuButton buttonHome"> HOME</button>
+            <button id="btMenuGameSnowman" class="menuButton buttonSnowman"> SNOWMAN</button>
+            <button id="btMenuTicTacToe" class="menuButton buttonTicTacToe"> TIC-TAC-TOE</button>
         </div>
 
     </div>
 
 
-    <div class="item-2 containerSectionHome">2
-        <div class="buttonGameSnowman  containerButtonGameSnowman">
-            <div class="buttonGameSnowmanTitle"> SNOWMAN </div>
-            <div class="buttonGameSnowmanPicture"> PICTURE </div>
+    <div id="sectionHome" class="item-2 containerSectionHome">
+        <div class="containerSectionGame1 ">
+            <div class="buttonGameSnowman containerButtonGameSnowman ">
+                <div class="containerButtonGameSnowmanElements">
+
+                    <div class="containerButtonGameSnowmanTitle">
+                        SNOWMAN
+                    </div>
+                    <div class="containerSnowmanPictureMain">
+
+                        <div class="containerSnowmanPicture-1"></div>
+                        <div class="containerSnowmanPicture-2"></div>
+                        <div class="containerSnowmanPicture-3"></div>
+                        <div class="containerSnowmanPicture-5"></div>
+                        <div class="containerSnowmanPicture-6"></div>
+                        <div class="containerSnowmanPicture-7"></div>
+                        <div class="containerSnowmanPicture-8"></div>
+                        <div class="containerSnowmanPicture-9"></div>
+                        <div class="containerSnowmanPicture-10"></div>
+                        <div class="containerSnowmanPicture-11"></div>
+                        <div class="containerSnowmanPicture-12"></div>
+                        <div class="containerSnowmanPicture-13"></div>
+
+
+                    </div>
+                </div>
+                <button id="btHomeGameSnowman" class="containerButtonGameSnowmanElementsRealButton" onclick="log()"></button>
+            </div>
 
         </div>
+    </div>
 
+
+
+    <div id="sectionGameSnowman" class="item-2 containerSectionGameSnowman">
 
     </div>
 
