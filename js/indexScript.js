@@ -1,10 +1,13 @@
-function menuHomePageGameButtons(name) {
+
+//const {createSnowmanFigure} = require("./js/snowmanFigureCreateElements.js");
+
+function menuHomePageGameButtons(elementId) {
     let gameButtons = document.getElementsByClassName("item-2");
     for (let gb of gameButtons) {
         gb.style.display = "none";
     }
 
-    let elem = document.getElementById(name);
+    let elem = document.getElementById(elementId);
     elem.style.display = "grid";
 
 }
@@ -23,7 +26,13 @@ btMenuHome.addEventListener("click", () => {
 })
 
 
+
+
 function log() {
     console.log("clicked xD")
 }
+
+// create snowman at home page
+// import { createSnowmanFigure } from "js/snowmanFigureCreateElements.js"
+ createSnowmanFigure("containerButtonGameSnowmanElements");
 

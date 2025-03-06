@@ -1,0 +1,1 @@
+// createSnowmanFigure("containerGameSnowmanElementActions");
