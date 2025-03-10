@@ -21,9 +21,15 @@ function createKeyboardButton(elementId, keysNumber, keysLine){
         newButton.style.gridTemplateRows = "1fr";
         newButton.style.gridTemplateColumns = "1fr";
 
-        newButton.value = keysLine[i];
+if(keysLine[i] !== ""){
+
+    newButton.value = keysLine[i];
+}
         newButton.innerHTML += keysLine[i];
+        newButton.setAttribute("id", "keyboard-"+keysLine[i]);
         newButton.classList.add("snowmanKeyboard")
+        newButton.setAttribute("onclick", "playGameSnowmanBuild(this.id)")
+        // newButton.addEventListener("onclick", playGameSnowmanBuild());
 
         columntStart+= 3;
         columntEnd+= 3;
@@ -48,11 +54,11 @@ function createKeyboardButtons(){
 
 createKeyboardButtons();
 
-// create buttons for word
+// // create buttons for word
 
 function createContainersForDescription(elementId){
 
-    const word = "JAVA";
+    // const word = "JAVA";
 
     let parentElement = document.getElementById(elementId)
 
@@ -72,65 +78,67 @@ function createContainersForDescription(elementId){
 
 }
 
-function createContainersForWord(elementId, word1){
-
-    const word = "JAVA";
-    let wordLength
-
-    let parentElement = document.getElementById(elementId)
-
-    let rowStart = 3;
-    let columntStart = 2;
-    let rowEnd = 4;
-    let columntEnd = 3;
-
-    parentElement.style.display = "grid";
-    parentElement.style.backgroundColor = "black";
-    parentElement.style.gridRow = rowStart;
-    parentElement.style.gridColumn = columntStart;
-    parentElement.style.gridRowEnd = rowEnd;
-    parentElement.style.gridColumnEnd = columntEnd;
-    // parentElement.style.gridTemplateRows = "1fr repeat(3, 8fr) 1fr";
-    // parentElement.style.gridTemplateRows = " repeat(1, 1fr 10fr 1fr) ";
-    parentElement.style.gridTemplateRows = " repeat(1, 40fr 100fr 40fr) ";
-    // parentElement.style.gridTemplateColumns = "1fr 80fr 1fr";
-    // parentElement.style.gridTemplateColumns = " repeat(4, 1fr 10fr 1fr)";
-    parentElement.style.gridTemplateColumns = " repeat(4, 5fr 100fr 5fr)";
-
-
-    let rowChildStart = 2;
-    let columntChildStart = 2;
-    let rowChildEnd = 2;
-    let columntChildEnd = 3;
-
-
-    for (let i = 0; i < word.length; i++) {
-
-        var newDiv = document.createElement("div");
-        document.getElementById(elementId).append(newDiv);
-        parentElement.append(newDiv);
-        newDiv.style.display = "grid";
-        newDiv.style.backgroundColor = "orange";
-        newDiv.style.gridRow = rowChildStart;
-        newDiv.style.gridColumn = columntChildStart;
-        newDiv.style.gridRowEnd = rowChildEnd;
-        newDiv.style.gridColumnEnd = columntChildEnd;
-        newDiv.style.gridTemplateRows = "1fr";
-        newDiv.style.gridTemplateColumns = "1fr";
-        //
-        // newDiv.value = keysLine[i];
-        // newDiv.innerHTML += keysLine[i];
-        // newDiv.classList.add("snowmanKeyboard")
-
-        columntChildStart+= 3;
-        columntChildEnd+= 3;
-
-    }
-
-
-
-
-}
-
-// createContainersForDescription("containerGameSnowmanWordToDiscover");
-createContainersForWord("containerGameSnowmanWordToDiscover", "JAVA");
+// function createContainersForWord(elementId, word1){
+//
+//     const word = "JAVA";
+//     let wordLength
+//
+//     let parentElement = document.getElementById(elementId)
+//
+//     let rowStart = 3;
+//     let columntStart = 2;
+//     let rowEnd = 4;
+//     let columntEnd = 3;
+//
+//     parentElement.style.display = "grid";
+//     parentElement.style.backgroundColor = "black";
+//     parentElement.style.gridRow = rowStart;
+//     parentElement.style.gridColumn = columntStart;
+//     parentElement.style.gridRowEnd = rowEnd;
+//     parentElement.style.gridColumnEnd = columntEnd;
+//     // parentElement.style.gridTemplateRows = "1fr repeat(3, 8fr) 1fr";
+//     // parentElement.style.gridTemplateRows = " repeat(1, 1fr 10fr 1fr) ";
+//     parentElement.style.gridTemplateRows = " repeat(1, 40fr 100fr 40fr) ";
+//     // parentElement.style.gridTemplateColumns = "1fr 80fr 1fr";
+//     // parentElement.style.gridTemplateColumns = " repeat(4, 1fr 10fr 1fr)";
+//     parentElement.style.gridTemplateColumns = " repeat(4, 5fr 100fr 5fr)";
+//
+//
+//     let rowChildStart = 2;
+//     let columntChildStart = 2;
+//     let rowChildEnd = 2;
+//     let columntChildEnd = 3;
+//
+//
+//     for (let i = 0; i < word.length; i++) {
+//
+//         var newDiv = document.createElement("div");
+//         document.getElementById(elementId).append(newDiv);
+//         parentElement.append(newDiv);
+//         newDiv.style.display = "grid";
+//         newDiv.style.backgroundColor = "orange";
+//         newDiv.style.gridRow = rowChildStart;
+//         newDiv.style.gridColumn = columntChildStart;
+//         newDiv.style.gridRowEnd = rowChildEnd;
+//         newDiv.style.gridColumnEnd = columntChildEnd;
+//         newDiv.style.gridTemplateRows = "1fr";
+//         newDiv.style.gridTemplateColumns = "1fr";
+//         //
+//         // newDiv.value = keysLine[i];
+//         // newDiv.innerHTML += keysLine[i];
+//         // newDiv.classList.add("snowmanKeyboard")
+//
+//         newDiv.setAttribute("id", "wordChar-"+i);
+//
+//         columntChildStart+= 3;
+//         columntChildEnd+= 3;
+//
+//     }
+//
+//
+//
+//
+// }
+//
+// // createContainersForDescription("containerGameSnowmanWordToDiscover");
+// createContainersForWord("containerGameSnowmanWordToDiscover", "JAVA");

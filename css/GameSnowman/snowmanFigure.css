@@ -1,5 +1,5 @@
 /* home  require change -> homeScript.js*/
-#containerSnowmanFigureElements-home{
+#containerSnowmanFigureElements-home {
     background-color: darkolivegreen;
     display: grid;
     grid-row: 1 / 1;
@@ -9,7 +9,7 @@
 }
 
 /* subpage - gameSnowman; require change -> snowmanCreateGameElements.js*/
-#containerSnowmanFigureElements-gameSnowman{
+#containerSnowmanFigureElements-gameSnowman {
     background-color: darkolivegreen;
     display: grid;
     grid-row: 1 / 1;
@@ -17,7 +17,6 @@
     grid-template-rows: repeat(23, 1fr);
     grid-template-columns: repeat(23, 1fr);
 }
-
 
 
 /* snowman container - start from top (hat) */
@@ -36,6 +35,13 @@
 }
 
 .containerSnowmanFigureElement-3 {
+    background-color: blue;
+    display: grid;
+    grid-row: 4 / 5;
+    grid-column: 9 / 16;
+}
+
+.containerSnowmanFigureElement-4 {
     background-color: pink;
     display: grid;
     /*grid-row: 4 / 4;*/
@@ -44,114 +50,154 @@
     grid-column: 7 / 18;
 }
 
-.containerSnowmanFigureElement-4 {
+.containerSnowmanFigureElement-5 {
     background-color: yellow;
     display: grid;
     grid-row: 6 / 8;
     grid-column: 9 / 16;
 }
 
-.containerSnowmanFigureElement-5 {
+.containerSnowmanFigureElement-6 {
     background-color: greenyellow;
     display: grid;
     grid-row: 8 / 10;
     grid-column: 9 / 16;
 }
 
-.containerSnowmanFigureElement-6 {
+.containerSnowmanFigureElement-7 {
     background-color: yellow;
     display: grid;
     grid-row: 10 / 12;
     grid-column: 8 / 17;
 }
 
-.containerSnowmanFigureElement-7 {
+.containerSnowmanFigureElement-8 {
     background-color: greenyellow;
     display: grid;
     grid-row: 12 / 14;
     grid-column: 8 / 17;
 }
 
-.containerSnowmanFigureElement-8 {
+.containerSnowmanFigureElement-9 {
     background-color: yellow;
     display: grid;
     grid-row: 14 / 16;
     grid-column: 8 / 17;
 }
 
-.containerSnowmanFigureElement-9 {
+.containerSnowmanFigureElement-10 {
     background-color: greenyellow;
     display: grid;
     grid-row: 16 / 18;
     grid-column: 7 / 18;
 }
 
-.containerSnowmanFigureElement-10 {
+.containerSnowmanFigureElement-11 {
     background-color: dimgrey;
     display: grid;
     grid-row: 18 / 20;
     grid-column: 6 / 19;
 }
 
-.containerSnowmanFigureElement-11 {
+.containerSnowmanFigureElement-12 {
     background-color: green;
     display: grid;
     grid-row: 20 / 22;
     grid-column: 5 / 20;
 }
 
-.containerSnowmanFigureElement-12 {
+.containerSnowmanFigureElement-13 {
     background-color: black;
     display: grid;
     grid-row: 22 / 22;
     grid-column: 2 / 23;
 }
 
+/* hands  */
+/* left */
+.containerSnowmanFigureElement-14 {
+    background-color: orange;
+    display: grid;
+    grid-row: 10 / 13;
+    grid-column: 4 / 8;
+}
+
+.containerSnowmanFigureElement-15 {
+    background-color: forestgreen;
+    display: grid;
+    grid-row: 4 / 10;
+    grid-column: 4 / 7;
+}
+
+/* right */
+.containerSnowmanFigureElement-16 {
+    background-color: orange;
+    display: grid;
+    grid-row: 10 / 13;
+    grid-column: 17 / 21;
+}
+
+.containerSnowmanFigureElement-17 {
+    background-color: forestgreen;
+    display: grid;
+    grid-row: 4 / 10;
+    grid-column: 18 / 21;
+}
+
+
+
+
+
 /* snowman action id - start from top (hat) */
-.snowmanFigureElementAction-1{
+.snowmanFigureElementAction-1 {
     background-color: black;
 }
 
-.snowmanFigureElementAction-2{
+.snowmanFigureElementAction-2 {
     background-color: saddlebrown;
 }
 
-.snowmanFigureElementAction-3{
+.snowmanFigureElementAction-3 {
+    background-color: orange;
+}
+
+.snowmanFigureElementAction-4 {
     background-color: black;
 }
 
-.snowmanFigureElementAction-4{
+.snowmanFigureElementAction-5 {
     background-color: cornflowerblue;
 }
 
-.snowmanFigureElementAction-5{
+.snowmanFigureElementAction-6 {
     background-color: deepskyblue;
+    opacity: 1;
 }
 
-.snowmanFigureElementAction-6{
+.snowmanFigureElementAction-7 {
     background-color: lightblue;
 }
 
-.snowmanFigureElementAction-7{
+.snowmanFigureElementAction-8 {
     background-color: royalblue;
 }
 
-.snowmanFigureElementAction-8{
+.snowmanFigureElementAction-9 {
     background-color: skyblue;
 }
 
-.snowmanFigureElementAction-9{
+.snowmanFigureElementAction-10 {
     background-color: cornflowerblue;
 }
 
-.snowmanFigureElementAction-10{
+.snowmanFigureElementAction-11 {
     background-color: steelblue;
 }
 
-.snowmanFigureElementAction-11{
+.snowmanFigureElementAction-12 {
     background-color: cadetblue;
 }
 
-.snowmanFigureElementAction-12{
+.snowmanFigureElementAction-13 {
     background-color: palegreen;
 }
