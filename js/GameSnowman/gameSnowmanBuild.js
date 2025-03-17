@@ -1,6 +1,6 @@
 function getWord() {
     // word max length 17 -> animation has 17 pieces
-    const fileWithWords = "JAVA, TEST, ZESTHMM, TESTLONGXD, QWERTYUIOPASD, TESTTEST, QWERTYUI";
+    const fileWithWords = "JAVA, TEST, QWERTYU, TESTLONGXD, QWERTYUIOPASD, TESTTESZ, QWERTYUI";
     const words = fileWithWords.split(", ")
     // add random index
     return words[5];
@@ -8,39 +8,73 @@ function getWord() {
 }
 
 const word = getWord();
-// const wordChar = ["J", "A", "V", "A"];
-const wordChar = word.split("");
 
 
-function checkCharacter(keyValue) {
+function getCharsNumber() {
+    return word.split("");
+}
 
-    // let wordChar = ["J", "A", "V", "A"];
-    // let char = "J";
+function getCharsNumberWithoutDuplicate() {
 
-    // console.log("CC keyValue = " +keyValue );
-    // console.log("CC wordChar.length = " +wordChar.length );
+    // console.log("wordChar = " + wordChar);
 
-    for (let i = 0; i < wordChar.length; i++) {
+    let temWord = word;
+    let finalChar = temWord.substring(0, 1);
 
-        if (keyValue === wordChar[i]) {
+    for (let i = 1; i < word.length; i++) {
 
-            return true;
+        let char = temWord.substring(i, i + 1);
+        // console.log("char = " + char)
+
+        // for (let j = 0; j < finalChar.length; j++) {
+        //
+        // let char2 = finalChar[j];
+        // let result = char.localeCompare(char2);
+        // console.log("result = " + j + " " + result);
+        //
+        // if(result < 0){
+        //     console.log("result = " + j + " " + result);
+        //     finalChar = finalChar + char;
+        // }
+
+        // console.log("finalChar.includes(char) = " + finalChar.includes(char));
+
+        if (!finalChar.includes(char)) {
+            finalChar = finalChar + char;
         }
+        // else{
+        // finalChar = finalChar + char;
+        // }
+        // }
 
     }
-    return false;
+
+    console.log("finalChar = " + finalChar);
+    return finalChar.split("");
 
 }
 
-function getKeyboardChar(clickedId) {
+const wordChar = getCharsNumber();
+const wordCharsWithoutDuplicate = getCharsNumberWithoutDuplicate();
 
-    // let keyIdPressedByUSer =(this.id);
+
+
+
+function checkCharacter(keyValue) {
+    for (let i = 0; i < wordChar.length; i++) {
+        if (keyValue === wordChar[i])
+            return true;
+    }
+    return false;
+}
+
+function getKeyboardChar(clickedId) {
     let keyIdPressedByUSer = (clickedId);
     let getKeyElementPressedByUSer = document.getElementById(keyIdPressedByUSer);
-    let getKeyValuePressedByUSer = getKeyElementPressedByUSer.getAttribute("value");
-    // console.log("getKeyValuePressedByUSer: " + getKeyValuePressedByUSer);
-    // return getKeyValuePressedByUSer;
+    // let getKeyValuePressedByUSer = getKeyElementPressedByUSer.getAttribute("value");
     return getKeyElementPressedByUSer.getAttribute("value");
+
+    // remove from button onclick="playGameSnowmanBuild(this.id) after clicked, change color, disable -> button
 }
 
 function setDiscoveredCharVisibleForUser(charToShow) {
@@ -51,7 +85,7 @@ function setDiscoveredCharVisibleForUser(charToShow) {
     }
 }
 
-let maxAnimationNumber = 7;
+
 let indexGroups = [
     [13, 12], // cut 6 -> 2
     [11, 10], // cut 4 -> 2
@@ -63,21 +97,16 @@ let indexGroups = [
     [16, 17] // cut 2 -> 2 -------------  6
 ];
 
+let cutDirection = [2, 6, 4, 1, 5, 0, 3]; // number index = indexGroups
 
 // let animationMaxNumber = indexGroups.length - 1;
-let animationMaxNumber =  wordChar.length - 1;
-let animationPartToDisplay = animationMaxNumber;
+// let animationMaxNumber = wordChar.length - 1;
+let animationMaxNumber = cutDirection.length;
 // let countedCorrectShots = word.length - 1;
-let countedCorrectShots =0;
+let countedCorrectShots = 0;
 let countedWrongShots = 0;
 let maxContainerDivNumberToDisplay = 17;
 
-function getAnimationMaxNumberToDisplay() {
-    if (animationMaxNumber > wordChar.length - 1) {
-        return animationMaxNumber
-    }
-    return wordChar.length - 1;
-}
 
 let indexGroups2 = [
     [13, 12, 11, 10],
@@ -89,48 +118,158 @@ let indexGroups2 = [
 ];
 
 
-function getCharsNumberWithoutDuplicate(){
+// 1/2/3/4 - hat
+// 5/6 - head
+// 14/15 - left - hand
+// 16/17 - right - hand
 
-    let charsNumberWithoutDuplicate = wordChar;
-
-   // to do
 
 
-    console.log("charsNumberWithoutDuplicate = " + charsNumberWithoutDuplicate);
-    return charsNumberWithoutDuplicate;
+// let wordLength = 13;  // can not be lower than 7 -> start animation length (let cutNumber)
+// let charsNumber = wordChar.length;  // can not be lower than 7 -> start animation length (let cutNumber)
+// let charsNumber = getCharsNumberWithoutDuplicate();
+
+const animationMaxNumberToDisplay = function getAnimationMaxNumberToDisplay() {
+    if (animationMaxNumber > wordCharsWithoutDuplicate.length) {
+        return animationMaxNumber
+    }
+    return wordCharsWithoutDuplicate.length;
 }
-
 
 function getAnimationIndexGroups() {
 
-    // let indexGroups;
-    let animationMaxNumberToDisplay = getAnimationMaxNumberToDisplay()
 
-    // 1/2/3/4 - hat
-    // 5/6 - head
-    // 14/15 - left - hand
-    // 16/17 - right - hand
+    if (wordCharsWithoutDuplicate.length < cutDirection.length) {
 
-    let cutDirection = [2, 6, 4, 1, 5, 0, 3] // number index = indexGroups
+        // console.log("test");
 
-    // let wordLength = 13;  // can not be lower than 7 -> start animation length (let cutNumber)
-    // let charsNumber = wordChar.length;  // can not be lower than 7 -> start animation length (let cutNumber)
-    let charsNumber = getCharsNumberWithoutDuplicate();  // can not be lower than 7 -> start animation length (let cutNumber)
+        let indexGroups2 = [
+            [13, 12, 11, 10],
+            [9, 8, 7],
+            [6, 5],
+            [14, 15, 16, 17],
+            [4, 3, 2, 1],
+            [16, 17]
+        ];
 
-    if(charsNumber < cutDirection.length){
-        console.log("test");
+        indexGroups2 = [
+            [13, 12, 11, 10, 9, 8, 7],
+            [6, 5, 14, 16],
+            [17, 15, 4, 3, 2, 1],
+        ];
+
+        indexGroups = indexGroups2;
+
+        let cutNumber = wordCharsWithoutDuplicate.length - indexGroups.length;
+
+
+
+        let count = 0;
+        let tempCutIndexGroups = [[]];
+        let cutDirectionNew = [0, 2];
+        cutDirection = cutDirectionNew;
+        let cutIndex = [2, 4, 2];
+
+        console.log("cutNumber = " + cutNumber);
+        console.log("indexGroups.length = " + indexGroups.length);
+
+        let indnexCut = 0;
+
+        if(cutNumber <  indexGroups.length){
+
+            console.log(" ??? ");
+
+            for (let i = 0; i < cutDirection.length; i++) {
+
+                let tempMiddleIndexGroups = indexGroups[cutDirection[i]];
+                let tempCutMiddleIndexGroups = [[]];
+
+
+                if (count < cutNumber) {
+
+                    for (let j = 0; j < tempMiddleIndexGroups.length; j++) {
+
+
+                            if (count < cutNumber) {
+                                let index = tempMiddleIndexGroups.slice(indnexCut, indnexCut + 2);
+
+                                tempCutMiddleIndexGroups[j] = index;
+                                count = count + 1;
+                            } else {
+
+                                let index = tempMiddleIndexGroups.slice(indnexCut, tempMiddleIndexGroups.length);
+
+                                tempCutMiddleIndexGroups[j] = index;
+                                count = count + 100;
+                                break;
+
+                            }
+
+                        console.log(tempCutIndexGroups[j][i]);
+                    }
+
+                    tempCutIndexGroups[i] = tempCutMiddleIndexGroups;
+                }
+            }
+
+        }
+
+
+        // console - only
+        for (let j = 0; j < tempCutIndexGroups.length; j++) {
+
+            console.log("j < 7");
+
+            for (let i = 0; i < tempCutIndexGroups[j].length; i++) {
+                console.log(tempCutIndexGroups[j][i]);
+            }
+        }
+
+        let newIndexGroups = [];
+
+        for (let i = 0; i < indexGroups.length; i++) {
+
+            let finishCut = 0;
+
+            for (let j = 0; j < tempCutIndexGroups.length; j++) {
+
+                if (finishCut === 0) {
+
+                    if (cutDirection[j] === i) {
+                        cutDirection[j] = 77;
+
+                        for (let i = 0; i < tempCutIndexGroups[j].length; i++) {
+                            newIndexGroups.push(tempCutIndexGroups[j][i])
+                        }
+
+                        finishCut += 100;
+                    } else {
+
+                        if (j === tempCutIndexGroups.length - 1) {
+                            newIndexGroups.push(indexGroups[i]);
+                        }
+                    }
+
+                }
+            }
+        }
+
+        indexGroups = newIndexGroups;
+
 
     }
 
-    if(charsNumber > cutDirection.length){
+
+
+
+    else if (wordCharsWithoutDuplicate.length > cutDirection.length) {
         let maxIndexToCut = 0;
 
-        // let count = 0;
-        let cutNumber = charsNumber - 7;
+        // let cutNumber = wordCharsWithoutDuplicate.length - 7;
+        let cutNumber = wordCharsWithoutDuplicate.length - cutDirection.length;
         let count = 1;
-        // let tempCutIndexGroups = indexGroups;
-        let tempCutMiddleIndexGroups = [];
-        let tempStart = [];
+        // let tempCutMiddleIndexGroups = [];
+        // let tempStart = [];
         let tempCutIndexGroups = [[]];
 
         for (let i = 0; i < cutDirection.length; i++) {
@@ -198,7 +337,7 @@ function getAnimationIndexGroups() {
                         finishCut += 100;
                     } else {
 
-                        if(j === tempCutIndexGroups.length-1){
+                        if (j === tempCutIndexGroups.length - 1) {
                             newIndexGroups.push(indexGroups[i]);
                         }
                     }
@@ -215,55 +354,16 @@ function getAnimationIndexGroups() {
         //
         for (let i = 0; i < indexGroups.length; i++) {
 
-            console.log("indexGroups["+i+"]: " + indexGroups[i]);
+            console.log("indexGroups[" + i + "]: " + indexGroups[i]);
         }
         console.log("")
-
     }
-
-
-    // XXX
-
-    // console.log("indexGroups: " + indexGroups);
-    //
-    // let tempStartIndexGroups = indexGroups.slice(0, 2);
-    // console.log("tempStartIndexGroups: " + tempStartIndexGroups);
-    //
-    // let tempEndIndexGroups = indexGroups.slice(3, 6);
-    // console.log("tempEndIndexGroups: " + tempEndIndexGroups);
-
-    // let cutIndexGroup = indexGroups.slice(2, 3);
-    // console.log("cutIndexGroup: " + cutIndexGroup);
-    //
-    // let index1 = indexGroups[2].slice(0, 1);
-    // console.log("index1: " + index1);
-    //
-    // let index2 = indexGroups[2].slice(1, 2);
-    // console.log("index2: " + index2);
-    //
-    // let index3 = indexGroups[2].slice(2, 3);
-    // console.log("index3: " + index3);
-
-    // let allIndex = [index1, index2, index3];
-    //
-    // tempStartIndexGroups.push(index1, index2, index3);
-    //
-    // let finalIndexGroups = tempStartIndexGroups.push.apply(tempStartIndexGroups, tempEndIndexGroups);
-    // console.log("finalIndexGroups: " + finalIndexGroups);
-    // console.log("tempStartIndexGroups: " + tempStartIndexGroups);
-    // indexGroups = tempStartIndexGroups;
-    // console.log("indexGroups: " + indexGroups);
-    // console.log("indexGroups: " + indexGroups[2]);
-    // console.log("indexGroups: " + indexGroups[3]);
-    // console.log("indexGroups: " + indexGroups[4]);
-
 
 }
 
 getAnimationIndexGroups(); // remove
 
 function playGameSnowmanBuild(clickedId) {
-
 
 
     let keyValue = getKeyboardChar(clickedId);
@@ -287,6 +387,7 @@ function playGameSnowmanBuild(clickedId) {
 }
 
 let countedAnimationElements = 0;
+
 function setSnowmanPartVisible() {
 
     let tempChangeColor = "orange";
