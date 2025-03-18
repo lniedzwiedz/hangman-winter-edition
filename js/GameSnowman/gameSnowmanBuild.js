@@ -1,9 +1,10 @@
 function getWord() {
     // word max length 17 -> animation has 17 pieces
-    const fileWithWords = "JAVA, TEST, QWERTYU, TESTLONGXD, QWERTYUIOPASD, TESTTESZ, QWERTYUI";
+    const fileWithWords = "JAVA, TEST, QWERTYU, TESTLONGXD, QWERTYUIOPASD, " +
+        "TESTTEST, TESTTESZ, TESTTEQZ, TESTTQAZ";
     const words = fileWithWords.split(", ")
     // add random index
-    return words[5];
+    return words[4];
 
 }
 
@@ -58,8 +59,6 @@ const wordChar = getCharsNumber();
 const wordCharsWithoutDuplicate = getCharsNumberWithoutDuplicate();
 
 
-
-
 function checkCharacter(keyValue) {
     for (let i = 0; i < wordChar.length; i++) {
         if (keyValue === wordChar[i])
@@ -85,8 +84,12 @@ function setDiscoveredCharVisibleForUser(charToShow) {
     }
 }
 
+// 1/2/3/4 - hat
+// 5/6 - head
+// 14/15 - left - hand
+// 16/17 - right - hand
 
-let indexGroups = [
+const indexGroups1 = [
     [13, 12], // cut 6 -> 2
     [11, 10], // cut 4 -> 2
     [9, 8, 7], // cut 1 -> 3 ---------------- 1
@@ -97,32 +100,20 @@ let indexGroups = [
     [16, 17] // cut 2 -> 2 -------------  6
 ];
 
-let cutDirection = [2, 6, 4, 1, 5, 0, 3]; // number index = indexGroups
-
-// let animationMaxNumber = indexGroups.length - 1;
-// let animationMaxNumber = wordChar.length - 1;
-let animationMaxNumber = cutDirection.length;
-// let countedCorrectShots = word.length - 1;
-let countedCorrectShots = 0;
-let countedWrongShots = 0;
-let maxContainerDivNumberToDisplay = 17;
-
-
-let indexGroups2 = [
-    [13, 12, 11, 10],
-    [9, 8, 7],
-    [6, 5],
-    [14, 15, 16, 17],
-    [4, 3, 2, 1],
-    [16, 17]
+const indexGroups2 = [
+    [13, 12, 11, 10, 9, 8, 7],
+    [6, 5, 14, 16],
+    [17, 15, 4, 3, 2, 1],
 ];
 
+let indexGroups;
 
-// 1/2/3/4 - hat
-// 5/6 - head
-// 14/15 - left - hand
-// 16/17 - right - hand
-
+const maxContainerDivNumberToDisplay = 17;
+let cutDirection = [2, 6, 4, 1, 5, 0, 3]; // number index = indexGroups
+let cutDirection2 = [0, 2];
+let animationMaxNumber = cutDirection.length;
+let countedCorrectShots = 0;
+let countedWrongShots = 0;
 
 
 // let wordLength = 13;  // can not be lower than 7 -> start animation length (let cutNumber)
@@ -136,227 +127,356 @@ const animationMaxNumberToDisplay = function getAnimationMaxNumberToDisplay() {
     return wordCharsWithoutDuplicate.length;
 }
 
+
+function getNewIndexGroups(tempCutIndexGroups) {
+    let newIndexGroups = [];
+
+    for (let i = 0; i < indexGroups.length; i++) {
+
+        let finishCut = 0;
+
+        for (let j = 0; j < tempCutIndexGroups.length; j++) {
+
+            if (finishCut === 0) {
+
+                if (cutDirection[j] === i) {
+                    cutDirection[j] = 77;
+
+                    for (let i = 0; i < tempCutIndexGroups[j].length; i++) {
+                        newIndexGroups.push(tempCutIndexGroups[j][i])
+                    }
+
+                    finishCut += 100;
+                } else {
+
+                    if (j === tempCutIndexGroups.length - 1) {
+                        newIndexGroups.push(indexGroups[i]);
+                    }
+                }
+
+            }
+        }
+    }
+
+    // indexGroups = newIndexGroups;
+    return newIndexGroups;
+}
+
+// rename
+function getAnimationIndexGroupWhenWordCharsNumberWithoutDuplicateIsLowerThanBaseCutDirectionNumber(cutNumber) {
+
+    let tempCutIndexGroups = [[]];
+    let indnexCut = 0;
+    let count = 0;
+
+    for (let i = 0; i < cutDirection.length; i++) {
+
+        let tempMiddleIndexGroups = indexGroups[cutDirection[i]];
+        let tempCutMiddleIndexGroups = [[]];
+
+
+        if (count < cutNumber) {
+
+            for (let j = 0; j < tempMiddleIndexGroups.length; j++) {
+
+
+                if (count < cutNumber) {
+                    // console.log("A indnexCut = " + indnexCut + " indnexCut + 2 = " + (indnexCut + 2))
+                    // let index = tempMiddleIndexGroups.slice(indnexCut, indnexCut + 2);
+                    let index = tempMiddleIndexGroups.slice(indnexCut, indnexCut + 2);
+                    indnexCut += 2;
+                    // console.log("A indnexCut = " + indnexCut);
+                    tempCutMiddleIndexGroups[j] = index;
+                    // console.log("A tempCutMiddleIndexGroups[j] = " + tempCutMiddleIndexGroups[j]);
+
+
+                    count = count + 1;
+                } else {
+
+                    let index = tempMiddleIndexGroups.slice(j, tempMiddleIndexGroups.length);
+
+                    tempCutMiddleIndexGroups[j] = index;
+                    count = count + 100;
+                    break;
+
+                }
+
+                console.log(tempCutIndexGroups[j]);
+            }
+
+            tempCutIndexGroups[i] = tempCutMiddleIndexGroups;
+        }
+
+    }
+
+    return tempCutIndexGroups;
+}
+
+function getAnimationIndexGroupWhenWordCharsNumberWithoutDuplicateIsBiggerThanBaseCutDirectionNumber() {
+
+    let cutNumber = wordCharsWithoutDuplicate.length - cutDirection.length;
+    let count = 1;
+    // let tempCutMiddleIndexGroups = [];
+    // let tempStart = [];
+    let tempCutIndexGroups = [[]];
+
+    for (let i = 0; i < cutDirection.length; i++) {
+
+        let tempMiddleIndexGroups = indexGroups[cutDirection[i]];
+        let tempCutMiddleIndexGroups = [[]];
+
+        if (tempMiddleIndexGroups.length >= 2) {
+            cutNumber = cutNumber + 1;
+        } else {
+
+        }
+
+        if (count < cutNumber) {
+
+            for (let j = 0; j < tempMiddleIndexGroups.length; j++) {
+
+                if (count < cutNumber) {
+                    let index = tempMiddleIndexGroups.slice(j, j + 1);
+
+                    tempCutMiddleIndexGroups[j] = index;
+                    count = count + 1;
+                } else {
+
+                    let index = tempMiddleIndexGroups.slice(j, tempMiddleIndexGroups.length);
+
+                    tempCutMiddleIndexGroups[j] = index;
+                    count = count + 100;
+                    break;
+
+                }
+            }
+
+            tempCutIndexGroups[i] = tempCutMiddleIndexGroups;
+        }
+    }
+
+    return tempCutIndexGroups;
+}
+
 function getAnimationIndexGroups() {
 
 
     if (wordCharsWithoutDuplicate.length < cutDirection.length) {
-
-        // console.log("test");
-
-        let indexGroups2 = [
-            [13, 12, 11, 10],
-            [9, 8, 7],
-            [6, 5],
-            [14, 15, 16, 17],
-            [4, 3, 2, 1],
-            [16, 17]
-        ];
-
-        indexGroups2 = [
-            [13, 12, 11, 10, 9, 8, 7],
-            [6, 5, 14, 16],
-            [17, 15, 4, 3, 2, 1],
-        ];
 
         indexGroups = indexGroups2;
 
         let cutNumber = wordCharsWithoutDuplicate.length - indexGroups.length;
 
 
+        // let count = 0;
+        // let tempCutIndexGroups = [[]];
+        // let cutDirectionNew = [0, 2];
+        cutDirection = cutDirection2;
 
-        let count = 0;
-        let tempCutIndexGroups = [[]];
-        let cutDirectionNew = [0, 2];
-        cutDirection = cutDirectionNew;
-        let cutIndex = [2, 4, 2];
+        // console.log("cutNumber = " + cutNumber);
+        // console.log("indexGroups.length = " + indexGroups.length);
 
-        console.log("cutNumber = " + cutNumber);
-        console.log("indexGroups.length = " + indexGroups.length);
+        // let indnexCut = 0;
 
-        let indnexCut = 0;
+        // if(cutNumber === 0) {
+        //     // indexGroups = indexGroups2;
+        // }
+        //
+        // else
+        if (cutNumber > 0 && cutNumber <= indexGroups.length) {
+            //  if((cutNumber !== 0) && (cutNumber <=  indexGroups.length)){
 
-        if(cutNumber <  indexGroups.length){
-
-            console.log(" ??? ");
-
-            for (let i = 0; i < cutDirection.length; i++) {
-
-                let tempMiddleIndexGroups = indexGroups[cutDirection[i]];
-                let tempCutMiddleIndexGroups = [[]];
-
-
-                if (count < cutNumber) {
-
-                    for (let j = 0; j < tempMiddleIndexGroups.length; j++) {
+            let tempCutIndexGroups = getAnimationIndexGroupWhenWordCharsNumberWithoutDuplicateIsLowerThanBaseCutDirectionNumber(cutNumber);
 
 
-                            if (count < cutNumber) {
-                                let index = tempMiddleIndexGroups.slice(indnexCut, indnexCut + 2);
+            // console.log(" ??? ");
+            // let indnexCut = 0;
+            //
+            // for (let i = 0; i < cutDirection.length; i++) {
+            //
+            //     let tempMiddleIndexGroups = indexGroups[cutDirection[i]];
+            //     let tempCutMiddleIndexGroups = [[]];
+            //
+            //
+            //     if (count < cutNumber) {
+            //
+            //         for (let j = 0; j < tempMiddleIndexGroups.length; j++) {
+            //
+            //
+            //                 if (count < cutNumber) {
+            //                     // console.log("A indnexCut = " + indnexCut + " indnexCut + 2 = " + (indnexCut + 2))
+            //                     // let index = tempMiddleIndexGroups.slice(indnexCut, indnexCut + 2);
+            //                     let index = tempMiddleIndexGroups.slice(indnexCut, indnexCut + 2);
+            //                     indnexCut+= 2;
+            //                     // console.log("A indnexCut = " + indnexCut);
+            //                     tempCutMiddleIndexGroups[j] = index;
+            //                     // console.log("A tempCutMiddleIndexGroups[j] = " + tempCutMiddleIndexGroups[j]);
+            //
+            //
+            //
+            //                     count = count + 1;
+            //                 } else {
+            //
+            //                     let index = tempMiddleIndexGroups.slice(j, tempMiddleIndexGroups.length);
+            //
+            //                     tempCutMiddleIndexGroups[j] = index;
+            //                     count = count + 100;
+            //                     break;
+            //
+            //                 }
+            //
+            //             console.log(tempCutIndexGroups[j]);
+            //         }
+            //
+            //         tempCutIndexGroups[i] = tempCutMiddleIndexGroups;
+            //     }
+            //
+            // }
 
-                                tempCutMiddleIndexGroups[j] = index;
-                                count = count + 1;
-                            } else {
 
-                                let index = tempMiddleIndexGroups.slice(indnexCut, tempMiddleIndexGroups.length);
+            indexGroups = getNewIndexGroups(tempCutIndexGroups);
 
-                                tempCutMiddleIndexGroups[j] = index;
-                                count = count + 100;
-                                break;
+            // let newIndexGroups = [];
+            //
+            // for (let i = 0; i < indexGroups.length; i++) {
+            //
+            //     let finishCut = 0;
+            //
+            //     for (let j = 0; j < tempCutIndexGroups.length; j++) {
+            //
+            //         if (finishCut === 0) {
+            //
+            //             if (cutDirection[j] === i) {
+            //                 cutDirection[j] = 77;
+            //
+            //                 for (let i = 0; i < tempCutIndexGroups[j].length; i++) {
+            //                     newIndexGroups.push(tempCutIndexGroups[j][i])
+            //                 }
+            //
+            //                 finishCut += 100;
+            //             } else {
+            //
+            //                 if (j === tempCutIndexGroups.length - 1) {
+            //                     newIndexGroups.push(indexGroups[i]);
+            //                 }
+            //             }
+            //
+            //         }
+            //     }
+            // }
+            //
+            // indexGroups = newIndexGroups;
 
-                            }
-
-                        console.log(tempCutIndexGroups[j][i]);
-                    }
-
-                    tempCutIndexGroups[i] = tempCutMiddleIndexGroups;
-                }
-            }
+            // for (let i = 0; i < indexGroups.length; i++) {
+            //
+            //     console.log("indexGroups[" + i + "]: " + indexGroups[i]);
+            // }
+            // console.log("")
 
         }
 
 
-        // console - only
-        for (let j = 0; j < tempCutIndexGroups.length; j++) {
+    } else if (wordCharsWithoutDuplicate.length > cutDirection.length) {
 
-            console.log("j < 7");
+        indexGroups = indexGroups1;
 
-            for (let i = 0; i < tempCutIndexGroups[j].length; i++) {
-                console.log(tempCutIndexGroups[j][i]);
-            }
-        }
+        // let maxIndexToCut = 0;
 
-        let newIndexGroups = [];
-
-        for (let i = 0; i < indexGroups.length; i++) {
-
-            let finishCut = 0;
-
-            for (let j = 0; j < tempCutIndexGroups.length; j++) {
-
-                if (finishCut === 0) {
-
-                    if (cutDirection[j] === i) {
-                        cutDirection[j] = 77;
-
-                        for (let i = 0; i < tempCutIndexGroups[j].length; i++) {
-                            newIndexGroups.push(tempCutIndexGroups[j][i])
-                        }
-
-                        finishCut += 100;
-                    } else {
-
-                        if (j === tempCutIndexGroups.length - 1) {
-                            newIndexGroups.push(indexGroups[i]);
-                        }
-                    }
-
-                }
-            }
-        }
-
-        indexGroups = newIndexGroups;
-
-
-    }
-
-
-
-
-    else if (wordCharsWithoutDuplicate.length > cutDirection.length) {
-        let maxIndexToCut = 0;
-
+        let tempCutIndexGroups = getAnimationIndexGroupWhenWordCharsNumberWithoutDuplicateIsBiggerThanBaseCutDirectionNumber();
         // let cutNumber = wordCharsWithoutDuplicate.length - 7;
-        let cutNumber = wordCharsWithoutDuplicate.length - cutDirection.length;
-        let count = 1;
-        // let tempCutMiddleIndexGroups = [];
-        // let tempStart = [];
-        let tempCutIndexGroups = [[]];
-
-        for (let i = 0; i < cutDirection.length; i++) {
-
-            let tempMiddleIndexGroups = indexGroups[cutDirection[i]];
-            let tempCutMiddleIndexGroups = [[]];
-
-            if (tempMiddleIndexGroups.length >= 2) {
-                cutNumber = cutNumber + 1;
-            } else {
-
-            }
-
-            if (count < cutNumber) {
-
-                for (let j = 0; j < tempMiddleIndexGroups.length; j++) {
-
-                    if (count < cutNumber) {
-                        let index = tempMiddleIndexGroups.slice(j, j + 1);
-
-                        tempCutMiddleIndexGroups[j] = index;
-                        count = count + 1;
-                    } else {
-
-                        let index = tempMiddleIndexGroups.slice(j, tempMiddleIndexGroups.length);
-
-                        tempCutMiddleIndexGroups[j] = index;
-                        count = count + 100;
-                        break;
-
-                    }
-                }
-
-                tempCutIndexGroups[i] = tempCutMiddleIndexGroups;
-            }
-        }
+        // let cutNumber = wordCharsWithoutDuplicate.length - cutDirection.length;
+        // let count = 1;
+        // // let tempCutMiddleIndexGroups = [];
+        // // let tempStart = [];
+        // // let tempCutIndexGroups = [[]];
+        //
+        // for (let i = 0; i < cutDirection.length; i++) {
+        //
+        //     let tempMiddleIndexGroups = indexGroups[cutDirection[i]];
+        //     let tempCutMiddleIndexGroups = [[]];
+        //
+        //     if (tempMiddleIndexGroups.length >= 2) {
+        //         cutNumber = cutNumber + 1;
+        //     } else {
+        //
+        //     }
+        //
+        //     if (count < cutNumber) {
+        //
+        //         for (let j = 0; j < tempMiddleIndexGroups.length; j++) {
+        //
+        //             if (count < cutNumber) {
+        //                 let index = tempMiddleIndexGroups.slice(j, j + 1);
+        //
+        //                 tempCutMiddleIndexGroups[j] = index;
+        //                 count = count + 1;
+        //             } else {
+        //
+        //                 let index = tempMiddleIndexGroups.slice(j, tempMiddleIndexGroups.length);
+        //
+        //                 tempCutMiddleIndexGroups[j] = index;
+        //                 count = count + 100;
+        //                 break;
+        //
+        //             }
+        //         }
+        //
+        //         tempCutIndexGroups[i] = tempCutMiddleIndexGroups;
+        //     }
+        // }
 
         // console - only
-        for (let j = 0; j < tempCutIndexGroups.length; j++) {
+        // for (let j = 0; j < tempCutIndexGroups.length; j++) {
+        //
+        //     console.log("j");
+        //
+        //     for (let i = 0; i < tempCutIndexGroups[j].length; i++) {
+        //         console.log(tempCutIndexGroups[j][i]);
+        //     }
+        // }
 
-            console.log("j");
+        indexGroups = getNewIndexGroups(tempCutIndexGroups);
 
-            for (let i = 0; i < tempCutIndexGroups[j].length; i++) {
-                console.log(tempCutIndexGroups[j][i]);
-            }
-        }
-
-        let newIndexGroups = [];
-
-        for (let i = 0; i < indexGroups.length; i++) {
-
-            let finishCut = 0;
-
-            for (let j = 0; j < tempCutIndexGroups.length; j++) {
-
-                if (finishCut === 0) {
-
-                    if (cutDirection[j] === i) {
-                        cutDirection[j] = 77;
-
-                        for (let i = 0; i < tempCutIndexGroups[j].length; i++) {
-                            newIndexGroups.push(tempCutIndexGroups[j][i])
-                        }
-
-                        finishCut += 100;
-                    } else {
-
-                        if (j === tempCutIndexGroups.length - 1) {
-                            newIndexGroups.push(indexGroups[i]);
-                        }
-                    }
-
-                }
-            }
-        }
-
-        indexGroups = newIndexGroups;
+        // let newIndexGroups = [];
+        //
+        // for (let i = 0; i < indexGroups.length; i++) {
+        //
+        //     let finishCut = 0;
+        //
+        //     for (let j = 0; j < tempCutIndexGroups.length; j++) {
+        //
+        //         if (finishCut === 0) {
+        //
+        //             if (cutDirection[j] === i) {
+        //                 cutDirection[j] = 77;
+        //
+        //                 for (let i = 0; i < tempCutIndexGroups[j].length; i++) {
+        //                     newIndexGroups.push(tempCutIndexGroups[j][i])
+        //                 }
+        //
+        //                 finishCut += 100;
+        //             } else {
+        //
+        //                 if (j === tempCutIndexGroups.length - 1) {
+        //                     newIndexGroups.push(indexGroups[i]);
+        //                 }
+        //             }
+        //
+        //         }
+        //     }
+        // }
+        //
+        // indexGroups = newIndexGroups;
 
         // console.log("");
         // console.log("ALL indexGroups:      " + indexGroups);
         // console.log("ALL indexGroups.length:      " + indexGroups.length);
         //
-        for (let i = 0; i < indexGroups.length; i++) {
-
-            console.log("indexGroups[" + i + "]: " + indexGroups[i]);
-        }
-        console.log("")
+        // for (let i = 0; i < indexGroups.length; i++) {
+        //
+        //     console.log("indexGroups[" + i + "]: " + indexGroups[i]);
+        // }
+        // console.log("")
     }
 
 }
@@ -377,7 +497,7 @@ function playGameSnowmanBuild(clickedId) {
         setDiscoveredCharVisibleForUser(keyValue);
 
         // console.log("animationPartToDisplay = " + animationPartToDisplay);
-        console.log("countedCorrectShots = " + countedCorrectShots);
+        // console.log("countedCorrectShots = " + countedCorrectShots);
         setSnowmanPartVisible();
         countedCorrectShots += 1;
         // animationPartToDisplay -= 1;
