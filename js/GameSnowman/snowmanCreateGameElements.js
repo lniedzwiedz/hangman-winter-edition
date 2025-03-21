@@ -28,7 +28,7 @@ function createKeyboardButton(elementId, keysNumber, keysLine) {
 
         newButton.innerHTML += keysLine[i];
         newButton.setAttribute("id", "keyboard-" + keysLine[i]);
-        newButton.classList.add("snowmanKeyboard")
+        newButton.classList.add("snowmanKeyboardButtons");
         // newButton.setAttribute("onclick", "playGameSnowmanBuild(this.id)")
         // newButton.addEventListener("onclick", playGameSnowmanBuild());
 

@@ -1,0 +1,70 @@
+.gameSnowmanWordToDiscover{
+    /*display: flex;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+
+
+
+    /*background-color: #000000;*/
+    /*background-color: #2a1e1e;*/
+    /*background-color: #292929;*/
+    /*background-color: #303030;*/
+    /*background-color: #101010;*/
+    /*background-color: #1f130e;*/
+
+    /*background-color: #5c3243;*/
+
+    /*background-color: #e9a610;*/
+    /*background-color: #c78e0e;*/
+    background-color: #a6760b;
+
+
+
+    /*color: #c94a6f;*/
+    /*color: #ac0041;*/
+    /*color: #aa6581;*/
+    /*color: #ff7d97;*/
+    /*color: #47001a;*/
+    /*color: #6b0028;*/
+    /*color: #8e0035;*/
+    /*color: #8a4c65;*/
+    /*color: #733f54;*/
+    /*color: #5c3243;*/
+    /*color: #5c3243;*/
+    /*color: #bf889b;*/
+    /*color: #000000;*/
+    /*color: #19252d;*/
+    /*color: #232323;*/
+    color: #000000;
+
+    /*padding: 5px;*/
+
+
+   justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+    font-size: 1.3rem;
+    font-weight: 900;
+    /*box-shadow: 1px 5px #A05880;*/
+
+    border: none;
+
+    /*border-color: #A05880;*/
+    border-radius: 0.45rem;
+    /*border-bottom-color: darkred;*/
+    /*border-color: forestgreen;*/
+    /*border-left-color: forestgreen;*/
+    /*border-color: #ffc7cd;*/
+    /*border-color: #47001a;*/
+    /*border-color: #47001a;*/
+    /*box-shadow: 0px 0px 0.5rem 0.5rem rgb(201, 74, 111);*/
+    /*box-shadow: 0px 0px 1px 1px orangered;*/
+    box-shadow: 0px 0px 1px 1px #2a1e1e;
+    /*box-shadow: 0px 0px 1px 1px #101010;*/
+    /*box-shadow: 0px 0px 1px 1px #1f130e;*/
+    /*box-shadow: 0px 0px 1px 1px #5c3243;*/
+
+
+}

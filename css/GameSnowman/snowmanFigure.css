@@ -1,6 +1,6 @@
 /* home  require change -> homeScript.js*/
 #containerSnowmanFigureElements-home {
-    background-color: darkolivegreen;
+    /*background-color: darkolivegreen;*/
     display: grid;
     grid-row: 1 / 1;
     grid-column: 1 / 1;
@@ -10,7 +10,7 @@
 
 /* subpage - gameSnowman; require change -> snowmanCreateGameElements.js*/
 #containerSnowmanFigureElements-gameSnowman {
-    background-color: darkolivegreen;
+    /*background-color: darkolivegreen;*/
     display: grid;
     grid-row: 1 / 1;
     grid-column: 1 / 1;
@@ -146,11 +146,9 @@
 
 
 
-
-
 /* snowman action id - start from top (hat) */
 .snowmanFigureElementAction-1 {
-    background-color: black;
+    background-color: #412E47;
 }
 
 .snowmanFigureElementAction-2 {
@@ -162,7 +160,7 @@
 }
 
 .snowmanFigureElementAction-4 {
-    background-color: black;
+    background-color: #412E47;
 }
 
 .snowmanFigureElementAction-5 {
