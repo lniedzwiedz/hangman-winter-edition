@@ -31,7 +31,14 @@ body {
     /*background-color: #1a1a1a;*/
     /*background-color: #412E47;*/
     background-color: #000000;
-    color: #5c3243;
+    /*color: #5c3243;*/
+    /*color: #ae7498;*/
+    /*color: #e76e9e;*/
+    /*color: #fc86b5;*/
+    /*color: #ec7ba8;*/
+    /*color: #d682a4;*/
+    color: #e26899;
+
 }
 
 .item-2 {
@@ -78,13 +85,20 @@ body {
 .buttonHome {
     /*background-color: #824769;*/
     background-color: #000000;
-    color: #5c3243;
     grid-row: 2 / 2;
     grid-column: 2 / 3;
 
+    /*color: #5c3243;*/
+    /*color: #ae7498;*/
+    /*color: #e76e9e;*/
+    /*color: #fc86b5;*/
+    /*color: #ec7ba8;*/
+    /*color: #d682a4;*/
+    /*color: #e26899;*/
+    color: #ac4a71;
 
     text-align: center;
-    font-weight: 900;
+    font-weight: 500;
     border: none;
     border-radius: 0.45rem;
     box-shadow: 0px 0px 1px 1px #2a1e1e;
@@ -93,12 +107,20 @@ body {
 .buttonSnowman {
     /*background-color: #824769;*/
     background-color: #000000;
-    color: #5c3243;
     grid-row: 2 / 2;
     grid-column: 4 / 5;
 
+    /*color: #5c3243;*/
+    /*color: #ae7498;*/
+    /*color: #e76e9e;*/
+    /*color: #fc86b5;*/
+    /*color: #ec7ba8;*/
+    /*color: #d682a4;*/
+    /*color: #e26899;*/
+    color: #ac4a71;
+
     text-align: center;
-    font-weight: 900;
+    font-weight: 500;
     border: none;
     border-radius: 0.45rem;
     box-shadow: 0px 0px 1px 1px #2a1e1e;

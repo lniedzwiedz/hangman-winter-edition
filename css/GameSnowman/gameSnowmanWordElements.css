@@ -1,9 +1,15 @@
-.gameSnowmanWordToDiscover{
+.gameSnowmanWordElementTextBuild{
+    color: #ac4a71;
+    font-size: 1.4rem;
+    font-weight: 200;
+
+
+}
+
+.gameSnowmanWordElementToDiscover{
     /*display: flex;*/
     /*width: 100%;*/
     /*height: 100%;*/
-
-
 
     /*background-color: #000000;*/
     /*background-color: #2a1e1e;*/
@@ -14,11 +20,9 @@
 
     /*background-color: #5c3243;*/
 
-    /*background-color: #e9a610;*/
+    background-color: #e9a610;
     /*background-color: #c78e0e;*/
-    background-color: #a6760b;
-
-
+    /*background-color: #a6760b;*/
 
     /*color: #c94a6f;*/
     /*color: #ac0041;*/
@@ -40,7 +44,7 @@
     /*padding: 5px;*/
 
 
-   justify-content: center;
+    justify-content: center;
     align-items: center;
     text-align: center;
 
@@ -68,3 +72,4 @@
 
 
 }
+

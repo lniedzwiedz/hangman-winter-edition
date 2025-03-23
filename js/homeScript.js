@@ -30,11 +30,11 @@
 
 
 
-function log() {
-    console.log("clicked xD")
-}
+// function log() {
+//     console.log("clicked xD")
+// }
 
 // create snowman at home page
 // import { createSnowmanFigure } from "js/snowmanCreateFigureElements.js"
- createSnowmanFigure("containerButtonGameSnowmanElementFigure", "home");
+//  createSnowmanFigure("containerButtonGameSnowmanElementFigure", "home");
 

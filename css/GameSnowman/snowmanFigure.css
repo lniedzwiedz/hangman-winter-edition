@@ -8,7 +8,7 @@
     grid-template-columns: repeat(23, 1fr);
 }
 
-/* subpage - gameSnowman; require change -> snowmanCreateGameElements.js*/
+/* subpage - gameSnowman; require change -> gameKeyboard.js*/
 #containerSnowmanFigureElements-gameSnowman {
     /*background-color: darkolivegreen;*/
     display: grid;
@@ -21,28 +21,28 @@
 
 /* snowman container - start from top (hat) */
 .containerSnowmanFigureElement-1 {
-    background-color: black;
+    /*background-color: black;*/
     display: grid;
     grid-row: 2 / 3;
     grid-column: 8 / 17;
 }
 
 .containerSnowmanFigureElement-2 {
-    background-color: blue;
+    /*background-color: blue;*/
     display: grid;
     grid-row: 3 / 5;
     grid-column: 9 / 16;
 }
 
 .containerSnowmanFigureElement-3 {
-    background-color: blue;
+    /*background-color: blue;*/
     display: grid;
     grid-row: 4 / 5;
     grid-column: 9 / 16;
 }
 
 .containerSnowmanFigureElement-4 {
-    background-color: pink;
+    /*background-color: pink;*/
     display: grid;
     /*grid-row: 4 / 4;*/
     /*grid-column: 9 / 15;*/
@@ -51,63 +51,63 @@
 }
 
 .containerSnowmanFigureElement-5 {
-    background-color: yellow;
+    /*background-color: yellow;*/
     display: grid;
     grid-row: 6 / 8;
     grid-column: 9 / 16;
 }
 
 .containerSnowmanFigureElement-6 {
-    background-color: greenyellow;
+    /*background-color: greenyellow;*/
     display: grid;
     grid-row: 8 / 10;
     grid-column: 9 / 16;
 }
 
 .containerSnowmanFigureElement-7 {
-    background-color: yellow;
+    /*background-color: yellow;*/
     display: grid;
     grid-row: 10 / 12;
     grid-column: 8 / 17;
 }
 
 .containerSnowmanFigureElement-8 {
-    background-color: greenyellow;
+    /*background-color: greenyellow;*/
     display: grid;
     grid-row: 12 / 14;
     grid-column: 8 / 17;
 }
 
 .containerSnowmanFigureElement-9 {
-    background-color: yellow;
+    /*background-color: yellow;*/
     display: grid;
     grid-row: 14 / 16;
     grid-column: 8 / 17;
 }
 
 .containerSnowmanFigureElement-10 {
-    background-color: greenyellow;
+    /*background-color: greenyellow;*/
     display: grid;
     grid-row: 16 / 18;
     grid-column: 7 / 18;
 }
 
 .containerSnowmanFigureElement-11 {
-    background-color: dimgrey;
+    /*background-color: dimgrey;*/
     display: grid;
     grid-row: 18 / 20;
     grid-column: 6 / 19;
 }
 
 .containerSnowmanFigureElement-12 {
-    background-color: green;
+    /*background-color: green;*/
     display: grid;
     grid-row: 20 / 22;
     grid-column: 5 / 20;
 }
 
 .containerSnowmanFigureElement-13 {
-    background-color: black;
+    /*background-color: black;*/
     display: grid;
     grid-row: 22 / 22;
     grid-column: 2 / 23;
@@ -116,14 +116,14 @@
 /* hands  */
 /* left */
 .containerSnowmanFigureElement-14 {
-    background-color: orange;
+    /*background-color: orange;*/
     display: grid;
     grid-row: 10 / 13;
     grid-column: 4 / 8;
 }
 
 .containerSnowmanFigureElement-15 {
-    background-color: forestgreen;
+    /*background-color: forestgreen;*/
     display: grid;
     grid-row: 4 / 10;
     grid-column: 4 / 7;
@@ -131,14 +131,14 @@
 
 /* right */
 .containerSnowmanFigureElement-16 {
-    background-color: orange;
+    /*background-color: orange;*/
     display: grid;
     grid-row: 10 / 13;
     grid-column: 17 / 21;
 }
 
 .containerSnowmanFigureElement-17 {
-    background-color: forestgreen;
+    /*background-color: forestgreen;*/
     display: grid;
     grid-row: 4 / 10;
     grid-column: 18 / 21;
@@ -147,55 +147,124 @@
 
 
 /* snowman action id - start from top (hat) */
+
+.snowmanFigureElementAddShape{
+    color: #ac4a71;
+    border-right-style: solid ;
+    border-left-style: solid ;
+    text-align: center;
+    padding-top: 0.8rem;
+    font-size: 2rem;
+}
+
+.snowmanFigureElements{
+
+    text-align: center;
+    padding-top: 0.8rem;
+    color: #ac4a71;
+    
+    border-right-style: solid ;
+    border-left-style: solid ;
+
+}
+
+
 .snowmanFigureElementAction-1 {
-    background-color: #412E47;
+    /*background-color: #412E47;*/
+    position: relative;
+    height: 100%;
+    width: 25%;
+    border-radius: 50%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
 .snowmanFigureElementAction-2 {
-    background-color: saddlebrown;
+    /*background-color: saddlebrown;*/
+    border-radius: 0.45rem;
 }
 
 .snowmanFigureElementAction-3 {
-    background-color: orange;
+    /*background-color: orange;*/
 }
 
 .snowmanFigureElementAction-4 {
-    background-color: #412E47;
+    /*background-color: #412E47;*/
+    /*width: 4rem;*/
+    border-radius: 0.45rem;
 }
 
+:root{
+    --divRadious: 0.6rem;
+}
+
+
+
 .snowmanFigureElementAction-5 {
-    background-color: cornflowerblue;
+    /*background-color: cornflowerblue;*/
+    border-radius: var(--divRadious);
 }
 
 .snowmanFigureElementAction-6 {
-    background-color: deepskyblue;
-    opacity: 1;
+    /*background-color: deepskyblue;*/
+    border-radius: var(--divRadious);
 }
 
 .snowmanFigureElementAction-7 {
-    background-color: lightblue;
+    /*background-color: lightblue;*/
+    border-radius: var(--divRadious);
 }
 
 .snowmanFigureElementAction-8 {
-    background-color: royalblue;
+    /*background-color: royalblue;*/
+    border-radius: var(--divRadious);
 }
 
 .snowmanFigureElementAction-9 {
-    background-color: skyblue;
+    /*background-color: skyblue;*/
+    border-radius: var(--divRadious);
 }
 
 .snowmanFigureElementAction-10 {
-    background-color: cornflowerblue;
+    /*background-color: cornflowerblue;*/
+    border-radius: var(--divRadious);
 }
 
 .snowmanFigureElementAction-11 {
-    background-color: steelblue;
+    /*background-color: steelblue;*/
+    border-radius: var(--divRadious);
 }
 
 .snowmanFigureElementAction-12 {
-    background-color: cadetblue;
+    /*background-color: cadetblue;*/
+    border-radius: var(--divRadious);
 }
 
 .snowmanFigureElementAction-13 {
-    background-color: palegreen;
+    /*background-color: palegreen;*/
+    border-radius: var(--divRadious);
+    /*border-radius: 0.2rem;*/
+}
+
+.snowmanFigureElementAction-14 {
+    /*background-color: cadetblue;*/
+    border-radius: var(--divRadious);
+}
+
+.snowmanFigureElementAction-15 {
+    /*background-color: palegreen;*/
+    border-radius: var(--divRadious);
+}
+
+.snowmanFigureElementAction-16 {
+    /*background-color: cadetblue;*/
+    border-radius: var(--divRadious);
+}
+
+.snowmanFigureElementAction-17 {
+    /*background-color: palegreen;*/
+    border-radius: var(--divRadious);
 }

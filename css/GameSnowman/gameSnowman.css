@@ -1,7 +1,9 @@
 .containerSectionGameSnowman {
     display: grid;
     /*background-color: #824769;*/
-    grid-template-rows: 12fr 18fr 18fr 3fr 3fr 14fr 14fr 4fr;
+    /*grid-template-rows: 12fr 18fr 18fr 3fr 3fr 14fr 14fr 4fr;*/
+    /*grid-template-rows: 2fr 28fr 18fr 3fr 3fr 14fr 14fr 4fr;*/
+    grid-template-rows: 2fr 28fr 24fr 1fr 1fr 14fr 14fr 4fr;
     grid-template-columns: 10fr 3fr 13fr 21fr 3fr 3fr 21fr 13fr 3fr 10fr;
 }
 
@@ -9,8 +11,15 @@
 #containerGameSnowmanAnimation {
     display: grid;
     /*background-color: #412E47;*/
-    grid-row: 2 / 4;
-    grid-column: 3 / 5;
+    /*grid-row: 2 / 4;*/
+    /*grid-column: 3 / 5;*/
+
+    /*grid-row: 2 / 8;*/
+    /*grid-column: 3 / 5;*/
+
+    grid-row: 2 / 8;
+    grid-column: 2 / 6;
+
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
 }
@@ -27,18 +36,39 @@
 #containerSnowmanFigureAction {
     /*background-color: #A05880;*/
     display: grid;
+    /*grid-row: 2 / 6;*/
+    /*grid-column: 3 / 5;*/
+
     grid-row: 2 / 6;
-    grid-column: 3 / 5;
+    grid-column: 2 / 6;
+
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
+
+    border: none;
+    border-radius: 0.45rem;
+    /*box-shadow: 0px 0px 1px 1px #2a1e1e;*/
+    /*box-shadow: 0px 0px 1px 1px #101010;*/
+    /*box-shadow: 0 5px 15px 0 #1f130e;*/
+    /*box-shadow: 0 3px 15px 0 #ac4a71;*/
+    /*box-shadow: 0 3px 15px 0 #621735;*/
+    /*box-shadow: 0 3px 15px 0 #390B1E;*/
+    box-shadow: 0 3px 15px 0 #230511;
+
+
 }
 
 /* keyboard */
 #containerGameSnowmanWord {
     display: grid;
     /*background-color: coral;*/
+    /*grid-row: 2 / 4;*/
+    /*grid-column: 7 / 9;*/
+
     grid-row: 2 / 4;
-    grid-column: 7 / 9;
+    grid-column: 6 / 10;
+
+
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
 }
@@ -48,7 +78,8 @@
     /*background-color: #412E47;*/
     grid-row: 1 / 1;
     grid-column: 1 / 1;
-    grid-template-rows: 1fr repeat(3, 8fr) 1fr;
+    /*grid-template-rows: 1fr repeat(3, 8fr) 1fr;*/
+    grid-template-rows: 1fr 4fr 4fr 2fr 1fr;
     /*grid-template-rows: 1fr repeat(2, 8fr) 1fr;*/
     grid-template-columns: 1fr 24fr 1fr;
 }
@@ -68,8 +99,12 @@
 #containerGameSnowmanKeyboard {
     display: grid;
     /*background-color: coral;*/
+    /*grid-row: 6 / 8;*/
+    /*grid-column: 3 / 9;*/
+
     grid-row: 6 / 8;
-    grid-column: 3 / 9;
+    grid-column: 6 / 10;
+
     /*grid-row: 6 / 8;*/
     /*grid-column: 4 / 8;*/
     grid-template-rows: 1fr;
@@ -83,8 +118,12 @@
     grid-column: 1 / 1;
     /*grid-template-rows: 5fr repeat(4, 25fr) 5fr;*/
     /* for containerSnowmanKeyboard-line-0 remove "repeat(3, 0.0005fr)" + repeat 5 instead of 4*/
-    grid-template-rows: 5fr repeat(3, 0.0005fr) repeat(4, 0.5fr 25fr 0.5fr) 5fr;
-    grid-template-columns: 5fr 90fr 5fr;
+
+    /*grid-template-rows: 5fr repeat(3, 0.0005fr) repeat(4, 0.5fr 25fr 0.5fr) 5fr;*/
+    /*grid-template-columns: 5fr 90fr 5fr;*/
+
+    grid-template-rows: 14fr repeat(3, 0.0005fr) repeat(4, 0.5fr 25fr 0.5fr) 14fr;
+    grid-template-columns: 1fr 24fr 1fr;
 }
 
 #containerSnowmanKeyboard-line-0 {
@@ -111,7 +150,7 @@
     grid-row: 9 / 10;
     grid-column: 2 / 3;
     grid-template-rows: 1fr 40fr 1fr;
-    grid-template-columns: 0.5fr 17.5fr 0.5fr repeat(11, 0.5fr 10fr 0.5fr)  0.5fr 20fr 0.5fr;
+    grid-template-columns: 0.5fr 17.5fr 0.5fr repeat(12, 0.5fr 10fr 0.5fr)  0.5fr 20fr 0.5fr;
 }
 
 #containerSnowmanKeyboard-line-3 {

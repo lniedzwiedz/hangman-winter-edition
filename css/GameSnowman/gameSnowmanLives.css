@@ -12,7 +12,7 @@
     background-color: #2c3e3a;
 
 
-    color: #000000;
+    /*color: #000000;*/
     /*color: #292929;*/
     /*color: #c94a6f;*/
     /*color: #ac0041;*/
@@ -28,14 +28,15 @@
     /*color: #bf889b;*/
     /*color: #000000;*/
     /*color: #19252d;*/
-    /*color: #232323;*/
+    color: #232323;
     /*color: #bf889b;*/
+
 
     justify-content: center;
     align-items: center;
     text-align: center;
 
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     font-weight: 900;
 
 
@@ -65,14 +66,15 @@
     /*color: #733f54;*/
     /*color: #5c3243;*/
     /*color: #5c3243;*/
-    color: #bf889b;
+    /*color: #bf889b;*/
     /*color: #000000;*/
     /*color: #19252d;*/
     /*color: #232323;*/
     /*color: #a35c7a;*/
+    color: #c18ead;
 
 
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 900;
 
 }

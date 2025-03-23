@@ -1,90 +1,8 @@
-function getWord() {
-    // word max length 17 -> animation has 17 pieces
-    const fileWithWords = "JAVA, TEST, QWERTYU, TESTLONGXD, QWERTYUIOPASD, " +
-        "TESTTEST, TESTTESZ, TESTTEQZ, TESTTQAZ, " +
-        "TEST AL";
-    const words = fileWithWords.split(", ")
-    // add random index
-    return words[9];
+const maxContainerDivNumberToDisplay = 17;
 
-}
-
-const word = getWord();
-
-function getCharsNumber(word) {
-    return word.split("");
-}
-
-function getCharsNumberWithoutDuplicate() {
-
-    // console.log("wordChar = " + wordChar);
-
-    let temWord = word;
-    let finalChar = temWord.substring(0, 1);
-
-    for (let i = 1; i < word.length; i++) {
-
-        let char = temWord.substring(i, i + 1);
-
-        // console.log("char = " + char);
-        if (char !== " ") {
-            // console.log("2 char =" + char) + ".";
-            if (!finalChar.includes(char)) {
-                finalChar = finalChar + char;
-            }
-        }
-    }
-
-    console.log("finalChar = " + finalChar);
-    return finalChar.split("");
-
-}
-
-const wordChar = getCharsNumber(word);
-const wordCharsWithoutDuplicate = getCharsNumberWithoutDuplicate();
-
-
-function checkCharacter(keyValue) {
-    for (let i = 0; i < wordChar.length; i++) {
-        if (keyValue === wordChar[i])
-            return true;
-    }
-    return false;
-}
-
-function getKeyboardChar(clickedId) {
-    // let keyIdPressedByUSer = (clickedId);
-    let getKeyElementPressedByUSer = document.getElementById(clickedId);
-    // let getKeyValuePressedByUSer = getKeyElementPressedByUSer.getAttribute("value");
-    return getKeyElementPressedByUSer.getAttribute("value");
-
-    // remove from button onclick="playGameSnowmanBuild(this.id) after clicked, change color, disable -> button
-}
-
-function disableKeyboardButton(clickedId){
-    let getKeyElementPressedByUSer = document.getElementById(clickedId);
-    getKeyElementPressedByUSer.removeAttribute("onclick");
-}
-
-function disableKeyboardButtons(){
-    let getKeys = document.getElementsByClassName("snowmanKeyboard");
-    // getKeys.length;
-
-    for (let i = 0; i < getKeys.length; i++) {
-        getKeys[i].removeAttribute("onclick");
-    }
-
-
-
-}
-
-function changeDiscoveredCharVisibility(charToShow) {
-    for (let i = 0; i < wordChar.length; i++) {
-        if (charToShow === wordChar[i]) {
-            document.getElementById("wordChar-" + i).innerHTML = charToShow;
-        }
-    }
-}
+let word;
+let wordChar;
+let wordCharsWithoutDuplicate;
 
 // 1/2/3/4 - hat
 // 5/6 - head
@@ -110,13 +28,197 @@ const indexGroups2 = [
 
 let indexGroups;
 
-const maxContainerDivNumberToDisplay = 17;
-let cutDirection = [2, 6, 4, 1, 5, 0, 3]; // number index = indexGroups
-let cutDirection2 = [0, 2];
-let animationMaxNumber = cutDirection.length;
-let countedCorrectShots = 0;
-let countedWrongShots = 0;
-let maxWrongShots = animationMaxNumber;
+let cutDirection; // number index = indexGroups
+let cutDirection2;
+let animationMaxNumber;
+let countedCorrectShots ;
+let countedWrongShots;
+let maxWrongShots;
+
+let countedAnimationElements;
+let gameLives;
+let gameLivesChars;
+
+function playGameSnowmanBuildConfiguration(){
+    word = getWord();
+    wordChar = getCharsNumber(word);
+    wordCharsWithoutDuplicate = getCharsNumberWithoutDuplicate();
+
+    cutDirection = [2, 6, 4, 1, 5, 0, 3]; // number index = indexGroups
+    cutDirection2 = [0, 2];
+    animationMaxNumber = cutDirection.length;
+    countedCorrectShots = 0;
+    countedWrongShots = 0;
+    countedAnimationElements = 0;
+    maxWrongShots = animationMaxNumber;
+    getAnimationIndexGroups();
+
+    gameLives = "LIVES" + " " + maxWrongShots;
+    gameLivesChars = getCharsNumber(gameLives);
+
+    createSnowmanFigure("containerSnowmanFigureAction", "gameSnowman");
+    createContainerGameSnowmanWordElements();
+    createKeyboardButtons();
+
+    randomNumber(); // remove
+
+}
+
+const fileWithWords = "JAVA, TEST, QWERTYU, TESTLONGXD, QWERTYUIOPASD, " +
+    "TESTTEST, TESTTESZ, TESTTEQZ, TESTTQAZ, " +
+    "TEST AL";
+
+const words = fileWithWords.split(", ")
+
+function randomNumber(){
+    // let min = 0;
+    // let max = words.length-1;
+    // return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor(Math.random() * words.length-1) + 1;
+
+}
+
+function getWord() {
+    // word max length 17 -> animation has 17 pieces
+    // const fileWithWords = "JAVA, TEST, QWERTYU, TESTLONGXD, QWERTYUIOPASD, " +
+    //     "TESTTEST, TESTTESZ, TESTTEQZ, TESTTQAZ, " +
+    //     "TEST AL";
+
+    // add random index
+    let index = randomNumber();
+    console.log("  ");
+    console.log("index = " + index);
+    console.log("words = " + words[index]);
+    return words[index];
+
+}
+
+// const word = getWord();
+// let word;
+
+function getCharsNumber(word) {
+    return word.split("");
+}
+
+function getCharsNumberWithoutDuplicate() {
+
+    let temWord = word;
+    let finalChar = temWord.substring(0, 1);
+
+    for (let i = 1; i < word.length; i++) {
+
+        let char = temWord.substring(i, i + 1);
+
+        // console.log("char = " + char);
+        if (char !== " ") {
+            // console.log("2 char =" + char) + ".";
+            if (!finalChar.includes(char)) {
+                finalChar = finalChar + char;
+            }
+        }
+    }
+
+    return finalChar.split("");
+}
+
+// const wordChar = getCharsNumber(word);
+// const wordCharsWithoutDuplicate = getCharsNumberWithoutDuplicate();
+//
+// let wordChar;
+// let wordCharsWithoutDuplicate;
+
+
+function checkCharacter(keyValue) {
+    for (let i = 0; i < wordChar.length; i++) {
+        if (keyValue === wordChar[i])
+            return true;
+    }
+    return false;
+}
+
+function getKeyboardChar(clickedId) {
+    let getKeyElementPressedByUSer = document.getElementById(clickedId);
+    return getKeyElementPressedByUSer.getAttribute("value");
+}
+
+function disableKeyboardButton(clickedId) {
+    let getKeyElementPressedByUSer = document.getElementById(clickedId);
+    getKeyElementPressedByUSer.removeAttribute("onclick");
+}
+
+function disableKeyboardButtons() {
+    let keys = document.getElementsByClassName("snowmanKeyboardButtons");
+
+    for (let i = 0; i < keys.length; i++) {
+        keys[i].removeAttribute("onclick");
+    }
+}
+
+
+function changeKeyboardButtonNewGameWhenGameOver(){
+    let element = document.getElementById("keyboard-NEW GAME");
+    element.className += " snowmanKeyboardButtonNewGameGameOver";
+    element.setAttribute("onclick", "playGameSnowmanBuildNewGame(this.id)");
+}
+
+function changeKeyboardButtonNewGameWhenStartNewGame(){
+    let element = document.getElementById("keyboard-NEW GAME");
+    element.classList.remove("snowmanKeyboardButtonNewGameGameOver");
+}
+
+
+
+function changeKeyboardButtonsGameOver(){
+    disableKeyboardButtons();
+    changeKeyboardButtonNewGameWhenGameOver();
+}
+
+function changeDiscoveredCharVisibility(charToShow) {
+    for (let i = 0; i < wordChar.length; i++) {
+        if (charToShow === wordChar[i]) {
+            document.getElementById("wordChar-" + i).innerHTML = charToShow;
+        }
+    }
+}
+
+// // 1/2/3/4 - hat
+// // 5/6 - head
+// // 14/15 - left - hand
+// // 16/17 - right - hand
+//
+// const indexGroups1 = [
+//     [13, 12], // cut 6 -> 2
+//     [11, 10], // cut 4 -> 2
+//     [9, 8, 7], // cut 1 -> 3 ---------------- 1
+//     [6, 5], // cut 7 -> 9
+//     [14, 15], // cut 3 -> 2 -----------------4
+//     // [1, 2, 3, 4], // cut 5 -> 4
+//     [4, 3, 2, 1], // cut 5 -> 4
+//     [16, 17] // cut 2 -> 2 -------------  6
+// ];
+//
+// const indexGroups2 = [
+//     [13, 12, 11, 10, 9, 8, 7],
+//     [6, 5, 14, 16],
+//     [17, 15, 4, 3, 2, 1],
+// ];
+
+// let indexGroups;
+//
+// const maxContainerDivNumberToDisplay = 17;
+// let cutDirection = [2, 6, 4, 1, 5, 0, 3]; // number index = indexGroups
+// let cutDirection2 = [0, 2];
+// let animationMaxNumber = cutDirection.length;
+// let countedCorrectShots = 0;
+// let countedWrongShots = 0;
+// let maxWrongShots = animationMaxNumber;
+
+// let cutDirection; // number index = indexGroups
+// let cutDirection2;
+// let animationMaxNumber;
+// let countedCorrectShots ;
+// let countedWrongShots;
+// let maxWrongShots;
 
 
 // let wordLength = 13;  // can not be lower than 7 -> start animation length (let cutNumber)
@@ -286,7 +388,9 @@ function getAnimationIndexGroups() {
     }
 }
 
-getAnimationIndexGroups(); // remove
+// getAnimationIndexGroups(); // remove
+
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 function playGameSnowmanBuild(clickedId) {
 
@@ -296,7 +400,7 @@ function playGameSnowmanBuild(clickedId) {
 
     let isCharExist = checkCharacter(keyValue);
 
-    console.log(" cutDirection.length = " + cutDirection.length);
+    // console.log(" cutDirection.length = " + cutDirection.length);
 
     if (isCharExist) {
 
@@ -308,8 +412,8 @@ function playGameSnowmanBuild(clickedId) {
         countedCorrectShots += 1;
 
         if (countedCorrectShots >= wordCharsWithoutDuplicate.length) {
-            createGameOverForWinner();
-            disableKeyboardButtons();
+            setGameOverTextWinner();
+            changeKeyboardButtonsGameOver();
             console.log("YOU WIN !!!");
             console.log("GO countedWrongShots = " + countedWrongShots);
         }
@@ -325,20 +429,21 @@ function playGameSnowmanBuild(clickedId) {
 
         // if (countedWrongShots >= maxWrongShots) {
         if (countedWrongShots === maxWrongShots) {
-        // else{
-            removeContainerGameSnowmanWordElements();
-            createGameOverForLoser();
-            disableKeyboardButtons();
+            // else{
+            // removeContainerGameSnowmanWordElements();
+            setGameOverTextLoser();
+            changeKeyboardButtonsGameOver();
             console.log("GAME OVER");
             console.log("GO countedWrongShots = " + countedWrongShots);
-            countedWrongShots+=77;
+            countedWrongShots += 77;
         }
     }
 
 
 }
 
-let countedAnimationElements = 0;
+// let countedAnimationElements = 0;
+// let countedAnimationElements;
 
 function changeSnowmanElementsVisible() {
 
@@ -357,8 +462,8 @@ function changeSnowmanElementsVisible() {
         let parent = document.getElementById("containerSnowmanFigureElements-gameSnowman");
         let child = parent.getElementsByClassName("containerSnowmanFigureElement-" + index);
         let grandChild = child[0].getElementsByClassName("snowmanFigureElementAction-" + index);
-        grandChild[0].setAttribute("style", "background-color:" + tempChangeColor);
-
+        // grandChild[0].setAttribute("style", "background-color:" + tempChangeColor);
+        grandChild[0].className += " snowmanFigureElementAddShape";
 
     }
     countedAnimationElements += 1;
@@ -379,7 +484,7 @@ function changeLivesNumberVisible() {
 
 // create buttons for word
 
-function createNewDiv(parentId, newChildId){
+function createNewDiv(parentId, newChildId) {
     let newDiv = document.createElement("div");
     let mainElem = document.getElementById(parentId);
     mainElem.append(newDiv);
@@ -435,7 +540,7 @@ function createContainersForWord() {
             newDiv.style.backgroundColor = "#00000";
         } else {
             // newDiv.style.backgroundColor = "orange";
-            newDiv.classList.add("gameSnowmanWordToDiscover");
+            newDiv.classList.add("gameSnowmanWordElementToDiscover");
         }
 
         newDiv.style.gridRow = rowChildStart;
@@ -457,8 +562,8 @@ function createContainersForWord() {
     }
 }
 
-const gameLives = "LIVES" + " " + maxWrongShots; // right now the same number is for the lives and animation
-const gameLivesChars = getCharsNumber(gameLives);
+// let gameLives = "LIVES" + " " + maxWrongShots; // right now the same number is for the lives and animation
+// let gameLivesChars = getCharsNumber(gameLives);
 
 
 const containerGameSnowmanLives = "containerGameSnowmanLives";
@@ -479,7 +584,9 @@ function createContainersForLives() {
     parentElement.style.gridColumn = columnStart;
     parentElement.style.gridRowEnd = rowEnd;
     parentElement.style.gridColumnEnd = columnEnd;
-    parentElement.style.gridTemplateRows = " repeat(1, 60fr 30fr 10fr) ";
+    // parentElement.style.gridTemplateRows = " repeat(1, 60fr 30fr 10fr) ";
+    // parentElement.style.gridTemplateRows = " repeat(1, 40fr 50fr 10fr) ";
+    parentElement.style.gridTemplateRows = " repeat(1, 50fr 40fr 10fr) ";
     parentElement.style.gridTemplateColumns = " repeat(" + maxWrongShots + ", 5fr 100fr 5fr)";
 
     let rowChildStart = 2;
@@ -502,7 +609,7 @@ function createContainersForLives() {
 
         newDiv.classList.add("gameSnowmanLives");
 
-        if(i === maxWrongShots-1){
+        if (i === maxWrongShots - 1) {
             newDiv.classList.add("gameSnowmanLivesNumber");
         }
 
@@ -523,12 +630,23 @@ function createContainersForLives() {
 
 const containerGameSnowmanDescription = "containerGameSnowmanDescription";
 
+const gameSnowmanDescription = "gameSnowmanDescription";
+// const gameSnowmanDescriptionTextBuild = "Build a snowman by discovering the colour. " +
+//     "Each guessed letter is one part of the snowman." +
+//     "When you win, the snowman will change colour.";
+
+const gameSnowmanDescriptionTextBuild = "Build snowman discover colour " +
+    "when you win, the snowman will change colour";
+
+const gameSnowmanDescriptionTextGameOverLoser = "Game over. You did well.";
+const gameSnowmanDescriptionTextGameOverWinner = "You win.";
+
 function createContainersForGameDescription() {
 
     createNewDiv(containerGameSnowmanWordElements, containerGameSnowmanDescription);
     let parentElement = document.getElementById(containerGameSnowmanDescription)
 
-    let gameKind = "build";
+    // let gameKind = "build";
 
     let rowStart = 2;
     let columnStart = 2;
@@ -565,95 +683,135 @@ function createContainersForGameDescription() {
     newDiv.style.gridColumnEnd = columnChildEnd;
     newDiv.style.gridTemplateRows = "1fr";
     newDiv.style.gridTemplateColumns = "1fr";
-    newDiv.innerHTML = "Build a snowman by discovering the colour. Each guessed letter is one part of the snowman." +
-        "When you win, the snowman will change colour.";
-    newDiv.style.color = "#5c3243";
+    newDiv.innerHTML = gameSnowmanDescriptionTextBuild;
+    // newDiv.style.color = "#5c3243";
+
+
+    /*color: #5c3243;*/
+    /*color: #ae7498;*/
+    /*color: #e76e9e;*/
+    /*color: #fc86b5;*/
+    /*color: #ec7ba8;*/
+    // color: #d682a4;
+    // color: #e26899;
+    // color: #ac4a71;
+
+    // newDiv.style.color = "#ac4a71";
     // newDiv.style.color = "#bf889b";
-    newDiv.style.fontWeight = "700";
+    // newDiv.style.fontWeight = "200";
+    newDiv.classList.add("gameSnowmanWordElementTextBuild");
 
     // //.
     // // newDiv.value = keysLine[i];
     // // newDiv.innerHTML += keysLine[i];
     // // newDiv.classList.add("snowmanKeyboard")
 
-    newDiv.setAttribute("id", "gameSnowmanDescription-" + gameKind);
+    // newDiv.setAttribute("id", "gameSnowmanDescription-" + gameKind);
+    newDiv.setAttribute("id", gameSnowmanDescription);
 
 }
 
-function createContainerGameSnowmanWordElements(){
+function createContainerGameSnowmanWordElements() {
     createContainersForWord();
     createContainersForLives();
     createContainersForGameDescription();
 }
 
-function removeElementsById(elementId){
+function removeElementsById(elementId) {
     let description = document.getElementById(elementId);
     description.remove();
 }
 
-function removeContainerGameSnowmanWordElements(){
+function removeContainerGameSnowmanWordElements() {
     removeElementsById(containerGameSnowmanDescription);
     removeElementsById(containerGameSnowmanWordToDiscover);
     removeElementsById(containerGameSnowmanLives);
 }
 
+function removeContainerSnowmanKeyboardLines(){
+
+    for (let i = 1; i < 5; i++) {
+        removeElementsById("containerSnowmanKeyboard-line-"+i);
+    }
+
+}
+
+function removeContainerSnowmanFigureElementsGameSnowman(){
+
+        removeElementsById("containerSnowmanFigureElements-gameSnowman");
+}
+
 
 const containerGameSnowmanGameOver = "containerGameSnowmanGameOver";
 const containerGameSnowmanGameOverDescription = "containerGameSnowmanGameOverDescription";
-function createContainerGameOver(){
 
-    createNewDiv(containerGameSnowmanWordElements, containerGameSnowmanGameOver);
-    let parentElement = document.getElementById(containerGameSnowmanGameOver)
+// function createContainerGameOver() {
+//
+//     createNewDiv(containerGameSnowmanWordElements, containerGameSnowmanGameOver);
+//     let parentElement = document.getElementById(containerGameSnowmanGameOver)
+//
+//     let rowStart = 2;
+//     let columnStart = 2;
+//     let rowEnd = 5;
+//     let columnEnd = 3;
+//
+//     parentElement.style.display = "grid";
+//     parentElement.style.backgroundColor = "cadetblue";
+//     parentElement.style.gridRow = rowStart;
+//     parentElement.style.gridColumn = columnStart;
+//     parentElement.style.gridRowEnd = rowEnd;
+//     parentElement.style.gridColumnEnd = columnEnd;
+//
+//     parentElement.style.gridTemplateRows = "5fr 100fr 5fr";
+//     parentElement.style.gridTemplateColumns = "5fr 100fr 5fr"; // to split
+//
+//     let rowChildStart = 2;
+//     let columnChildStart = 2;
+//     let rowChildEnd = 2;
+//     let columnChildEnd = 3;
+//
+//     let newDiv = document.createElement("div");
+//     parentElement.append(newDiv);
+//     newDiv.style.display = "grid";
+//     newDiv.style.backgroundColor = "darkslategrey";
+//     newDiv.style.gridRow = rowChildStart;
+//     newDiv.style.gridColumn = columnChildStart;
+//     newDiv.style.gridRowEnd = rowChildEnd;
+//     newDiv.style.gridColumnEnd = columnChildEnd;
+//     newDiv.style.gridTemplateRows = "1fr";
+//     newDiv.style.gridTemplateColumns = "1fr";
+//     newDiv.style.color = "#5c3243";
+//
+//     newDiv.setAttribute("id", containerGameSnowmanGameOverDescription);
+//
+//     // create button new game
+//
+// }
 
-    let rowStart = 2;
-    let columnStart = 2;
-    let rowEnd = 5;
-    let columnEnd = 3;
+function setGameOverTextLoser() {
+    // createContainerGameOver();
+    // let element = document.getElementById(containerGameSnowmanGameOverDescription);
+    let element = document.getElementById(gameSnowmanDescription);
+    element.innerHTML = gameSnowmanDescriptionTextGameOverLoser;
+}
 
-    parentElement.style.display = "grid";
-    parentElement.style.backgroundColor = "cadetblue";
-    parentElement.style.gridRow = rowStart;
-    parentElement.style.gridColumn = columnStart;
-    parentElement.style.gridRowEnd = rowEnd;
-    parentElement.style.gridColumnEnd = columnEnd;
+function setGameOverTextWinner() {
+    let element = document.getElementById(gameSnowmanDescription);
+    element.innerHTML = gameSnowmanDescriptionTextGameOverWinner;
+}
 
-    parentElement.style.gridTemplateRows = "5fr 100fr 5fr";
-    parentElement.style.gridTemplateColumns = "5fr 100fr 5fr"; // to split
+function playGameSnowmanBuildNewGame(){
+    // window.location.reload(); //-> fast pass
 
-    let rowChildStart = 2;
-    let columnChildStart = 2;
-    let rowChildEnd = 2;
-    let columnChildEnd = 3;
+    removeContainerSnowmanFigureElementsGameSnowman();
+    removeContainerGameSnowmanWordElements();
+    removeContainerSnowmanKeyboardLines();
 
-    let newDiv = document.createElement("div");
-    parentElement.append(newDiv);
-    newDiv.style.display = "grid";
-    newDiv.style.backgroundColor = "darkslategrey";
-    newDiv.style.gridRow = rowChildStart;
-    newDiv.style.gridColumn = columnChildStart;
-    newDiv.style.gridRowEnd = rowChildEnd;
-    newDiv.style.gridColumnEnd = columnChildEnd;
-    newDiv.style.gridTemplateRows = "1fr";
-    newDiv.style.gridTemplateColumns = "1fr";
-    newDiv.style.color = "#5c3243";
-    // newDiv.innerHTML = "Game over. You did well."; // variable text game over and winner the same, but not the same
+    playGameSnowmanBuildConfiguration();
 
-    newDiv.setAttribute("id", containerGameSnowmanGameOverDescription);
-
-    // create button new game
 
 }
 
-function createGameOverForLoser(){
-    createContainerGameOver();
-    let element = document.getElementById(containerGameSnowmanGameOverDescription);
-    element.innerHTML = "Game over. You did well.";
-}
+// createContainerGameSnowmanWordElements();
 
-function createGameOverForWinner(){
-    createContainerGameOver();
-    let element = document.getElementById(containerGameSnowmanGameOverDescription);
-    element.innerHTML = "You win.";
-}
-
-createContainerGameSnowmanWordElements();
+playGameSnowmanBuildConfiguration(); // onclick - temp

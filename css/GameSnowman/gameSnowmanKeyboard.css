@@ -16,15 +16,23 @@
     /*color: #8e0035;*/
     /*color: #8a4c65;*/
     /*color: #733f54;*/
-    color: #5c3243;
     /*color: #bf889b;*/
+
+    /*color: #5c3243;*/
+
+    /*color: #d57bb2;*/
+    /*color: #ae7498;*/
+    color: #ac4a71;
 
     padding: 9px;
 
 
+    justify-content: center;
+    align-items: center;
     text-align: center;
+
     font-size: 0.9rem;
-    font-weight: 900;
+    font-weight: 200;
     /*box-shadow: 1px 5px #A05880;*/
 
     border: none;
@@ -44,4 +52,9 @@
 
 
 }
+
+.snowmanKeyboardButtonNewGameGameOver {
+    color: #27ab48;
+}
+
 
