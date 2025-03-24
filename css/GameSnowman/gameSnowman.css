@@ -52,8 +52,9 @@
     /*box-shadow: 0 5px 15px 0 #1f130e;*/
     /*box-shadow: 0 3px 15px 0 #ac4a71;*/
     /*box-shadow: 0 3px 15px 0 #621735;*/
+    box-shadow: 0 2px 10px 0 #621735;
     /*box-shadow: 0 3px 15px 0 #390B1E;*/
-    box-shadow: 0 3px 15px 0 #230511;
+    /*box-shadow: 0 3px 15px 0 #230511;*/
 
 
 }
@@ -79,7 +80,8 @@
     grid-row: 1 / 1;
     grid-column: 1 / 1;
     /*grid-template-rows: 1fr repeat(3, 8fr) 1fr;*/
-    grid-template-rows: 1fr 4fr 4fr 2fr 1fr;
+    /*grid-template-rows: 1fr 4fr 4fr 2fr 1fr;*/
+    grid-template-rows: 1fr 6fr 6fr 2fr 1fr;
     /*grid-template-rows: 1fr repeat(2, 8fr) 1fr;*/
     grid-template-columns: 1fr 24fr 1fr;
 }

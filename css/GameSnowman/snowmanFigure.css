@@ -20,93 +20,98 @@
 
 
 /* snowman container - start from top (hat) */
-.containerSnowmanFigureElement-1 {
+#containerSnowmanFigureElement-0 {
     /*background-color: black;*/
     display: grid;
     grid-row: 2 / 3;
     grid-column: 8 / 17;
 }
 
-.containerSnowmanFigureElement-2 {
+#containerSnowmanFigureElement-1 {
     /*background-color: blue;*/
     display: grid;
+    /*grid-row: 3 / 4;  // 5 not 4 */
     grid-row: 3 / 5;
     grid-column: 9 / 16;
 }
 
-.containerSnowmanFigureElement-3 {
+#containerSnowmanFigureElement-2 {
     /*background-color: blue;*/
     display: grid;
     grid-row: 4 / 5;
     grid-column: 9 / 16;
 }
 
-.containerSnowmanFigureElement-4 {
+#containerSnowmanFigureElement-3 {
     /*background-color: pink;*/
     display: grid;
     /*grid-row: 4 / 4;*/
     /*grid-column: 9 / 15;*/
-    grid-row: 5 / 5;
+
+    grid-row: 5 / 6;
     grid-column: 7 / 18;
+
+    /*grid-row: 5 / 7;*/
+    /*grid-column: 7 / 18;*/
 }
 
-.containerSnowmanFigureElement-5 {
+#containerSnowmanFigureElement-4 {
     /*background-color: yellow;*/
     display: grid;
     grid-row: 6 / 8;
     grid-column: 9 / 16;
 }
 
-.containerSnowmanFigureElement-6 {
+#containerSnowmanFigureElement-5 {
     /*background-color: greenyellow;*/
     display: grid;
     grid-row: 8 / 10;
     grid-column: 9 / 16;
 }
 
-.containerSnowmanFigureElement-7 {
+#containerSnowmanFigureElement-6 {
     /*background-color: yellow;*/
     display: grid;
     grid-row: 10 / 12;
     grid-column: 8 / 17;
 }
 
-.containerSnowmanFigureElement-8 {
+#containerSnowmanFigureElement-7 {
     /*background-color: greenyellow;*/
     display: grid;
     grid-row: 12 / 14;
     grid-column: 8 / 17;
 }
 
-.containerSnowmanFigureElement-9 {
+#containerSnowmanFigureElement-8 {
     /*background-color: yellow;*/
     display: grid;
     grid-row: 14 / 16;
     grid-column: 8 / 17;
 }
 
-.containerSnowmanFigureElement-10 {
+#containerSnowmanFigureElement-9 {
     /*background-color: greenyellow;*/
     display: grid;
     grid-row: 16 / 18;
     grid-column: 7 / 18;
 }
 
-.containerSnowmanFigureElement-11 {
+#containerSnowmanFigureElement-10 {
     /*background-color: dimgrey;*/
     display: grid;
     grid-row: 18 / 20;
     grid-column: 6 / 19;
 }
 
-.containerSnowmanFigureElement-12 {
+#containerSnowmanFigureElement-11 {
     /*background-color: green;*/
     display: grid;
     grid-row: 20 / 22;
     grid-column: 5 / 20;
 }
 
-.containerSnowmanFigureElement-13 {
+#containerSnowmanFigureElement-12 {
     /*background-color: black;*/
     display: grid;
     grid-row: 22 / 22;
@@ -115,14 +120,14 @@
 
 /* hands  */
 /* left */
-.containerSnowmanFigureElement-14 {
+#containerSnowmanFigureElement-13 {
     /*background-color: orange;*/
     display: grid;
     grid-row: 10 / 13;
     grid-column: 4 / 8;
 }
 
-.containerSnowmanFigureElement-15 {
+#containerSnowmanFigureElement-14 {
     /*background-color: forestgreen;*/
     display: grid;
     grid-row: 4 / 10;
@@ -130,14 +135,14 @@
 }
 
 /* right */
-.containerSnowmanFigureElement-16 {
+#containerSnowmanFigureElement-15 {
     /*background-color: orange;*/
     display: grid;
     grid-row: 10 / 13;
     grid-column: 17 / 21;
 }
 
-.containerSnowmanFigureElement-17 {
+#containerSnowmanFigureElement-16 {
     /*background-color: forestgreen;*/
     display: grid;
     grid-row: 4 / 10;
@@ -145,126 +150,315 @@
 }
 
 
-
 /* snowman action id - start from top (hat) */
 
-.snowmanFigureElementAddShape{
+.snowmanFigureElementActionAddShape {
     color: #ac4a71;
-    border-right-style: solid ;
-    border-left-style: solid ;
+    border-color: #ac4a71;
+    border-right-style: solid;
+    border-left-style: solid;
+    /*border-radius: 0.45rem;*/
+    border-radius: 1.7rem;
     text-align: center;
     padding-top: 0.8rem;
     font-size: 2rem;
 }
 
-.snowmanFigureElements{
+.snowmanFigureElementsFinal {
 
-    text-align: center;
-    padding-top: 0.8rem;
-    color: #ac4a71;
-    
-    border-right-style: solid ;
-    border-left-style: solid ;
+    /*border-color: #000000;*/
+
+    color: #000000;
+
+    /*color: #e9a610;*/
+    /*background-color: #000000;*/
+    /*background-color: #000000;*/
+
+    /*border-color: antiquewhite;*/
+    /*background-color: antiquewhite;*/
+
+    /*opacity: 0.9;*/
+    border: 0;
+
+    /*box-shadow: -5px -1px 19px 1px #ac4a71;*/
+    /*box-shadow: -70px 13px 50px 4px antiquewhite inset;*/
+
+    /* ok 1*/
+    box-shadow: -5px -2px 50px 1px antiquewhite,
+    -70px 13px 50px 4px antiquewhite inset;
+
+    /*ok 2 */
+    /*box-shadow: -5px -1px 19px 1px antiquewhite,*/
+    /*-70px 13px 50px 4px antiquewhite inset;*/
+
+    /*box-shadow: 0px -9px 20px 0px antiquewhite,*/
+    /*-70px 13px 50px 4px antiquewhite inset;*/
+
+    /*box-shadow: -12px -7px 20px 0px antiquewhite,*/
+    /*-70px 13px 50px 4px antiquewhite inset;*/
 
 }
 
 
-.snowmanFigureElementAction-1 {
+.snowmanFigureElementAction-0 {
     /*background-color: #412E47;*/
     position: relative;
-    height: 100%;
-    width: 25%;
+    /*height: 100%;*/
+    /*width: 25%;*/
+
+    height: 1rem;
+    width: 2rem;
+
     border-radius: 50%;
 
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
+    /*background-color: #37150f;*/
+    /*background-color: #333332;*/
+    /*background-color: #242423;*/
+    /*background-color: #242423;*/
+    /*background-color: #470016;*/
+    background-color: #000000;
+
+    /*box-shadow: 0px 0px 1px 1px #2a1e1e; */
+    /* box-shadow: 0px 0px 1px 1px #101010; */
+    /* box-shadow: 0 5px 15px 0 #1f130e; */
+    /* box-shadow: 0 3px 15px 0 #ac4a71; */
+    /* box-shadow: 0 3px 15px 0 #621735; */
+    /*box-shadow: 0 2px 10px 0 #621735;*/
+    /*box-shadow: 0 2px 10px 0 #2c3e3a;*/
+    /*box-shadow: 0 2px 10px 0 #3b534d;*/
+    /*box-shadow: 0 2px 10px 0 #587d74;*/
+
+    /* box-shadow: 0 3px 15px 0 #390B1E; */
+    /* box-shadow: 0 3px 15px 0 #230511;*/
+
+    /*box-shadow: 0px 3px 15px -1.5px #ac4a71;*/
+    /*box-shadow: -5px -5px 13px 1px #ac4a71;*/
+    box-shadow: -5px -1px 19px 1px #390B1E;
+    /*-70px 13px 50px 4px #ac4a71 inset;*/
+
+}
+
+.snowmanFigureElementAction-1 {
+    /*background-color: saddlebrown;*/
+    /*border-radius: 1.4rem;*/
+
+    /*background-color: #470016;*/
+    /*background-color: #2c2d19;*/
+    background-color: #000000;
+
+    /*box-shadow: 0px 0px 1px 1px #2a1e1e; */
+    /* box-shadow: 0px 0px 1px 1px #101010; */
+    /* box-shadow: 0 5px 15px 0 #1f130e; */
+    /* box-shadow: 0 3px 15px 0 #ac4a71; */
+    /* box-shadow: 0 3px 15px 0 #621735; */
+    /*box-shadow: 0 2px 10px 0 #621735;*/
+    /*box-shadow: 0 2px 10px 0 #2c3e3a;*/
+    /*box-shadow: 0 2px 10px 0 #3b534d;*/
+    /*box-shadow: 0 2px 10px 0 #587d74;*/
+
+    /* box-shadow: 0 3px 15px 0 #390B1E; */
+    /* box-shadow: 0 3px 15px 0 #230511;*/
+
+    /*box-shadow: 0px 3px 15px -1.5px #ac4a71;*/
+    /*box-shadow: -5px -1px 19px 1px #ac4a71;*/
+
+    box-shadow: -5px -1px 19px 1px #390B1E,
+    -4px -1px 20px 1px #ac4a71 inset;
 }
 
 .snowmanFigureElementAction-2 {
-    /*background-color: saddlebrown;*/
-    border-radius: 0.45rem;
+    /*background-color: orange;*/
+    border-radius: 0.0000001rem;
+
+    /*background-color: #470016;*/
+    /*background-color: #2c2d19;*/
+    background-color: #000000;
+
+    /*box-shadow: 0px 0px 1px 1px #2a1e1e; */
+    /* box-shadow: 0px 0px 1px 1px #101010; */
+    /* box-shadow: 0 5px 15px 0 #1f130e; */
+    /* box-shadow: 0 3px 15px 0 #ac4a71; */
+    box-shadow: 0 0 0 0 #ac4a71;
+    /* box-shadow: 0 3px 15px 0 #621735; */
+    /*box-shadow: 0 2px 10px 0 #621735;*/
+    /*box-shadow: 0 2px 10px 0 #2c3e3a;*/
+    /*box-shadow: 0 2px 10px 0 #3b534d;*/
+    /*box-shadow: 0 2px 10px 0 #587d74;*/
+
+    /* box-shadow: 0 3px 15px 0 #390B1E; */
+    /* box-shadow: 0 3px 15px 0 #230511;*/
+
+
 }
 
 .snowmanFigureElementAction-3 {
-    /*background-color: orange;*/
-}
-
-.snowmanFigureElementAction-4 {
     /*background-color: #412E47;*/
-    /*width: 4rem;*/
-    border-radius: 0.45rem;
+    /*position: relative;*/
+    width: 90%;
+    /*padding-left: 0.2rem;*/
+    /*padding-right: 0.2rem;*/
+
+    margin: 0 auto;
+
+    /*background-color: #37150f;*/
+    /*background-color: #333332;*/
+    /*background-color: #242423;*/
+    /*background-color: #470016;*/
+    background-color: #000000;
+
+    /*box-shadow: 0px 0px 1px 1px #2a1e1e; */
+    /* box-shadow: 0px 0px 1px 1px #101010; */
+    /* box-shadow: 0 5px 15px 0 #1f130e; */
+    /* box-shadow: 0 3px 15px 0 #ac4a71; */
+    /* box-shadow: 0 3px 15px 0 #621735; */
+    /*box-shadow: 0 2px 10px 0 #621735;*/
+    /*box-shadow: 0 2px 10px 0 #2c3e3a;*/
+    /*box-shadow: 0 2px 10px 0 #3b534d;*/
+    /*box-shadow: 0 2px 10px 0 #587d74;*/
+
+    /* box-shadow: 0 3px 15px 0 #390B1E; */
+    /* box-shadow: 0 3px 15px 0 #230511;*/
+
+    /*box-shadow: 0px 3px 15px -1.5px #621735;*/
+    /*box-shadow: -5px -1px 19px 1px #ac4a71;*/
+    /*box-shadow: -5px -1px 19px 1px #ac4a71;*/
+    /*box-shadow: -5px 4px 19px 1px #390B1E,*/
+    /*-4px -1px 20px 1px #621735 inset;   */
+    /*box-shadow: -5px 4px 19px 1px #390B1E,*/
+    /*-10px -4px 0px 0px #621735 inset;*/
+    /*-4px -10px 0px 0px #621735 inset;*/
+
+    /*box-shadow: -5px 4px 19px 1px #390B1E,*/
+    /*-8px -2px 5px 0px #40071e inset;*/
+
+    /*box-shadow: -5px -1px 19px 1px #390B1E,*/
+    /*-4px -1px 20px 1px #390B1E inset;*/
+
+    /*box-shadow: inset 5px -5px 8px 1px #250310;*/
+    /*-4px -1px 20px 1px #250310 inset;*/
+
+    /*box-shadow:  -16px 10px 8px 1px #250310 inset;*/
+    /*box-shadow: -5px -1px 19px 1px #390B1E,*/
+    /*-9px 8px 18px 3px #ac4a71 inset;*/
+
+    /*box-shadow: inset -5px 3px 6px 1px #ac4a71,*/
+    /*-9px 8px 18px 3px #390B1E ;*/
+
+    box-shadow: inset -5px 3px 6px 1px #390B1E;
+    /*-18px -10px 20px 0px #390B1E;*/
 }
 
-:root{
-    --divRadious: 0.6rem;
+#snowmanFigureElementSmile{
+    /*background-color: black;*/
+    /*background-color: antiquewhite;*/
+    position: relative;
+    width: 50%;
+    height: 100%;
+    padding: 0;
+    margin: 0 auto;
+    border: 0;
+    top: -30%;
+    opacity: 0.8;
+
+    border-radius: 70%;
+
+    /*box-shadow: inset 0px -3px 0px 1px #390B1E;*/
+
+    /*box-shadow: inset 0px -3px 0px 1px #390B1E,*/
+    /*0px -3px 0px 1px #390B1E;*/
+
+    /*box-shadow: inset 0px -3px 0px 1px #390B1E, */
+    /*3px 6px 4px 0px #390B1E;*/
+
+    /*box-shadow: inset 0px -3px 0px 1px #390B1E,*/
+    /*0px 3px 0px 1px #390B1E;*/
+
+    /*box-shadow: inset 0px -4px 2px 0px #390B1E,*/
+    /*0px 3px 0px 1px #390B1E;*/
+
+    box-shadow: inset 0px -4px 2px 0px #000000,
+    0px 3px 0px 1px #000000;
 }
 
-
-
-.snowmanFigureElementAction-5 {
-    /*background-color: cornflowerblue;*/
-    border-radius: var(--divRadious);
+.snowmanFigureElementSmileSad{
+    box-shadow: 0px -3px 0px 1px #390B1E;
 }
 
-.snowmanFigureElementAction-6 {
-    /*background-color: deepskyblue;*/
-    border-radius: var(--divRadious);
+.snowmanFigureElementEye{
+
 }
 
-.snowmanFigureElementAction-7 {
-    /*background-color: lightblue;*/
-    border-radius: var(--divRadious);
-}
+/*:root{*/
+/*    --divRadious: 0.6rem;*/
+/*}*/
 
-.snowmanFigureElementAction-8 {
-    /*background-color: royalblue;*/
-    border-radius: var(--divRadious);
-}
 
-.snowmanFigureElementAction-9 {
-    /*background-color: skyblue;*/
-    border-radius: var(--divRadious);
-}
+/*.snowmanFigureElementAction-4 {*/
+/*    !*background-color: cornflowerblue;*!*/
+/*    border-radius: var(--divRadious);*/
+/*}*/
 
-.snowmanFigureElementAction-10 {
-    /*background-color: cornflowerblue;*/
-    border-radius: var(--divRadious);
-}
+/*.snowmanFigureElementAction-5 {*/
+/*    !*background-color: deepskyblue;*!*/
+/*    border-radius: var(--divRadious);*/
+/*}*/
 
-.snowmanFigureElementAction-11 {
-    /*background-color: steelblue;*/
-    border-radius: var(--divRadious);
-}
+/*.snowmanFigureElementAction-6 {*/
+/*    !*background-color: lightblue;*!*/
+/*    border-radius: var(--divRadious);*/
+/*}*/
 
-.snowmanFigureElementAction-12 {
-    /*background-color: cadetblue;*/
-    border-radius: var(--divRadious);
-}
+/*.snowmanFigureElementAction-7 {*/
+/*    !*background-color: royalblue;*!*/
+/*    border-radius: var(--divRadious);*/
+/*}*/
 
-.snowmanFigureElementAction-13 {
-    /*background-color: palegreen;*/
-    border-radius: var(--divRadious);
-    /*border-radius: 0.2rem;*/
-}
+/*.snowmanFigureElementAction-8 {*/
+/*    !*background-color: skyblue;*!*/
+/*    border-radius: var(--divRadious);*/
+/*}*/
 
-.snowmanFigureElementAction-14 {
-    /*background-color: cadetblue;*/
-    border-radius: var(--divRadious);
-}
+/*.snowmanFigureElementAction-9 {*/
+/*    !*background-color: cornflowerblue;*!*/
+/*    border-radius: var(--divRadious);*/
+/*}*/
 
-.snowmanFigureElementAction-15 {
-    /*background-color: palegreen;*/
-    border-radius: var(--divRadious);
-}
+/*.snowmanFigureElementAction-10 {*/
+/*    !*background-color: steelblue;*!*/
+/*    border-radius: var(--divRadious);*/
+/*}*/
 
-.snowmanFigureElementAction-16 {
-    /*background-color: cadetblue;*/
-    border-radius: var(--divRadious);
-}
+/*.snowmanFigureElementAction-11 {*/
+/*    !*background-color: cadetblue;*!*/
+/*    border-radius: var(--divRadious);*/
+/*}*/
 
-.snowmanFigureElementAction-17 {
-    /*background-color: palegreen;*/
-    border-radius: var(--divRadious);
-}
+/*.snowmanFigureElementAction-12 {*/
+/*    !*background-color: palegreen;*!*/
+/*    border-radius: var(--divRadious);*/
+/*    !*border-radius: 0.2rem;*!*/
+/*}*/
+
+/*.snowmanFigureElementAction-13 {*/
+/*    !*background-color: cadetblue;*!*/
+/*    border-radius: var(--divRadious);*/
+/*}*/
+
+/*.snowmanFigureElementAction-14 {*/
+/*    !*background-color: palegreen;*!*/
+/*    border-radius: var(--divRadious);*/
+/*}*/
+
+/*.snowmanFigureElementAction-15 {*/
+/*    !*background-color: cadetblue;*!*/
+/*    border-radius: var(--divRadious);*/
+/*}*/
+
+/*.snowmanFigureElementAction-16 {*/
+/*    !*background-color: palegreen;*!*/
+/*    border-radius: var(--divRadious);*/
+/*}*/

@@ -1,10 +1,88 @@
 .gameSnowmanWordElementTextBuild{
     color: #ac4a71;
+    /*margin: 0;*/
+    text-align: center;
+    /*padding-top: 0.5rem;*/
+    /*font-size: 1.7rem;*/
+    /*font-weight: 700;*/
+}
+
+#gameSnowmanWordElementTextBuild-p0{
+    /*color: #ac4a71;*/
+    /*margin: 0;*/
+    /*text-align: center;*/
+
+    /*height: 0.5rem;*/
+    /*height: auto;*/
+    margin-top: 0;
+    margin-bottom: 0;
+    /*font-size: 1.7rem;*/
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+#gameSnowmanWordElementTextBuild-p1{
+    /*color: #ac4a71;*/
+    /*margin: 0;*/
+    /*text-align: center;*/
+
+    /*height: 1rem;*/
+    /*height: auto;*/
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    font-weight: 200;
+}
+
+#gameSnowmanWordElementTextBuild-p2{
+    /*color: #ac4a71;*/
+    /*margin: 0;*/
+    /*text-align: center;*/
+
+    /*height: 1rem;*/
+
+    /*height: auto;*/
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 1.4rem;
     font-weight: 200;
-
-
 }
+
+#gameSnowmanWordElementTextBuild-p3{
+    /*color: #ac4a71;*/
+    /*margin: 0;*/
+    /*text-align: center;*/
+
+    /*height: 1rem;*/
+
+    /*height: auto;*/
+    /*margin-bottom: 4rem;*/
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+
+#gameSnowmanWordElementTextBuild-p4{
+    /*color: #ac4a71;*/
+    /*margin: 0;*/
+    /*text-align: center;*/
+
+    /*height: 1rem;*/
+
+    /*height: auto;*/
+    /*margin-bottom: 4rem;*/
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+
 
 .gameSnowmanWordElementToDiscover{
     /*display: flex;*/
