@@ -60,6 +60,7 @@
     display: grid;
     grid-row: 6 / 8;
     grid-column: 9 / 16;
+
 }
 
 #containerSnowmanFigureElement-5 {
@@ -160,7 +161,7 @@
     /*border-radius: 0.45rem;*/
     border-radius: 1.7rem;
     text-align: center;
-    padding-top: 0.8rem;
+    /*padding-top: 0.8rem;*/
     font-size: 2rem;
 }
 
@@ -352,19 +353,16 @@
     /*-18px -10px 20px 0px #390B1E;*/
 }
 
-#snowmanFigureElementSmile{
-    /*background-color: black;*/
+#snowmanFigureElementSmile {
     /*background-color: antiquewhite;*/
-    position: relative;
-    width: 50%;
-    height: 100%;
-    padding: 0;
-    margin: 0 auto;
-    border: 0;
-    top: -30%;
-    opacity: 0.8;
 
+    width: 3rem;
+    height: 1.4rem;
+    border: 0;
+    opacity: 0.8;
     border-radius: 70%;
+    margin-right: 0.3rem;
+    margin-left: 0.3rem;
 
     /*box-shadow: inset 0px -3px 0px 1px #390B1E;*/
 
@@ -380,62 +378,230 @@
     /*box-shadow: inset 0px -4px 2px 0px #390B1E,*/
     /*0px 3px 0px 1px #390B1E;*/
 
-    box-shadow: inset 0px -4px 2px 0px #000000,
-    0px 3px 0px 1px #000000;
+    /*box-shadow: inset 0px -4px 2px 0px #000000,*/
+    /*0px 3px 0px 1px #000000;*/
+
+    /*box-shadow: inset 0px -4px 2px 0px #000000,*/
+    /*0px 3px 0px -1px #000000;*/
+
+    /*box-shadow: inset 0px -2.5px 0px 0px #000000,*/
+    /*0px 3px 0px -1px #000000;*/
+
+    /*box-shadow: inset 0px -2.5px 0px 0px #000000,*/
+    /*inset 0px -9px 0px -1px #000000;*/
+
+    /*box-shadow: inset 0px -2.5px 0px 0px #000000,*/
+    /*inset 0px -6px 0px -1px #000000;*/
+
+    box-shadow: inset 0px -2.5px 0px 0px #000000,
+    inset -6px -4px 0px -1px #000000
+
+
 }
 
-.snowmanFigureElementSmileSad{
+.snowmanFigureElementSmileSad {
     box-shadow: 0px -3px 0px 1px #390B1E;
 }
 
-.snowmanFigureElementEye{
+.snowmanFigureElementEyes {
+
+    /*background-color: darkslategrey;*/
+    /*position: relative;*/
+    /*width: 15%;*/
+    /*height: 60%;    */
+
+    width: 2rem;
+    height: 2rem;
+
+    margin-top: 0.7rem;
+    margin-right: 0.3rem;
+    margin-left: 0.3rem;
+
+    /*align-items: flex-start;*/
+
+    /*padding: 0;*/
+    /*margin: auto;*/
+    /*border: 0;*/
+
+
+    /*!*top: -30%;*!*/
+    /*opacity: 0.8;*/
+
+    border-radius: 60%;
+
+    /*box-shadow: inset 0px 14px 1px 0px #000000;*/
+
+    /*box-shadow: inset 0px 14px 1px 0px #1A780C,*/
+    /*inset 0px 14px 1px 0px #FFFFFF;*/
+
+    /*box-shadow: inset 0px 14px 1px 0px #FFFFFF,*/
+    /*inset 0px 14px 1px 0px #1A780C;*/
+
+    /*box-shadow: inset 0px 7px 2px 0px #FFFFFF,*/
+    /*inset 0px 16px 1px 0px #1A780C;*/
+
+    /*box-shadow: inset 0px 7px 2px 0px #FFFFFF,*/
+    /*inset 0px 16px 1px 0px #1A780C,*/
+    /*inset 0px 7px 2px 0px #FFFFFF;*/
+
+    /*box-shadow: inset 0px 7px 2px 1px #FFFFFF,*/
+    /*!*inset 0px 15px 1px 0px #1A780C,*!*/
+    /*inset 4px -3px 2px 0px #FFFFFF;*/
+
+    /*box-shadow: inset -1px 2px 2px 5px #FFFFFF,*/
+    /*inset 0px 1px 0px 7px #FFFFFF,*/
+    /*inset 0px 15px 1px 0px #1A780C;*/
+
+    /*box-shadow: inset -1px 2px 2px 5px #FFFFFF,*/
+    /*inset 0px 1px 0px 7px #FFFFFF,*/
+    /*inset 0px 15px 1px 0px #1A780C;*/
+
+    /*box-shadow: inset -1px 2px 2px 5px #FFFFFF,*/
+    /*inset 0px 1px 0px 7px #FFF333,*/
+    /*inset 7px 13px 1px 0px #1A780C,*/
+    /*inset 0px 1px 0px 7px #FF3694;*/
+
+    /*box-shadow: inset 4px 12px 2px 0px #1A780C,*/
+    /*inset 5px -5px 0px 7px #FFFFFF,*/
+    /*inset 5px -5px 0px 7px #000000,*/
+    /*inset -4px 15px 1px 0px #000000,*/
+    /*inset -7px -3px 0px 7px #000000;*/
+
+    /*box-shadow:*/
+    /*        inset 1px 6px 2px 0px #000000,*/
+    /*        inset 7px 12px 0px 1px #FFFFFF,*/
+    /*        inset 8px 13px 0px 3px #1A780C,*/
+    /*        inset 5px -5px 0px 8px #008899,*/
+    /*        inset -4px 18px 4px 0px #621735;*/
+
+    /*box-shadow:*/
+    /*        inset 1px 6px 2px 0px #000000,*/
+    /*        inset 7px 12px 0px 1px #FFFFFF,*/
+    /*        inset 8px 13px 0px 3px #1A780C,*/
+    /*        inset 5px -5px 0px 8px #000000,*/
+    /*        inset -4px 18px 4px 0px #000000;*/
+
+    /*box-shadow:*/
+    /*        inset 1px 6px 2px 0px #000000,*/
+    /*        inset 1px 3px 2px 6px #FFFFFF,*/
+    /*        inset 1px 3px 3px 9px #1A780C,*/
+    /*        inset 0px 1px 2px 14px #000000;*/
+
+    box-shadow: inset 1px 6px 2px 0px #000000,
+    inset 1px 3px 2px 6px #FFFFFF,
+    inset 1px 3px 3px 9px #1A780C,
+    inset 0px 1px 2px 14px #000000;
+
+    /*box-shadow:*/
+    /*        inset 0.1rem 0.6rem 0.2rem 0rem #000000,*/
+    /*        inset 0.1rem 0.3rem 0.2rem 0.6rem #FFFFFF,*/
+    /*        inset 0.1rem 0.3rem 0.3rem 0.9rem #1A780C,*/
+    /*        inset 0.0rem 0.1rem 0.2rem 0.14rem #000000;*/
+
 
 }
 
-/*:root{*/
-/*    --divRadious: 0.6rem;*/
-/*}*/
+
+.snowmanFigureElementEye-0 {
+    /*background-color: darkgreen;*/
+    /*background-color: #000000;*/
+    background-color: #FFFFFF;
+    /*background-color: #ac4a71;*/
+    /*background-color: #1A780C;*/
+
+}
+
+.snowmanFigureElementEye-1 {
+
+    /*background-color: darkslategrey;*/
+    /*background-color: #000000;*/
+    background-color: #FFFFFF;
+    /*background-color: #ac4a71;*/
+    /*background-color: #1A780C;*/
+
+}
+
+.snowmanFigureElementButtons {
+    /*background-color: darkslategrey;*/
+    background-color: #FFFFFF;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 60%;
+
+    box-shadow:
+            inset 1px -2px 5px 8px #000000
+    /*inset 0px 1px 2px 14px #000000;*/
+
+}
 
 
-/*.snowmanFigureElementAction-4 {*/
-/*    !*background-color: cornflowerblue;*!*/
-/*    border-radius: var(--divRadious);*/
-/*}*/
+:root {
+    /*--divRadious: 0.6rem;*/
+    --display: flex;
+    --justifyContent: center;
+    --alignItems: center;
+}
 
-/*.snowmanFigureElementAction-5 {*/
-/*    !*background-color: deepskyblue;*!*/
-/*    border-radius: var(--divRadious);*/
-/*}*/
 
-/*.snowmanFigureElementAction-6 {*/
-/*    !*background-color: lightblue;*!*/
-/*    border-radius: var(--divRadious);*/
-/*}*/
+#snowmanFigureElementAction-4 {
+    /*!*background-color: cornflowerblue;*!*/
+    display: var(--display);
+    justify-content: var(--justifyContent);
 
-/*.snowmanFigureElementAction-7 {*/
-/*    !*background-color: royalblue;*!*/
-/*    border-radius: var(--divRadious);*/
-/*}*/
+}
 
-/*.snowmanFigureElementAction-8 {*/
-/*    !*background-color: skyblue;*!*/
-/*    border-radius: var(--divRadious);*/
-/*}*/
+#snowmanFigureElementAction-5 {
+    /*background-color: deepskyblue;*/
+    display: var(--display);
+    justify-content: var(--justifyContent);
+    align-items: var(--alignItems);
+}
 
-/*.snowmanFigureElementAction-9 {*/
-/*    !*background-color: cornflowerblue;*!*/
-/*    border-radius: var(--divRadious);*/
-/*}*/
+#snowmanFigureElementAction-6 {
+    /*background-color: lightblue;*/
+    display: var(--display);
+    justify-content: var(--justifyContent);
+    align-items: var(--alignItems);
+}
 
-/*.snowmanFigureElementAction-10 {*/
-/*    !*background-color: steelblue;*!*/
-/*    border-radius: var(--divRadious);*/
-/*}*/
+#snowmanFigureElementAction-7 {
+    /*background-color: royalblue;*/
+    display: var(--display);
+    justify-content: var(--justifyContent);
+    align-items: var(--alignItems);
 
-/*.snowmanFigureElementAction-11 {*/
-/*    !*background-color: cadetblue;*!*/
-/*    border-radius: var(--divRadious);*/
-/*}*/
+}
+
+#snowmanFigureElementAction-8 {
+    /*background-color: skyblue;*/
+    display: var(--display);
+    justify-content: var(--justifyContent);
+    align-items: var(--alignItems);
+
+}
+
+#snowmanFigureElementAction-9 {
+    /*background-color: cornflowerblue;*/
+    display: var(--display);
+    justify-content: var(--justifyContent);
+    align-items: var(--alignItems);
+
+}
+
+#snowmanFigureElementAction-10 {
+    /*background-color: steelblue;*/
+    display: var(--display);
+    justify-content: var(--justifyContent);
+    align-items: var(--alignItems);
+
+}
+
+#snowmanFigureElementAction-11 {
+    /*background-color: cadetblue;*/
+    display: var(--display);
+    justify-content: var(--justifyContent);
+    align-items: var(--alignItems);
+}
 
 /*.snowmanFigureElementAction-12 {*/
 /*    !*background-color: palegreen;*!*/

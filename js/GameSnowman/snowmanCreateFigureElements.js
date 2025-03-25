@@ -51,21 +51,39 @@ function createSnowmanFigure(parentId, subpageName) {
         div1.append(innerDiv);
 
 
-        if (i === 4)
+        if (i === 4){
             // innerDiv.innerHTML = "O,O";
-            let divEye = document.createElement('div');
-        divEye.setAttribute('id', "snowmanFigureElementEye");
-        document.getElementById(ClassGreatGrandchild + i.toString()).append(divEye);
+
+            for (let j = 0; j < 2; j++) {
+
+                let divEye = document.createElement('div');
+                document.getElementById(ClassGreatGrandchild + i.toString()).append(divEye);
+
+                divEye.classList.add("snowmanFigureElementEyes");
+                divEye.classList.add("snowmanFigureElementEye-"+j.toString());
+
+
+            }
+
+        }
 
         if (i === 5) {
             // innerDiv.innerHTML = "U";
+
             let divSmile = document.createElement('div');
             divSmile.setAttribute('id', "snowmanFigureElementSmile");
             document.getElementById(ClassGreatGrandchild + i.toString()).append(divSmile);
         }
 
 
-        if (i > 5 && i < 12) innerDiv.innerHTML = "*";
+        if (i > 5 && i < 12) {
+            // innerDiv.innerHTML = "*";
+
+            let divButton = document.createElement('div');
+            document.getElementById(ClassGreatGrandchild + i.toString()).append(divButton);
+            divButton.classList.add("snowmanFigureElementButtons");
+
+        }
     }
 }
 
