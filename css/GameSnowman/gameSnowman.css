@@ -4,7 +4,8 @@
     /*grid-template-rows: 12fr 18fr 18fr 3fr 3fr 14fr 14fr 4fr;*/
     /*grid-template-rows: 2fr 28fr 18fr 3fr 3fr 14fr 14fr 4fr;*/
     grid-template-rows: 2fr 28fr 24fr 1fr 1fr 14fr 14fr 4fr;
-    grid-template-columns: 10fr 3fr 13fr 21fr 3fr 3fr 21fr 13fr 3fr 10fr;
+    /*grid-template-columns: 10fr 3fr 13fr 21fr 3fr 3fr 21fr 13fr 3fr 10fr;*/
+    grid-template-columns: 17fr 3fr 13fr 21fr 3fr 3fr 21fr 13fr 3fr 17fr;
 }
 
 /* animation figure */
@@ -20,8 +21,15 @@
     grid-row: 2 / 8;
     grid-column: 2 / 6;
 
+    /*grid-template-rows: 1fr;*/
+    /*grid-template-columns: 1fr;*/
+
+    box-shadow: 0 2px 10px 0 #621735;
+
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
+    grid-template-columns:  minmax( 400px, 1fr);
+
+
 }
 
 #containerGameSnowmanAnimationElements {
@@ -40,22 +48,29 @@
     /*grid-column: 3 / 5;*/
 
     grid-row: 2 / 6;
-    grid-column: 2 / 6;
+    grid-column: 3 / 5;
 
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
+
+    /*grid-template-rows: 1fr;*/
+    /*grid-template-columns: 1fr;*/
 
     border: none;
     border-radius: 0.45rem;
-    /*box-shadow: 0px 0px 1px 1px #2a1e1e;*/
-    /*box-shadow: 0px 0px 1px 1px #101010;*/
-    /*box-shadow: 0 5px 15px 0 #1f130e;*/
-    /*box-shadow: 0 3px 15px 0 #ac4a71;*/
-    /*box-shadow: 0 3px 15px 0 #621735;*/
-    box-shadow: 0 2px 10px 0 #621735;
-    /*box-shadow: 0 3px 15px 0 #390B1E;*/
-    /*box-shadow: 0 3px 15px 0 #230511;*/
+    /*box-shadow: 0 2px 10px 0 #621735;*/
 
+
+
+    /*grid-template-rows:  minmax( 100px, 680px);*/
+    /*grid-template-columns:  minmax( 250px, 450px);*/
+
+    grid-template-rows: 1fr;
+    grid-template-columns:  minmax( 400px, 500px);
+
+    /*align-items: center;*/
+    justify-content: center;
+
+    /*grid-template-rows: 1fr;*/
+    /*grid-template-columns: minmax( 450px, 600px);*/
 
 }
 
@@ -69,9 +84,16 @@
     grid-row: 2 / 4;
     grid-column: 6 / 10;
 
+    /*grid-template-rows: 1fr;*/
+    /*grid-template-columns: 1fr;*/
 
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
+    /*grid-template-columns:  minmax( 400px, 500px);*/
+    grid-template-columns:  minmax( 400px, 1fr);
+
+
+    /*align-items: center;*/
+    justify-content: center;
 }
 
 #containerGameSnowmanWordElements {
@@ -109,8 +131,11 @@
 
     /*grid-row: 6 / 8;*/
     /*grid-column: 4 / 8;*/
+    /*grid-template-rows: 1fr;*/
+    /*grid-template-columns: 1fr;*/
+
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(400px, 1fr);
 }
 
 #containerGameSnowmanKeyboardElements {

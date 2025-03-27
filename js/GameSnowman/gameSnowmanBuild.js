@@ -686,7 +686,7 @@ function createContainersForGameDescription() {
     parentElement.style.gridColumnEnd = columnEnd;
 
     parentElement.style.gridTemplateRows = " repeat(1, 0.00001fr 100fr  0.00001fr) ";
-    parentElement.style.gridTemplateColumns = "5fr 100fr 5fr";
+    parentElement.style.gridTemplateColumns = "0.00001fr 100fr 0.00001fr";
 
     let rowChildStart = 2;
     let columnChildStart = 2;
@@ -725,7 +725,7 @@ function createContainersForGameDescription() {
     // newDiv.style.color = "#bf889b";
     // newDiv.style.fontWeight = "200";
     // newDiv.classList.add("gameSnowmanWordElementTextBuild");
-    newDiv.classList.add(gameSnowmanWordElementTextBuild);
+    // newDiv.classList.add(gameSnowmanWordElementTextBuild);
 
     // //.
     // // newDiv.value = keysLine[i];
@@ -741,10 +741,10 @@ function createContainersForGameDescription() {
         // document.getElementById(containerGameSnowmanDescription).append(newDiv);
         newDiv.append(newP);
         newP.innerHTML = gameSnowmanDescriptionTextBuild[i];
-        // newP.classList.add(gameSnowmanWordElementTextBuild)
+
         // newP.classList.add(gameSnowmanWordElementTextBuild+"-p"+i)
         newP.setAttribute("id", gameSnowmanWordElementTextBuild + "-p" + i)
-
+        newP.classList.add(gameSnowmanWordElementTextBuild)
     }
 
 }

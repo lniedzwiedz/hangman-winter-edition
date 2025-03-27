@@ -79,8 +79,18 @@ function createSnowmanFigure(parentId, subpageName) {
         if (i > 5 && i < 12) {
             // innerDiv.innerHTML = "*";
 
+            // let divButtonBox = document.createElement('div');
+            // document.getElementById(ClassGreatGrandchild + i.toString()).append(divButtonBox);
+            // divButtonBox.classList.add("snowmanFigureElementButtons");
+
+
+            let divButtonBox = document.createElement('div');
+            document.getElementById(ClassGreatGrandchild + i.toString()).append(divButtonBox);
+            divButtonBox.setAttribute("id", "snowmanFigureElementButtonsNo-" + i.toString())
+            // divButtonBox.classList.add("snowmanFigureElementButtons");
+
             let divButton = document.createElement('div');
-            document.getElementById(ClassGreatGrandchild + i.toString()).append(divButton);
+            document.getElementById("snowmanFigureElementButtonsNo-" + i.toString()).append(divButton);
             divButton.classList.add("snowmanFigureElementButtons");
 
         }

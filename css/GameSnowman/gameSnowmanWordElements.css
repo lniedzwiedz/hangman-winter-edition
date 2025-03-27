@@ -5,6 +5,11 @@
     /*padding-top: 0.5rem;*/
     /*font-size: 1.7rem;*/
     /*font-weight: 700;*/
+
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    /*height: auto;*/
 }
 
 #gameSnowmanWordElementTextBuild-p0{
@@ -14,11 +19,13 @@
 
     /*height: 0.5rem;*/
     /*height: auto;*/
-    margin-top: 0;
-    margin-bottom: 0;
+    /*margin-top: 0;*/
+    /*margin-bottom: 0;*/
     /*font-size: 1.7rem;*/
+    /*font-size: 2.4rem;*/
     font-size: 2.4rem;
     font-weight: 400;
+    /*height: 2.4rem;*/
 }
 
 #gameSnowmanWordElementTextBuild-p1{
@@ -28,8 +35,14 @@
 
     /*height: 1rem;*/
     /*height: auto;*/
-    margin-top: 0;
-    margin-bottom: 2rem;
+    /*margin-top: 0;*/
+    /*margin-bottom: 0;*/
+    /*margin-bottom: 2rem;*/
+    /*margin-bottom: 35%;*/
+    /*margin-top: 0%;*/
+
+    position: relative;
+    bottom: 130%;
     font-size: 1.1rem;
     font-weight: 200;
 }
@@ -42,8 +55,8 @@
     /*height: 1rem;*/
 
     /*height: auto;*/
-    margin-top: 0;
-    margin-bottom: 0;
+    /*margin-top: 0;*/
+    /*margin-bottom: 0;*/
     font-size: 1.4rem;
     font-weight: 200;
 }
@@ -58,8 +71,8 @@
     /*height: auto;*/
     /*margin-bottom: 4rem;*/
 
-    margin-top: 0;
-    margin-bottom: 0;
+    /*margin-top: 0;*/
+    /*margin-bottom: 0;*/
 
     font-size: 0.9rem;
     font-weight: 200;
@@ -75,8 +88,8 @@
     /*height: auto;*/
     /*margin-bottom: 4rem;*/
 
-    margin-top: 0;
-    margin-bottom: 0;
+    /*margin-top: 0;*/
+    /*margin-bottom: 0;*/
 
     font-size: 1.2rem;
     font-weight: 200;
