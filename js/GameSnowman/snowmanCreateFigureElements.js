@@ -21,25 +21,11 @@ function createSnowmanFigure(parentId, subpageName) {
         let innerDiv = document.createElement("div");
         // innerDiv.setAttribute("class", ClassGreatGrandchild + i.toString());
         innerDiv.setAttribute("id", ClassGreatGrandchild + i.toString());
-        // innerDiv.setAttribute("class", "");
-        // innerDiv.className += " snowmanFigureElementActionAddShape";
+        // innerDiv.setAttribute("class", "snowmanFigureElementButtons");
+        innerDiv.className += " snowmanFigureElementButtons";
 
 
-        // XXXXXXXXXXXXXXXXXXXX only for test ->
 
-        innerDiv.className += " snowmanFigureElementActionAddShape ";
-
-        if (i === 0) innerDiv.className += " snowmanFigureElementAction-0";
-
-        if (i === 1) innerDiv.className += " snowmanFigureElementAction-1";
-
-        if (i === 2) innerDiv.className += " snowmanFigureElementAction-2";
-
-        if (i === 3) innerDiv.className += " snowmanFigureElementAction-3";
-
-        innerDiv.className += " snowmanFigureElementsFinal ";
-
-        // XXXXXXXXXXXXXXXXXXXX only for test <-
 
 
         // let div0 = document.getElementById(IdChild);
@@ -60,7 +46,8 @@ function createSnowmanFigure(parentId, subpageName) {
                 document.getElementById(ClassGreatGrandchild + i.toString()).append(divEye);
 
                 divEye.classList.add("snowmanFigureElementEyes");
-                divEye.classList.add("snowmanFigureElementEye-"+j.toString());
+                // divEye.classList.add("snowmanFigureElementEye-"+j.toString());
+
 
 
             }
@@ -86,14 +73,34 @@ function createSnowmanFigure(parentId, subpageName) {
 
             let divButtonBox = document.createElement('div');
             document.getElementById(ClassGreatGrandchild + i.toString()).append(divButtonBox);
-            divButtonBox.setAttribute("id", "snowmanFigureElementButtonsNo-" + i.toString())
-            // divButtonBox.classList.add("snowmanFigureElementButtons");
+            divButtonBox.setAttribute("id", "snowmanFigureElementButtonNo-" + i.toString())
+            // divButtonBox.classList.add("snowmanFigureElementsButtons");
+
 
             let divButton = document.createElement('div');
-            document.getElementById("snowmanFigureElementButtonsNo-" + i.toString()).append(divButton);
-            divButton.classList.add("snowmanFigureElementButtons");
+            // divButton.classList.add("snowmanFigureElementButton");
+            document.getElementById("snowmanFigureElementButtonNo-" + i.toString()).append(divButton);
+            divButton.classList.add("snowmanFigureElementButton");
 
         }
+
+        // XXXXXXXXXXXXXXXXXXXX only for test ->
+
+        innerDiv.className += " snowmanFigureElementActionAddShape ";
+
+        if (i === 0) innerDiv.className += " snowmanFigureElementAction-0";
+
+        if (i === 1) innerDiv.className += " snowmanFigureElementAction-1";
+
+        if (i === 2) innerDiv.className += " snowmanFigureElementAction-2";
+
+        if (i === 3) innerDiv.className += " snowmanFigureElementAction-3";
+
+        innerDiv.className += " snowmanFigureElementsFinal ";
+
+        // XXXXXXXXXXXXXXXXXXXX only for test <-
+
+        // innerDiv.className += " snowmanFigureElementButtons";
     }
 }
 
