@@ -22,7 +22,7 @@ function createSnowmanFigure(parentId, subpageName) {
         // innerDiv.setAttribute("class", ClassGreatGrandchild + i.toString());
         innerDiv.setAttribute("id", ClassGreatGrandchild + i.toString());
         // innerDiv.setAttribute("class", "snowmanFigureElementButtons");
-        innerDiv.className += " snowmanFigureElementButtons";
+        // innerDiv.className += " snowmanFigureElementButtons";
 
 
 
@@ -73,21 +73,24 @@ function createSnowmanFigure(parentId, subpageName) {
 
             let divButtonBox = document.createElement('div');
             document.getElementById(ClassGreatGrandchild + i.toString()).append(divButtonBox);
-            divButtonBox.setAttribute("id", "snowmanFigureElementButtonNo-" + i.toString())
+            divButtonBox.setAttribute("id", "containerSnowmanFigureElementButtonNo-" + i.toString())
+
 
             let divButton = document.createElement('div');
-            document.getElementById("snowmanFigureElementButtonNo-" + i.toString()).append(divButton);
+            document.getElementById("containerSnowmanFigureElementButtonNo-" + i.toString()).append(divButton);
+            divButton.setAttribute("id", "snowmanFigureElementButtonNo-" + i.toString())
             divButton.classList.add("snowmanFigureElementButton");
+
 
         }
 
         // XXXXXXXXXXXXXXXXXXXX only for test ->
 
-        innerDiv.className += " snowmanFigureElementActionAddShape ";
-
-        if (i > 12 && i < 17) {
-            innerDiv.className += " snowmanFigureElementActionAddShapeHands ";
-        }
+        // innerDiv.className += " snowmanFigureElementActionAddShape ";
+        //
+        // if (i > 12 && i < 17) {
+        //     innerDiv.className += " snowmanFigureElementActionAddShapeHands ";
+        // }
         // if (i === 0) innerDiv.className += " snowmanFigureElementAction-0";
         //
         // if (i === 1) innerDiv.className += " snowmanFigureElementAction-1";
@@ -98,21 +101,39 @@ function createSnowmanFigure(parentId, subpageName) {
 
         // innerDiv.className += " snowmanFigureElementsFinal ";
 
-        // XXXXXXXXXXXXXXXXXXXX only for test <-
 
 
-        let smile = document.getElementById("snowmanFigureElementSmile");
-        // smile.classList.add("snowmanFigureElementSmile");
-        // smile.className = "snowmanFigureElementSmile";
 
 
-       let buttons = document.getElementsByClassName("snowmanFigureElementButton");
 
-        for (let a = 0; a < buttons.length; a++) {
 
-            buttons[a].className += " snowmanFigureElementActionAddShape ";
-
-        }
     }
+
+
+    // let buttons = document.getElementsByClassName("snowmanFigureElementButton");
+    //
+    // for (let a = 0; a < buttons.length; a++) {
+    //
+    //     buttons[a].className += " snowmanFigureElementActionAddShape snowmanFigureElementActionAddShapeButton ";
+    //
+    // }
+
+    // let button = document.getElementById("snowmanFigureElementButtonNo-11");
+    // button.className += "snowmanFigureElementButton snowmanFigureElementActionAddShape";
+
+    // let eyes = document.getElementsByClassName("snowmanFigureElementEyes ");
+    //
+    // for (let e = 0; e < eyes.length; e++) {
+    //
+    //     eyes[e].className += " snowmanFigureElementActionAddShape ";
+    //
+    // }
+
+
+    // let smile = document.getElementById("snowmanFigureElementSmile");
+    // smile.classList.add("snowmanFigureElementActionAddShapeSmile");
+
+    // XXXXXXXXXXXXXXXXXXXX only for test <-
+
 }
 
