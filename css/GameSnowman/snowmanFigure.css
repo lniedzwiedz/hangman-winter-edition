@@ -242,24 +242,24 @@
 
 #snowmanFigureElementAction-0 {
     /*!*background-color: #412E47;*!*/
-    position: relative;
+    /*position: relative;*/
 
-    height: 100%;
-    width: 20%;
-    border-radius: 50%;
+    /*height: 100%;*/
+    /*width: 20%;*/
+    /*border-radius: 50%;*/
 
-    /*!*top: 115%;*!*/
-    /*!*left: 52%;*!*/
-    transform: translate(-50%, -50%);
-    background-color: #000000;
+    /*!*!*top: 115%;*!*!*/
+    /*!*!*left: 52%;*!*!*/
+    /*transform: translate(-50%, -50%);*/
+    /*background-color: #000000;*/
 
-    /*box-shadow: -5px -1px 19px 4px #390B1E;*/
-    /*!*-70px 13px 50px 4px #ac4a71 inset;*!*/
+    /*!*box-shadow: -5px -1px 19px 4px #390B1E;*!*/
+    /*!*!*-70px 13px 50px 4px #ac4a71 inset;*!*!*/
 
-    /*!*position: relative;*!*/
-    /*rotate: 4deg;*/
-    top: 50%;
-    left: 52%;
+    /*!*!*position: relative;*!*!*/
+    /*!*rotate: 4deg;*!*/
+    /*top: 50%;*/
+    /*left: 52%;*/
 
     /*!*rotate: 143deg;*!*/
     /*!*top: -2.3rem;*!*/
@@ -274,41 +274,88 @@
 
 }
 
-.snowmanFigureElementAction-0 {
-    /*background-color: #412E47;*/
-    /*position: relative;*/
+.snowmanFigureElementAction-0-hatElementInitialPositionForShape{
+    position: relative;
 
-    /*height: 100%;*/
-    /*width: 20%;*/
-    /*border-radius: 50%;*/
+    height: 100%;
+    width: 20%;
+    border-radius: 50%;
 
-    /*transform: translate(-50%, -50%);*/
-    background-color: #000000;
+    /*!*top: 115%;*!*/
+    /*!*left: 52%;*!*/
+    transform: translate(-50%, -50%);
+    /*background-color: #000000;*/
 
-    box-shadow: -5px -1px 19px 4px #390B1E;
+    /*box-shadow: -5px -1px 19px 4px #390B1E;*/
     /*-70px 13px 50px 4px #ac4a71 inset;*/
 
-    /*position: relative;*/
-    rotate: 4deg;
-    top: 115%;
+    /*!*position: relative;*!*/
+    /*rotate: 4deg;*/
+    top: 120%;
     left: 52%;
+}
 
-    /*rotate: 143deg;*/
-    /*top: -2.3rem;*/
-    /*left: 8.0rem;*/
+.snowmanFigureElementAction-0-hatElementInitialPositionForAnimation{
+    position: relative;
 
-    animation: hatElement-0 5s 4s alternate infinite;
-    transform-origin: right bottom;
+    height: 100%;
+    width: 20%;
+    border-radius: 50%;
+
+    /*!*top: 115%;*!*/
+    /*!*left: 52%;*!*/
+    transform: translate(-50%, -50%);
+    /*background-color: #000000;*/
+
+    /*box-shadow: -5px -1px 19px 4px #390B1E;*/
+    /*-70px 13px 50px 4px #ac4a71 inset;*/
+
+    /*!*position: relative;*!*/
+    /*rotate: 4deg;*/
+    top: 120%;
+    left: 52%;
+}
+
+
+.snowmanFigureElementAction-0-setAnimationHatFinalColor {
+    border: 0;
+    animation: animationHatFinalColor-0 4s ;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animationHatFinalColor-0 {
+    0% {
+    }
+    100% {
+        background-color: #000000;
+        box-shadow: -5px -1px 19px 4px #390B1E;
+    }
+}
+
+.snowmanFigureElementAction-0-setHatFinalColor{
+    border: 0;
+    background-color: #000000;
+    box-shadow: -5px -1px 19px 4px #390B1E;
+}
+
+.snowmanFigureElementAction-0 {
+    /*background-color: #000000;*/
+    /*box-shadow: -5px -1px 19px 4px #390B1E;*/
 
     /*rotate: 4deg;*/
-    /*top: 320%;*/
-    /*left: 188%;*/
+    /*top: 115%;*/
+    /*left: 52%;*/
+
+    animation: animationHatElement-0 5s 4s alternate infinite;
+    transform-origin: right bottom;
+    animation-fill-mode: forwards;
+
 
 }
 
 
 
-@keyframes hatElement-0 {
+@keyframes animationHatElement-0 {
     from {
         rotate: 4deg;
         top: 115%;
@@ -359,31 +406,67 @@
 
 }
 
-.snowmanFigureElementAction-1 {
-    /*background-color: saddlebrown;*/
+.snowmanFigureElementAction-1-hatElementInitialPositionForShape{
     position: relative;
-    background-color: #000000;
-
-    /*box-shadow: 0 2px 10px 0 #621735;*/
-    /*box-shadow: 0 2px 10px 0 #2c3e3a;*/
-    /*box-shadow: 0 2px 10px 0 #3b534d;*/
-    /*box-shadow: 0 2px 10px 0 #587d74;*/
-
-    /* box-shadow: 0 3px 15px 0 #390B1E; */
-    /* box-shadow: 0 3px 15px 0 #230511;*/
-
-    /*box-shadow: 0px 3px 15px -1.5px #ac4a71;*/
-    /*box-shadow: -5px -1px 19px 1px #ac4a71;*/
-
-    box-shadow: -5px -1px 19px 1px #390B1E,
-    -4px -1px 20px 1px #ac4a71 inset;
-
-
-    rotate: 4deg;
+    /*border-radius: 0.0000001rem;*/
+    /*border-radius: 20%;*/
+    /*background-color: #000000;*/
+    /*box-shadow: 0 0 0 0 #ac4a71;*/
+    /*rotate: 4deg;*/
     top: 30%;
     left: 0;
 
-    animation: hatElement-1 5s 4s alternate infinite;
+}
+
+.snowmanFigureElementAction-1-hatElementInitialPositionForAnimation{
+    position: relative;
+    /*border-radius: 0.0000001rem;*/
+    border-radius: 20%;
+    /*background-color: #000000;*/
+    /*box-shadow: 0 0 0 0 #ac4a71;*/
+    rotate: 4deg;
+    top: 30%;
+    left: 0;
+}
+
+
+.snowmanFigureElementAction-1-setAnimationHatFinalColor {
+    border: 0;
+    animation: animationHatFinalColor-1 4s ;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animationHatFinalColor-1 {
+    0% {
+    }
+    100% {
+        background-color: #000000;
+        box-shadow: -5px -1px 19px 1px #390B1E,
+        -4px -1px 20px 1px #ac4a71 inset;
+    }
+}
+
+.snowmanFigureElementAction-1-setHatFinalColor{
+    border: 0;
+    background-color: #000000;
+    box-shadow: -5px -1px 19px 1px #390B1E,
+    -4px -1px 20px 1px #ac4a71 inset;
+}
+
+.snowmanFigureElementAction-1 {
+    /*background-color: saddlebrown;*/
+    /*position: relative;*/
+    /*background-color: #000000;*/
+
+    /*box-shadow: -5px -1px 19px 1px #390B1E,*/
+    /*-4px -1px 20px 1px #ac4a71 inset;*/
+
+
+    /*rotate: 4deg;*/
+    /*top: 30%;*/
+    /*left: 0;*/
+
+    animation: animationHatElement-1 5s 4s alternate infinite;
     transform-origin: right bottom;
 
     /*rotate: 130deg;*/
@@ -392,7 +475,7 @@
 
 }
 
-@keyframes hatElement-1 {
+@keyframes animationHatElement-1 {
     from {
         rotate: 4deg;
         top: 30%;
@@ -409,7 +492,7 @@
 
 #snowmanFigureElementAction-2 {
     /*background-color: orange;*/
-    border-radius: 0.0000001rem;
+    /*border-radius: 0.0000001rem;*/
     /*position: relative;*/
     /*background-color: #000000;*/
 
@@ -430,24 +513,69 @@
 
 }
 
-.snowmanFigureElementAction-2 {
-    /*background-color: orange;*/
-    border-radius: 0.0000001rem;
+.snowmanFigureElementAction-2-hatElementInitialPositionForShape{
     position: relative;
-    background-color: #000000;
-    box-shadow: 0 0 0 0 #ac4a71;
-    rotate: 4deg;
-    top: 70%;
+    /*border-radius: 0.0000001rem;*/
+    /*border-radius: 0.01%;*/
+    /*background-color: #000000;*/
+    /*box-shadow: 0 0 0 0 #ac4a71;*/
+    /*rotate: 4deg;*/
+    top: 40%;
     left: 0;
 
-    animation: hatElement-2 5s 4s alternate infinite;
+}
+
+.snowmanFigureElementAction-2-hatElementInitialPositionForAnimation{
+    position: relative;
+    /*border-radius: 0.0000001rem;*/
+    /*border-radius: 0.01%;*/
+    /*background-color: #000000;*/
+    /*box-shadow: 0 0 0 0 #ac4a71;*/
+    rotate: 4deg;
+    top: 40%;
+    left: 0;
+}
+
+
+.snowmanFigureElementAction-2-setAnimationHatFinalColor {
+    border: 0;
+    animation: animationHatFinalColor-2 4s ;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animationHatFinalColor-2 {
+    0% {
+    }
+    100% {
+        background-color: #000000;
+        box-shadow: 0 0 0 0 #ac4a71;
+    }
+}
+
+.snowmanFigureElementAction-2-setHatFinalColor{
+    border: 0;
+    background-color: #000000;
+    box-shadow: 0 0 0 0 #ac4a71;
+}
+
+.snowmanFigureElementAction-2 {
+    /*background-color: orange;*/
+    /*border-radius: 0.0000001rem;*/
+    /*position: relative;*/
+    /*background-color: #000000;*/
+    /*box-shadow: 0 0 0 0 #ac4a71;*/
+    /*rotate: 4deg;*/
+    /*top: 70%;*/
+    /*left: 0;*/
+
+    animation: animationHatElement-2 5s 4s alternate infinite;
     transform-origin: right bottom;
 
 
 }
 
 
-@keyframes hatElement-2 {
+@keyframes animationHatElement-2 {
     from{
         rotate: 4deg;
         top: 70%;
@@ -462,19 +590,17 @@
 
 #snowmanFigureElementAction-3 {
 
-    position: relative;
-    width: 90%;
+    /*position: relative;*/
+    /*width: 90%;*/
+    /*margin: 0 auto;*/
 
-    margin: 0 auto;
+
     /*background-color: #000000;*/
     /*!*background-color: darkslategrey;*!*/
     /*box-shadow: inset -5px 3px 6px 1px #390B1E;*/
-
     /*rotate: 4deg;*/
     /*top: 70%;*/
     /*left: 0;*/
-
-
 
     /*animation: hatElement-3 5s alternate infinite;*/
 
@@ -491,39 +617,73 @@
 
 }
 
-.snowmanFigureElementAction-3 {
-
+.snowmanFigureElementAction-3-hatElementInitialPositionForShape{
     position: relative;
     width: 90%;
-
     margin: 0 auto;
-    background-color: #000000;
-    /*background-color: darkslategrey;*/
-    box-shadow: inset -5px 3px 6px 1px #390B1E;
-
-    rotate: 4deg;
+    /*background-color: #000000;*/
+    /*box-shadow: inset -5px 3px 6px 1px #390B1E;*/
+    /*rotate: 4deg;*/
+    top: 70%;
     top: 70%;
     left: 0;
-
-
-
-    animation: hatElement-3 5s 4s alternate infinite;
-
-    /*transform-origin: right bottom;*/
-    transform-origin: right bottom;
-    /*rotation-point: 90% 90%;*/
-    /*transform: scale(100, 100);*/
-
-    /*rotate: 130deg;*/
-    /*top: -80%;*/
-    /*left: -5%;*/
-
     z-index: 1;
 
 }
 
+.snowmanFigureElementAction-3-hatElementInitialPositionForAnimation{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    /*background-color: #000000;*/
+    /*box-shadow: inset -5px 3px 6px 1px #390B1E;*/
+    rotate: 4deg;
+    /*top: 70%;*/
+    top: 40%;
+    left: 0;
+    z-index: 1;
+}
 
-@keyframes hatElement-3 {
+
+.snowmanFigureElementAction-3-setAnimationHatFinalColor {
+    border: 0;
+    animation: animationHatFinalColor-3 4s ;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animationHatFinalColor-3 {
+    0% {
+    }
+    100% {
+        background-color: #000000;
+        box-shadow: inset -5px 3px 6px 1px #390B1E;
+    }
+}
+
+.snowmanFigureElementAction-3-setHatFinalColor{
+    border: 0;
+    background-color: #000000;
+    box-shadow: inset -5px 3px 6px 1px #390B1E;
+}
+
+
+.snowmanFigureElementAction-3 {
+    /*position: relative;*/
+    /*width: 90%;*/
+    /*margin: 0 auto;*/
+    /*background-color: #000000;*/
+    /*box-shadow: inset -5px 3px 6px 1px #390B1E;*/
+    /*rotate: 4deg;*/
+    /*top: 70%;*/
+    /*left: 0;*/
+
+    animation: animationHatElement-3 5s 4s alternate infinite;
+    transform-origin: right bottom;
+
+    /*z-index: 1;*/
+}
+
+@keyframes animationHatElement-3 {
     from{
         rotate: 4deg;
         top: 70%;
@@ -661,24 +821,9 @@
 
 
 .snowmanFigureElementButton {
-
-    /*background-color: darkslategrey;*/
-    /*background-color: #FFFFFF;*/
-    /*background-color: ;*/
-    /*width: 1.4rem;*/
-    /*height: 1.4rem;*/
-
     width: 15%;
     height: 70%;
-
     border-radius: 80%;
-    /*border-color: #ac4a71;*/
-
-
-    /*box-shadow:*/
-    /*        inset 1px -2px 5px 8px #000000*/
-
-
 }
 
 .snowmanFigureElementButtonFinal {
@@ -751,7 +896,7 @@
     /*border-radius: 1.7rem;*/
 }
 
-.snowmanFigureElementActionChangeShapeShape {
+.snowmanFigureElementActionChangeShapeColor {
     animation: animationSnowmanFigureElementActionChangeShapeColor 4s alternate;
     animation-fill-mode: forwards;
 }
@@ -783,6 +928,12 @@
     }
 }
 
+.snowmanFigureElementActionFinalSnowballsColor{
+    border: 0;
+    box-shadow: -5px -2px 50px 1px var(--snowmanFigureColor),
+    -70px 13px 50px 4px var(--snowmanFigureColor) inset;
+}
+
 .snowmanFigureElementsDisplay {
     /*width: 15%;*/
     /*height: 70%;*/
@@ -799,9 +950,6 @@
     display: var(--display);
     justify-content: var(--justifyContent);
     align-items: var(--alignItems);
-
-
-
     width: 100%;
     height: 50%;
 }
@@ -931,38 +1079,20 @@
 
 
 
-@keyframes handLeftShoulder {
-    0% {
-        rotate: -145deg;
-        height: 75%;
-        right: 10%;
-        top: -30%;
-    }
-    10% {
-        rotate: -125deg;
-        height: 75%;
-        right: 3%;
-        top: -90%;
-    }
-    20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {
-    /*20%, 30%, 40%, 50%, 60%, 70%, 80%, 90% {*/
-        rotate: -135deg;
-        height: 75%;
-        right: 9%;
-        top: -60%;
-    }
-    /*100%{*/
-    /*    rotate: -135deg;*/
-    /*    height: 75%;*/
-    /*    right: 9%;*/
-    /*    top: -60%;*/
-    /*box-shadow: -5px -2px 50px 1px antiquewhite,*/
-    /*-70px 13px 50px 4px antiquewhite inset;*/
-/*}*/
-}
+
 
 #snowmanFigureElementAction-13 {
     border-radius: var(--borderRadius);
+    /*position: relative;*/
+    /*rotate: -145deg;*/
+    /*height: 75%;*/
+    /*right: 10%;*/
+    /*top: -30%;*/
+}
+
+
+
+.snowmanFigureElementAction-13-handInitialPositionForShape{
     position: relative;
     rotate: -145deg;
     height: 75%;
@@ -970,22 +1100,46 @@
     top: -30%;
 }
 
-.snowmanFigureElementAction-13 {
-    /*position: relative;*/
-    /*rotate: -145deg;*/
-    /*height: 75%;*/
-    /*right: 10%;*/
-    /*top: -30%;*/
-
-    /*animation: animationSnowballs 4s ;*/
-    /*animation-fill-mode: forwards;*/
-
-    animation: handLeftShoulder  5s 2s alternate infinite;
-    /*animation-fill-mode: forwards;*/
+.snowmanFigureElementAction-13-handInitialPositionForAnimation{
+    rotate: -145deg;
+    height: 75%;
+    right: 10%;
+    top: -30%;
 }
 
 
-@keyframes handLeftElbow {
+
+.snowmanFigureElementAction-13 {
+
+    /*box-shadow: -5px -2px 50px 1px var(--snowmanFigureColor),*/
+    /*-70px 13px 50px 4px var(--snowmanFigureColor) inset;*/
+    animation: animationHandLeftShoulder  5s 2s alternate infinite;
+}
+
+@keyframes animationHandLeftShoulder {
+    0%{
+        rotate: -145deg;
+        height: 75%;
+        right: 10%;
+        top: -30%;
+    }
+    10%{
+        rotate: -125deg;
+        height: 75%;
+        right: 3%;
+        top: -90%;
+    }
+    20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100%{
+        rotate: -135deg;
+        height: 75%;
+        right: 9%;
+        top: -60%;
+    }
+}
+
+
+
+@keyframes animationHandLeftElbow {
     0% {
         rotate: 130deg;
         height: 75%;
@@ -1044,61 +1198,56 @@
 
 #snowmanFigureElementAction-14 {
     border-radius: var(--borderRadius);
+    /*position: relative;*/
+    /*rotate: 90deg;*/
+    /*height: 75%;*/
+    /*right: 40%;*/
+    /*top: -75%;*/
+
+}
+
+.snowmanFigureElementAction-14-handInitialPositionForShape{
     position: relative;
     rotate: 90deg;
     height: 75%;
     right: 40%;
     top: -75%;
-
-
-
-
-    /*animation: handLeftElbow 5s alternate infinite;*/
-    /*animation: handLeftElbow 5s 2s alternate infinite;*/
-    /*animation-name: handLeftElbow;*/
-    /*animation-delay: 2s;*/
-    /*animation-duration: 5s;*/
-    /*!*animation: step-end;*!*/
-    /*animation-direction: alternate;*/
-    /*animation-iteration-count:  infinite;*/
-
-    /*z-index: 1;*/
 }
 
-.snowmanFigureElementAction-14{
+.snowmanFigureElementAction-14-handInitialPositionForAnimation{
     rotate: 130deg;
     height: 75%;
     right: 15%;
     top: -60%;
+}
 
-    /*animation: handLeftElbow 5s alternate infinite;*/
-    animation: handLeftElbow 5s 2s alternate infinite;
-    /*animation-name: handLeftElbow;*/
-    /*animation-delay: 2s;*/
-    /*animation-duration: 5s;*/
-    /*!*animation: step-end;*!*/
-    /*animation-direction: alternate;*/
-    /*animation-iteration-count:  infinite;*/
+.snowmanFigureElementAction-14{
+    /*rotate: 130deg;*/
+    /*height: 75%;*/
+    /*right: 15%;*/
+    /*top: -60%;*/
+
+    /*box-shadow: -5px -2px 50px 1px var(--snowmanFigureColor),*/
+    /*-70px 13px 50px 4px var(--snowmanFigureColor) inset;*/
+
+    animation: animationHandLeftElbow 5s 2s alternate infinite;
+
 
     z-index: 1;
 }
+
+/*.snowmanFigureElementAction-14-startHand{*/
+/*    position: relative;*/
+/*    height: 75%;*/
+/*    right: 15%;*/
+/*    top: -27%;*/
+/*    rotate: -35deg;*/
+/*}*/
 
 
 
 #snowmanFigureElementAction-15 {
     border-radius: var(--borderRadius);
-    /*background-color: cadetblue;*/
-    position: relative;
-    height: 75%;
-    right: 15%;
-    top: -27%;
-    rotate: -35deg;
-
-    /*animation: handRightShoulder 5s alternate infinite;*/
-
-}
-
-.snowmanFigureElementAction-15 {
     /*background-color: cadetblue;*/
     /*position: relative;*/
     /*height: 75%;*/
@@ -1106,11 +1255,39 @@
     /*top: -27%;*/
     /*rotate: -35deg;*/
 
-    animation: handRightShoulder 5s alternate infinite;
+    /*animation: handRightShoulder 5s alternate infinite;*/
 
 }
 
-@keyframes handRightShoulder {
+.snowmanFigureElementAction-15-handInitialPositionForShape{
+    position: relative;
+    height: 75%;
+    rotate: -35deg;
+    right: 15%;
+    top: -27%;
+}
+
+.snowmanFigureElementAction-15-handInitialPositionForAnimation{
+    /*position: relative;*/
+    height: 75%;
+    rotate: -35deg;
+    right: 15%;
+    top: -27%;
+}
+
+.snowmanFigureElementAction-15 {
+
+    /*rotate: -35deg;*/
+    /*right: 15%;*/
+    /*top: -27%;*/
+
+    /*box-shadow: -5px -2px 50px 1px var(--snowmanFigureColor),*/
+    /*-70px 13px 50px 4px var(--snowmanFigureColor) inset;*/
+    animation: animationHandRightShoulder 5s alternate infinite;
+
+}
+
+@keyframes animationHandRightShoulder {
     from {
         rotate: -35deg;
         right: 15%;
@@ -1132,41 +1309,43 @@
 
 #snowmanFigureElementAction-16 {
     border-radius: var(--borderRadius);
-    /*background-color: palegreen;*/
-    position: relative;
-    /*rotate: 70deg;*/
-    /*top: 6.2rem;*/
-    /*right: 0.8rem;*/
-    /*height: 2.5rem;*/
 
+    /*position: relative;*/
+    /*height: 75%;*/
+    /*right: -15%;*/
+    /*top: -70%;*/
+    /*rotate: 90deg;*/
+
+}
+
+.snowmanFigureElementAction-16-handInitialPositionForShape{
+    position: relative;
     height: 75%;
     right: -15%;
-    /*top: -55%;*/
     top: -70%;
-
     rotate: 90deg;
+}
 
-    /*animation: handRightElbow 5s alternate infinite;*/
-
-    /*rotate: 75deg;*/
-    /*right: 2%;*/
-    /*top: -116%;*/
-
-
+.snowmanFigureElementAction-16-handInitialPositionForAnimation{
+    rotate: 60deg;
+    right: 5%;
+    top: -62%;
 }
 
 .snowmanFigureElementAction-16 {
     /*background-color: palegreen;*/
-    position: relative;
-    height: 75%;
-    right: 5%;
-    top: -62%;
-    rotate: 60deg;
+    /*position: relative;*/
+    /*height: 75%;*/
+    /*right: 5%;*/
+    /*top: -62%;*/
+    /*rotate: 60deg;*/
+    /*box-shadow: -5px -2px 50px 1px var(--snowmanFigureColor),*/
+    /*-70px 13px 50px 4px var(--snowmanFigureColor) inset;*/
 
-    animation: handRightElbow 5s alternate infinite;
+    animation: animationHandRightElbow 5s alternate infinite;
 }
 
-@keyframes handRightElbow {
+@keyframes animationHandRightElbow {
     from {
         rotate: 60deg;
         right: 5%;

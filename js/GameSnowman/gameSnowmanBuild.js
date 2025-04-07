@@ -452,36 +452,20 @@ function addShapeSnowmanFigureElements() {
     let tempChangeColor = "#A05880";
     let elementIdPartialText = "snowmanFigureElementAction-";
 
-    // console.log("countedAnimationElements = " + countedAnimationElements);
     let indexGroup = indexGroups[countedAnimationElements];
-    // console.log("indexGroups[countedAnimationElements] = " + indexGroups[countedAnimationElements]);
 
     for (let i = 0; i < indexGroup.length; i++) {
         let index = indexGroup[i];
 
-        // console.log("index = " + index);
-
-        // change to id, it is too long, element remove when subpage change
-        // let parent = document.getElementById("containerSnowmanFigureElements-gameSnowman");
-        // let child = parent.getElementsByClassName("containerSnowmanFigureElement-" + index);
-        // let grandChild = child[0].getElementsByClassName("snowmanFigureElementAction-" + index);
-        // // grandChild[0].setAttribute("style", "background-color:" + tempChangeColor);
-        // grandChild[0].className += " snowmanFigureElementAddShape";
-
         let element = document.getElementById("snowmanFigureElementAction-"+index.toString());
-        // let element = document.getElementById(elementIdPartialText + index);
-        // console.log(element);
-
-        // element.className += " snowmanFigureElementsDisplay ";
         element.className += " snowmanFigureElementActionAddShape ";
 
         if(index < 4){
 
-            // element.className += " snowmanFigureElementAction-"+index.toString();
+            element.className += " snowmanFigureElementAction-"+index+"-hatElementInitialPositionForShape";
         }
 
         if(index === 4){
-
             let eyes = document.getElementsByClassName("snowmanFigureElementEyes ");
 
             for (let e = 0; e < eyes.length; e++) {
@@ -491,26 +475,19 @@ function addShapeSnowmanFigureElements() {
 
         if(index === 5){
             let smile = document.getElementById("snowmanFigureElementSmile");
-            // smile.classList.add("snowmanFigureElementActionAddShape snowmanFigureElementActionAddShapeSmile");
             smile.className += "snowmanFigureElementActionAddShape snowmanFigureElementActionAddShapeSmile";
         }
 
         if (index > 5 && index < 12) {
-
             let button = document.getElementById("snowmanFigureElementButtonNo-"+index.toString());
             button.className += " snowmanFigureElementActionAddShape snowmanFigureElementActionAddShapeButton";
-
-
         }
 
         if (index > 12 && index < 17) {
-            // let handPart = document.getElementById("snowmanFigureElementAction-" + index.toString());
-            // handPart.className = "snowmanFigureElementActionAddShape snowmanFigureElementActionAddShapeHands";
-            element.className = "snowmanFigureElementActionAddShape snowmanFigureElementActionAddShapeHands";
+            element.className = "snowmanFigureElementAction-"+index+"-handInitialPositionForShape ";
+            element.className += "snowmanFigureElementActionAddShape ";
+            element.className += "snowmanFigureElementActionAddShapeHands";
         }
-
-
-
 
     }
     countedAnimationElements += 1;
@@ -894,7 +871,7 @@ let rootVariables = document.querySelector(":root");
 let colorTest = "antiquewhite";
 // let colorTest = "green";
 
-function changeColourSnowmanFigureElements() {
+function setAnimationAfterWinSnowmanFigureElementsSnowballs() {
 
     rootVariables.style.setProperty("--snowmanFigureColor", colorTest);
 
@@ -910,7 +887,8 @@ function changeColourSnowmanFigureElements() {
 
         if(i < 4){
 
-            element.className += " snowmanFigureElementAction-"+i.toString();
+            // element.className += " snowmanFigureElementAction-"+i.toString();
+            element.classList.add("snowmanFigureElementAction-"+i+"-setAnimationHatFinalColor");
         }
 
         if(i === 4){
@@ -941,13 +919,11 @@ function changeColourSnowmanFigureElements() {
             button.classList.remove("snowmanFigureElementActionAddShape");
             button.classList.add("snowmanFigureElementButtonFinal");
 
-
         }
 
         if (i > 12 && i <= 16) {
-            // let handPart = document.getElementById("snowmanFigureElementAction-" + index.toString());
-            // handPart.className = "snowmanFigureElementActionAddShape snowmanFigureElementActionAddShapeHands";
             element.classList.remove("snowmanFigureElementActionAddShapeHands");
+            // element.classList.add("snowmanFigureElementAction-" + i)
             // rootVariables.style.setProperty("--snowmanFigureColor", colorTest);
             // setTimeoutAnimationForHands(element, i)
 
@@ -978,7 +954,7 @@ function playGameSnowmanBuildNewGame() {
 }
 
 
-function changeSnowmanFigureElementsShapeColor() {
+function setAnimationAfterWinSnowmanFigureElementsShapeColor() {
 
     rootVariables.style.setProperty("--snowmanFigureColor", colorTest);
 
@@ -987,24 +963,24 @@ function changeSnowmanFigureElementsShapeColor() {
         let element = document.getElementById("snowmanFigureElementAction-"+i.toString());
 
         if(i >= 0 || (i > 12 && i <= 16)) {
-            element.classList.add("snowmanFigureElementActionChangeShapeShape");
+            element.classList.add("snowmanFigureElementActionChangeShapeColor");
         }
 
         if(i === 4){
             let eyes = document.getElementsByClassName("snowmanFigureElementEyes ");
             for (let e = 0; e < eyes.length; e++) {
-                eyes[e].classList.add("snowmanFigureElementActionChangeShapeShape");
+                eyes[e].classList.add("snowmanFigureElementActionChangeShapeColor");
             }
         }
 
         if(i === 5){
             let smile = document.getElementById("snowmanFigureElementSmile");
-            smile.classList.add("snowmanFigureElementActionChangeShapeShape");
+            smile.classList.add("snowmanFigureElementActionChangeShapeColor");
         }
 
         if (i > 5 && i < 12) {
             let button = document.getElementById("snowmanFigureElementButtonNo-"+i.toString());
-            button.classList.add("snowmanFigureElementActionChangeShapeShape");
+            button.classList.add("snowmanFigureElementActionChangeShapeColor");
         }
     }
 
@@ -1013,8 +989,8 @@ function changeSnowmanFigureElementsShapeColor() {
 // function setTimeoutAnimationForHands(element, i){
 //
 //      setTimeout(function(){
-//          // element.classList.add("snowmanFigureElementFinalSnowballsColor")
-//          // element.classList.add("snowmanFigureElementAction-"+i)
+//          element.classList.add("snowmanFigureElementActionFinalSnowballsColor")
+//          element.classList.add("snowmanFigureElementAction-"+i)
 //      }, 8000);
 // }
 //
@@ -1026,18 +1002,63 @@ function changeSnowmanFigureElementsShapeColor() {
 //     }, 4000);
 // }
 
+function setAnimationInitialPositionsOfElementsAfterWinSnowmanFigureElementsHandsAndHat(){
+
+    for (let i = 12; i <= 16; i++) {
+        let element = document.getElementById("snowmanFigureElementAction-"+i.toString());
+        element.classList.remove("snowmanFigureElementActionAddShape");
+        element.classList.remove("snowmanFigureElementActionChangeShapeColor");
+        element.classList.add("snowmanFigureElementAction-"+i+"-handInitialPositionForAnimation");
+    }
+
+    for (let i = 0; i <= 3; i++) {
+        let element = document.getElementById("snowmanFigureElementAction-"+i.toString());
+        element.classList.remove("snowmanFigureElementActionAddShape");
+        element.classList.remove("snowmanFigureElementActionChangeShapeColor");
+        element.classList.add("snowmanFigureElementAction-"+i+"-hatElementInitialPositionForShape");
+    }
+}
+
+
+function setAnimationsAfterWinSnowmanFigureElementsHandsAndHat(){
+
+    for (let i = 13; i <= 16; i++) {
+        let element = document.getElementById("snowmanFigureElementAction-"+i.toString());
+        element.classList.remove("snowmanFigureElementActionFinalSnowballs");
+        element.classList.add("snowmanFigureElementActionFinalSnowballsColor");
+        element.classList.add("snowmanFigureElementAction-"+i+"");
+    }
+
+    for (let i = 0; i <= 3; i++) {
+        let element = document.getElementById("snowmanFigureElementAction-"+i.toString());
+        element.classList.remove("snowmanFigureElementAction-"+i+"-setAnimationHatFinalColor");
+        element.classList.add("snowmanFigureElementAction-"+i+"-setHatFinalColor");
+        element.classList.add("snowmanFigureElementAction-"+i);
+    }
+}
+
 
 function setColorForSnowman(){
 
-    // changeSnowmanFigureElementsShape();
 
     setTimeout(function(){
-        changeSnowmanFigureElementsShapeColor()
+        setAnimationAfterWinSnowmanFigureElementsShapeColor()
     }, 2000)
 
     setTimeout(function(){
-        changeColourSnowmanFigureElements()
-    }, 5000)
+        setAnimationInitialPositionsOfElementsAfterWinSnowmanFigureElementsHandsAndHat()
+    }, 6000)
+
+    setTimeout(function(){
+        setAnimationAfterWinSnowmanFigureElementsSnowballs()
+    }, 6000)
+
+    //
+    // setTimeout(function(){
+    //     setAnimationsAfterWinSnowmanFigureElementsHandsAndHat()
+    // }, 11000)
+
+
 
 
 }
