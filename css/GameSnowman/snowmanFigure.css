@@ -121,8 +121,6 @@
 
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
-
-
 }
 
 #containerSnowmanFigureElement-9 {
@@ -131,8 +129,8 @@
     grid-row: 16 / 18;
     grid-column: 7 / 18;
 
-    /*grid-template-rows: 1fr;*/
-    /*grid-template-columns: 1fr;*/
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
 }
 
 #containerSnowmanFigureElement-10 {
@@ -141,8 +139,8 @@
     grid-row: 18 / 20;
     grid-column: 6 / 19;
 
-    /*grid-template-rows: 1fr;*/
-    /*grid-template-columns: 1fr;*/
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
 }
 
 #containerSnowmanFigureElement-11 {
@@ -151,8 +149,8 @@
     grid-row: 20 / 22;
     grid-column: 5 / 20;
 
-    /*grid-template-rows: 1fr;*/
-    /*grid-template-columns: 1fr;*/
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
 }
 
 #containerSnowmanFigureElement-12 {
@@ -161,8 +159,8 @@
     grid-row: 22 / 22;
     grid-column: 2 / 23;
 
-    /*grid-template-rows: 1fr;*/
-    /*grid-template-columns: 1fr;*/
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
 }
 
 /* hands  */
@@ -173,8 +171,8 @@
     grid-row: 11 / 13;
     grid-column: 4 / 12;
 
-    /*grid-template-rows: 1fr;*/
-    /*grid-template-columns: 1fr;*/
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
 }
 
 #containerSnowmanFigureElement-14 {
@@ -183,8 +181,8 @@
     grid-row: 9 / 11;
     grid-column: 4 / 12;
 
-    /*grid-template-rows: 1fr;*/
-    /*grid-template-columns: 1fr;*/
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
 }
 
 /* right */
@@ -200,8 +198,8 @@
     grid-row: 11 / 13;
     grid-column: 15 / 23;
 
-    /*grid-template-rows: 1fr;*/
-    /*grid-template-columns: 1fr;*/
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
 }
 
 #containerSnowmanFigureElement-16 {
@@ -219,8 +217,8 @@
     grid-row: 9 / 11;
     grid-column: 15 / 23;
 
-    /*grid-template-rows: 1fr;*/
-    /*grid-template-columns: 1fr;*/
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
 }
 
 /* up */
@@ -231,91 +229,36 @@
     --alignItems: center;
     --borderRadius: 1.7rem;
     --snowmanFigureColor: orange;
+    --snowmanFigureShapeInitialColor:#ac4a71;
+    --snowmanFigureShapeInitialBorderColor: #ac4a71;
+    --snowmanFigureShapeAnimationDisapperColor: #000000;
+    --snowmanFigureShapAnimationDisapperBorderColor: #000000;
+    --snowmanFigureElementHatBackgroundColor: #000000;
 }
 
 
-/* BUTTONS */
-
-
-
-
-
 #snowmanFigureElementAction-0 {
-    /*!*background-color: #412E47;*!*/
-    /*position: relative;*/
-
-    /*height: 100%;*/
-    /*width: 20%;*/
-    /*border-radius: 50%;*/
-
-    /*!*!*top: 115%;*!*!*/
-    /*!*!*left: 52%;*!*!*/
-    /*transform: translate(-50%, -50%);*/
-    /*background-color: #000000;*/
-
-    /*!*box-shadow: -5px -1px 19px 4px #390B1E;*!*/
-    /*!*!*-70px 13px 50px 4px #ac4a71 inset;*!*!*/
-
-    /*!*!*position: relative;*!*!*/
-    /*!*rotate: 4deg;*!*/
-    /*top: 50%;*/
-    /*left: 52%;*/
-
-    /*!*rotate: 143deg;*!*/
-    /*!*top: -2.3rem;*!*/
-    /*!*left: 8.0rem;*!*/
-
-    /*animation: hatElement-0 5s alternate infinite;*/
-    /*transform-origin: right bottom;*/
-
-    /*!*rotate: 4deg;*!*/
-    /*!*top: 320%;*!*/
-    /*!*left: 188%;*!*/
-
 }
 
 .snowmanFigureElementAction-0-hatElementInitialPositionForShape{
     position: relative;
-
     height: 100%;
     width: 20%;
     border-radius: 50%;
-
-    /*!*top: 115%;*!*/
-    /*!*left: 52%;*!*/
     transform: translate(-50%, -50%);
-    /*background-color: #000000;*/
-
-    /*box-shadow: -5px -1px 19px 4px #390B1E;*/
-    /*-70px 13px 50px 4px #ac4a71 inset;*/
-
-    /*!*position: relative;*!*/
-    /*rotate: 4deg;*/
     top: 120%;
     left: 52%;
 }
 
 .snowmanFigureElementAction-0-hatElementInitialPositionForAnimation{
     position: relative;
-
     height: 100%;
     width: 20%;
     border-radius: 50%;
-
-    /*!*top: 115%;*!*/
-    /*!*left: 52%;*!*/
     transform: translate(-50%, -50%);
-    /*background-color: #000000;*/
-
-    /*box-shadow: -5px -1px 19px 4px #390B1E;*/
-    /*-70px 13px 50px 4px #ac4a71 inset;*/
-
-    /*!*position: relative;*!*/
-    /*rotate: 4deg;*/
     top: 120%;
     left: 52%;
 }
-
 
 .snowmanFigureElementAction-0-setAnimationHatFinalColor {
     border: 0;
@@ -327,33 +270,23 @@
     0% {
     }
     100% {
-        background-color: #000000;
+        background-color: var(--snowmanFigureElementHatBackgroundColor);
         box-shadow: -5px -1px 19px 4px #390B1E;
     }
 }
 
 .snowmanFigureElementAction-0-setHatFinalColor{
     border: 0;
-    background-color: #000000;
+    /*background-color: #000000;*/
+    background-color: var(--snowmanFigureElementHatBackgroundColor);;
     box-shadow: -5px -1px 19px 4px #390B1E;
 }
 
 .snowmanFigureElementAction-0 {
-    /*background-color: #000000;*/
-    /*box-shadow: -5px -1px 19px 4px #390B1E;*/
-
-    /*rotate: 4deg;*/
-    /*top: 115%;*/
-    /*left: 52%;*/
-
-    animation: animationHatElement-0 5s 4s alternate infinite;
+    animation: animationHatElement-0 5s 0s alternate infinite;
     transform-origin: right bottom;
     animation-fill-mode: forwards;
-
-
 }
-
-
 
 @keyframes animationHatElement-0 {
     from {
@@ -366,64 +299,20 @@
         top: 320%;
         left: 188%;
     }
-
-
 }
 
-
-
-
 #snowmanFigureElementAction-1 {
-    /*background-color: saddlebrown;*/
-    /*position: relative;*/
-    /*background-color: #000000;*/
-
-    /*box-shadow: 0 2px 10px 0 #621735;*/
-    /*box-shadow: 0 2px 10px 0 #2c3e3a;*/
-    /*box-shadow: 0 2px 10px 0 #3b534d;*/
-    /*box-shadow: 0 2px 10px 0 #587d74;*/
-
-    /* box-shadow: 0 3px 15px 0 #390B1E; */
-    /* box-shadow: 0 3px 15px 0 #230511;*/
-
-    /*box-shadow: 0px 3px 15px -1.5px #ac4a71;*/
-    /*box-shadow: -5px -1px 19px 1px #ac4a71;*/
-
-    /*box-shadow: -5px -1px 19px 1px #390B1E,*/
-    /*-4px -1px 20px 1px #ac4a71 inset;*/
-
-
-    /*rotate: 4deg;*/
-    /*top: 30%;*/
-    /*left: 0;*/
-
-    /*animation: hatElement-1 5s alternate infinite;*/
-    /*transform-origin: right bottom;*/
-
-    /*rotate: 130deg;*/
-    /*top: 15%;*/
-    /*left: 51%;*/
-
 }
 
 .snowmanFigureElementAction-1-hatElementInitialPositionForShape{
     position: relative;
-    /*border-radius: 0.0000001rem;*/
-    /*border-radius: 20%;*/
-    /*background-color: #000000;*/
-    /*box-shadow: 0 0 0 0 #ac4a71;*/
-    /*rotate: 4deg;*/
     top: 30%;
     left: 0;
-
 }
 
 .snowmanFigureElementAction-1-hatElementInitialPositionForAnimation{
     position: relative;
-    /*border-radius: 0.0000001rem;*/
     border-radius: 20%;
-    /*background-color: #000000;*/
-    /*box-shadow: 0 0 0 0 #ac4a71;*/
     rotate: 4deg;
     top: 30%;
     left: 0;
@@ -440,39 +329,26 @@
     0% {
     }
     100% {
-        background-color: #000000;
+        /*background-color: #000000;*/
+        background-color: var(--snowmanFigureElementHatBackgroundColor);;
         box-shadow: -5px -1px 19px 1px #390B1E,
-        -4px -1px 20px 1px #ac4a71 inset;
+        /*-4px -1px 20px 1px #ac4a71 inset;*/
+        -4px -1px 20px 1px var(--snowmanFigureShapeInitialColor) inset;
     }
 }
 
 .snowmanFigureElementAction-1-setHatFinalColor{
     border: 0;
-    background-color: #000000;
+    /*background-color: #000000;*/
+    background-color: var(--snowmanFigureElementHatBackgroundColor);;
     box-shadow: -5px -1px 19px 1px #390B1E,
-    -4px -1px 20px 1px #ac4a71 inset;
+    /*-4px -1px 20px 1px #ac4a71 inset;*/
+    -4px -1px 20px 1px var(--snowmanFigureShapeInitialColor) inset;
 }
 
 .snowmanFigureElementAction-1 {
-    /*background-color: saddlebrown;*/
-    /*position: relative;*/
-    /*background-color: #000000;*/
-
-    /*box-shadow: -5px -1px 19px 1px #390B1E,*/
-    /*-4px -1px 20px 1px #ac4a71 inset;*/
-
-
-    /*rotate: 4deg;*/
-    /*top: 30%;*/
-    /*left: 0;*/
-
-    animation: animationHatElement-1 5s 4s alternate infinite;
+    animation: animationHatElement-1 5s 0s alternate infinite;
     transform-origin: right bottom;
-
-    /*rotate: 130deg;*/
-    /*top: 15%;*/
-    /*left: 51%;*/
-
 }
 
 @keyframes animationHatElement-1 {
@@ -486,53 +362,21 @@
         top: 15%;
         left: 50%;
     }
-
-
 }
 
 #snowmanFigureElementAction-2 {
-    /*background-color: orange;*/
-    /*border-radius: 0.0000001rem;*/
-    /*position: relative;*/
-    /*background-color: #000000;*/
-
-    /*box-shadow: 0px 0px 1px 1px #2a1e1e; */
-    /* box-shadow: 0px 0px 1px 1px #101010; */
-    /* box-shadow: 0 5px 15px 0 #1f130e; */
-    /* box-shadow: 0 3px 15px 0 #ac4a71; */
-    /*box-shadow: 0 0 0 0 #ac4a71;*/
-    /* box-shadow: 0 3px 15px 0 #621735; */
-    /*box-shadow: 0 2px 10px 0 #621735;*/
-    /*box-shadow: 0 2px 10px 0 #2c3e3a;*/
-    /*box-shadow: 0 2px 10px 0 #3b534d;*/
-    /*box-shadow: 0 2px 10px 0 #587d74;*/
-
-    /*rotate: 4deg;*/
-    /*top: 70%;*/
-    /*left: 0;*/
-
 }
 
 .snowmanFigureElementAction-2-hatElementInitialPositionForShape{
     position: relative;
-    /*border-radius: 0.0000001rem;*/
-    /*border-radius: 0.01%;*/
-    /*background-color: #000000;*/
-    /*box-shadow: 0 0 0 0 #ac4a71;*/
-    /*rotate: 4deg;*/
-    top: 40%;
+    top: 70%;
     left: 0;
-
 }
 
 .snowmanFigureElementAction-2-hatElementInitialPositionForAnimation{
     position: relative;
-    /*border-radius: 0.0000001rem;*/
-    /*border-radius: 0.01%;*/
-    /*background-color: #000000;*/
-    /*box-shadow: 0 0 0 0 #ac4a71;*/
     rotate: 4deg;
-    top: 40%;
+    top: 70%;
     left: 0;
 }
 
@@ -547,33 +391,23 @@
     0% {
     }
     100% {
-        background-color: #000000;
-        box-shadow: 0 0 0 0 #ac4a71;
+        background-color: var(--snowmanFigureElementHatBackgroundColor);;
+        /*box-shadow: 0 0 0 0 #ac4a71;*/
+        box-shadow: 0 0 0 0 var(--snowmanFigureShapeInitialColor);
     }
 }
 
 .snowmanFigureElementAction-2-setHatFinalColor{
     border: 0;
-    background-color: #000000;
-    box-shadow: 0 0 0 0 #ac4a71;
+    background-color: var(--snowmanFigureElementHatBackgroundColor);;
+    /*box-shadow: 0 0 0 0 #ac4a71;*/
+    box-shadow: 0 0 0 0 var(--snowmanFigureShapeInitialColor);
 }
 
 .snowmanFigureElementAction-2 {
-    /*background-color: orange;*/
-    /*border-radius: 0.0000001rem;*/
-    /*position: relative;*/
-    /*background-color: #000000;*/
-    /*box-shadow: 0 0 0 0 #ac4a71;*/
-    /*rotate: 4deg;*/
-    /*top: 70%;*/
-    /*left: 0;*/
-
-    animation: animationHatElement-2 5s 4s alternate infinite;
+    animation: animationHatElement-2 5s 0s alternate infinite;
     transform-origin: right bottom;
-
-
 }
-
 
 @keyframes animationHatElement-2 {
     from{
@@ -590,60 +424,29 @@
 
 #snowmanFigureElementAction-3 {
 
-    /*position: relative;*/
-    /*width: 90%;*/
-    /*margin: 0 auto;*/
-
-
-    /*background-color: #000000;*/
-    /*!*background-color: darkslategrey;*!*/
-    /*box-shadow: inset -5px 3px 6px 1px #390B1E;*/
-    /*rotate: 4deg;*/
-    /*top: 70%;*/
-    /*left: 0;*/
-
-    /*animation: hatElement-3 5s alternate infinite;*/
-
-    /*!*transform-origin: right bottom;*!*/
-    /*transform-origin: right bottom;*/
-    /*!*rotation-point: 90% 90%;*!*/
-    /*!*transform: scale(100, 100);*!*/
-
-    /*!*rotate: 130deg;*!*/
-    /*!*top: -80%;*!*/
-    /*!*left: -5%;*!*/
-
-    /*z-index: 1;*/
-
 }
 
 .snowmanFigureElementAction-3-hatElementInitialPositionForShape{
     position: relative;
     width: 90%;
     margin: 0 auto;
-    /*background-color: #000000;*/
-    /*box-shadow: inset -5px 3px 6px 1px #390B1E;*/
     /*rotate: 4deg;*/
-    top: 70%;
     top: 70%;
     left: 0;
     z-index: 1;
-
 }
 
 .snowmanFigureElementAction-3-hatElementInitialPositionForAnimation{
     position: relative;
+    border-radius: 1%;
     width: 90%;
     margin: 0 auto;
-    /*background-color: #000000;*/
-    /*box-shadow: inset -5px 3px 6px 1px #390B1E;*/
     rotate: 4deg;
     /*top: 70%;*/
-    top: 40%;
+    top: 35%;
     left: 0;
     z-index: 1;
 }
-
 
 .snowmanFigureElementAction-3-setAnimationHatFinalColor {
     border: 0;
@@ -655,38 +458,29 @@
     0% {
     }
     100% {
-        background-color: #000000;
+        background-color: var(--snowmanFigureElementHatBackgroundColor);
         box-shadow: inset -5px 3px 6px 1px #390B1E;
     }
 }
 
 .snowmanFigureElementAction-3-setHatFinalColor{
     border: 0;
-    background-color: #000000;
+    background-color: var(--snowmanFigureElementHatBackgroundColor);
     box-shadow: inset -5px 3px 6px 1px #390B1E;
 }
 
 
 .snowmanFigureElementAction-3 {
-    /*position: relative;*/
-    /*width: 90%;*/
-    /*margin: 0 auto;*/
-    /*background-color: #000000;*/
-    /*box-shadow: inset -5px 3px 6px 1px #390B1E;*/
-    /*rotate: 4deg;*/
-    /*top: 70%;*/
-    /*left: 0;*/
-
-    animation: animationHatElement-3 5s 4s alternate infinite;
+    animation: animationHatElement-3 5s 0s alternate infinite;
     transform-origin: right bottom;
-
-    /*z-index: 1;*/
 }
 
 @keyframes animationHatElement-3 {
     from{
         rotate: 4deg;
+        /*top: 40%;*/
         top: 70%;
+        /*top: 20%;*/
         left: 0;
     }
     to{
@@ -698,16 +492,6 @@
 
 
 #snowmanFigureElementSmile {
-    /*background-color: antiquewhite;*/
-
-    /*width: 3rem;*/
-    /*height: 1.4rem;*/
-    /*border: 0;*/
-    /*opacity: 0.8;*/
-    /*border-radius: 70%;*/
-    /*margin-right: 0.3rem;*/
-    /*margin-left: 0.3rem;*/
-
     width: 40%;
     height: 40%;
     border: 0;
@@ -716,21 +500,23 @@
     margin-right: 20%;
     margin-left: 20%;
     margin-top: -7%;
-
     box-shadow: inset 0px -2.5px 0px 0px,
     inset -6px -4px 0px -1px;
-
     z-index: 2;
 }
 
 @keyframes animationSnowmanFigureElementActionAddShapeSmileChangeColor {
     from{
-        box-shadow: inset 0px -2.5px 0px 0px #000000,
-        inset -6px -4px 0px -1px #000000;
+        /*box-shadow: inset 0px -2.5px 0px 0px #000000,*/
+        /*inset -6px -4px 0px -1px #000000;*/
+        box-shadow: inset 0px -2.5px 0px 0px var(--snowmanFigureShapeAnimationDisapperColor),
+        inset -6px -4px 0px -1px var(--snowmanFigureShapeAnimationDisapperColor);
     }
     to{
-        box-shadow: inset 0px -2.5px 0px 0px #ac4a71,
-        inset -6px -4px 0px -1px #ac4a71;
+        /*box-shadow: inset 0px -2.5px 0px 0px #ac4a71,*/
+        /*inset -6px -4px 0px -1px #ac4a71;*/
+        box-shadow: inset 0px -2.5px 0px 0px var(--snowmanFigureShapeInitialColor),
+        inset -6px -4px 0px -1px var(--snowmanFigureShapeInitialColor);
     }
 }
 
@@ -741,12 +527,16 @@
 
 @keyframes animationSnowmanFigureElementActionChangeColor {
     from{
-        box-shadow: inset 0px -2.5px 0px 0px #ac4a71,
-        inset -6px -4px 0px -1px #ac4a71;
+        /*box-shadow: inset 0px -2.5px 0px 0px #ac4a71,*/
+        /*inset -6px -4px 0px -1px #ac4a71;*/
+        box-shadow: inset 0px -2.5px 0px 0px var(--snowmanFigureShapeInitialColor),
+        inset -6px -4px 0px -1px var(--snowmanFigureShapeInitialColor);
     }
     to{
-        box-shadow: inset 0px -2.5px 0px 0px #000000,
-        inset -6px -4px 0px -1px #000000;
+        /*box-shadow: inset 0px -2.5px 0px 0px #000000,*/
+        /*inset -6px -4px 0px -1px #000000;*/
+        box-shadow: inset 0px -2.5px 0px 0px var(--snowmanFigureShapeAnimationDisapperColor),
+        inset -6px -4px 0px -1px var(--snowmanFigureShapeAnimationDisapperColor);
     }
 }
 
@@ -763,28 +553,18 @@
 }
 
 
-
 .snowmanFigureElementSmileSad {
     box-shadow: 0px -3px 0px 1px #390B1E;
 }
 
 .snowmanFigureElementEyes {
-    /*background-color: #FFFFFF;*/
     width: 27%;
     height: 54%;
     margin-top: 7%;
     margin-right: 2%;
     margin-left: 2%;
     border-radius: 60%;
-
-    /*box-shadow: inset -2px 12px 2px 0px #000000,*/
-    /*inset 1px 3px 2px 6px #FFFFFF,*/
-    /*inset 1px 3px 3px 9px #1A780C,*/
-    /*inset 0px 1px 2px 14px #000000;*/
-
     z-index: 1;
-
-
 }
 
 .snowmanFigureElementActionFinalEyes {
@@ -793,7 +573,6 @@
     inset 1px 3px 2px 6px #FFFFFF,
     inset 1px 3px 3px 9px #1A780C,
     inset 0px 1px 2px 14px #000000;
-
 }
 
 
@@ -817,9 +596,6 @@
 }
 
 
-/* snowmanFigureElementsButtons - does not work*/
-
-
 .snowmanFigureElementButton {
     width: 15%;
     height: 70%;
@@ -827,73 +603,51 @@
 }
 
 .snowmanFigureElementButtonFinal {
-
-    /*background-color: darkslategrey;*/
     background-color: #FFFFFF;
-    /*background-color: ;*/
-    /*width: 1.4rem;*/
-    /*height: 1.4rem;*/
-
     width: 15%;
     height: 70%;
-
     border-radius: 80%;
-    /*border-color: #ac4a71;*/
-
-
-    /*box-shadow:*/
-    /*        inset 1px -2px 5px 8px #000000;*/
-    box-shadow:
-            inset 6px -3px 14px 3px #000000;
-
-
+    box-shadow: inset 6px -3px 14px 3px #000000;
 }
 
 /* snowman action id - start from top (hat) */
 
 .snowmanFigureElementActionAddShape {
-    /*color: #ac4a71;*/
-    /*border-color: #ac4a71;*/
     border-right-style: solid;
     border-left-style: solid;
     border-top-style: none;
     border-bottom-style: none;
-
     animation: animationSnowmanFigureElementActionAddShapeChangeColor 3s alternate;
     animation-fill-mode: forwards;
 }
 
 @keyframes animationSnowmanFigureElementActionAddShapeChangeColor {
     from{
-        color: #000000;
-        border-color: #000000;
-        /*color: #ac4a71;*/
-        /*border-color: #ac4a71;*/
+        /*color: #000000;*/
+        /*border-color: #000000;*/
+        color: var(--snowmanFigureShapeAnimationDisapperColor);
+        border-color: var(--snowmanFigureShapeAnimationDisapperColor);
     }
     to{
-        color: #ac4a71;
-        border-color: #ac4a71;
+        /*color: #ac4a71;*/
+        /*border-color: #ac4a71;*/
+        color: var(--snowmanFigureShapeInitialColor);
+        border-color: var(--snowmanFigureShapeInitialColor);
     }
 }
 
 .snowmanFigureElementActionAddShapeHands {
-    /*color: #ac4a71;*/
-    /*border-color: #ac4a71;*/
     border-right-style: none;
     border-left-style: none;
     border-top-style: solid;
     border-bottom-style: solid;
-    /*border-radius: 1.7rem;*/
 }
 
 .snowmanFigureElementActionAddShapeButton {
-    /*color: #ac4a71;*/
-    /*border-color: #ac4a71;*/
     border-right-style: none;
     border-left-style: none;
     border-top-style: solid;
     border-bottom-style: solid;
-    /*border-radius: 1.7rem;*/
 }
 
 .snowmanFigureElementActionChangeShapeColor {
@@ -903,13 +657,16 @@
 
 @keyframes animationSnowmanFigureElementActionChangeShapeColor {
     from{
-        color: #ac4a71;
-        border-color: #ac4a71;
+        /*color: #ac4a71;*/
+        /*border-color: #ac4a71;*/
+        color: var(--snowmanFigureShapeInitialColor);
+        border-color: var(--snowmanFigureShapeInitialColor);
     }
     to{
-        color: #000000;
-        border-color: #000000;
-        /*border: 0;*/
+        /*color: #000000;*/
+        /*border-color: #000000;*/
+        color: var(--snowmanFigureShapeAnimationDisapperColor);
+        border-color: var(--snowmanFigureShapeAnimationDisapperColor);
     }
 }
 
@@ -935,14 +692,9 @@
 }
 
 .snowmanFigureElementsDisplay {
-    /*width: 15%;*/
-    /*height: 70%;*/
-
     display: var(--display);
     justify-content: var(--justifyContent);
     align-items: var(--alignItems);
-
-
 }
 
 #containerSnowmanFigureElementButtonNo-6 {
@@ -990,7 +742,6 @@
     height: 50%;
 }
 
-/*#containerSnowmanFigureElementButtonNo-11 {*/
 #containerSnowmanFigureElementButtonNo-11 {
     display: var(--display);
     justify-content: var(--justifyContent);
@@ -998,7 +749,6 @@
     width: 65%;
     height: 50%;
 }
-
 
 #snowmanFigureElementAction-4 {
     display: var(--display);
@@ -1076,21 +826,9 @@
 }
 
 
-
-
-
-
-
 #snowmanFigureElementAction-13 {
     border-radius: var(--borderRadius);
-    /*position: relative;*/
-    /*rotate: -145deg;*/
-    /*height: 75%;*/
-    /*right: 10%;*/
-    /*top: -30%;*/
 }
-
-
 
 .snowmanFigureElementAction-13-handInitialPositionForShape{
     position: relative;
@@ -1107,12 +845,7 @@
     top: -30%;
 }
 
-
-
 .snowmanFigureElementAction-13 {
-
-    /*box-shadow: -5px -2px 50px 1px var(--snowmanFigureColor),*/
-    /*-70px 13px 50px 4px var(--snowmanFigureColor) inset;*/
     animation: animationHandLeftShoulder  5s 2s alternate infinite;
 }
 
@@ -1136,8 +869,6 @@
         top: -60%;
     }
 }
-
-
 
 @keyframes animationHandLeftElbow {
     0% {
@@ -1198,12 +929,6 @@
 
 #snowmanFigureElementAction-14 {
     border-radius: var(--borderRadius);
-    /*position: relative;*/
-    /*rotate: 90deg;*/
-    /*height: 75%;*/
-    /*right: 40%;*/
-    /*top: -75%;*/
-
 }
 
 .snowmanFigureElementAction-14-handInitialPositionForShape{
@@ -1222,41 +947,12 @@
 }
 
 .snowmanFigureElementAction-14{
-    /*rotate: 130deg;*/
-    /*height: 75%;*/
-    /*right: 15%;*/
-    /*top: -60%;*/
-
-    /*box-shadow: -5px -2px 50px 1px var(--snowmanFigureColor),*/
-    /*-70px 13px 50px 4px var(--snowmanFigureColor) inset;*/
-
     animation: animationHandLeftElbow 5s 2s alternate infinite;
-
-
     z-index: 1;
 }
 
-/*.snowmanFigureElementAction-14-startHand{*/
-/*    position: relative;*/
-/*    height: 75%;*/
-/*    right: 15%;*/
-/*    top: -27%;*/
-/*    rotate: -35deg;*/
-/*}*/
-
-
-
 #snowmanFigureElementAction-15 {
     border-radius: var(--borderRadius);
-    /*background-color: cadetblue;*/
-    /*position: relative;*/
-    /*height: 75%;*/
-    /*right: 15%;*/
-    /*top: -27%;*/
-    /*rotate: -35deg;*/
-
-    /*animation: handRightShoulder 5s alternate infinite;*/
-
 }
 
 .snowmanFigureElementAction-15-handInitialPositionForShape{
@@ -1276,30 +972,16 @@
 }
 
 .snowmanFigureElementAction-15 {
-
-    /*rotate: -35deg;*/
-    /*right: 15%;*/
-    /*top: -27%;*/
-
-    /*box-shadow: -5px -2px 50px 1px var(--snowmanFigureColor),*/
-    /*-70px 13px 50px 4px var(--snowmanFigureColor) inset;*/
     animation: animationHandRightShoulder 5s alternate infinite;
-
 }
 
 @keyframes animationHandRightShoulder {
     from {
         rotate: -35deg;
         right: 15%;
-        /*top: -25%;*/
-        /*top: -30%;*/
         top: -27%;
     }
     to {
-        /*rotate: -45deg;*/
-        /*right: 20%;*/
-        /*top: -60%;*/
-
         rotate: -45deg;
         right: 17%;
         top: -55%;
@@ -1309,13 +991,6 @@
 
 #snowmanFigureElementAction-16 {
     border-radius: var(--borderRadius);
-
-    /*position: relative;*/
-    /*height: 75%;*/
-    /*right: -15%;*/
-    /*top: -70%;*/
-    /*rotate: 90deg;*/
-
 }
 
 .snowmanFigureElementAction-16-handInitialPositionForShape{
@@ -1333,15 +1008,6 @@
 }
 
 .snowmanFigureElementAction-16 {
-    /*background-color: palegreen;*/
-    /*position: relative;*/
-    /*height: 75%;*/
-    /*right: 5%;*/
-    /*top: -62%;*/
-    /*rotate: 60deg;*/
-    /*box-shadow: -5px -2px 50px 1px var(--snowmanFigureColor),*/
-    /*-70px 13px 50px 4px var(--snowmanFigureColor) inset;*/
-
     animation: animationHandRightElbow 5s alternate infinite;
 }
 
@@ -1349,19 +1015,11 @@
     from {
         rotate: 60deg;
         right: 5%;
-        /*top: -55%;*/
         top: -62%;
-
     }
     to {
-
-        /*rotate: 75deg;*/
-        /*right: 2%;*/
-        /*top: -110%;*/
-
         rotate: 75deg;
         right: 2%;
         top: -116%;
     }
-
 }

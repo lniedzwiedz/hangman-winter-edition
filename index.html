@@ -8,13 +8,18 @@
     <meta name="Author" content="AŁ">
     <title>Simple Games</title>
 <!--        <link rel="stylesheet" href="css/mainLayout.css">-->
-    <link rel="stylesheet" href="css/Home/buttonHomeSnowman.css">
+    <link rel="stylesheet" href="css/Home/Home.css">
     <link rel="stylesheet" href="css/GameSnowman/gameSnowman.css">
     <link rel="stylesheet" href="css/GameSnowman/snowmanFigure.css">
+    <link rel="stylesheet" href="css/GameSnowman/gameSnowmanKeyboard.css">
+    <link rel="stylesheet" href="css/GameSnowman/gameSnowmanWordElements.css">
+    <link rel="stylesheet" href="css/GameSnowman/gameSnowmanLives.css">
 
-    <script src="js/GameSnowman/snowmanCreateFigureElements.js" defer></script>
-    <script src="js/homeScript.js" defer></script>
-    <script src="js/GameSnowman/gameKeyboard.js" defer></script>
+<!--    <script src="js/GameSnowman/snowmanCreateFigureElements.js" defer></script>-->
+<!--    <script src="js/homeScript.js" defer></script>-->
+<!--    <script src="js/GameSnowman/gameKeyboard.js" defer></script>-->
+<!--    <script src="js/GameSnowman/gameSnowmanBuild.js" defer></script>-->
+    <script src="js/Home/Home.js" defer></script>
 
 
 
@@ -35,115 +40,35 @@
 
 
     <div id="sectionHome" class="item-2 containerSectionHome">
-        <div class="containerSectionGame1 ">
-            <div id="containerButtonGameSnowman" class="buttonGameSnowman ">
-                <div id="containerButtonGameSnowmanElements">
-
-                    <div id="containerButtonGameSnowmanElementTitle">SNOWMAN</div>
-                    <div id="containerButtonGameSnowmanElementFigure">
-
-<!--                        <div id="containerSnowmanFigureElements">-->
-<!--                            <div id="containerSnowmanFigureElement-1">-->
-<!--                                <div id="snowmanFigureElementAction-1" class="snowmanFigure"></div>-->
-<!--                            </div>-->
-<!--                            <div id="containerSnowmanFigureElement-2">-->
-<!--                                <div id="snowmanFigureElementAction-2" class="snowmanFigure"></div>-->
-<!--                            </div>-->
-<!--                            <div id="containerSnowmanFigureElement-3">-->
-<!--                                <div id="snowmanFigureElementAction-3" class="snowmanFigure"></div>-->
-<!--                            </div>-->
-<!--                            <div id="containerSnowmanFigureElement-4">-->
-<!--                                <div id="snowmanFigureElementAction-4" class="snowmanFigure"></div>-->
-<!--                            </div>-->
-<!--                            <div id="containerSnowmanFigureElement-5">-->
-<!--                                <div id="snowmanFigureElementAction-5" class="snowmanFigure"></div>-->
-<!--                            </div>-->
-<!--                            <div id="containerSnowmanFigureElement-6">-->
-<!--                                <div id="snowmanFigureElementAction-6" class="snowmanFigure"></div>-->
-<!--                            </div>-->
-<!--                            <div id="containerSnowmanFigureElement-7">-->
-<!--                                <div id="snowmanFigureElementAction-7" class="snowmanFigure"></div>-->
-<!--                            </div>-->
-<!--                            <div id="containerSnowmanFigureElement-8">-->
-<!--                                <div id="snowmanFigureElementAction-8" class="snowmanFigure"></div>-->
-<!--                            </div>-->
-<!--                            <div id="containerSnowmanFigureElement-9">-->
-<!--                                <div id="snowmanFigureElementAction-9" class="snowmanFigure"></div>-->
-<!--                            </div>-->
-<!--                            <div id="containerSnowmanFigureElement-10">-->
-<!--                                <div id="snowmanFigureElementAction-10" class="snowmanFigure"></div>-->
-<!--                            </div>-->
-<!--                            <div id="containerSnowmanFigureElement-11">-->
-<!--                                <div id="snowmanFigureElementAction-11" class="snowmanFigure"></div>-->
-<!--                            </div>-->
-<!--                            <div id="containerSnowmanFigureElement-12">-->
-<!--                                <div id="snowmanFigureElementAction-12" class="snowmanFigure"></div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-                    </div>
+        <div class="containerHomeButtonsGame-1">
+            <div id="containerHomeButtonGameSnowmanBuild" class="buttonGameSnowman ">
 
 
-
-                </div>
-                <button id="btHomeGameSnowman" class="containerButtonGameSnowmanElementsRealButton"
-                        onclick="log()"></button>
             </div>
+<!--                <button id="btHomeGameSnowman" class="containerButtonGameSnowmanElementsRealButton"-->
+<!--                        onclick="log()"></button>-->
+<!--            </div>-->
 
         </div>
     </div>
 
 
-    <div id="sectionGameSnowman" class="item-2 containerSectionGameSnowman">
-        <div id="containerGameSnowmanAnimation">
-            <div id="containerGameSnowmanAnimationElements">
-                <div id="containerSnowmanFigureAction">
-                    <!--                    <div id="containerSnowmanFigureElements">-->
+    <div id="sectionGameSnowman" class="item-2 " >
 
-                    <!--                                            <div id="containerSnowmanFigureElement-1">-->
-                    <!--                                                <div id="snowmanFigureElementAction-1" class="snowmanFigure"></div>-->
-                    <!--                                            </div>-->
-                    <!--                                            <div id="containerSnowmanFigureElement-2">-->
-                    <!--                                                <div id="snowmanFigureElementAction-2" class="snowmanFigure"></div>-->
-                    <!--                                            </div>-->
-                    <!--                                            <div id="containerSnowmanFigureElement-3">-->
-                    <!--                                                <div id="snowmanFigureElementAction-3" class="snowmanFigure"></div>-->
-                    <!--                                            </div>-->
-                    <!--                                            <div id="containerSnowmanFigureElement-4">-->
-                    <!--                                                <div id="snowmanFigureElementAction-4" class="snowmanFigure"></div>-->
-                    <!--                                            </div>-->
-                    <!--                                            <div id="containerSnowmanFigureElement-5">-->
-                    <!--                                                <div id="snowmanFigureElementAction-5" class="snowmanFigure"></div>-->
-                    <!--                                            </div>-->
-                    <!--                                            <div id="containerSnowmanFigureElement-6">-->
-                    <!--                                                <div id="snowmanFigureElementAction-6" class="snowmanFigure"></div>-->
-                    <!--                                            </div>-->
-                    <!--                                            <div id="containerSnowmanFigureElement-7">-->
-                    <!--                                                <div id="snowmanFigureElementAction-7" class="snowmanFigure"></div>-->
-                    <!--                                            </div>-->
-                    <!--                                            <div id="containerSnowmanFigureElement-8">-->
-                    <!--                                                <div id="snowmanFigureElementAction-8" class="snowmanFigure"></div>-->
-                    <!--                                            </div>-->
-                    <!--                                            <div id="containerSnowmanFigureElement-9">-->
-                    <!--                                                <div id="snowmanFigureElementAction-9" class="snowmanFigure"></div>-->
-                    <!--                                            </div>-->
-                    <!--                                            <div id="containerSnowmanFigureElement-10">-->
-                    <!--                                                <div id="snowmanFigureElementAction-10" class="snowmanFigure"></div>-->
-                    <!--                                            </div>-->
-                    <!--                                            <div id="containerSnowmanFigureElement-11">-->
-                    <!--                                                <div id="snowmanFigureElementAction-11" class="snowmanFigure"></div>-->
-                    <!--                                            </div>-->
-                    <!--                                            <div id="containerSnowmanFigureElement-12">-->
-                    <!--                                                <div id="snowmanFigureElementAction-12" class="snowmanFigure"></div>-->
-                    <!--                                            </div>-->
+<!--        <div id="containerGameSnowmanAnimation">-->
+<!--            <div id="containerGameSnowmanAnimationElements">-->
+<!--                <div id="containerSnowmanFigureAction"></div>-->
+<!--            </div>-->
+<!--        </div>-->
 
-                    <!--                    </div>-->
+<!--        <div id="containerGameSnowmanWord">-->
+<!--            <div id="containerGameSnowmanWordElements"></div>-->
+<!--        </div>-->
 
 
-                </div>
-            </div>
-
-        </div>
-
+<!--        <div id="containerGameSnowmanKeyboard">-->
+<!--            <div id="containerGameSnowmanKeyboardElements"></div>-->
+<!--        </div>-->
 
     </div>
 

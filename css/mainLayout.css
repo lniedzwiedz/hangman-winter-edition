@@ -84,19 +84,6 @@ body {
     grid-column: 4 / 5;
 }
 
-.buttonTicTacToe {
-    background-color: #824769;
-    grid-row: 2 / 2;
-    grid-column: 6 / 7;
-}
-
-/* ROWS -> containerMenu = 85 -> change destroy containerSection!!!! !*/
-/*.containerSection{ --> do not remove! grid for one game ??? */
-/*    display: grid;*/
-/*    grid-template-rows: 2fr repeat(40, 2fr) 3fr;*/
-/*    grid-template-columns: 10fr repeat(40, 2fr) 10fr;*/
-/*}*/
-
 .containerSectionHome {
     display: grid;
     /*grid-template-rows: 6fr 17fr 17fr 3fr 3fr 17fr 17fr 6fr;*/

@@ -40,7 +40,6 @@ function createKeyboardButtonsForOneLine(elementId, keysLine) {
         if (keysLine[i] === "NEW GAME") {
             newButton.setAttribute("onclick", "playGameSnowmanBuildNewGame(this.id)");
         }
-
         newButton.innerHTML += keysLine[i];
         newButton.setAttribute("id", "keyboard-" + keysLine[i]);
         newButton.classList.add("snowmanKeyboardButtons");
@@ -65,22 +64,6 @@ function createKeyboardButtonsForLines() {
         let lineValues = eval(text + i);
         createKeyboardButtonsForOneLine(containerSnowmanKeyboardLine + i, lineValues);
     }
-
-    // const keysLine1 = ["", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "", "", ""];
-    // createKeyboardButtonsForOneLine(containerSnowmanKeyboardLine + "1", 14, keysLine1);
-    // createKeyboardButtonsForOneLine(containerSnowmanKeyboardLine + "1", buttonsLine1);
-
-    // const keysLine2 = ["", "A", "S", "D", "F", "G", "H", "I", "J", "K", "L", "", "", ""];
-    // createKeyboardButtonsForOneLine(containerSnowmanKeyboardLine + "2", 13, keysLine2);
-    // createKeyboardButtonsForOneLine(containerSnowmanKeyboardLine + "2", keysLine2);
-
-    // const keysLine3 = ["", "Z", "X", "C", "V", "B", "N", "M", "", "", "", ""];
-    // createKeyboardButtonsForOneLine(containerSnowmanKeyboardLine + "3", 12, keysLine3);
-    // createKeyboardButtonsForOneLine(containerSnowmanKeyboardLine + "3", keysLine3);
-
-    // const keysLine4 = ["", "", "", "NEW GAME", "", "", "", ""];
-    // createKeyboardButtonsForOneLine(containerSnowmanKeyboardLine + "4", 8, keysLine4);
-    // createKeyboardButtonsForOneLine(containerSnowmanKeyboardLine + "4", keysLine4);
 }
 
 function createKeyboardButtons(){

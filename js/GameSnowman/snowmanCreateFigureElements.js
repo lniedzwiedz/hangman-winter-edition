@@ -4,84 +4,50 @@ function createSnowmanFigure(parentId, subpageName) {
     let ClassGrandchild = "containerSnowmanFigureElement-";
     let ClassGreatGrandchild = "snowmanFigureElementAction-";
 
-    let parrentDiv = document.createElement('div');
-    parrentDiv.setAttribute('id', IdChild);
-    document.getElementById(parentId).append(parrentDiv);
+    let parentDiv = document.createElement('div');
+    parentDiv.setAttribute('id', IdChild);
+    document.getElementById(parentId).append(parentDiv);
 
     // 16 - snowman containers + div
     for (let i = 0; i <= 16; i++) {
 
         // container
         let innerDivContainer = document.createElement('div');
-        // innerDivContainer.setAttribute('class', ClassGrandchild + i.toString());
         innerDivContainer.setAttribute('id', ClassGrandchild + i.toString());
         document.getElementById(IdChild).append(innerDivContainer);
 
         // action
         let innerDiv = document.createElement("div");
-        // innerDiv.setAttribute("class", ClassGreatGrandchild + i.toString());
         innerDiv.setAttribute("id", ClassGreatGrandchild + i.toString());
-        // innerDiv.setAttribute("class", "snowmanFigureElementButtons");
-        // innerDiv.className += " snowmanFigureElementButtons";
-
-
-
-
-
-        // let div0 = document.getElementById(IdChild);
-        // let div1 = div0.getElementsByClassName(ClassGrandchild + i.toString())[0];
-        // div1.append(innerDiv);
-
         let div1 = document.getElementById(ClassGrandchild + i.toString());
-
         div1.append(innerDiv);
 
-
         if (i === 4){
-            // innerDiv.innerHTML = "O,O";
+            // innerDiv.innerHTML = "O,O" eyes;
 
             for (let j = 0; j < 2; j++) {
-
                 let divEye = document.createElement('div');
                 document.getElementById(ClassGreatGrandchild + i.toString()).append(divEye);
-
                 divEye.classList.add("snowmanFigureElementEyes");
-                // divEye.classList.add("snowmanFigureElementEye-"+j.toString());
-
-
-
             }
-
         }
 
         if (i === 5) {
-            // innerDiv.innerHTML = "U";
-
+            // innerDiv.innerHTML = "U" mouth;
             let divSmile = document.createElement('div');
             divSmile.setAttribute('id', "snowmanFigureElementSmile");
             document.getElementById(ClassGreatGrandchild + i.toString()).append(divSmile);
         }
 
-
         if (i > 5 && i < 12) {
-            // innerDiv.innerHTML = "*";
-
-            // let divButtonBox = document.createElement('div');
-            // document.getElementById(ClassGreatGrandchild + i.toString()).append(divButtonBox);
-            // divButtonBox.classList.add("snowmanFigureElementButtons");
-
-
             let divButtonBox = document.createElement('div');
             document.getElementById(ClassGreatGrandchild + i.toString()).append(divButtonBox);
             divButtonBox.setAttribute("id", "containerSnowmanFigureElementButtonNo-" + i.toString())
-
 
             let divButton = document.createElement('div');
             document.getElementById("containerSnowmanFigureElementButtonNo-" + i.toString()).append(divButton);
             divButton.setAttribute("id", "snowmanFigureElementButtonNo-" + i.toString())
             divButton.classList.add("snowmanFigureElementButton");
-
-
         }
 
         // XXXXXXXXXXXXXXXXXXXX only for test ->
@@ -100,11 +66,6 @@ function createSnowmanFigure(parentId, subpageName) {
         // if (i === 3) innerDiv.className += " snowmanFigureElementAction-3";
 
         // innerDiv.className += " snowmanFigureElementsFinal ";
-
-
-
-
-
 
 
     }
