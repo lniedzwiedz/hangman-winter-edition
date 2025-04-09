@@ -8,8 +8,17 @@
     grid-template-columns: repeat(23, 1fr);
 }
 
-/* subpage - gameSnowman; require change -> gameKeyboard.js*/
-#containerSnowmanFigureElements-gameSnowman {
+/*!* subpage - gameSnowman; require change -> gameKeyboard.js*!*/
+/*#containerSnowmanFigureElements-gameSnowman {*/
+/*    !*background-color: darkolivegreen;*!*/
+/*    display: grid;*/
+/*    grid-row: 1 / 1;*/
+/*    grid-column: 1 / 1;*/
+/*    grid-template-rows: repeat(23, 1fr);*/
+/*    grid-template-columns: repeat(23, 1fr);*/
+/*}*/
+
+#containerSnowmanFigureElements {
     /*background-color: darkolivegreen;*/
     display: grid;
     grid-row: 1 / 1;
@@ -17,6 +26,102 @@
     grid-template-rows: repeat(23, 1fr);
     grid-template-columns: repeat(23, 1fr);
 }
+
+#containerSnowmanFigureMessage-1-welcomeText{
+    display: grid;
+    grid-row: 2 / 6;
+    grid-column: 2 / 6;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    z-index: 1;
+}
+
+#containerSnowmanFigureMessage-1-goodbyeText{
+    display: grid;
+    grid-row: 2 / 6;
+    grid-column: 2 / 6;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    z-index: 1;
+}
+
+.containerSnowmanFigureMessage{
+    display: grid;
+    grid-row: 2 / 6;
+    grid-column: 2 / 6;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    z-index: 1;
+}
+
+#snowmanFigureStartGameElement-1-welcomeText {
+    /*text-shadow: 5px -9px 20px #621735;*/
+    /*text-shadow: 3px -7px 20px #621735;*/
+    text-shadow: 4px -1px 20px #621735;
+    /*color: #ac4a71;*/
+    color: #000000;
+    margin: auto;
+    text-align: center;
+    /*padding-top: 0.5rem;*/
+    font-size: 13.7rem;
+    font-weight: 700;
+
+    /*margin-top: 0;*/
+    /*margin-bottom: 0;*/
+    padding: 0;
+
+    /*animation: animationStartGameElement-1-set 5s alternate;*/
+
+}
+
+#snowmanFigureStartGameElement-1-goodbyeText {
+    /*text-shadow: 5px -9px 20px #621735;*/
+    /*text-shadow: 3px -7px 20px #621735;*/
+    text-shadow: 4px -1px 20px #621735;
+    /*color: #ac4a71;*/
+    color: #000000;
+    margin: auto;
+    text-align: center;
+    /*padding-top: 0.5rem;*/
+    font-size: 3rem;
+    font-weight: 500;
+
+    /*margin-top: 0;*/
+    /*margin-bottom: 0;*/
+    padding: 0;
+
+    /*animation: animationStartGameElement-1-set 5s alternate;*/
+
+}
+
+.snowmanFigureStartGameElement-setAnimationToShowColor {
+    animation: animationStartGameElement-1-setAnimationToShowColor 2s alternate;
+}
+
+@keyframes animationStartGameElement-1-setAnimationToShowColor{
+    from {
+        text-shadow: 4px -1px 20px #000000;
+    }
+    to {
+        text-shadow: 4px -1px 20px #621735;
+    }
+}
+
+.snowmanFigureStartGameElement-setAnimationToRemoveColor {
+    animation: animationStartGameElement-1-remove 3s alternate;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animationStartGameElement-1-remove {
+    from {
+        text-shadow: 4px -1px 20px #621735;
+    }
+    to {
+        text-shadow: 4px -1px 20px #000000;
+    }
+}
+
+
 
 
 /* snowman container - start from top (hat) */
@@ -612,16 +717,16 @@
 
 /* snowman action id - start from top (hat) */
 
-.snowmanFigureElementActionAddShape {
+.snowmanFigureElementActionAddShapeColor {
     border-right-style: solid;
     border-left-style: solid;
     border-top-style: none;
     border-bottom-style: none;
-    animation: animationSnowmanFigureElementActionAddShapeChangeColor 3s alternate;
+    animation: animationSnowmanFigureElementActionAddShapeColor 3s alternate;
     animation-fill-mode: forwards;
 }
 
-@keyframes animationSnowmanFigureElementActionAddShapeChangeColor {
+@keyframes animationSnowmanFigureElementActionAddShapeColor {
     from{
         /*color: #000000;*/
         /*border-color: #000000;*/
@@ -650,12 +755,12 @@
     border-bottom-style: solid;
 }
 
-.snowmanFigureElementActionChangeShapeColor {
-    animation: animationSnowmanFigureElementActionChangeShapeColor 4s alternate;
+.snowmanFigureElementActionShapeRemoveColor {
+    animation: animationSnowmanFigureElementActionShapeRemoveColor 4s alternate;
     animation-fill-mode: forwards;
 }
 
-@keyframes animationSnowmanFigureElementActionChangeShapeColor {
+@keyframes animationSnowmanFigureElementActionShapeRemoveColor {
     from{
         /*color: #ac4a71;*/
         /*border-color: #ac4a71;*/

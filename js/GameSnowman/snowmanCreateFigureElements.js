@@ -1,6 +1,8 @@
-function createSnowmanFigure(parentId, subpageName) {
+function createSnowmanFigure() {
 
-    let IdChild = "containerSnowmanFigureElements-" + subpageName;
+    // let IdChild = "containerSnowmanFigureElements";
+    let parentId = "containerGameSnowmanAnimation";
+    let IdChild = "containerSnowmanFigureElements";
     let ClassGrandchild = "containerSnowmanFigureElement-";
     let ClassGreatGrandchild = "snowmanFigureElementAction-";
 
