@@ -1,5 +1,5 @@
 
-//const {createSnowmanFigure} = require("./js/snowmanCreateFigureElements.js");
+//const {createSnowmanFigure} = require("./js/gameSnowmanCreateFigureElements.js");
 
 // function menuHomePageGameButtons(elementId) {
 //     let gameButtons = document.getElementsByClassName("item-2");
@@ -35,6 +35,6 @@
 // }
 
 // create snowman at home page
-// import { createSnowmanFigure } from "js/snowmanCreateFigureElements.js"
+// import { createSnowmanFigure } from "js/gameSnowmanCreateFigureElements.js"
 //  createSnowmanFigure("containerButtonGameSnowmanElementFigure", "home");
 

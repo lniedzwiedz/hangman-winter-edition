@@ -1,9 +1,52 @@
+const containerMainHome = "containerMainHome";
+const containerHomeGamesButtons = "containerHomeGamesButtons";
 
 const containerGameSnowmanDescription = "containerGameSnowmanDescription";
 const gameSnowmanWordElementTextBuild = "gameSnowmanWordElementTextBuild";
 const gameSnowmanDescriptionTextBuild = ["BUILD SNOWMAN2", "discover colour name", "WIN GAME", "&", "snowman will change colour"];
 
 const gameSnowmanDescription = "gameSnowmanDescription";
+
+function createSubpageHome(){
+    createMainContainerHome();
+    createContainerButtonGameBuildSnowman()
+    createContainersForGameDescription("SnowmanBuild");
+
+}
+
+createSubpageHome();
+
+
+
+
+function createMainContainerHome(){
+
+    let elementId1 = "sectionHome"
+    let elementIdAndClass = containerMainHome;
+
+    let mainElement = document.getElementsByClassName("containerMain")[0];
+    let newDiv = document.createElement("div");
+    mainElement.append(newDiv);
+    newDiv.setAttribute("id", elementId1);
+    newDiv.classList.add("item-2")
+    newDiv.classList.add("containerSectionHome")
+
+    let newDiv2 = document.createElement("div");
+    let mainElem = document.getElementById(elementId1);
+    mainElem.append(newDiv2);
+    newDiv2.setAttribute("id", elementIdAndClass);
+    newDiv2.classList.add((elementIdAndClass));
+
+}
+
+
+
+function createContainerButtonGameBuildSnowman(){
+    // let elementId2 = containerMainHome;
+    // let elementId3 = containerHomeGamesButtons;
+    createNewDiv(containerMainHome, containerHomeGamesButtons);
+}
+
 
 function createNewDiv(parentId, newChildId) {
     let newDiv = document.createElement("div");
@@ -12,71 +55,39 @@ function createNewDiv(parentId, newChildId) {
     newDiv.setAttribute("id", newChildId);
 }
 
-function createContainersForGameDescription() {
+function createContainersForGameDescription(descriptionName) {
 
-    createNewDiv("containerHomeButtonGameSnowmanBuild", containerGameSnowmanDescription);
-    let parentElement = document.getElementById(containerGameSnowmanDescription);
+    let containerGameSnowmanDescriptionSpecified = containerGameSnowmanDescription + descriptionName;
+    createNewDiv(containerHomeGamesButtons, containerGameSnowmanDescriptionSpecified);
+    let element1 = document.getElementById(containerGameSnowmanDescriptionSpecified);
+    element1.classList.add(containerGameSnowmanDescriptionSpecified);
 
-    // let gameKind = "build";
-    //
-    let rowStart = 1;
-    let columnStart = 1;
-    let rowEnd = 2;
-    let columnEnd = 3;
+   let containerButton = containerGameSnowmanDescriptionSpecified +"-gameButton";
+    createNewDiv(containerGameSnowmanDescriptionSpecified, containerButton);
+    let element2 = document.getElementById(containerButton);
+    // element2.classList.add(containerButton);
 
-    parentElement.style.display = "grid";
-    // parentElement.style.backgroundColor = "cadetblue";
-    parentElement.style.gridRow = rowStart;
-    parentElement.style.gridColumn = columnStart;
-    parentElement.style.gridRowEnd = rowEnd;
-    parentElement.style.gridColumnEnd = columnEnd;
-
-    // parentElement.style.gridTemplateRows = " repeat(1, 0.00001fr 100fr  0.00001fr) ";
-    // parentElement.style.gridTemplateColumns = "0.00001fr 100fr 0.00001fr";
-    // parentElement.style.gridTemplateRows = " repeat(1, 27fr 46fr 27fr) ";
-    parentElement.style.gridTemplateRows = " repeat(1, 7fr 46fr 47fr) ";
-    parentElement.style.gridTemplateColumns = "30fr 40fr 30fr";
-
-
-    let rowChildStart = 2;
-    let columnChildStart = 2;
-    let rowChildEnd = 2;
-    let columnChildEnd = 3;
-
-
-    let newDiv = document.createElement("div");
-    // document.getElementById(containerGameSnowmanDescription).append(newDiv);
-    parentElement.append(newDiv);
-    newDiv.style.display = "grid";
-
-    // newDiv.style.backgroundColor = "darkslategrey";
-
-
-    newDiv.style.gridRow = rowChildStart;
-    newDiv.style.gridColumn = columnChildStart;
-    newDiv.style.gridRowEnd = rowChildEnd;
-    newDiv.style.gridColumnEnd = columnChildEnd;
-    newDiv.style.gridTemplateRows = "repeat(1, 1fr) ";
-    newDiv.style.gridTemplateColumns = "1fr";
-    // newDiv.innerHTML = gameSnowmanDescriptionTextBuild;
-
-
-
-    // newDiv.setAttribute("id", "gameSnowmanDescription-" + gameKind);
-    newDiv.setAttribute("id", gameSnowmanDescription);
+    let containerDescription = containerGameSnowmanDescriptionSpecified +"-text";
+    createNewDiv(containerButton, containerDescription);
+    let element3 = document.getElementById(containerDescription);
 
     for (let i = 0; i < gameSnowmanDescriptionTextBuild.length; i++) {
 
+        let elementId = gameSnowmanWordElementTextBuild + "-" + i
+        createNewDiv(containerDescription, elementId);
+        let element4 = document.getElementById(elementId);
+
         let newP = document.createElement("p");
         // document.getElementById(containerGameSnowmanDescription).append(newDiv);
-        newDiv.append(newP);
+        element4.append(newP);
         newP.innerHTML = gameSnowmanDescriptionTextBuild[i];
 
-        // newP.classList.add(gameSnowmanWordElementTextBuild+"-p"+i)
-        newP.setAttribute("id", gameSnowmanWordElementTextBuild + "-p" + i)
+        // newP.setAttribute("id", gameSnowmanWordElementTextBuild + "-" + i)
         newP.classList.add(gameSnowmanWordElementTextBuild)
+        newP.classList.add(gameSnowmanWordElementTextBuild+"-"+i)
+
     }
 
 }
 
-createContainersForGameDescription();
+;
