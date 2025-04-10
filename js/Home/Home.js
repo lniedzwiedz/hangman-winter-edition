@@ -18,7 +18,6 @@ function createSubpageHome() {
     createContainerButtonGameBuildSnowman()
     createContainersHomeButtonGameSnowman(gameNameSnowmanBuild, gameSnowmanDescriptionTextBuild);
     createContainersHomeButtonGameSnowman(gameNameSnowmanDestroy, gameSnowmanDescriptionTextDestroy);
-
 }
 
 createSubpageHome();
@@ -38,7 +37,6 @@ function createMainContainerHome() {
     mainElem.append(newDiv2);
     newDiv2.setAttribute("id", containerMainHome);
     newDiv2.classList.add((containerMainHome));
-
 }
 
 function createContainerButtonGameBuildSnowman() {
