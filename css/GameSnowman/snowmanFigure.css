@@ -8,21 +8,12 @@
     grid-template-columns: repeat(23, 1fr);
 }
 
-/*!* subpage - gameSnowman; require change -> gameKeyboard.js*!*/
-/*#containerSnowmanFigureElements-gameSnowman {*/
-/*    !*background-color: darkolivegreen;*!*/
-/*    display: grid;*/
-/*    grid-row: 1 / 1;*/
-/*    grid-column: 1 / 1;*/
-/*    grid-template-rows: repeat(23, 1fr);*/
-/*    grid-template-columns: repeat(23, 1fr);*/
-/*}*/
 
 #containerSnowmanFigureElements {
     /*background-color: darkolivegreen;*/
     display: grid;
-    grid-row: 2 / 6;
-    grid-column: 2 / 6;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
     grid-template-rows: repeat(23, 1fr);
     grid-template-columns: repeat(23, 1fr);
 }

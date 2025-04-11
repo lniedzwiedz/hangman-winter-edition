@@ -1,11 +1,15 @@
+const containerGameSnowmanKeyboard = "containerGameSnowmanKeyboard";
+const containerGameSnowmanKeyboardElements = "containerGameSnowmanKeyboardElements";
 const containerSnowmanKeyboardLine = "containerSnowmanKeyboard-line-";
+const snowmanKeyboardButtons = "snowmanKeyboardButtons";
+const snowmanKeyboardButtonNewGameGameOver = "snowmanKeyboardButtonNewGameGameOver";
 
 function createKeyboardLines(){
     let keyboardLines = 4;
 
     for (let i = 1; i <= 4; i++) {
         let newDiv = document.createElement("div");
-        document.getElementById("containerGameSnowmanKeyboardElements").append(newDiv);
+        document.getElementById(containerGameSnowmanKeyboardElements).append(newDiv);
         newDiv.setAttribute("id", containerSnowmanKeyboardLine+i);
     }
 }
@@ -34,16 +38,15 @@ function createKeyboardButtonsForOneLine(elementId, keysLine) {
         if ((keysLine[i] !== "") && (keysLine[i] !== "NEW GAME")) {
             console.log("")
             newButton.value = keysLine[i];
-            newButton.setAttribute("onclick", "playGameSnowmanBuild(this.id)");
+            newButton.setAttribute("onclick", functionNameOnclickPlayGameSnowmanBuild+"(this.id)");
         }
 
         if (keysLine[i] === "NEW GAME") {
-            newButton.setAttribute("onclick", "playGameSnowmanBuildNewGame(this.id)");
+            newButton.setAttribute("onclick", functionSetConfigurationForGameSnowmanBuild+"(this.id)");
         }
         newButton.innerHTML += keysLine[i];
         newButton.setAttribute("id", "keyboard-" + keysLine[i]);
-        newButton.classList.add("snowmanKeyboardButtons");
-
+        newButton.classList.add(snowmanKeyboardButtons);
         columntStart += 3;
         columntEnd += 3;
     }
@@ -57,7 +60,6 @@ const buttonsLine4 = ["", "", "", "NEW GAME", "", "", "", ""];
 const lines = 4;
 
 function createKeyboardButtonsForLines() {
-
     let text = "buttonsLine";
 
     for (let i = 1; i <= lines; i++) {
@@ -69,4 +71,36 @@ function createKeyboardButtonsForLines() {
 function createKeyboardButtons(){
     createKeyboardLines();
     createKeyboardButtonsForLines();
+}
+
+// game snowman functions:
+
+function getKeyboardChar(clickedId) {
+    let getKeyElementPressedByUSer = document.getElementById(clickedId);
+    return getKeyElementPressedByUSer.getAttribute("value");
+}
+
+function disableKeyboardButton(clickedId) {
+    let getKeyElementPressedByUSer = document.getElementById(clickedId);
+    getKeyElementPressedByUSer.removeAttribute("onclick");
+}
+
+function disableKeyboardButtons() {
+    let keys = document.getElementsByClassName(snowmanKeyboardButtons);
+
+    for (let i = 0; i < keys.length; i++) {
+        keys[i].removeAttribute("onclick");
+    }
+}
+
+function changeKeyboardButtonNewGameWhenGameOver(functionNameOnclickPlayGameSnowman) {
+    let element = document.getElementById("keyboard-NEW GAME");
+    // element.className += snowmanKeyboardButtonNewGameGameOver;
+    element.classList.add(snowmanKeyboardButtonNewGameGameOver);
+    element.setAttribute("onclick", functionNameOnclickPlayGameSnowman+"(this.id)");
+}
+
+function changeKeyboardButtonsGameOver() {
+    disableKeyboardButtons();
+    changeKeyboardButtonNewGameWhenGameOver(functionSetConfigurationForGameSnowmanBuild);
 }

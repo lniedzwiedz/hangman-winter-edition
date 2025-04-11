@@ -1,5 +1,3 @@
-const maxContainerDivNumberToDisplay = 17;
-
 let word;
 let wordChar;
 let wordCharsWithoutDuplicate;
@@ -27,23 +25,26 @@ const indexGroups2 = [
 ];
 
 let indexGroups;
-
-let cutDirection; // number index = indexGroups
+let cutDirection;
 let cutDirection2;
 let animationMaxNumber;
 let countedCorrectShots;
 let countedWrongShots;
 let maxWrongShots;
-
 let countedAnimationElements;
 let gameLives;
 let gameLivesChars;
 
-function playGameSnowmanBuildConfiguration() {
+const fileWithWords = "JAVA, TEST, QWERTYU, TESTLONGXD, QWERTYUIOPASD, " +
+    "TESTTEST, TESTTESZ, TESTTEQZ, TESTTQAZ, " +
+    "TEST AL";
+
+const words = fileWithWords.split(", ")
+
+function setConfigurationForGameSnowmanBuild() {
     word = getWord();
     wordChar = getCharsNumber(word);
     wordCharsWithoutDuplicate = getCharsNumberWithoutDuplicate();
-
     cutDirection = [2, 6, 4, 1, 5, 0, 3]; // number index = indexGroups
     cutDirection2 = [0, 2];
     animationMaxNumber = cutDirection.length;
@@ -52,49 +53,18 @@ function playGameSnowmanBuildConfiguration() {
     countedAnimationElements = 0;
     maxWrongShots = animationMaxNumber;
     getAnimationIndexGroups();
-
     gameLives = "LIVES" + " " + maxWrongShots;
     gameLivesChars = getCharsNumber(gameLives);
-
-    // createSnowmanFigure("containerSnowmanFigureAction", "gameSnowman");
-    // createSnowmanFigure("containerSnowmanFigureAction");
     removeMainContainerForGameSnowman();
     createStartContainersForGameSnowman();
-    // createMainContainerForGameSnowman()
-    // createStartContainersForGameSnowmanAnimation();
-    // createContainersForGameSnowmanFigureMessage("snowmanFigureStartGameElement-1-welcomeText", "?")
-    // createStartContainersForGameSnowmanWord();
-    // createStartContainersForGameSnowmanKeyboard();
-    // createSnowmanFigure();
-    // createContainerGameSnowmanWordElements();
-    // createKeyboardButtons();
-
-
-    randomNumber(); // remove
-
+    randomNumber();
 }
 
-const fileWithWords = "JAVA, TEST, QWERTYU, TESTLONGXD, QWERTYUIOPASD, " +
-    "TESTTEST, TESTTESZ, TESTTEQZ, TESTTQAZ, " +
-    "TEST AL";
-
-const words = fileWithWords.split(", ")
-
 function randomNumber() {
-    // let min = 0;
-    // let max = words.length-1;
-    // return Math.floor(Math.random() * (max - min + 1)) + min;
     return Math.floor(Math.random() * words.length - 1) + 1;
-
 }
 
 function getWord() {
-    // word max length 17 -> animation has 17 pieces
-    // const fileWithWords = "JAVA, TEST, QWERTYU, TESTLONGXD, QWERTYUIOPASD, " +
-    //     "TESTTEST, TESTTESZ, TESTTEQZ, TESTTQAZ, " +
-    //     "TEST AL";
-
-    // add random index
     let index = randomNumber();
     console.log("  ");
     console.log("index = " + index);
@@ -102,12 +72,7 @@ function getWord() {
     // return words[index];
     return "JAVA";
     // return "QWERTYUIOPASDFGHJKL";
-
-
 }
-
-// const word = getWord();
-// let word;
 
 function getCharsNumber(word) {
     return word.split("");
@@ -134,56 +99,12 @@ function getCharsNumberWithoutDuplicate() {
     return finalChar.split("");
 }
 
-// const wordChar = getCharsNumber(word);
-// const wordCharsWithoutDuplicate = getCharsNumberWithoutDuplicate();
-//
-// let wordChar;
-// let wordCharsWithoutDuplicate;
-
-
 function checkCharacter(keyValue) {
     for (let i = 0; i < wordChar.length; i++) {
         if (keyValue === wordChar[i])
             return true;
     }
     return false;
-}
-
-function getKeyboardChar(clickedId) {
-    let getKeyElementPressedByUSer = document.getElementById(clickedId);
-    return getKeyElementPressedByUSer.getAttribute("value");
-}
-
-function disableKeyboardButton(clickedId) {
-    let getKeyElementPressedByUSer = document.getElementById(clickedId);
-    getKeyElementPressedByUSer.removeAttribute("onclick");
-}
-
-function disableKeyboardButtons() {
-    let keys = document.getElementsByClassName("snowmanKeyboardButtons");
-
-    for (let i = 0; i < keys.length; i++) {
-        keys[i].removeAttribute("onclick");
-    }
-
-}
-
-
-function changeKeyboardButtonNewGameWhenGameOver() {
-    let element = document.getElementById("keyboard-NEW GAME");
-    element.className += " snowmanKeyboardButtonNewGameGameOver";
-    element.setAttribute("onclick", "playGameSnowmanBuildNewGame(this.id)");
-}
-
-function changeKeyboardButtonNewGameWhenStartNewGame() {
-    let element = document.getElementById("keyboard-NEW GAME");
-    element.classList.remove("snowmanKeyboardButtonNewGameGameOver");
-}
-
-
-function changeKeyboardButtonsGameOver() {
-    disableKeyboardButtons();
-    changeKeyboardButtonNewGameWhenGameOver();
 }
 
 function changeDiscoveredCharVisibility(charToShow) {
@@ -200,7 +121,6 @@ const animationMaxNumberToDisplay = function getAnimationMaxNumberToDisplay() {
     }
     return wordCharsWithoutDuplicate.length;
 }
-
 
 function getNewIndexGroups(tempCutIndexGroups) {
     let newIndexGroups = [];
@@ -361,31 +281,10 @@ function getAnimationIndexGroups() {
 
 function playGameSnowmanBuild(clickedId) {
 
-
     let keyValue = getKeyboardChar(clickedId);
-    // console.log("clickedId = " + clickedId );
-
     let isCharExist = checkCharacter(keyValue);
 
-    // console.log(" cutDirection.length = " + cutDirection.length);
-
     if (isCharExist) {
-
-
-        // if(countedCorrectShots === 0){
-        //     removeContainerSnowmanFigureMessageActionsWelcomeText();
-        //     createSnowmanFigure();
-        //     setTimeout(function(){
-        //         setShapeSnowmanFigureElements();
-        //     },1000);
-        //     changeDiscoveredCharVisibility(keyValue);
-        //     disableKeyboardButton(clickedId);
-        // }else{
-        //     setShapeSnowmanFigureElements();
-        //     changeDiscoveredCharVisibility(keyValue);
-        //     disableKeyboardButton(clickedId);
-        // }
-
         countedCorrectShots += 1;
 
         if (countedCorrectShots >= wordCharsWithoutDuplicate.length) {
@@ -395,23 +294,12 @@ function playGameSnowmanBuild(clickedId) {
             changeDiscoveredCharVisibility(keyValue);
             setShapeSnowmanFigureElements();
             setColorForSnowman();
-
-            // setTimeout(function(){
-            //
-            //     setColorForSnowman();
-            // },3000);
-
-            // changeColourSnowmanFigureElements()
             console.log("YOU WIN !!!");
-            console.log("GO countedWrongShots = " + countedWrongShots);
+            // console.log("GO countedWrongShots = " + countedWrongShots);
         }else{
             if(countedCorrectShots === 1){
                 removeContainerSnowmanFigureMessageActionsWelcomeText();
-
-                // createSnowmanFigure();
                 createContainersSnowmanFigureMainElements();
-
-
                 setTimeout(function(){
 
                     setShapeSnowmanFigureElements();
@@ -424,51 +312,29 @@ function playGameSnowmanBuild(clickedId) {
                 disableKeyboardButton(clickedId);
             }
         }
-
-
-        // animationPartToDisplay -= 1;
     } else {
-
-
-        // countedWrongShots += 1;
 
         changeLivesNumberVisible();
 
         if (countedWrongShots < maxWrongShots -1) {
-            console.log("maxWrongShots = " + maxWrongShots);
-            console.log("countedWrongShots = " + countedWrongShots);
-
-            // changeLivesNumberVisible();
+            // console.log("maxWrongShots = " + maxWrongShots);
+            // console.log("countedWrongShots = " + countedWrongShots);
             countedWrongShots += 1;
         }
-
-        // if (countedWrongShots >= maxWrongShots) {
         else {
-
             createContainersForGameSnowmanFigureMessageGameOver();
             setGameOverTextLoser();
             changeKeyboardButtonsGameOver();
             console.log("GAME OVER");
-            console.log("GO countedWrongShots = " + countedWrongShots);
+            // console.log("GO countedWrongShots = " + countedWrongShots);
             countedWrongShots += 77;
         }
-
-        // countedWrongShots += 1;
     }
-
-
 }
-
-// let countedAnimationElements = 0;
-// let countedAnimationElements;
 
 function setShapeSnowmanFigureElements() {
 
     let tempChangeColor = "#A05880";
-    let elementIdPartialText = "snowmanFigureElementAction-";
-    let IdChild = "containerSnowmanFigureElements";
-    let ClassGrandchild = "containerSnowmanFigureElement-";
-    let ClassGreatGrandchild = "snowmanFigureElementAction-";
 
     let indexGroup = indexGroups[countedAnimationElements];
 
@@ -476,126 +342,74 @@ function setShapeSnowmanFigureElements() {
         let index = indexGroup[i];
 
 
-        let element = document.getElementById("snowmanFigureElementAction-"+index.toString());
+        let element = document.getElementById(snowmanFigureElementAction+index.toString());
         // element.className += " snowmanFigureElementActionAddShapeColor ";
         // console.log("index < 4, index = " + index);
         if(index < 4){
 
             // console.log("index < 4, index = " + index);
 
-            element.classList.add("snowmanFigureElementAction-"+index+"-hatElementInitialPositionForShape");
-            element.classList.add("snowmanFigureElementActionAddShapeColor");
+            element.classList.add(snowmanFigureElementAction+index+hatElementInitialPositionForShape);
+            element.classList.add(snowmanFigureElementActionAddShapeColor);
         }
 
         if(index === 4){
             // innerDiv.innerHTML = "O,O" eyes;
-            element.className += "snowmanFigureElementActionAddShapeColor";
+            // element.className += "snowmanFigureElementActionAddShapeColor";
+            element.classList.add(snowmanFigureElementActionAddShapeColor);
 
             for (let j = 0; j < 2; j++) {
                 let divEye = document.createElement('div');
-                document.getElementById(ClassGreatGrandchild + index.toString()).append(divEye);
-                divEye.classList.add("snowmanFigureElementEyes");
-                divEye.classList.add("snowmanFigureElementActionAddShapeColor");
+                document.getElementById(snowmanFigureElementAction + index.toString()).append(divEye);
+                divEye.classList.add(snowmanFigureElementEyes);
+                divEye.classList.add(snowmanFigureElementActionAddShapeColor);
             }
-
-            // divEye.className += " snowmanFigureElementActionAddShapeColor ";
-            // let eyes = document.getElementsByClassName("snowmanFigureElementEyes");
-            //
-            // for (let e = 0; e < eyes.length; e++) {
-            //     eyes[e].className += " snowmanFigureElementActionAddShapeColor ";
-            // }
         }
 
         if(index === 5){
 
             // innerDiv.innerHTML = "U" mouth;
             let divSmile = document.createElement('div');
-            divSmile.setAttribute('id', "snowmanFigureElementSmile");
-            document.getElementById(ClassGreatGrandchild + index.toString()).append(divSmile);
+            divSmile.setAttribute('id', snowmanFigureElementSmile);
+            document.getElementById(snowmanFigureElementAction + index.toString()).append(divSmile);
 
-            element.className += " snowmanFigureElementActionAddShapeColor ";
-            let smile = document.getElementById("snowmanFigureElementSmile");
+            // element.className += " snowmanFigureElementActionAddShapeColor ";
+            element.classList.add(snowmanFigureElementActionAddShapeColor);
+            let smile = document.getElementById(snowmanFigureElementSmile);
             // smile.className += "snowmanFigureElementActionAddShapeColor snowmanFigureElementActionAddShapeSmile";
-            smile.className += "snowmanFigureElementActionAddShapeColor";
+            // smile.className += snowmanFigureElementActionAddShapeColor;
+            smile.classList.add(snowmanFigureElementActionAddShapeColor);
         }
 
         if (index > 5 && index < 12) {
 
             let divButtonBox = document.createElement('div');
-            document.getElementById(ClassGreatGrandchild + index.toString()).append(divButtonBox);
-            divButtonBox.setAttribute("id", "containerSnowmanFigureElementButtonNo-" + index.toString())
+            document.getElementById(snowmanFigureElementAction + index.toString()).append(divButtonBox);
+            divButtonBox.setAttribute("id", containerSnowmanFigureElementButtonNo + index.toString())
 
             let divButton = document.createElement('div');
             // document.getElementById("containerSnowmanFigureElementButtonNo-" + i.toString()).append(divButton);
-            let button = document.getElementById("containerSnowmanFigureElementButtonNo-" + index.toString());
+            let button = document.getElementById(containerSnowmanFigureElementButtonNo + index.toString());
             button.append(divButton);
-            divButton.setAttribute("id", "snowmanFigureElementButtonNo-" + index.toString())
-            divButton.classList.add("snowmanFigureElementButton");
-            divButton.classList.add("snowmanFigureElementActionAddShapeColor");
-            divButton.classList.add("snowmanFigureElementActionAddShapeButton");
+            divButton.setAttribute("id", snowmanFigureElementButtonNo + index.toString())
+            divButton.classList.add(snowmanFigureElementButton);
+            divButton.classList.add(snowmanFigureElementActionAddShapeColor);
+            divButton.classList.add(snowmanFigureElementActionAddShapeButton);
 
-            element.className += " snowmanFigureElementActionAddShapeColor ";
-            // let button = document.getElementById("snowmanFigureElementButtonNo-"+index.toString());
-            // button.className += " snowmanFigureElementActionAddShapeColor snowmanFigureElementActionAddShapeButton";
+            // element.className += " snowmanFigureElementActionAddShapeColor ";
+            element.classList.add(snowmanFigureElementActionAddShapeColor);
+
         }
 
         if (index > 12 && index < 17) {
-            element.className = "snowmanFigureElementAction-"+index+"-handInitialPositionForShape ";
-            element.className += "snowmanFigureElementActionAddShapeColor ";
-            element.className += "snowmanFigureElementActionAddShapeHands";
+            // element.className = snowmanFigureElementAction+index+"-handInitialPositionForShape ";
+            // element.className += "snowmanFigureElementActionAddShapeColor ";
+            // element.className += "snowmanFigureElementActionAddShapeHands";
+
+            element.classList.add(snowmanFigureElementAction+index+handInitialPositionForShape);
+            element.classList.add(snowmanFigureElementActionAddShapeColor);
+            element.classList.add(snowmanFigureElementActionAddShapeHands);
         }
-
-    }
-    countedAnimationElements += 1;
-
-}
-
-function setShapeSnowmanFigureElements1() {
-
-    let tempChangeColor = "#A05880";
-    let elementIdPartialText = "snowmanFigureElementAction-";
-
-    let indexGroup = indexGroups[countedAnimationElements];
-
-    for (let i = 0; i < indexGroup.length; i++) {
-        let index = indexGroup[i];
-
-        let element = document.getElementById("snowmanFigureElementAction-"+index.toString());
-        // element.className += " snowmanFigureElementActionAddShapeColor ";
-
-        if(index < 4){
-
-            element.className += " snowmanFigureElementAction-"+index+"-hatElementInitialPositionForShape";
-        }
-
-        if(index === 4){
-            element.className += " snowmanFigureElementActionAddShapeColor ";
-            let eyes = document.getElementsByClassName("snowmanFigureElementEyes");
-
-            for (let e = 0; e < eyes.length; e++) {
-                eyes[e].className += " snowmanFigureElementActionAddShapeColor ";
-            }
-        }
-
-        if(index === 5){
-            element.className += " snowmanFigureElementActionAddShapeColor ";
-            let smile = document.getElementById("snowmanFigureElementSmile");
-            // smile.className += "snowmanFigureElementActionAddShapeColor snowmanFigureElementActionAddShapeSmile";
-            smile.className += "snowmanFigureElementActionAddShapeColor";
-        }
-
-        if (index > 5 && index < 12) {
-            element.className += " snowmanFigureElementActionAddShapeColor ";
-            let button = document.getElementById("snowmanFigureElementButtonNo-"+index.toString());
-            button.className += " snowmanFigureElementActionAddShapeColor snowmanFigureElementActionAddShapeButton";
-        }
-
-        if (index > 12 && index < 17) {
-            element.className = "snowmanFigureElementAction-"+index+"-handInitialPositionForShape ";
-            element.className += "snowmanFigureElementActionAddShapeColor ";
-            element.className += "snowmanFigureElementActionAddShapeHands";
-        }
-
     }
     countedAnimationElements += 1;
 
@@ -612,18 +426,12 @@ function changeLivesNumberVisible() {
 
 }
 
-
-// create buttons for word
-
 function createNewDiv(parentId, newChildId) {
     let newDiv = document.createElement("div");
     let mainElem = document.getElementById(parentId);
     mainElem.append(newDiv);
     newDiv.setAttribute("id", newChildId);
 }
-
-const containerGameSnowmanWordElements = "containerGameSnowmanWordElements";
-const containerGameSnowmanWordToDiscover = "containerGameSnowmanWordToDiscover";
 
 function createContainersForWord() {
 
@@ -673,7 +481,7 @@ function createContainersForWord() {
             newDiv.style.backgroundColor = "#00000";
         } else {
             // newDiv.style.backgroundColor = "orange";
-            newDiv.classList.add("gameSnowmanWordElementToDiscover");
+            newDiv.classList.add(gameSnowmanWordElementToDiscover);
         }
 
         newDiv.style.gridRow = rowChildStart;
@@ -697,9 +505,6 @@ function createContainersForWord() {
 
 // let gameLives = "LIVES" + " " + maxWrongShots; // right now the same number is for the lives and animation
 // let gameLivesChars = getCharsNumber(gameLives);
-
-
-const containerGameSnowmanLives = "containerGameSnowmanLives";
 
 function createContainersForLives() {
 
@@ -761,29 +566,41 @@ function createContainersForLives() {
     }
 }
 
-const containerGameSnowmanDescription = "containerGameSnowmanDescription";
 
-const gameSnowmanWordElementTextBuild = "gameSnowmanWordElementTextBuild";
-// const gameSnowmanDescriptionTextBuild = "Build a snowman by discovering the colour. " +
-//     "Each guessed letter is one part of the snowman." +
-//     "When you win, the snowman will change colour.";
-//
-// const gameSnowmanDescriptionTextBuild = "Build snowman discover colour " +
-//     "when you win, the snowman will change colour";
-//
-// const gameSnowmanDescriptionTextBuild = ["Build snowman!", "discover colour", "when you win, the snowman will change colour"];
-// const gameSnowmanDescriptionTextBuild = ["BUILD SNOWMAN", "discover colour", "when you win, the snowman will change colour"];
-// const gameSnowmanDescriptionTextBuild = ["BUILD SNOWMAN", "discover colour name", "WIN GAME", "AND", "snowman will change colour"];
-const gameSnowmanDescriptionTextBuild = ["BUILD SNOWMAN", "discover colour name", "WIN GAME", "&", "snowman will change colour"];
+function setClassNameGameSnowman(elementId, suffixText) {
+    let name = containerGameSnowmanDescription + "-" + suffixText;
+    document.getElementById(elementId).classList.add(name);
+}
 
-const gameSnowmanDescriptionTextGameOverLoser = "GAME OVER";
-const gameSnowmanDescriptionTextGameOverLoserGiveHope = "You did well!";
-const gameSnowmanDescriptionTextGameOverWinner = "YOU WIN";
-const gameSnowmanDescriptionTextGameOverWinnerCongratulations = "Congratulations!";
+function createContainersForGameDescription(gameName, gameSnowmanDescriptionText) {
 
-const gameSnowmanDescription = "gameSnowmanDescription";
+    let containerGameSnowmanDescriptionSpecified = containerGameSnowmanDescription + gameName;
+    let containerButtonFiled = containerGameSnowmanDescriptionSpecified + "-gameOn";
+    createDiv(containerGameSnowmanWordElements, containerButtonFiled);
+    setClassNameGameSnowman(containerButtonFiled, "gameOn");
 
-function createContainersForGameDescription() {
+    let containerDescription = containerGameSnowmanDescriptionSpecified + "-gameButtonText";
+    createDiv(containerButtonFiled, containerDescription);
+    setClassNameGameSnowman(containerDescription, "gameButtonText");
+
+    for (let i = 0; i < gameSnowmanDescriptionText.length; i++) {
+
+        let elementId = gameSnowmanWordElementText + gameName + "-" + i;
+        createDiv(containerDescription, elementId);
+
+        let elementClass = containerGameSnowmanWordElementText + "-" + i;
+        setClassName(elementId, elementClass);
+
+        let newP = document.createElement("p");
+        document.getElementById(elementId).append(newP);
+        newP.innerHTML = gameSnowmanDescriptionText[i];
+        newP.classList.add(gameSnowmanWordElementText);
+        newP.classList.add(gameSnowmanWordElementText + "-" + i);
+    }
+
+}
+
+function createContainersForGameDescription1() {
 
     createNewDiv(containerGameSnowmanWordElements, containerGameSnowmanDescription);
     let parentElement = document.getElementById(containerGameSnowmanDescription)
@@ -838,9 +655,9 @@ function createContainersForGameDescription() {
 }
 
 function createContainerGameSnowmanWordElements() {
+    createContainersForGameDescription( gameNameSnowmanBuild, gameSnowmanDescriptionTextBuild);
     createContainersForWord();
     createContainersForLives();
-    createContainersForGameDescription();
 }
 
 function removeElementsById(elementId) {
@@ -850,42 +667,40 @@ function removeElementsById(elementId) {
     }
 }
 
-function removeContainerGameSnowmanWordElements() {
-    removeElementsById(containerGameSnowmanDescription);
-    removeElementsById(containerGameSnowmanWordToDiscover);
-    removeElementsById(containerGameSnowmanLives);
-}
+// function removeContainerGameSnowmanWordElements() {
+//     removeElementsById(containerGameSnowmanDescription);
+//     removeElementsById(containerGameSnowmanWordToDiscover);
+//     removeElementsById(containerGameSnowmanLives);
+// }
+//
+// function removeContainerSnowmanKeyboardLines() {
+//
+//     for (let i = 1; i < 5; i++) {
+//         removeElementsById("containerSnowmanKeyboard-line-" + i);
+//     }
+//
+// }
+//
+// function removeContainerSnowmanFigureElementsGameSnowman() {
+//
+//     removeElementsById("containerSnowmanFigureElements-gameSnowman");
+// }
 
-function removeContainerSnowmanKeyboardLines() {
-
-    for (let i = 1; i < 5; i++) {
-        removeElementsById("containerSnowmanKeyboard-line-" + i);
-    }
-
-}
-
-function removeContainerSnowmanFigureElementsGameSnowman() {
-
-    removeElementsById("containerSnowmanFigureElements-gameSnowman");
-}
 
 
-const containerGameSnowmanGameOver = "containerGameSnowmanGameOver";
-const containerGameSnowmanGameOverDescription = "containerGameSnowmanGameOverDescription";
 
 function setGameOverTextColorName(){
-    let element = document.getElementById(gameSnowmanWordElementTextBuild + "-p1");
-    element.innerHTML = "color: " + word;
+    let text = "color: " + word;
+    let cn = gameSnowmanWordElementText+"-1";
+    setElementTextByClassName(cn, text);
 }
 
 function setGameOverEndText(textEnd){
-    let element = document.getElementById(gameSnowmanWordElementTextBuild + "-p4");
-    element.innerHTML = textEnd;
+    setElementTextByClassName(gameSnowmanWordElementText + "-4", textEnd);
 }
 
 function setGameOverTextGameResult(textIsWin){
-    let element = document.getElementById(gameSnowmanWordElementTextBuild + "-p2");
-    element.innerHTML = textIsWin;
+    setElementTextByClassName(gameSnowmanWordElementText + "-2", textIsWin);
 }
 
 function setGameOverTextLoser() {
@@ -903,178 +718,142 @@ function setGameOverTextWinner() {
     setGameOverEndText(gameSnowmanDescriptionTextGameOverWinnerCongratulations);
 }
 
-
-let rootVariables = document.querySelector(":root");
 let colorTest = "antiquewhite";
 // let colorTest = "green";
 
 function setAnimationAfterWinSnowmanFigureElementsSnowballs() {
 
-    rootVariables.style.setProperty("--snowmanFigureColor", colorTest);
+    // rootVariables.style.setProperty("--snowmanFigureColor", colorTest);
+    rootVariables.style.setProperty(cssSnowmanFigureColor, colorTest);
 
     for (let i = 0; i <= 16; i++) {
 
-        let element = document.getElementById("snowmanFigureElementAction-"+i.toString());
+        let element = document.getElementById(snowmanFigureElementAction+i.toString());
 
         if(i >= 4) {
-            element.classList.add("snowmanFigureElementActionFinalSnowballs");
+            element.classList.add(snowmanFigureElementActionFinalSnowballs);
         }
 
         if(i < 4){
-            element.classList.add("snowmanFigureElementAction-"+i+"-setAnimationHatFinalColor");
+            element.classList.add(snowmanFigureElementAction+i+setAnimationHatFinalColor);
         }
 
         if(i === 4){
 
-            let eyes = document.getElementsByClassName("snowmanFigureElementEyes ");
+            let eyes = document.getElementsByClassName(snowmanFigureElementEyes);
 
             for (let e = 0; e < eyes.length; e++) {
-                eyes[e].classList.remove("snowmanFigureElementActionAddShapeColor");
-                eyes[e].classList.add("snowmanFigureElementActionFinalEyes");
+                // eyes[e].classList.remove("snowmanFigureElementActionAddShapeColor");
+                eyes[e].classList.remove(snowmanFigureElementActionAddShapeColor);
+                eyes[e].classList.add(snowmanFigureElementActionFinalEyes);
             }
         }
 
         if(i === 5){
-            let smile = document.getElementById("snowmanFigureElementSmile");
+            let smile = document.getElementById(snowmanFigureElementSmile);
             // smile.classList.add("snowmanFigureElementActionAddShape snowmanFigureElementActionAddShapeSmile");
-            smile.classList.remove("snowmanFigureElementActionAddShapeSmile");
-            smile.classList.remove("snowmanFigureElementActionAddShapeColor");
-            smile.classList.add("snowmanFigureElementActionFinalSmile");
+            smile.classList.remove(snowmanFigureElementActionAddShapeSmile);
+            // smile.classList.remove("snowmanFigureElementActionAddShapeColor");
+            smile.classList.remove(snowmanFigureElementActionAddShapeColor);
+            smile.classList.add(snowmanFigureElementActionFinalSmile);
         }
 
         if (i > 5 && i < 12) {
 
-            let button = document.getElementById("snowmanFigureElementButtonNo-"+i.toString());
-            button.classList.remove("snowmanFigureElementActionAddShapeButton");
-            button.classList.remove("snowmanFigureElementActionAddShapeColor");
-            button.classList.add("snowmanFigureElementButtonFinal");
+            let button = document.getElementById(snowmanFigureElementButtonNo+i.toString());
+            button.classList.remove(snowmanFigureElementActionAddShapeButton);
+            // button.classList.remove("snowmanFigureElementActionAddShapeColor");
+            button.classList.remove(snowmanFigureElementActionAddShapeColor);
+            button.classList.add(snowmanFigureElementButtonFinal);
         }
 
         if (i > 12 && i <= 16) {
-            element.classList.remove("snowmanFigureElementActionAddShapeHands");
+            element.classList.remove(snowmanFigureElementActionAddShapeHands);
         }
     }
 }
 
-function playGameSnowmanBuildNewGame() {
-    // window.location.reload(); //-> fast pass
-
-    // removeContainerSnowmanFigureElementsGameSnowman();
-    // removeContainerGameSnowmanWordElements();
-    // removeContainerSnowmanKeyboardLines();
-
-    playGameSnowmanBuildConfiguration();
-
-
-}
-
-
 function setAnimationSnowmanFigureElementsShapeRemoveColor() {
-
-    rootVariables.style.setProperty("--snowmanFigureColor", colorTest);
+    // rootVariables.style.setProperty("--snowmanFigureColor", colorTest);
+    rootVariables.style.setProperty(cssSnowmanFigureColor, colorTest);
 
     for (let i = 0; i <= 16; i++) {
-
-        let element = document.getElementById("snowmanFigureElementAction-"+i.toString());
+        let element = document.getElementById(snowmanFigureElementAction+i.toString());
 
         if(element !=  null){
             if(i >= 0 || (i > 12 && i <= 16)) {
-                element.classList.add("snowmanFigureElementActionShapeRemoveColor");
+                element.classList.add(snowmanFigureElementActionShapeRemoveColor);
             }
 
             if(i === 4){
-                let eyes = document.getElementsByClassName("snowmanFigureElementEyes ");
+                let eyes = document.getElementsByClassName( snowmanFigureElementEyes);
                 if(eyes !=  null){
                     for (let e = 0; e < eyes.length; e++) {
-                        eyes[e].classList.add("snowmanFigureElementActionShapeRemoveColor");
+                        eyes[e].classList.add(snowmanFigureElementActionShapeRemoveColor);
                     }
                 }
             }
 
             if(i === 5){
-                let smile = document.getElementById("snowmanFigureElementSmile");
+                let smile = document.getElementById(snowmanFigureElementSmile);
                 if(smile !=  null){
-                    smile.classList.add("snowmanFigureElementActionShapeRemoveColor");
+                    smile.classList.add(snowmanFigureElementActionShapeRemoveColor);
                 }
             }
 
             if (i > 5 && i < 12) {
-                let button = document.getElementById("snowmanFigureElementButtonNo-"+i.toString());
+                let button = document.getElementById(snowmanFigureElementButtonNo+i.toString());
                 if(button !=  null){
-                    button.classList.add("snowmanFigureElementActionShapeRemoveColor");
+                    button.classList.add(snowmanFigureElementActionShapeRemoveColor);
                 }
             }
         }
-
     }
-
 }
-
-// function setTimeoutAnimationForHands(element, i){
-//
-//      setTimeout(function(){
-//          element.classList.add("snowmanFigureElementActionFinalSnowballsColor")
-//          element.classList.add("snowmanFigureElementAction-"+i)
-//      }, 8000);
-// }
-//
-// function setTimeoutAnimationForSetFinalColorForSnowballs(element, i){
-//
-//     setTimeout(function(){
-//         rootVariables.style.setProperty("--snowmanFigureColor", colorTest);
-//         element.classList.add("snowmanFigureElementActionFinalSnowballs");
-//     }, 4000);
-// }
 
 function setAnimationInitialPositionsOfElementsAfterWinSnowmanFigureElementsHandsAndHat(){
 
     for (let i = 12; i <= 16; i++) {
-        let element = document.getElementById("snowmanFigureElementAction-"+i.toString());
+        let element = document.getElementById(snowmanFigureElementAction+i.toString());
         if(element != null){
-            element.classList.remove("snowmanFigureElementActionAddShapeColor");
-            element.classList.remove("snowmanFigureElementActionShapeRemoveColor");
-            element.classList.add("snowmanFigureElementAction-"+i+"-handInitialPositionForAnimation");
+            element.classList.remove(snowmanFigureElementActionAddShapeColor);
+            element.classList.remove(snowmanFigureElementActionShapeRemoveColor);
+            element.classList.add(snowmanFigureElementAction+i+handInitialPositionForAnimation);
         }
-
     }
 
     for (let i = 0; i <= 3; i++) {
-        let element = document.getElementById("snowmanFigureElementAction-" + i.toString());
+        let element = document.getElementById(snowmanFigureElementAction + i.toString());
         if (element != null) {
-            element.classList.remove("snowmanFigureElementActionAddShapeColor");
-            element.classList.remove("snowmanFigureElementActionShapeRemoveColor");
-            // element.classList.remove("snowmanFigureElementAction-"+i+"-hatElementInitialPositionForShape");
-            element.classList.add("snowmanFigureElementAction-" + i + "-hatElementInitialPositionForAnimation");
+            element.classList.remove(snowmanFigureElementActionAddShapeColor);
+            element.classList.remove(snowmanFigureElementActionShapeRemoveColor);
+            element.classList.add(snowmanFigureElementAction + i + hatElementInitialPositionForAnimation);
         }
     }
 }
-
 
 function setAnimationsAfterWinSnowmanFigureElementsHandsAndHat(){
 
     for (let i = 13; i <= 16; i++) {
-        let element = document.getElementById("snowmanFigureElementAction-"+i.toString());
+        let element = document.getElementById(snowmanFigureElementAction+i.toString());
         if(element != null) {
-            element.classList.remove("snowmanFigureElementActionFinalSnowballs");
-            element.classList.add("snowmanFigureElementActionFinalSnowballsColor");
-            element.classList.add("snowmanFigureElementAction-" + i + "");
+            element.classList.remove(snowmanFigureElementActionFinalSnowballs);
+            element.classList.add(snowmanFigureElementActionFinalSnowballsColor);
+            element.classList.add(snowmanFigureElementAction + i + "");
         }
     }
 
     for (let i = 0; i <= 3; i++) {
-        let element = document.getElementById("snowmanFigureElementAction-"+i.toString());
+        let element = document.getElementById(snowmanFigureElementAction+i.toString());
         if(element != null) {
-            element.classList.remove("snowmanFigureElementAction-" + i + "-setAnimationHatFinalColor");
-            element.classList.add("snowmanFigureElementAction-" + i + "-setHatFinalColor");
-            element.classList.add("snowmanFigureElementAction-" + i);
+            element.classList.remove(snowmanFigureElementAction + i + setAnimationHatFinalColor);
+            element.classList.add(snowmanFigureElementAction + i + setHatFinalColor);
+            element.classList.add(snowmanFigureElementAction + i);
         }
     }
 }
 
-
 function setColorForSnowman(){
-
-
     setTimeout(function(){
         setAnimationSnowmanFigureElementsShapeRemoveColor()
     }, 2000)
@@ -1091,7 +870,6 @@ function setColorForSnowman(){
     setTimeout(function(){
         setAnimationsAfterWinSnowmanFigureElementsHandsAndHat()
     }, 9000)
-
 }
 
 function createNewP(parentId, newChildId) {
@@ -1101,74 +879,50 @@ function createNewP(parentId, newChildId) {
     newDiv.setAttribute("id", newChildId);
 }
 
-
 function createMainContainerForGameSnowman(){
 
-    let mainElement = document.getElementsByClassName("containerMain")[0];
+    let mainElement = document.getElementsByClassName(containerMain)[0];
     let newDiv = document.createElement("div");
     mainElement.append(newDiv);
-    let elementId1 = "sectionGameSnowman";
-    newDiv.setAttribute("id", elementId1);
+    // let elementId1 = sectionGameSnowman;
+    newDiv.setAttribute("id", sectionGameSnowman);
     newDiv.classList.add("item-2")
-    newDiv.classList.add("containerSectionGameSnowman")
+    newDiv.classList.add(containerSectionGameSnowman)
 }
 
 function removeMainContainerForGameSnowman(){
-    removeElementsById("sectionGameSnowman");
+    removeElementsById(sectionGameSnowman);
 }
 
-
 function createStartContainersForGameSnowmanAnimation(){
-    let elementId1 = "sectionGameSnowman";
-    let elementId2 = "containerGameSnowmanAnimation";
-    let elementId3 = "containerGameSnowmanAnimationElements";
-
-createNewDiv(elementId1, elementId2);
-createNewDiv(elementId2, elementId3);
-
+    createNewDiv(sectionGameSnowman, containerGameSnowmanAnimation);
+    createNewDiv(containerGameSnowmanAnimation, containerGameSnowmanAnimationElements);
 }
 
 function createContainersForGameSnowmanFigureMessageWelcomeText(){
-
-    let elementId3 = "containerGameSnowmanAnimationElements";
-    let elementId4 = "containerSnowmanFigureMessage-1-welcomeText";
-    let elementId5 = "snowmanFigureStartGameElement-1-welcomeText";
-    let welcomeText = "?";
-    createNewDiv(elementId3, elementId4);
-    createNewP(elementId4, elementId5);
-    document.getElementById(elementId5).innerHTML= welcomeText;
-    document.getElementById(elementId5).classList.add("snowmanFigureStartGameElement-setAnimationToShowColor");
+    createNewDiv(containerGameSnowmanAnimationElements, containerSnowmanFigureMessage1welcomeText);
+    createNewP(containerSnowmanFigureMessage1welcomeText, snowmanFigureStartGameElement1welcomeText);
+    document.getElementById(snowmanFigureStartGameElement1welcomeText).innerHTML= welcomeText;
+    document.getElementById(snowmanFigureStartGameElement1welcomeText).classList.add(snowmanFigureStartGameElementSetAnimationToShowColor);
 
 }
 
 function createContainersForGameSnowmanFigureMessageGoodbyeText(){
-    let elementId3 = "containerGameSnowmanAnimationElements";
-    let elementId4 = "containerSnowmanFigureMessage-1-goodbyeText";
-    let elementId5 = "snowmanFigureStartGameElement-1-goodbyeText";
-    let welcomeText = "GAME\nOVER";
-    createNewDiv(elementId3, elementId4);
-    createNewP(elementId4, elementId5);
-    document.getElementById(elementId5).innerHTML= welcomeText;
-    document.getElementById(elementId5).classList.add("snowmanFigureStartGameElement-setAnimationToShowColor");
+    createNewDiv(containerGameSnowmanAnimationElements, containerSnowmanFigureMessage1goodbyeText);
+    createNewP(containerSnowmanFigureMessage1goodbyeText, snowmanFigureStartGameElement1goodbyeText);
+    document.getElementById(snowmanFigureStartGameElement1goodbyeText).innerHTML= goodbyeText;
+    document.getElementById(snowmanFigureStartGameElement1goodbyeText).classList.add(snowmanFigureStartGameElementSetAnimationToShowColor);
 
 }
 
 function createStartContainersForGameSnowmanWord(){
-    let elementId1 = "sectionGameSnowman";
-    let elementId2 = "containerGameSnowmanWord";
-    let elementId3 = "containerGameSnowmanWordElements";
-
-    createNewDiv(elementId1, elementId2);
-    createNewDiv(elementId2, elementId3);
+    createNewDiv(sectionGameSnowman, containerGameSnowmanWord);
+    createNewDiv(containerGameSnowmanWord, containerGameSnowmanWordElements);
 }
 
 function createStartContainersForGameSnowmanKeyboard(){
-    let elementId1 = "sectionGameSnowman";
-    let elementId2 = "containerGameSnowmanKeyboard";
-    let elementId3 = "containerGameSnowmanKeyboardElements";
-
-    createNewDiv(elementId1, elementId2);
-    createNewDiv(elementId2, elementId3);
+    createNewDiv(sectionGameSnowman, containerGameSnowmanKeyboard);
+    createNewDiv(containerGameSnowmanKeyboard, containerGameSnowmanKeyboardElements);
 }
 
 function createStartContainersForGameSnowman(){
@@ -1183,20 +937,17 @@ function createStartContainersForGameSnowman(){
 
 function removeContainerSnowmanFigureMessageWelcomeText(){
     setTimeout(function(){
-        removeElementsById("containerSnowmanFigureMessage-1-welcomeText")
+        removeElementsById(containerSnowmanFigureMessage1welcomeText)
     }, 3000);
 }
 
 function setAnimationGameSnowmanFigureMessageToRemoveText(){
-    let elementId = "snowmanFigureStartGameElement-1-welcomeText";
-    let element = document.getElementById(elementId);
+    let element = document.getElementById(snowmanFigureStartGameElement1welcomeText);
 
     if(element != null){
-    element.classList.remove("snowmanFigureStartGameElement-setAnimationToShowColor");
-    element.classList.add("snowmanFigureStartGameElement-setAnimationToRemoveColor");
+    element.classList.remove(snowmanFigureStartGameElementSetAnimationToShowColor);
+    element.classList.add(snowmanFigureStartGameElementSetAnimationToRemoveColor);
     }
-    // document.getElementById(elementId).classList.remove("snowmanFigureStartGameElement-setAnimationToShowColor");
-    // document.getElementById(elementId).classList.add("snowmanFigureStartGameElement-setAnimationToRemoveColor");
 }
 
 function removeContainerSnowmanFigureMessageActionsWelcomeText(){
@@ -1205,14 +956,11 @@ function removeContainerSnowmanFigureMessageActionsWelcomeText(){
 }
 
 function createContainersForGameSnowmanFigureMessageGameOver(){
-
     removeContainerSnowmanFigureMessageActionsWelcomeText();
 
-
-    if(document.getElementById("containerSnowmanFigureElements") != null){
+    if(document.getElementById(containerSnowmanFigureElements) != null){
         setAnimationSnowmanFigureElementsShapeRemoveColor();
     }
-
 
     setTimeout(function(){
         createContainersForGameSnowmanFigureMessageGoodbyeText();
@@ -1222,41 +970,27 @@ function createContainersForGameSnowmanFigureMessageGameOver(){
 
 function createContainersSnowmanFigureMainElements(){
 
-    let elementId2 = "containerGameSnowmanAnimationElements";
-    let IdChild = "containerSnowmanFigureElements";
-    let ClassGrandchild = "containerSnowmanFigureElement-";
-    let ClassGreatGrandchild = "snowmanFigureElementAction-";
+    createNewDiv(containerGameSnowmanAnimationElements, containerSnowmanFigureAction);
 
     let parentDiv = document.createElement('div');
-    parentDiv.setAttribute('id', IdChild);
-    document.getElementById(elementId2).append(parentDiv);
+    parentDiv.setAttribute('id', containerSnowmanFigureElements);
+    document.getElementById(containerSnowmanFigureAction).append(parentDiv);
 
     for (let i = 0; i <= 16; i++) {
 
         // container element
         let innerDivContainer = document.createElement('div');
-        innerDivContainer.setAttribute('id', ClassGrandchild + i.toString());
-        document.getElementById(IdChild).append(innerDivContainer);
+        innerDivContainer.setAttribute('id', containerSnowmanFigureElement + i.toString());
+        document.getElementById(containerSnowmanFigureElements).append(innerDivContainer);
 
         // action
         let innerDiv = document.createElement("div");
-        innerDiv.setAttribute("id", ClassGreatGrandchild + i.toString());
-        let div1 = document.getElementById(ClassGrandchild + i.toString());
+        innerDiv.setAttribute("id", snowmanFigureElementAction + i.toString());
+        let div1 = document.getElementById(containerSnowmanFigureElement + i.toString());
         div1.append(innerDiv);
     }
 
 }
-
-function createContainerSnowmanFigureElements(){
-    let ClassGrandchild = "containerSnowmanFigureElement-";
-    let ClassGreatGrandchild = "snowmanFigureElementAction-";
-
-    let parentDiv = document.createElement('div');
-    parentDiv.setAttribute('id', IdChild);
-    document.getElementById(parentId).append(parentDiv);
-}
-
-
 
 
 
@@ -1264,4 +998,4 @@ function createContainerSnowmanFigureElements(){
 
 // createContainerGameSnowmanWordElements();
 
-playGameSnowmanBuildConfiguration(); // onclick - temp
+// setConfigurationForGameSnowmanBuild(); // onclick - temp

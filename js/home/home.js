@@ -1,36 +1,11 @@
-const containerMainHome = "containerMainHome";
-const containerHomeGamesButtons = "containerHomeGamesButtons";
-
-const containerGameSnowmanDescription = "containerGameSnowmanDescription";
-const containerGameSnowmanWordElementText = "containerGameSnowmanWordElementText";
-const gameSnowmanWordElementText = "gameSnowmanWordElementText";
-const gameSnowmanDescriptionTextBuild = ["SAVE SNOWMAN", "discover colour name", "WIN GAME", "&", "snowman will change colour"];
-const gameSnowmanDescriptionTextDestroy = ["DESTROY SNOWMAN", "discover colour name", "WIN GAME", "&", "snowman will change colour"];
-
-const gameSnowmanDescription = "gameSnowmanDescription";
-const gameNameSnowmanBuild = "SnowmanBuild"
-const gameNameSnowmanDestroy = "SnowmanDestroy"
-const sectionHome = "sectionHome"
-
-
-function createSubpageHome() {
-    createMainContainerHome();
-    createContainerButtonGameBuildSnowman()
-    createContainersHomeButtonGameSnowman(gameNameSnowmanBuild, gameSnowmanDescriptionTextBuild);
-    createContainersHomeButtonGameSnowman(gameNameSnowmanDestroy, gameSnowmanDescriptionTextDestroy);
-}
-
-createSubpageHome();
-
-
 function createMainContainerHome() {
 
-    let mainElement = document.getElementsByClassName("containerMain")[0];
+    let mainElement = document.getElementsByClassName(containerMain)[0];
     let newDiv = document.createElement("div");
     mainElement.append(newDiv);
     newDiv.setAttribute("id", sectionHome);
     newDiv.classList.add("item-2")
-    newDiv.classList.add("containerSectionHome")
+    newDiv.classList.add(containerSectionHome)
 
     let newDiv2 = document.createElement("div");
     let mainElem = document.getElementById(sectionHome);
@@ -43,54 +18,9 @@ function createContainerButtonGameBuildSnowman() {
     createDiv(containerMainHome, containerHomeGamesButtons);
 }
 
-function setFunctionOnclick(elementId, functionNameOnclick) {
-    document.getElementById(elementId).setAttribute("onclick", functionNameOnclick + "(this.id)");
-}
-
-function createElement(parentId, childId, elementKind) {
-    let newElement = document.createElement(elementKind);
-    let mainElement = document.getElementById(parentId);
-    mainElement.append(newElement);
-    newElement.setAttribute("id", childId);
-}
-
-function createDiv(parentId, childId) {
-    createElement(parentId, childId, "div")
-}
-
-function createButton(parentId, childId) {
-    createElement(parentId, childId, "button")
-}
-
-function setClassName(elementId, classname) {
-    document.getElementById(elementId).classList.add(classname);
-}
-
-function removeElementsById(elementId) {
-    let element = document.getElementById(elementId);
-    if (element != null) {
-        element.remove();
-    }
-}
-
 function setClassNameHomeButtonGameSnowman(elementId, suffixText) {
     let name = containerGameSnowmanDescription + "-" + suffixText;
     document.getElementById(elementId).classList.add(name);
-}
-
-function removeContainerSectionHome() {
-    removeElementsById(sectionHome);
-}
-
-function setGameSnowmanBuild() {
-    console.log("clicked -> setGameSnowmanBuild")
-    removeContainerSectionHome();
-
-}
-
-function setGameSnowmanDestroy() {
-    console.log("clicked -> gameNameSnowmanDestroy")
-    removeContainerSectionHome();
 }
 
 function createContainersHomeButtonGameSnowman(gameName, gameSnowmanDescriptionText) {
@@ -117,8 +47,7 @@ function createContainersHomeButtonGameSnowman(gameName, gameSnowmanDescriptionT
     let buttonId = "homeButtonGame" + gameName;
     createButton(containerClick, buttonId);
     setFunctionOnclick(buttonId, "setGame" + gameName);
-    let buttonClass = "homeButtonGameSnowman";
-    setClassName(buttonId, buttonClass);
+    setClassName(buttonId, homeButtonGameSnowman);
 
     for (let i = 0; i < gameSnowmanDescriptionText.length; i++) {
 
@@ -133,8 +62,30 @@ function createContainersHomeButtonGameSnowman(gameName, gameSnowmanDescriptionT
         newP.innerHTML = gameSnowmanDescriptionText[i];
         newP.classList.add(gameSnowmanWordElementText);
         newP.classList.add(gameSnowmanWordElementText + "-" + i);
-
     }
 
+}
+
+function createSubpageHome() {
+    createMainContainerHome();
+    createContainerButtonGameBuildSnowman();
+    createContainersHomeButtonGameSnowman(gameNameSnowmanBuild, gameSnowmanDescriptionTextBuild);
+    createContainersHomeButtonGameSnowman(gameNameSnowmanDestroy, gameSnowmanDescriptionTextDestroy);
+}
+
+
+function removeContainerSectionHome() {
+    removeElementsById(sectionHome);
+}
+
+function setGameSnowmanBuild() {
+    console.log("clicked -> setGameSnowmanBuild")
+    removeContainerSectionHome();
+    setConfigurationForGameSnowmanBuild();
+}
+
+function setGameSnowmanDestroy() {
+    console.log("clicked -> gameNameSnowmanDestroy")
+    removeContainerSectionHome();
 }
 
