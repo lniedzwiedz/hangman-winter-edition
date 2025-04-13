@@ -24,9 +24,13 @@ const homeButtonGameSnowman = "homeButtonGameSnowman";
 
 // game
 const functionNameOnclickPlayGameSnowmanBuild = "playGameSnowmanBuild";
-const functionSetConfigurationForGameSnowmanBuild = "setConfigurationForGameSnowmanBuild";
+const functionNameOnclickSetConfigurationForGameSnowmanBuild = "setConfigurationForGameSnowmanBuild";
+
+const functionNameOnclickPlayGameSnowmanDestroy = "playGameSnowmanDestroy";
+const functionNameOnclickSetConfigurationForGameSnowmanDestroy = "setConfigurationForGameSnowmanDestroy";
 
 const sectionGameSnowman = "sectionGameSnowman-";
+const sectionGameSnowmanDestroy = "sectionGameSnowmanDestroy-";
 const snowmanFigureElementAction = "snowmanFigureElementAction-";
 
 
@@ -85,7 +89,6 @@ const snowmanFigureElementActionAddShapeHands = "snowmanFigureElementActionAddSh
 const handInitialPositionForAnimation = "handInitialPositionForAnimation";
 
 
-
 //game description
 const gameSnowmanWordElementTextBuild = "gameSnowmanWordElementTextBuild";
 const gameSnowmanDescriptionTextGameOverLoser = "GAME OVER";
@@ -106,3 +109,42 @@ const containerGameSnowmanLives = "containerGameSnowmanLives";
 
 // CSS variable
 let cssSnowmanFigureColor = "--snowmanFigureColor"
+
+// menu
+const sectionMenu = "sectionMenu";
+const containerSectionMenu = "containerSectionMenu";
+const containerMenuMain = "containerMenuMain";
+const containerMenuMainParts = "containerMenuMainParts";
+const containerMenuTitleMain = "containerMenuTitleMain";
+const menuTitle = "menuTitle";
+const menuTitleText = "menuTitleText";
+const menuTitleTextDisplay = "Simply Games";
+const containerMenuButtonsMain = "containerMenuButtonsMain";
+const containerMenuButtonsMainParts = "containerMenuButtonsMainParts";
+const containerMenuButtonHomeMain = "containerMenuButtonHomeMain";
+const containerMenuButtonHome = "containerMenuButtonHome";
+const containerMenuButtonHomeText = "containerMenuButtonHomeText";
+const menuButtonHomeText = "menuButtonHomeText";
+const menuButtonHomeTextDisplay = "HOME";
+
+
+//footer
+const containerSectionFooter = "containerSectionFooter";
+const containerMainFooter = "containerMainFooter";
+const containerMainFooterParts = "containerMainFooterParts";
+const containerFooterAuthor = "containerFooterAuthor";
+const footerAuthor = "footerAuthor";
+const footerAuthorData = "&copy 2025 Copyright: Anita Łaszczak";
+const containerMainFooterEnvelope = "containerMainFooterEnvelope";
+const footerIconEnvelope = "IvI";
+const sectionFooter = "sectionFooter";
+const functionNameOnclickCreateSubpageFormContact = "createSubpageFormContact";
+const containerFooterButtonEnvelope = "containerFooterButtonEnvelope";
+const containerFooterEnvelopeText = "containerFooterEnvelopeText";
+const footerButtonEnvelope = "footerButtonEnvelope";
+const containerFooterEnvelope = "containerFooterEnvelope";
+
+// contact form
+const sectionContactForm = "sectionContactForm";
+const containerSectionContactForm = "containerSectionContactForm";
+const containerMainContactForm = "containerMainContactForm";

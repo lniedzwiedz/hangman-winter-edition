@@ -1,21 +1,23 @@
 function createMainContainerHome() {
 
-    let mainElement = document.getElementsByClassName(containerMain)[0];
-    let newDiv = document.createElement("div");
-    mainElement.append(newDiv);
-    newDiv.setAttribute("id", sectionHome);
-    newDiv.classList.add("item-2")
-    newDiv.classList.add(containerSectionHome)
+    // let mainElement = document.getElementsByClassName(containerMain)[0];
+    // let newDiv = document.createElement("div");
+    // mainElement.append(newDiv);
+    // newDiv.setAttribute("id", sectionHome);
+    // newDiv.classList.add("item-2")
+    // newDiv.classList.add(containerSectionHome)
+    //
+    // let newDiv2 = document.createElement("div");
+    // let mainElem = document.getElementById(sectionHome);
+    // mainElem.append(newDiv2);
+    // newDiv2.setAttribute("id", containerMainHome);
+    // newDiv2.classList.add((containerMainHome));
 
-    let newDiv2 = document.createElement("div");
-    let mainElem = document.getElementById(sectionHome);
-    mainElem.append(newDiv2);
-    newDiv2.setAttribute("id", containerMainHome);
-    newDiv2.classList.add((containerMainHome));
+    createContainerMainElements(sectionHome, containerSectionHome, containerMainHome);
 }
 
 function createContainerButtonGameBuildSnowman() {
-    createDiv(containerMainHome, containerHomeGamesButtons);
+    createElementDiv(containerMainHome, containerHomeGamesButtons);
 }
 
 function setClassNameHomeButtonGameSnowman(elementId, suffixText) {
@@ -26,33 +28,33 @@ function setClassNameHomeButtonGameSnowman(elementId, suffixText) {
 function createContainersHomeButtonGameSnowman(gameName, gameSnowmanDescriptionText) {
 
     let containerGameSnowmanDescriptionSpecified = containerGameSnowmanDescription + gameName;
-    createDiv(containerHomeGamesButtons, containerGameSnowmanDescriptionSpecified);
+    createElementDiv(containerHomeGamesButtons, containerGameSnowmanDescriptionSpecified);
 
     let containerButton = containerGameSnowmanDescriptionSpecified + "-gameButton";
-    createDiv(containerGameSnowmanDescriptionSpecified, containerButton);
+    createElementDiv(containerGameSnowmanDescriptionSpecified, containerButton);
     setClassNameHomeButtonGameSnowman(containerButton, "gameButton");
 
     let containerButtonFiled = containerGameSnowmanDescriptionSpecified + "-gameButtonField";
-    createDiv(containerButton, containerButtonFiled);
+    createElementDiv(containerButton, containerButtonFiled);
     setClassNameHomeButtonGameSnowman(containerButtonFiled, "gameButtonField");
 
     let containerDescription = containerGameSnowmanDescriptionSpecified + "-gameButtonText";
-    createDiv(containerButtonFiled, containerDescription);
+    createElementDiv(containerButtonFiled, containerDescription);
     setClassNameHomeButtonGameSnowman(containerDescription, "gameButtonText")
 
     let containerClick = containerGameSnowmanDescriptionSpecified + "-gameButtonClick";
-    createDiv(containerButtonFiled, containerClick);
+    createElementDiv(containerButtonFiled, containerClick);
     setClassNameHomeButtonGameSnowman(containerClick, "gameButtonClick");
 
     let buttonId = "homeButtonGame" + gameName;
-    createButton(containerClick, buttonId);
+    createElementButton(containerClick, buttonId);
     setFunctionOnclick(buttonId, "setGame" + gameName);
     setClassName(buttonId, homeButtonGameSnowman);
 
     for (let i = 0; i < gameSnowmanDescriptionText.length; i++) {
 
         let elementId = gameSnowmanWordElementText + gameName + "-" + i;
-        createDiv(containerDescription, elementId);
+        createElementDiv(containerDescription, elementId);
 
         let elementClass = containerGameSnowmanWordElementText + "-" + i;
         setClassName(elementId, elementClass);
@@ -73,19 +75,21 @@ function createSubpageHome() {
     createContainersHomeButtonGameSnowman(gameNameSnowmanDestroy, gameSnowmanDescriptionTextDestroy);
 }
 
-
 function removeContainerSectionHome() {
     removeElementsById(sectionHome);
 }
 
 function setGameSnowmanBuild() {
     console.log("clicked -> setGameSnowmanBuild")
-    removeContainerSectionHome();
+    removeMainContainers();
+    // removeContainerSectionHome();
     setConfigurationForGameSnowmanBuild();
 }
 
 function setGameSnowmanDestroy() {
     console.log("clicked -> gameNameSnowmanDestroy")
-    removeContainerSectionHome();
+    removeMainContainers();
+    // removeContainerSectionHome();
+    setConfigurationForGameSnowmanDestroy();
 }
 

@@ -1,5 +1,5 @@
 
 
-//function menu
+createMenu();
 createSubpageHome();
-// function footer
+createFooter();

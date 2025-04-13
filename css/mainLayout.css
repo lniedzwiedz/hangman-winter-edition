@@ -6,14 +6,12 @@ body {
     display: flex;
 }
 
-/* ROWS -> containerMenu = 80 -> change destroy containerSection!!!! !*/
 .containerMain {
     display: grid;
     background-color: black;
     height: 100%;
     width: 100%;
 
-    /* 85 = change -> containerSection change to!*/
     grid-template-rows: 12fr 85fr 3fr;
     grid-template-columns: 1fr;
 
@@ -23,11 +21,11 @@ body {
 }
 
 .item-1 {
-    grid-area: header;
-    grid-row: 1 / 1;
-    grid-column: 1 / 1;
-    /*background-color: #F6ADC7;*/
-    background-color: #000000;
+    /*grid-area: header;*/
+    /*grid-row: 1 / 1;*/
+    /*grid-column: 1 / 1;*/
+    /*!*background-color: #F6ADC7;*!*/
+    /*background-color: #000000;*/
 }
 
 .item-2 {
@@ -38,59 +36,27 @@ body {
     background-color: #000000;
 }
 
-.item-3 {
-    grid-area: footer;
-    grid-row: 3 / 3;
-    grid-column: 1 / 1;
-    /*background-color: #633D60;*/
-    background-color: #000000;
-}
+/*.item-3 {*/
+/*    grid-area: footer;*/
+/*    grid-row: 3 / 3;*/
+/*    grid-column: 1 / 1;*/
+/*    !*background-color: #633D60;*!*/
+/*    background-color: #000000;*/
+/*}*/
 
-/* MENU */
 
-.containerMenu {
-    display: grid;
-    /*background-color: dimgray;*/
-    grid-template-rows: 20fr 60fr 20fr;
-    grid-template-columns: 10fr 30fr 50fr 10fr;
-}
 
-.titleName {
-    /*background-color: darkolivegreen;*/
-    grid-row: 2 / 2;
-    grid-column: 2 / 3;
-    text-align: center;
-}
 
-.containerButtonTop {
-    display: grid;
-    /*background-color: yellowgreen;*/
-    grid-row: 2 / 3;
-    grid-column: 3 / 3;
-    /*text-align: center;*/
-    grid-template-rows: 15fr 30fr 30fr 15fr;
-    grid-template-columns: 5fr 20fr 5fr 20fr 5fr 20fr 5fr;
-}
 
-.buttonHome {
-    background-color: #824769;
-    grid-row: 2 / 2;
-    grid-column: 2 / 3;
-}
 
-.buttonSnowman {
-    background-color: #824769;
-    grid-row: 2 / 2;
-    grid-column: 4 / 5;
-}
 
-.containerSectionHome {
-    display: grid;
-    /*grid-template-rows: 6fr 17fr 17fr 3fr 3fr 17fr 17fr 6fr;*/
-    /*grid-template-columns: 10fr 3fr 17fr 3fr 14fr 3fr 3fr 14fr 3fr 17fr 3fr 10fr;  */
-    grid-template-rows: 6fr 17fr 17fr 3fr 3fr 17fr 17fr 6fr;
-    grid-template-columns: 10fr 3fr 17fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 17fr 3fr 10fr;
-}
+/*.containerSectionHome {*/
+/*    display: grid;*/
+/*    !*grid-template-rows: 6fr 17fr 17fr 3fr 3fr 17fr 17fr 6fr;*!*/
+/*    !*grid-template-columns: 10fr 3fr 17fr 3fr 14fr 3fr 3fr 14fr 3fr 17fr 3fr 10fr;  *!*/
+/*    grid-template-rows: 6fr 17fr 17fr 3fr 3fr 17fr 17fr 6fr;*/
+/*    grid-template-columns: 10fr 3fr 17fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 17fr 3fr 10fr;*/
+/*}*/
 
 
 

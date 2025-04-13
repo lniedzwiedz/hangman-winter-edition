@@ -23,8 +23,12 @@ body {
 }
 
 :root{
-    --homeButtoGameBnoxShadow: 0 2px 13px 0px #621735;
+    /*--homeButtoGameBnoxShadow: 0 2px 13px 0px #621735;*/
+    --homeButtoGameBnoxShadow: 0 0px 5px 0px #621735;
+    /*--homeButtoGameBnoxShadow: 0 2px 13px 0px #2c3e3a;*/
+    /*--homeButtoGameBnoxShadow: 0 2px 13px 0px #2a1e1e;*/
     --homeButtoGameBnoxShadowHover: 0 2px 13px 0px #621735;
+    /*--homeButtoGameBnoxShadowHover: 0 2px 13px 0px #2a1e1e;*/
 }
 
 .item-1 {
@@ -52,74 +56,6 @@ body {
     background-color: #000000;
 }
 
-/* MENU */
-
-.containerMenu {
-    display: grid;
-    /*background-color: dimgray;*/
-    grid-template-rows: 20fr 60fr 20fr;
-    grid-template-columns: 10fr 30fr 50fr 10fr;
-}
-
-.titleName {
-    /*background-color: darkolivegreen;*/
-    grid-row: 2 / 2;
-    grid-column: 2 / 3;
-    text-align: center;
-}
-
-.containerButtonTop {
-    display: grid;
-    /*background-color: yellowgreen;*/
-    grid-row: 2 / 3;
-    grid-column: 3 / 3;
-    grid-template-rows: 15fr 30fr 30fr 15fr;
-    grid-template-columns: 5fr 20fr 5fr 20fr 5fr 20fr 5fr;
-}
-
-.buttonHome {
-    /*background-color: #824769;*/
-    background-color: #000000;
-    grid-row: 2 / 2;
-    grid-column: 2 / 3;
-
-    /*color: #5c3243;*/
-    /*color: #ae7498;*/
-    /*color: #e76e9e;*/
-    /*color: #fc86b5;*/
-    /*color: #ec7ba8;*/
-    /*color: #d682a4;*/
-    /*color: #e26899;*/
-    color: #ac4a71;
-
-    text-align: center;
-    font-weight: 500;
-    border: none;
-    border-radius: 0.45rem;
-    box-shadow: 0px 0px 1px 1px #2a1e1e;
-}
-
-.buttonSnowman {
-    /*background-color: #824769;*/
-    background-color: #000000;
-    grid-row: 2 / 2;
-    grid-column: 4 / 5;
-
-    /*color: #5c3243;*/
-    /*color: #ae7498;*/
-    /*color: #e76e9e;*/
-    /*color: #fc86b5;*/
-    /*color: #ec7ba8;*/
-    /*color: #d682a4;*/
-    /*color: #e26899;*/
-    color: #ac4a71;
-
-    text-align: center;
-    font-weight: 500;
-    border: none;
-    border-radius: 0.45rem;
-    box-shadow: 0px 0px 1px 1px #2a1e1e;
-}
 
 .containerSectionHome {
     display: grid;
@@ -180,11 +116,13 @@ body {
     border-radius: 2%;
     /*box-shadow: 0 2px 10px 0 #621735;*/
     box-shadow: var(--homeButtoGameBnoxShadow);
+    opacity: 0.8;
     /*box-shadow: 0 2px 10px 0 #FFFFFF;*/
 }
 
 .containerGameSnowmanDescription-gameButtonField:hover{
     box-shadow: var(--homeButtoGameBnoxShadowHover);
+    opacity: 1;
 }
 
 .containerGameSnowmanDescription-gameOn{
@@ -227,70 +165,6 @@ body {
     opacity: 0.1;
 }
 
-/*#containerGameSnowmanDescriptionSnowmanDestroy{*/
-/*    display: grid;*/
-/*    grid-row: 2 / 2;*/
-/*    grid-column: 1 / 3;*/
-/*    grid-template-rows: 1fr;*/
-/*    grid-template-columns: 1fr;*/
-/*}*/
-
-/*#containerGameSnowmanDescriptionSnowmanDestroy-gameButton{*/
-/*    display: grid;*/
-/*    grid-row: 1 / 2;*/
-/*    grid-column: 1 / 2;*/
-/*    !*grid-template-rows: repeat(1, 7fr 46fr 47fr);*!*/
-/*    grid-template-rows: repeat(1, 1fr 8fr 1fr);*/
-/*    grid-template-columns: 30fr 40fr 30fr;*/
-/*}*/
-
-/*#containerGameSnowmanDescriptionSnowmanDestroy-gameButtonField{*/
-/*    display: grid;*/
-/*    grid-row: 2 / 3;*/
-/*    grid-column: 2 / 3;*/
-/*    !*grid-template-rows: repeat(1, 7fr 46fr 47fr);*!*/
-/*    grid-template-rows: 1fr;*/
-/*    grid-template-columns: 1fr;*/
-
-/*    border-radius: 2%;*/
-/*    !*box-shadow: 0 2px 10px 0 #621735;*!*/
-/*    box-shadow: var(--homeButtoGameBnoxShadow);*/
-/*    !*box-shadow: 0 2px 10px 0 #FFFFFF;*!*/
-/*}*/
-
-/*#containerGameSnowmanDescriptionSnowmanDestroy-gameButtonField:hover{*/
-/*    box-shadow: var(--homeButtoGameBnoxShadowHover);*/
-/*}*/
-
-/*#containerGameSnowmanDescriptionSnowmanDestroy-gameButtonClick{*/
-/*    display: grid;*/
-/*    grid-row: 1 / 2;*/
-/*    grid-column: 1 / 2;*/
-/*    grid-template-rows: 1fr;*/
-/*    grid-template-columns: 1fr;*/
-/*    z-index: 1;*/
-/*}*/
-
-/*#containerGameSnowmanDescriptionSnowmanDestroy-gameButtonText{*/
-/*    display: grid;*/
-/*    grid-row: 1 / 2;*/
-/*    grid-column: 1 / 2;*/
-/*    grid-template-rows: 30fr 20fr 20fr 10fr 20fr;*/
-/*    grid-template-columns: 1fr;*/
-/*}*/
-
-/*#homeButtonGameSnowmanDestroy{*/
-/*    !*background-color: #ac4a71;*!*/
-/*    background-color: #000000;*/
-/*    opacity: 0.2;*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*    border: 0;*/
-/*}*/
-
-/*#homeButtonGameSnowmanDestroy:hover{*/
-/*    opacity: 0.1;*/
-/*}*/
 
 
 

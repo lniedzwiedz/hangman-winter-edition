@@ -55,7 +55,8 @@ function setConfigurationForGameSnowmanBuild() {
     getAnimationIndexGroups();
     gameLives = "LIVES" + " " + maxWrongShots;
     gameLivesChars = getCharsNumber(gameLives);
-    removeMainContainerForGameSnowman();
+    // removeMainContainerForGameSnowman();
+    removeMainContainers();
     createStartContainersForGameSnowman();
     randomNumber();
 }
@@ -426,16 +427,16 @@ function changeLivesNumberVisible() {
 
 }
 
-function createNewDiv(parentId, newChildId) {
-    let newDiv = document.createElement("div");
-    let mainElem = document.getElementById(parentId);
-    mainElem.append(newDiv);
-    newDiv.setAttribute("id", newChildId);
-}
+// function createElementDiv(parentId, newChildId) {
+//     let newDiv = document.createElement("div");
+//     let mainElem = document.getElementById(parentId);
+//     mainElem.append(newDiv);
+//     newDiv.setAttribute("id", newChildId);
+// }
 
 function createContainersForWord() {
 
-    createNewDiv(containerGameSnowmanWordElements, containerGameSnowmanWordToDiscover);
+    createElementDiv(containerGameSnowmanWordElements, containerGameSnowmanWordToDiscover);
     let parentElement = document.getElementById(containerGameSnowmanWordToDiscover)
 
     let rowStart = 3;
@@ -508,7 +509,7 @@ function createContainersForWord() {
 
 function createContainersForLives() {
 
-    createNewDiv(containerGameSnowmanWordElements, containerGameSnowmanLives);
+    createElementDiv(containerGameSnowmanWordElements, containerGameSnowmanLives);
     let parentElement = document.getElementById(containerGameSnowmanLives)
 
     let rowStart = 4;
@@ -566,7 +567,6 @@ function createContainersForLives() {
     }
 }
 
-
 function setClassNameGameSnowman(elementId, suffixText) {
     let name = containerGameSnowmanDescription + "-" + suffixText;
     document.getElementById(elementId).classList.add(name);
@@ -576,17 +576,17 @@ function createContainersForGameDescription(gameName, gameSnowmanDescriptionText
 
     let containerGameSnowmanDescriptionSpecified = containerGameSnowmanDescription + gameName;
     let containerButtonFiled = containerGameSnowmanDescriptionSpecified + "-gameOn";
-    createDiv(containerGameSnowmanWordElements, containerButtonFiled);
+    createElementDiv(containerGameSnowmanWordElements, containerButtonFiled);
     setClassNameGameSnowman(containerButtonFiled, "gameOn");
 
     let containerDescription = containerGameSnowmanDescriptionSpecified + "-gameButtonText";
-    createDiv(containerButtonFiled, containerDescription);
+    createElementDiv(containerButtonFiled, containerDescription);
     setClassNameGameSnowman(containerDescription, "gameButtonText");
 
     for (let i = 0; i < gameSnowmanDescriptionText.length; i++) {
 
         let elementId = gameSnowmanWordElementText + gameName + "-" + i;
-        createDiv(containerDescription, elementId);
+        createElementDiv(containerDescription, elementId);
 
         let elementClass = containerGameSnowmanWordElementText + "-" + i;
         setClassName(elementId, elementClass);
@@ -602,7 +602,7 @@ function createContainersForGameDescription(gameName, gameSnowmanDescriptionText
 
 function createContainersForGameDescription1() {
 
-    createNewDiv(containerGameSnowmanWordElements, containerGameSnowmanDescription);
+    createElementDiv(containerGameSnowmanWordElements, containerGameSnowmanDescription);
     let parentElement = document.getElementById(containerGameSnowmanDescription)
 
     // let gameKind = "build";
@@ -884,7 +884,6 @@ function createMainContainerForGameSnowman(){
     let mainElement = document.getElementsByClassName(containerMain)[0];
     let newDiv = document.createElement("div");
     mainElement.append(newDiv);
-    // let elementId1 = sectionGameSnowman;
     newDiv.setAttribute("id", sectionGameSnowman);
     newDiv.classList.add("item-2")
     newDiv.classList.add(containerSectionGameSnowman)
@@ -895,12 +894,12 @@ function removeMainContainerForGameSnowman(){
 }
 
 function createStartContainersForGameSnowmanAnimation(){
-    createNewDiv(sectionGameSnowman, containerGameSnowmanAnimation);
-    createNewDiv(containerGameSnowmanAnimation, containerGameSnowmanAnimationElements);
+    createElementDiv(sectionGameSnowman, containerGameSnowmanAnimation);
+    createElementDiv(containerGameSnowmanAnimation, containerGameSnowmanAnimationElements);
 }
 
 function createContainersForGameSnowmanFigureMessageWelcomeText(){
-    createNewDiv(containerGameSnowmanAnimationElements, containerSnowmanFigureMessage1welcomeText);
+    createElementDiv(containerGameSnowmanAnimationElements, containerSnowmanFigureMessage1welcomeText);
     createNewP(containerSnowmanFigureMessage1welcomeText, snowmanFigureStartGameElement1welcomeText);
     document.getElementById(snowmanFigureStartGameElement1welcomeText).innerHTML= welcomeText;
     document.getElementById(snowmanFigureStartGameElement1welcomeText).classList.add(snowmanFigureStartGameElementSetAnimationToShowColor);
@@ -908,7 +907,7 @@ function createContainersForGameSnowmanFigureMessageWelcomeText(){
 }
 
 function createContainersForGameSnowmanFigureMessageGoodbyeText(){
-    createNewDiv(containerGameSnowmanAnimationElements, containerSnowmanFigureMessage1goodbyeText);
+    createElementDiv(containerGameSnowmanAnimationElements, containerSnowmanFigureMessage1goodbyeText);
     createNewP(containerSnowmanFigureMessage1goodbyeText, snowmanFigureStartGameElement1goodbyeText);
     document.getElementById(snowmanFigureStartGameElement1goodbyeText).innerHTML= goodbyeText;
     document.getElementById(snowmanFigureStartGameElement1goodbyeText).classList.add(snowmanFigureStartGameElementSetAnimationToShowColor);
@@ -916,13 +915,13 @@ function createContainersForGameSnowmanFigureMessageGoodbyeText(){
 }
 
 function createStartContainersForGameSnowmanWord(){
-    createNewDiv(sectionGameSnowman, containerGameSnowmanWord);
-    createNewDiv(containerGameSnowmanWord, containerGameSnowmanWordElements);
+    createElementDiv(sectionGameSnowman, containerGameSnowmanWord);
+    createElementDiv(containerGameSnowmanWord, containerGameSnowmanWordElements);
 }
 
 function createStartContainersForGameSnowmanKeyboard(){
-    createNewDiv(sectionGameSnowman, containerGameSnowmanKeyboard);
-    createNewDiv(containerGameSnowmanKeyboard, containerGameSnowmanKeyboardElements);
+    createElementDiv(sectionGameSnowman, containerGameSnowmanKeyboard);
+    createElementDiv(containerGameSnowmanKeyboard, containerGameSnowmanKeyboardElements);
 }
 
 function createStartContainersForGameSnowman(){
@@ -970,7 +969,7 @@ function createContainersForGameSnowmanFigureMessageGameOver(){
 
 function createContainersSnowmanFigureMainElements(){
 
-    createNewDiv(containerGameSnowmanAnimationElements, containerSnowmanFigureAction);
+    createElementDiv(containerGameSnowmanAnimationElements, containerSnowmanFigureAction);
 
     let parentDiv = document.createElement('div');
     parentDiv.setAttribute('id', containerSnowmanFigureElements);

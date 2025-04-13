@@ -42,7 +42,7 @@ function createKeyboardButtonsForOneLine(elementId, keysLine) {
         }
 
         if (keysLine[i] === "NEW GAME") {
-            newButton.setAttribute("onclick", functionSetConfigurationForGameSnowmanBuild+"(this.id)");
+            newButton.setAttribute("onclick", functionNameOnclickSetConfigurationForGameSnowmanBuild+"(this.id)");
         }
         newButton.innerHTML += keysLine[i];
         newButton.setAttribute("id", "keyboard-" + keysLine[i]);
@@ -102,5 +102,5 @@ function changeKeyboardButtonNewGameWhenGameOver(functionNameOnclickPlayGameSnow
 
 function changeKeyboardButtonsGameOver() {
     disableKeyboardButtons();
-    changeKeyboardButtonNewGameWhenGameOver(functionSetConfigurationForGameSnowmanBuild);
+    changeKeyboardButtonNewGameWhenGameOver(functionNameOnclickSetConfigurationForGameSnowmanBuild);
 }

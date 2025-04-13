@@ -1,0 +1,18 @@
+.containerSectionContactForm {
+    display: grid;
+    /*grid-template-rows: 6fr 17fr 17fr 3fr 3fr 17fr 17fr 6fr;*/
+    /*grid-template-columns: 10fr 3fr 17fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 17fr 3fr 10fr;*/
+
+    grid-template-rows: 6fr 17fr 17fr 3fr 3fr 17fr 17fr 6fr;
+    grid-template-columns: 10fr 3fr 17fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 17fr 3fr 10fr;
+}
+
+.containerMainContactForm {
+    background-color: #824769;
+    opacity: 0.5;
+    display: grid;
+    grid-row: 2 / 8;
+    grid-column: 2 / 14;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
