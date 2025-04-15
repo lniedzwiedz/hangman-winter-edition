@@ -68,12 +68,18 @@
     border-radius: 2%;
     /*box-shadow: 0 2px 10px 0 #621735;*/
     box-shadow: var(--homeButtoGameBnoxShadow);
-    opacity: 0.8;
+    /*box-shadow: 0 0px 5px 0px #27ab48;*/
+    /*box-shadow: 0 0px 5px 0px #2c3e3a;*/
+    /*box-shadow: 0 0px 5px 0px #e9a610;*/
+    opacity: 0.9;
     /*box-shadow: 0 2px 10px 0 #FFFFFF;*/
 }
 
 .containerGameSnowmanDescription-gameButtonField:hover{
     box-shadow: var(--homeButtoGameBnoxShadowHover);
+    /*box-shadow: 0 2px 13px 0px #e9a610;*/
+    /*box-shadow: 0 2px 13px 0px #621735;*/
+    /*box-shadow: 0 2px 13px 0px #2c3e3a;*/
     opacity: 1;
 }
 
@@ -116,6 +122,8 @@
 .homeButtonGameSnowman:hover{
     opacity: 0.1;
 }
+
+
 
 
 

@@ -135,7 +135,8 @@ const containerMenuButtonHomeText = "containerMenuButtonHomeText";
 const containerMenuButtonText = "containerMenuButtonText";
 const menuButtonHomeText = "menuButtonHomeText";
 const menuButtonText = "menuButtonText";
-const menuButtonHomeTextDisplay = "HOME";
+const menuButtonHomeTextDisplay = "HOME <i class=\"fa-solid fa-igloo\"></i>";
+// const menuButtonHomeTextDisplay = "SWEET<i class=\"fa-solid fa-igloo\"></i>";
 
 const containerMenuButtonGameSnowmanBuildMain = "containerMenuButtonGameSnowmanBuildMain";
 const containerMenuButtonGameSnowmanBuildText = "containerMenuButtonGameSnowmanBuildText";
@@ -143,7 +144,8 @@ const containerMenuButtonGameSnowmanBuild = "containerMenuButtonGameSnowmanBuild
 const containerMenuButtonGameSnowmanBuildClick = "containerMenuButtonGameSnowmanBuildClick";
 const menuButtonGameSnowmanBuildClick = "menuButtonGameSnowmanBuildClick";
 const menuButtonGameSnowmanBuildText = "menuButtonGameSnowmanBuildText";
-const menuButtonGameSnowmanBuildTextDisplay = "SAVE SNOWMAN";
+// const menuButtonGameSnowmanBuildTextDisplay = "SAVE SNOWMAN";
+const menuButtonGameSnowmanBuildTextDisplay = "SAVE <i class=\"fa-solid fa-snowman\"></i>";
 
 const containerMenuButtonGameSnowmanDestroyMain = "containerMenuButtonGameSnowmanDestroyMain";
 const containerMenuButtonGameSnowmanDestroyText = "containerMenuButtonGameSnowmanDestroyText";
@@ -151,7 +153,8 @@ const containerMenuButtonGameSnowmanDestroy = "containerMenuButtonGameSnowmanDes
 const containerMenuButtonGameSnowmanDestroyClick = "containerMenuButtonGameSnowmanDestroyClick";
 const menuButtonGameSnowmanDestroyClick = "menuButtonGameSnowmanDestroyClick";
 const menuButtonGameSnowmanDestroyText = "menuButtonGameSnowmanDestroyText";
-const menuButtonGameSnowmanDestroyTextDisplay = "DESTROY SNOWMAN";
+// const menuButtonGameSnowmanDestroyTextDisplay = "DESTROY SNOWMAN";
+const menuButtonGameSnowmanDestroyTextDisplay = 'DESTROY <i class=\"fa-solid fa-snowman\"></i>';
 
 
 //footer
@@ -162,7 +165,8 @@ const containerFooterAuthor = "containerFooterAuthor";
 const footerAuthor = "footerAuthor";
 const footerAuthorData = "&copy 2025 Copyright: Anita Łaszczak";
 const containerMainFooterEnvelope = "containerMainFooterEnvelope";
-const footerIconEnvelope = "IvI";
+// const footerIconEnvelope = "IvI";
+const footerIconEnvelope = '<i class="fa-solid fa-envelope"></i>';
 const sectionFooter = "sectionFooter";
 const functionNameOnclickCreateSubpageFormContact = "createSubpageFormContact";
 const containerFooterButtonEnvelope = "containerFooterButtonEnvelope";

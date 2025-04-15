@@ -41,7 +41,7 @@ function createContainerFooterEnvelope(){
     setClassName(containerFooterButtonEnvelope, containerFooterButtonEnvelope);
 
     createElementButton(containerFooterButtonEnvelope, footerButtonEnvelope);
-    setFunctionOnclick(footerButtonEnvelope, functionNameOnclickCreateSubpageFormContact);
+    // setFunctionOnclick(footerButtonEnvelope, functionNameOnclickCreateSubpageFormContact);
     setClassName(footerButtonEnvelope, footerButtonEnvelope);
 }
 

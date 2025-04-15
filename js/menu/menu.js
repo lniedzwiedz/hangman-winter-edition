@@ -16,6 +16,7 @@ function createContainerMainMenuParts(){
 function createContainerManuTitle(){
     createElementDivWithTheSameValueForIdAndClassName(containerMenuMainParts, containerMenuTitleMain);
     createElementDiv(containerMenuTitleMain, menuTitle);
+    setClassName(menuTitle, menuTitle)
     createElementP(menuTitle, menuTitleText);
     setClassName(menuTitleText, menuTitleText)
     setElementTextById(menuTitleText, menuTitleTextDisplay);
