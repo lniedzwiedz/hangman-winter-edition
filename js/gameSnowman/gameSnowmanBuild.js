@@ -39,7 +39,7 @@ let gameLivesChars;
 const fileWithWords = "NAVAJO WHITE, IVORY, BONE WHITE, ALABASTER, EGGSHELL, SEASHELL, ";
 
 // const fileWithWordsH = "#EDEADE, pink, #F9F6EE, #F0EAD6, ";
-const fileWithWordsH = "#FFDEAD, #F5F5DC, #FFF8DC, #EDEADE, #FOEAD6, #FFF5EE, ";
+const fileWithWordsH = "#FFDEAD, #F5F5DC, #FFF8DC, #EDEADE, #F0EAD6, #FFF5EE, ";
 const wordsH = fileWithWordsH.split(", ")
 let winColorSnowman;
 
@@ -659,6 +659,7 @@ function setAnimationAfterWinSnowmanFigureElementsSnowballs() {
     // rootVariables.style.setProperty("--snowmanFigureColor", colorTest);
     // rootVariables.style.setProperty(cssSnowmanFigureColor, colorTest);
     // console.log("winColorSnowman: " + winColorSnowman);
+    // winColorSnowman = "#F0EAD6";
     rootVariables.style.setProperty(cssSnowmanFigureColor, winColorSnowman);
 
     for (let i = 0; i <= 16; i++) {

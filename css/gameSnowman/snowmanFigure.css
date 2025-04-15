@@ -327,7 +327,8 @@
     --justifyContent: center;
     --alignItems: center;
     --borderRadius: 1.7rem;
-    --snowmanFigureColor: orange;
+    /*--snowmanFigureColor: orange;*/
+    --snowmanFigureColor: #ac4a71;
     --snowmanFigureShapeInitialColor:#ac4a71;
     --snowmanFigureShapeInitialBorderColor: #ac4a71;
     --snowmanFigureShapeAnimationDisapperColor: #000000;
