@@ -2,15 +2,8 @@ function setFunctionOnclick(elementId, functionNameOnclick) {
     document.getElementById(elementId).setAttribute("onclick", functionNameOnclick + "(this.id)");
 }
 
-function createContainerMainElements(containerMainSectionName, sectionName, containerSectionName, containerSectionMainName){
-    // let mainElement = document.getElementsByClassName(containerMain)[0];
-    // let newDiv = document.createElement("div");
-    // mainElement.append(newDiv);
-    // newDiv.setAttribute("id", sectionName);
-
+function createContainerMainElements(containerMainSectionName, sectionName, containerSectionName, containerSectionMainName) {
     createElementDiv(containerMainSectionName, containerSectionName)
-    // setClassName(containerSectionName, containerMainSectionName)
-    // newDiv.classList.add(containerSectionName);
 
     let newDiv2 = document.createElement("div");
     let mainElem = document.getElementById(containerSectionName);
@@ -38,13 +31,13 @@ function createElementP(parentId, childId) {
     createElement(parentId, childId, "p");
 }
 
-function setClassName(elementId, className) {
+function setElementClassName(elementId, className) {
     document.getElementById(elementId).classList.add(className);
 }
 
-function createElementDivWithTheSameValueForIdAndClassName(parentId, elementIdAndClassName){
+function createElementDivWithTheSameValueForIdAndClassName(parentId, elementIdAndClassName) {
     createElementDiv(parentId, elementIdAndClassName);
-    setClassName(elementIdAndClassName, elementIdAndClassName);
+    setElementClassName(elementIdAndClassName, elementIdAndClassName);
 }
 
 function removeElementsById(elementId) {
@@ -54,15 +47,15 @@ function removeElementsById(elementId) {
     }
 }
 
-function setElementTextByClassName(className, text){
+function setElementTextByClassName(className, text) {
     document.getElementsByClassName(className)[0].innerHTML = text;
 }
 
-function setElementTextById(elementId, text){
+function setElementTextById(elementId, text) {
     document.getElementById(elementId).innerHTML = text;
 }
 
-function removeContainerMainSection(){
+function removeContainerMainSection() {
     removeContainerSectionHome();
     removeMainContainerForGameSnowman();
     removeMainContainerGameSnowmanDestroy();

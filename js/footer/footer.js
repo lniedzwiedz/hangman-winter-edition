@@ -1,47 +1,38 @@
-function createFooter(){
+function createFooter() {
     createContainerMainFooter();
     createContainerFooterAuthor();
     createContainerFooterEnvelope();
 }
 
-function createContainerMainFooter(){
-    // let mainElement = document.getElementsByClassName(containerMain)[0];
-    // let newDiv = document.createElement("div");
-    // mainElement.append(newDiv);
-    // newDiv.setAttribute("id", sectionFooter);
-    // // newDiv.classList.add("item-3")
-    // newDiv.classList.add(containerMainFooter)
-    //
-    // createElementDiv(sectionFooter, containerMainFooter);
-    // setClassName(containerMainFooter, containerMainFooter);
-    // createElementDiv(containerMainSectionFooter, sectionFooter);
+function createContainerMainFooter() {
     createContainerMainElements(containerMainSectionFooter, sectionFooter, containerSectionFooter, containerMainFooter);
+    setElementClassName(containerSectionFooter, containerSectionFooter);
 }
 
-function createContainerFooterAuthor(){
+function createContainerFooterAuthor() {
     createElementDiv(containerMainFooter, containerFooterAuthor);
-    setClassName(containerFooterAuthor, containerFooterAuthor);
+    setElementClassName(containerFooterAuthor, containerFooterAuthor);
     createElementP(containerFooterAuthor, footerAuthor);
-    setClassName(footerAuthor, footerAuthor);
+    setElementClassName(footerAuthor, footerAuthor);
     setElementTextById(footerAuthor, footerAuthorData);
 }
 
-function createContainerFooterEnvelope(){
+function createContainerFooterEnvelope() {
 
     createElementDiv(containerMainFooter, containerMainFooterEnvelope);
-    setClassName(containerMainFooterEnvelope, containerMainFooterEnvelope);
+    setElementClassName(containerMainFooterEnvelope, containerMainFooterEnvelope);
 
     createElementDiv(containerMainFooterEnvelope, containerFooterEnvelopeText);
-    setClassName(containerFooterEnvelopeText, containerFooterEnvelope);
-    setClassName(containerFooterEnvelopeText, containerFooterEnvelopeText);
+    setElementClassName(containerFooterEnvelopeText, containerFooterEnvelope);
+    setElementClassName(containerFooterEnvelopeText, containerFooterEnvelopeText);
     setElementTextById(containerFooterEnvelopeText, footerIconEnvelope);
 
     createElementDiv(containerMainFooterEnvelope, containerFooterButtonEnvelope);
-    setClassName(containerFooterButtonEnvelope, containerFooterEnvelope);
-    setClassName(containerFooterButtonEnvelope, containerFooterButtonEnvelope);
+    setElementClassName(containerFooterButtonEnvelope, containerFooterEnvelope);
+    setElementClassName(containerFooterButtonEnvelope, containerFooterButtonEnvelope);
 
     createElementButton(containerFooterButtonEnvelope, footerButtonEnvelope);
     // setFunctionOnclick(footerButtonEnvelope, functionNameOnclickCreateSubpageFormContact);
-    setClassName(footerButtonEnvelope, footerButtonEnvelope);
+    setElementClassName(footerButtonEnvelope, footerButtonEnvelope);
 }
 

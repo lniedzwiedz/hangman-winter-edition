@@ -23,8 +23,6 @@ const gameNameSnowmanDestroy = "SnowmanDestroy";
 const homeButtonGameSnowman = "homeButtonGameSnowman";
 
 
-
-
 // game
 const functionNameOnclickPlayGameSnowmanBuild = "playGameSnowmanBuild";
 const functionNameOnclickSetConfigurationForGameSnowmanBuild = "setConfigurationForGameSnowmanBuild";
@@ -163,7 +161,7 @@ const containerMainFooter = "containerMainFooter";
 const containerMainFooterParts = "containerMainFooterParts";
 const containerFooterAuthor = "containerFooterAuthor";
 const footerAuthor = "footerAuthor";
-const footerAuthorData = "&copy 2025 Copyright: Anita Łaszczak";
+const footerAuthorData = "Copyright &copy 2025 Anita Łaszczak";
 const containerMainFooterEnvelope = "containerMainFooterEnvelope";
 // const footerIconEnvelope = "IvI";
 const footerIconEnvelope = '<i class="fa-solid fa-envelope"></i>';

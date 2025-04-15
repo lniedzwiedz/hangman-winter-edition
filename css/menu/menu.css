@@ -1,16 +1,10 @@
-
 #containerSectionMenu {
     display: grid;
-    /*background-color: dimgray;*/
     grid-template-rows: 20fr 60fr 20fr;
-    grid-template-columns: 10fr 30fr 50fr 10fr;
-    /*box-shadow: 0 2px 10px 0 #621735;*/
-    /*box-shadow: 0 2px 10px 0 #2c3e3a;*/
-    /*box-shadow: 0 2px 10px 0 #2a1e1e;*/
+    grid-template-columns: 15fr 15fr 55fr 15fr;
 }
 
 .containerMenuMain {
-    /*background-color: #824769;*/
     display: grid;
     grid-row: 2 / 2;
     grid-column: 2 / 4;
@@ -19,8 +13,6 @@
 }
 
 #containerMenuMainParts {
-    /*background-color: #824769;*/
-    /*opacity: 0.5;*/
     display: grid;
     grid-row: 1 / 1;
     grid-column: 1 / 1;
@@ -29,204 +21,113 @@
 }
 
 #containerMenuTitleMain {
-    /*background-color: darkolivegreen;*/
-    /*display: grid;*/
-    /*grid-row: 1 / 2;*/
-    /*grid-column: 1 / 2;*/
-    /*!*text-align: center;*!*/
-    /*grid-template-rows: 1fr;*/
-    /*grid-template-columns: 1fr;*/
 }
 
 .containerMenuTitleMain {
-    /*background-color: darkolivegreen;*/
     display: grid;
     grid-row: 1 / 2;
     grid-column: 1 / 2;
-    /*text-align: center;*/
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
 }
 
 #menuTitle {
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*background-color: #000000;*/
-    /*background-color: orange;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*margin: 0;*/
-    /*padding: 0;*/
-    /*align-items: center;*/
-    /*text-align: center;*/
 }
 
 .menuTitle {
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*margin: 0;*/
-    /*padding: 0;*/
-    /*align-items: center;*/
-    /*text-align: center;*/
 }
 
 #menuTitleText {
-    /*background-color: #000000;*/
-    /*color: coral;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*margin: 0;*/
-    /*padding: 0;*/
-    /*align-items: center;*/
-    /*text-align: center;*/
 }
 
 .menuTitleText {
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*color: coral;*/
     margin: 0;
-    /*margin-bottom: 0;*/
     padding: 0;
-    /*color: #ac4a71;*/
     color: #e9a610;
-    /*color: #07a986;*/
     opacity: 0.9;
     font-size: 2.1rem;
-    /* font-size: 20%; */
     font-weight: 400;
-    /*margin: auto;*/
-    /*align-items: center;*/
-    /*text-align: center;*/
-    /*margin: auto;*/
-    /*margin-bottom: 0;*/
-    /*margin-top: 0;*/
 }
-
 
 #containerMenuButtonsMain {
     display: grid;
-    /*background-color: yellowgreen;*/
     grid-row: 1 / 1;
     grid-column: 2 / 3;
-    /*text-align: center;*/
-    /*grid-template-rows: 15fr 30fr 30fr 15fr;*/
-    /*grid-template-columns: 5fr 20fr 5fr 20fr 5fr 20fr 5fr;*/
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
 }
 
 #containerMenuButtonsMainParts {
     display: grid;
-    /*background-color: yellowgreen;*/
     grid-row: 1 / 1;
     grid-column: 1 / 1;
-    /*text-align: center;*/
-    /*grid-template-rows: 15fr 30fr 30fr 15fr;*/
-    /*grid-template-columns: 5fr 20fr 5fr 20fr 5fr 20fr 5fr;*/
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 #containerMenuButtonHomeMain {
-    /*display: grid;*/
-    /*background-color: yellowgreen;*/
-    /*grid-row: 1 / 1;*/
-    /*grid-column: 1 / 2;*/
-    /*!*text-align: center;*!*/
-    /*!*grid-template-rows: 15fr 30fr 30fr 15fr;*!*/
-    /*!*grid-template-columns: 5fr 20fr 5fr 20fr 5fr 20fr 5fr;*!*/
-    /*grid-template-rows: 1fr;*/
-    /*grid-template-columns: 1fr;*/
 }
 
-
-
-#containerMenuButtonGameSnowmanBuildMain{
+#containerMenuButtonGameSnowmanBuildMain {
     display: grid;
-    /*background-color: yellowgreen;*/
     grid-row: 1 / 1;
     grid-column: 2 / 3;
-    /*text-align: center;*/
-    /*grid-template-rows: 15fr 30fr 30fr 15fr;*/
-    /*grid-template-columns: 5fr 20fr 5fr 20fr 5fr 20fr 5fr;*/
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
 }
 
-#containerMenuButtonGameSnowmanDestroyMain{
+#containerMenuButtonGameSnowmanDestroyMain {
     display: grid;
-    /*background-color: yellowgreen;*/
     grid-row: 1 / 1;
     grid-column: 3 / 4;
-    /*text-align: center;*/
-    /*grid-template-rows: 15fr 30fr 30fr 15fr;*/
-    /*grid-template-columns: 5fr 20fr 5fr 20fr 5fr 20fr 5fr;*/
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
 }
 
 .containerMenuButtonHome {
     display: grid;
-    /*background-color: yellowgreen;*/
     grid-row: 1 / 1;
     grid-column: 1 / 2;
-    /*text-align: center;*/
-    /*grid-template-rows: 15fr 30fr 30fr 15fr;*/
-    /*grid-template-columns: 5fr 20fr 5fr 20fr 5fr 20fr 5fr;*/
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
 }
 
 .containerMenuButtonGameSnowmanBuild {
     display: grid;
-    /*background-color: yellowgreen;*/
     grid-row: 1 / 1;
     grid-column: 1 / 2;
-    /*text-align: center;*/
-    /*grid-template-rows: 15fr 30fr 30fr 15fr;*/
-    /*grid-template-columns: 5fr 20fr 5fr 20fr 5fr 20fr 5fr;*/
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
 }
 
-.containerMenuButtonGameSnowmanDestroy  {
+.containerMenuButtonGameSnowmanDestroy {
     display: grid;
-    /*background-color: yellowgreen;*/
     grid-row: 1 / 1;
     grid-column: 1 / 2;
-    /*text-align: center;*/
-    /*grid-template-rows: 15fr 30fr 30fr 15fr;*/
-    /*grid-template-columns: 5fr 20fr 5fr 20fr 5fr 20fr 5fr;*/
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
 }
 
-/*#containerMenuButtonHomeText {*/
-/*.containerMenuButtonHomeText {*/
 .containerMenuButtonText {
     width: 100%;
     height: 100%;
-    /*background-color: #000000;*/
-    /*background-color: orange;*/
+
     margin: 0;
     padding: 0;
     border: 0;
-    /*justify-content: center;*/
     align-items: center;
     text-align: center;
 }
 
 .menuButtonText {
     color: #ac4a71;
-    font-size: 1.2rem;
+    font-size: 1rem;
     /*font-size: 1rem;*/
     font-weight: 400;
     margin: 0;
 }
 
 #containerMenuButtonHomeClick {
-
 }
 
 #menuButtonHomeClick {
@@ -236,28 +137,22 @@
     opacity: 0;
 }
 
-
 .containerMenuButton-buttonClick {
 }
 
-.fa-snowman{
-    font-size: 2.5rem;
-    /*color: #2c3e3a;*/
-    /*color: #e9a610;*/
+.fa-snowman {
+    font-size: 2.1rem;
 }
 
-.fa-igloo{
-    font-size: 2.5rem;
-    /*color: #000000;*/
-    /*color: #2c3e3a;*/
-    /*color: #e9a610;*/
+.fa-igloo {
+    font-size: 2.1rem;
 }
 
-.containerMenuButtonHomeMain{
+.containerMenuButtonHomeMain {
     color: #27ab48;
 }
 
-.containerMenuButtonHomeMain:hover{
+.containerMenuButtonHomeMain:hover {
     color: #e9a610;
 }
 
