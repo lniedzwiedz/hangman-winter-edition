@@ -120,6 +120,7 @@ function setDiscoveredChar(charToShow) {
 const animationMaxNumberToDisplay = function getAnimationMaxNumberToDisplay() {
     if (animationMaxNumber > wordCharsWithoutDuplicate.length) {
         return animationMaxNumber
+
     }
     return wordCharsWithoutDuplicate.length;
 }
