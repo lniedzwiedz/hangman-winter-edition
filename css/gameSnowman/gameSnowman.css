@@ -1,12 +1,27 @@
-.containerSectionGameSnowman {
+/*#containerSectionGameSnowman {*/
+#containerMainSectionGameSnowman {
     display: grid;
     /*background-color: #824769;*/
     /*grid-template-rows: 12fr 18fr 18fr 3fr 3fr 14fr 14fr 4fr;*/
     /*grid-template-rows: 2fr 28fr 18fr 3fr 3fr 14fr 14fr 4fr;*/
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
     grid-template-rows: 2fr 28fr 24fr 1fr 1fr 14fr 14fr 4fr;
     /*grid-template-columns: 10fr 3fr 13fr 21fr 3fr 3fr 21fr 13fr 3fr 10fr;*/
     grid-template-columns: 17fr 3fr 13fr 21fr 3fr 3fr 21fr 13fr 3fr 17fr;
 }
+
+/*#containerGameSnowman {*/
+/*    display: grid;*/
+/*    !*background-color: #824769;*!*/
+/*    !*grid-template-rows: 12fr 18fr 18fr 3fr 3fr 14fr 14fr 4fr;*!*/
+/*    !*grid-template-rows: 2fr 28fr 18fr 3fr 3fr 14fr 14fr 4fr;*!*/
+/*    grid-row: 1 / 1;*/
+/*    grid-column: 1 / 1;*/
+/*    grid-template-rows: 2fr 28fr 24fr 1fr 1fr 14fr 14fr 4fr;*/
+/*    !*grid-template-columns: 10fr 3fr 13fr 21fr 3fr 3fr 21fr 13fr 3fr 10fr;*!*/
+/*    grid-template-columns: 17fr 3fr 13fr 21fr 3fr 3fr 21fr 13fr 3fr 17fr;*/
+/*}*/
 
 /* animation figure */
 #containerGameSnowmanAnimation {

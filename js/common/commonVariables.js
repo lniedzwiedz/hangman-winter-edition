@@ -2,10 +2,13 @@ let rootVariables = document.querySelector(":root");
 
 // container main
 const containerMain = "containerMain";
+const containerMainSectionMenu = "containerMainSectionMenu";
+const containerMainSectionActions = "containerMainSectionActions";
+const containerMainSectionFooter = "containerMainSectionFooter";
 
 // subpage HOME
 const sectionHome = "sectionHome";
-const containerSectionHome = "containerSectionHome";
+const containerMainSectionHome = "containerMainSectionHome";
 const containerMainHome = "containerMainHome";
 const containerHomeGamesButtons = "containerHomeGamesButtons";
 
@@ -41,7 +44,7 @@ const snowmanFigureElementActionShapeRemoveColor = "snowmanFigureElementActionSh
 const containerSnowmanFigureAction = "containerSnowmanFigureAction";
 const containerGameSnowmanAnimation = "containerGameSnowmanAnimation";
 const containerGameSnowmanAnimationElements = "containerGameSnowmanAnimationElements";
-const containerSectionGameSnowman = "containerSectionGameSnowman";
+const containerMainSectionGameSnowman = "containerMainSectionGameSnowman";
 
 // figure field
 const welcomeText = "?";
@@ -119,13 +122,36 @@ const containerMenuTitleMain = "containerMenuTitleMain";
 const menuTitle = "menuTitle";
 const menuTitleText = "menuTitleText";
 const menuTitleTextDisplay = "Simply Games";
+
 const containerMenuButtonsMain = "containerMenuButtonsMain";
 const containerMenuButtonsMainParts = "containerMenuButtonsMainParts";
 const containerMenuButtonHomeMain = "containerMenuButtonHomeMain";
+const containerMenuButtonHomeClick = "containerMenuButtonHomeClick";
+const menuButtonHomeClick = "menuButtonHomeClick";
+const menuButtonClick = "menuButtonClick";
+const functionNameOnclickCreateSubpageHome = "createSubpageHome";
 const containerMenuButtonHome = "containerMenuButtonHome";
 const containerMenuButtonHomeText = "containerMenuButtonHomeText";
+const containerMenuButtonText = "containerMenuButtonText";
 const menuButtonHomeText = "menuButtonHomeText";
+const menuButtonText = "menuButtonText";
 const menuButtonHomeTextDisplay = "HOME";
+
+const containerMenuButtonGameSnowmanBuildMain = "containerMenuButtonGameSnowmanBuildMain";
+const containerMenuButtonGameSnowmanBuildText = "containerMenuButtonGameSnowmanBuildText";
+const containerMenuButtonGameSnowmanBuild = "containerMenuButtonGameSnowmanBuild";
+const containerMenuButtonGameSnowmanBuildClick = "containerMenuButtonGameSnowmanBuildClick";
+const menuButtonGameSnowmanBuildClick = "menuButtonGameSnowmanBuildClick";
+const menuButtonGameSnowmanBuildText = "menuButtonGameSnowmanBuildText";
+const menuButtonGameSnowmanBuildTextDisplay = "SAVE SNOWMAN";
+
+const containerMenuButtonGameSnowmanDestroyMain = "containerMenuButtonGameSnowmanDestroyMain";
+const containerMenuButtonGameSnowmanDestroyText = "containerMenuButtonGameSnowmanDestroyText";
+const containerMenuButtonGameSnowmanDestroy = "containerMenuButtonGameSnowmanDestroy";
+const containerMenuButtonGameSnowmanDestroyClick = "containerMenuButtonGameSnowmanDestroyClick";
+const menuButtonGameSnowmanDestroyClick = "menuButtonGameSnowmanDestroyClick";
+const menuButtonGameSnowmanDestroyText = "menuButtonGameSnowmanDestroyText";
+const menuButtonGameSnowmanDestroyTextDisplay = "DESTROY SNOWMAN";
 
 
 //footer

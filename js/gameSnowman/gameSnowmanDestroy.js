@@ -1,10 +1,12 @@
 function setConfigurationForGameSnowmanDestroy(){
 
+    removeContainerMainSection();
+    // createElementDiv(containerMainSectionActions, containerMainSectionGameSnowman);
     // temp -> to remove
     let temContainer = "tempContainerGameSnowmanDestroy"
     let tempIdClass = "tempGameSnowmanDestroyText"
     createMainContainerForGameSnowman()
-    createElementDiv(sectionGameSnowman, temContainer);
+    createElementDiv(containerMainSectionGameSnowman, temContainer);
     createElementDiv(temContainer, containerGameSnowmanAnimationElements);
     createElementDiv(containerGameSnowmanAnimationElements, containerSnowmanFigureMessage1welcomeText);
     createNewP(containerSnowmanFigureMessage1welcomeText, tempIdClass);
@@ -13,7 +15,7 @@ function setConfigurationForGameSnowmanDestroy(){
 }
 
 function removeMainContainerGameSnowmanDestroy() {
-    removeElementsById(sectionGameSnowmanDestroy);
+    removeElementsById(containerMainSectionGameSnowman);
 }
 
 

@@ -1,19 +1,6 @@
 function createMainContainerHome() {
-
-    // let mainElement = document.getElementsByClassName(containerMain)[0];
-    // let newDiv = document.createElement("div");
-    // mainElement.append(newDiv);
-    // newDiv.setAttribute("id", sectionHome);
-    // newDiv.classList.add("item-2")
-    // newDiv.classList.add(containerSectionHome)
-    //
-    // let newDiv2 = document.createElement("div");
-    // let mainElem = document.getElementById(sectionHome);
-    // mainElem.append(newDiv2);
-    // newDiv2.setAttribute("id", containerMainHome);
-    // newDiv2.classList.add((containerMainHome));
-
-    createContainerMainElements(sectionHome, containerSectionHome, containerMainHome);
+    // createElementDiv(containerMainSectionActions, sectionHome);
+    createContainerMainElements(containerMainSectionActions, sectionHome, containerMainSectionHome, containerMainHome);
 }
 
 function createContainerButtonGameBuildSnowman() {
@@ -69,6 +56,7 @@ function createContainersHomeButtonGameSnowman(gameName, gameSnowmanDescriptionT
 }
 
 function createSubpageHome() {
+    removeContainerMainSection();
     createMainContainerHome();
     createContainerButtonGameBuildSnowman();
     createContainersHomeButtonGameSnowman(gameNameSnowmanBuild, gameSnowmanDescriptionTextBuild);
@@ -76,20 +64,25 @@ function createSubpageHome() {
 }
 
 function removeContainerSectionHome() {
-    removeElementsById(sectionHome);
+    console.log("clicked -> removeContainerSectionHome")
+    // removeElementsById(sectionHome);
+    removeElementsById(containerMainSectionHome);
+    // removeMainContainers();
 }
 
 function setGameSnowmanBuild() {
     console.log("clicked -> setGameSnowmanBuild")
-    removeMainContainers();
+    removeContainerMainSection();
     // removeContainerSectionHome();
     setConfigurationForGameSnowmanBuild();
 }
 
 function setGameSnowmanDestroy() {
     console.log("clicked -> gameNameSnowmanDestroy")
-    removeMainContainers();
+    removeContainerMainSection();
     // removeContainerSectionHome();
     setConfigurationForGameSnowmanDestroy();
 }
+
+
 

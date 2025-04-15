@@ -2,15 +2,18 @@ function setFunctionOnclick(elementId, functionNameOnclick) {
     document.getElementById(elementId).setAttribute("onclick", functionNameOnclick + "(this.id)");
 }
 
-function createContainerMainElements(sectionName, containerSectionName, containerSectionMainName){
-    let mainElement = document.getElementsByClassName(containerMain)[0];
-    let newDiv = document.createElement("div");
-    mainElement.append(newDiv);
-    newDiv.setAttribute("id", sectionName);
-    newDiv.classList.add(containerSectionName);
+function createContainerMainElements(containerMainSectionName, sectionName, containerSectionName, containerSectionMainName){
+    // let mainElement = document.getElementsByClassName(containerMain)[0];
+    // let newDiv = document.createElement("div");
+    // mainElement.append(newDiv);
+    // newDiv.setAttribute("id", sectionName);
+
+    createElementDiv(containerMainSectionName, containerSectionName)
+    // setClassName(containerSectionName, containerMainSectionName)
+    // newDiv.classList.add(containerSectionName);
 
     let newDiv2 = document.createElement("div");
-    let mainElem = document.getElementById(sectionName);
+    let mainElem = document.getElementById(containerSectionName);
     mainElem.append(newDiv2);
     newDiv2.setAttribute("id", containerSectionMainName);
     newDiv2.classList.add((containerSectionMainName));
@@ -28,11 +31,11 @@ function createElementDiv(parentId, childId) {
 }
 
 function createElementButton(parentId, childId) {
-    createElement(parentId, childId, "button")
+    createElement(parentId, childId, "button");
 }
 
 function createElementP(parentId, childId) {
-    createElement(parentId, childId, "p")
+    createElement(parentId, childId, "p");
 }
 
 function setClassName(elementId, className) {
@@ -41,7 +44,7 @@ function setClassName(elementId, className) {
 
 function createElementDivWithTheSameValueForIdAndClassName(parentId, elementIdAndClassName){
     createElementDiv(parentId, elementIdAndClassName);
-    setClassName(elementIdAndClassName, elementIdAndClassName)
+    setClassName(elementIdAndClassName, elementIdAndClassName);
 }
 
 function removeElementsById(elementId) {
@@ -59,9 +62,9 @@ function setElementTextById(elementId, text){
     document.getElementById(elementId).innerHTML = text;
 }
 
-function removeMainContainers(){
+function removeContainerMainSection(){
     removeContainerSectionHome();
     removeMainContainerForGameSnowman();
     removeMainContainerGameSnowmanDestroy();
-
+    removeContainerSectionContactForm();
 }

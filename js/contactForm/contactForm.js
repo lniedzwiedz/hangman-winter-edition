@@ -1,7 +1,8 @@
 function createSubpageFormContact (){
     console.log("> createSubpageFormContact");
-    removeContainerSectionContactForm();
-    removeContainerSectionHome();
+    // removeContainerSectionContactForm();
+    // removeContainerSectionHome();
+    removeContainerMainSection();
     createContainerMainFormContact();
 }
 

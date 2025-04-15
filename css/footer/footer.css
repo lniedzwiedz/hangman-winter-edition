@@ -1,6 +1,8 @@
-.containerSectionFooter{
+#containerSectionFooter{
     display: grid;
     /*background-color: dimgray;*/
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
     grid-template-rows: 1fr;
     grid-template-columns: 10fr 80fr 10fr;
     /*box-shadow: 0 2px 10px 0 #2c3e3a;*/

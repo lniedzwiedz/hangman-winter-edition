@@ -14,8 +14,8 @@ function createContainerMainFooter(){
     //
     // createElementDiv(sectionFooter, containerMainFooter);
     // setClassName(containerMainFooter, containerMainFooter);
-
-    createContainerMainElements(sectionFooter, containerSectionFooter, containerMainFooter);
+    // createElementDiv(containerMainSectionFooter, sectionFooter);
+    createContainerMainElements(containerMainSectionFooter, sectionFooter, containerSectionFooter, containerMainFooter);
 }
 
 function createContainerFooterAuthor(){
