@@ -64,7 +64,7 @@ const snowmanFigureElementActionFinalSnowballsColor = "snowmanFigureElementActio
 // hat
 const hatElementInitialPositionForShape = "-hatElementInitialPositionForShape";
 const handInitialPositionForShape = "-handInitialPositionForShape";
-const hatElementInitialPositionForAnimation = "hatElementInitialPositionForAnimation";
+const hatElementInitialPositionForAnimation = "-hatElementInitialPositionForAnimation";
 const setAnimationHatFinalColor = "-setAnimationHatFinalColor";
 const setHatFinalColor = "-setHatFinalColor";
 

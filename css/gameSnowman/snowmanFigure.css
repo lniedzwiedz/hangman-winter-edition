@@ -94,7 +94,8 @@
         text-shadow: 4px -1px 20px #000000;
     }
     to {
-        text-shadow: 4px -1px 20px #621735;
+        /*text-shadow: 4px -1px 20px #621735;*/
+        text-shadow: 4px -1px 20px #ac4a71;
     }
 }
 

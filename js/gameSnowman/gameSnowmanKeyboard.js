@@ -36,7 +36,6 @@ function createKeyboardButtonsForOneLine(elementId, keysLine) {
         newButton.style.gridTemplateColumns = "1fr";
 
         if ((keysLine[i] !== "") && (keysLine[i] !== "NEW GAME")) {
-            console.log("")
             newButton.value = keysLine[i];
             newButton.setAttribute("onclick", functionNameOnclickPlayGameSnowmanBuild+"(this.id)");
         }
