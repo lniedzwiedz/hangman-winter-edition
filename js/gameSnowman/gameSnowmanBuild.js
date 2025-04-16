@@ -115,10 +115,8 @@ function randomNumber() {
 
 function getWord() {
     let index = randomNumber();
-    // winColorSnowman= wordsH[index];
-    winColorSnowman= wordsH[2];
-    // return words[index];
-    return "JAVA";
+    winColorSnowman= wordsH[index];
+    return words[index];
 }
 
 function getCharsNumber(word) {
