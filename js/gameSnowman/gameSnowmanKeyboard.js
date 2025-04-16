@@ -123,9 +123,13 @@ function changeKeyboardButtonNewGameWhenGameOver(functionNameOnclick) {
     element.setAttribute("onclick", functionNameOnclick + "(this.id)");
 }
 
+// time === setColorForSnowman(), gameSnowmanBuild.js
 function changeKeyboardButtonsGameOver(functionNameOnclick) {
     disableKeyboardButtons();
-    changeKeyboardButtonNewGameWhenGameOver(functionNameOnclick);
+    setTimeout(function(){
+        changeKeyboardButtonNewGameWhenGameOver(functionNameOnclick)
+    }, 9000)
+
 }
 
 function changeKeyboardButtonsGameSnowmanBuildGameOver() {

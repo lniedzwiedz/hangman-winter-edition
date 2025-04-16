@@ -348,7 +348,7 @@ function playGameSnowmanBuild(clickedId) {
 
         if (countedCorrectShots >= wordCharsWithoutDuplicate.length) {
             setGameOverTextWinner();
-            changeKeyboardButtonsGameSnowmanBuildGameOver();
+            // changeKeyboardButtonsGameSnowmanBuildGameOver();
             disableKeyboardButton(clickedId);
             setDiscoveredChar(keyValue);
             // setShapeSnowmanFigureElements();
@@ -896,6 +896,7 @@ function setAnimationsAfterWinSnowmanFigureElementsHandsAndHat(){
     }
 }
 
+//// time === changeKeyboardButtonsGameOver(), gameSnowmanBuildKeyboard.js
 function setColorForSnowman(){
     setTimeout(function(){
         setAnimationSnowmanFigureElementsShapeRemoveColor()
@@ -908,7 +909,6 @@ function setColorForSnowman(){
     setTimeout(function(){
         setAnimationAfterWinSnowmanFigureElementsSnowballs()
     }, 6000)
-
 
     setTimeout(function(){
         setAnimationsAfterWinSnowmanFigureElementsHandsAndHat()
@@ -1030,19 +1030,11 @@ function createContainersSnowmanFigureMainElements(){
         innerDivContainer.setAttribute('id', containerSnowmanFigureElement + i.toString());
         document.getElementById(containerSnowmanFigureElements).append(innerDivContainer);
 
-        // action
+        // container action
         let innerDiv = document.createElement("div");
         innerDiv.setAttribute("id", snowmanFigureElementAction + i.toString());
         let div1 = document.getElementById(containerSnowmanFigureElement + i.toString());
         div1.append(innerDiv);
     }
-
 }
 
-
-
-// createStartContainersForGameSnowman();
-
-// createContainerGameSnowmanWordElements();
-
-// setConfigurationForGameSnowmanBuild(); // onclick - temp

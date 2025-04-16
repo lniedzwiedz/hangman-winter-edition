@@ -15,8 +15,8 @@ const containerHomeGamesButtons = "containerHomeGamesButtons";
 const containerGameSnowmanDescription = "containerGameSnowmanDescription";
 const containerGameSnowmanWordElementText = "containerGameSnowmanWordElementText";
 const gameSnowmanWordElementText = "gameSnowmanWordElementText";
-const gameSnowmanDescriptionTextBuild = ["SAVE SNOWMAN", "discover colour name", "WIN GAME", "&", "snowman will change colour"];
-const gameSnowmanDescriptionTextDestroy = ["DESTROY SNOWMAN", "discover colour name", "WIN GAME", "&", "snowman will rise again"];
+const gameSnowmanDescriptionTextBuild = ["BUILD SNOWMAN", "discover colour name", "WIN GAME", "&", "snowman will change colour"];
+const gameSnowmanDescriptionTextDestroy = ["SAVE SNOWMAN", "discover colour name", "WIN GAME", "&", "snowman will rise again"];
 
 const gameNameSnowmanBuild = "SnowmanBuild";
 const gameNameSnowmanDestroy = "SnowmanDestroy";
@@ -143,7 +143,7 @@ const containerMenuButtonGameSnowmanBuildClick = "containerMenuButtonGameSnowman
 const menuButtonGameSnowmanBuildClick = "menuButtonGameSnowmanBuildClick";
 const menuButtonGameSnowmanBuildText = "menuButtonGameSnowmanBuildText";
 // const menuButtonGameSnowmanBuildTextDisplay = "SAVE SNOWMAN";
-const menuButtonGameSnowmanBuildTextDisplay = "SAVE <i class=\"fa-solid fa-snowman\"></i>";
+const menuButtonGameSnowmanBuildTextDisplay = "BUILD <i class=\"fa-solid fa-snowman\"></i>";
 
 const containerMenuButtonGameSnowmanDestroyMain = "containerMenuButtonGameSnowmanDestroyMain";
 const containerMenuButtonGameSnowmanDestroyText = "containerMenuButtonGameSnowmanDestroyText";
@@ -152,7 +152,7 @@ const containerMenuButtonGameSnowmanDestroyClick = "containerMenuButtonGameSnowm
 const menuButtonGameSnowmanDestroyClick = "menuButtonGameSnowmanDestroyClick";
 const menuButtonGameSnowmanDestroyText = "menuButtonGameSnowmanDestroyText";
 // const menuButtonGameSnowmanDestroyTextDisplay = "DESTROY SNOWMAN";
-const menuButtonGameSnowmanDestroyTextDisplay = 'DESTROY <i class=\"fa-solid fa-snowman\"></i>';
+const menuButtonGameSnowmanDestroyTextDisplay = 'SAVE <i class=\"fa-solid fa-snowman\"></i>';
 
 
 //footer
