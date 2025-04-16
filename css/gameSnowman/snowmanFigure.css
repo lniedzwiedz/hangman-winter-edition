@@ -751,7 +751,7 @@
 }
 
 .snowmanFigureElementActionShapeRemoveColor {
-    animation: animationSnowmanFigureElementActionShapeRemoveColor 4s alternate;
+    animation: animationSnowmanFigureElementActionShapeRemoveColor 3s alternate;
     animation-fill-mode: forwards;
 }
 

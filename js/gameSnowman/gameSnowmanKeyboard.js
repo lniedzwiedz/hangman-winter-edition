@@ -3,14 +3,15 @@ const containerGameSnowmanKeyboardElements = "containerGameSnowmanKeyboardElemen
 const containerSnowmanKeyboardLine = "containerSnowmanKeyboard-line-";
 const snowmanKeyboardButtons = "snowmanKeyboardButtons";
 const snowmanKeyboardButtonNewGameGameOver = "snowmanKeyboardButtonNewGameGameOver";
+const buttonsLine = "buttonsLine";
 
-function createKeyboardLines(){
+function createKeyboardLines() {
     let keyboardLines = 4;
 
     for (let i = 1; i <= 4; i++) {
         let newDiv = document.createElement("div");
         document.getElementById(containerGameSnowmanKeyboardElements).append(newDiv);
-        newDiv.setAttribute("id", containerSnowmanKeyboardLine+i);
+        newDiv.setAttribute("id", containerSnowmanKeyboardLine + i);
     }
 }
 
@@ -37,12 +38,8 @@ function createKeyboardButtonsForOneLine(elementId, keysLine) {
 
         if ((keysLine[i] !== "") && (keysLine[i] !== "NEW GAME")) {
             newButton.value = keysLine[i];
-            newButton.setAttribute("onclick", functionNameOnclickPlayGameSnowmanBuild+"(this.id)");
         }
 
-        if (keysLine[i] === "NEW GAME") {
-            newButton.setAttribute("onclick", functionNameOnclickSetConfigurationForGameSnowmanBuild+"(this.id)");
-        }
         newButton.innerHTML += keysLine[i];
         newButton.setAttribute("id", "keyboard-" + keysLine[i]);
         newButton.classList.add(snowmanKeyboardButtons);
@@ -59,17 +56,45 @@ const buttonsLine4 = ["", "", "", "NEW GAME", "", "", "", ""];
 const lines = 4;
 
 function createKeyboardButtonsForLines() {
-    let text = "buttonsLine";
-
     for (let i = 1; i <= lines; i++) {
-        let lineValues = eval(text + i);
+        let lineValues = eval(buttonsLine + i);
         createKeyboardButtonsForOneLine(containerSnowmanKeyboardLine + i, lineValues);
     }
 }
 
-function createKeyboardButtons(){
+function createKeyboardButtons() {
     createKeyboardLines();
     createKeyboardButtonsForLines();
+}
+
+function createKeyboardButtonsGameSnowmanBuild() {
+    createKeyboardButtons();
+    setKeyboardGameSnowmanFunctionNameOnclick(functionNameOnclickPlayGameSnowmanBuild, functionNameOnclickSetConfigurationForGameSnowmanBuild);
+}
+
+function createKeyboardButtonsGameSnowmanDestroy() {
+    createKeyboardButtons();
+    setKeyboardGameSnowmanFunctionNameOnclick(functionNameOnclickPlayGameSnowmanDestroy, functionNameOnclickSetConfigurationForGameSnowmanDestroy);
+}
+
+function setKeyboardGameSnowmanFunctionNameOnclick(functionNameOnclickPlayGameSnowman, functionNameOnclickSetConfigurationForGameSnowman) {
+
+    for (let i = 1; i <= lines; i++) {
+        let keysLine = eval(buttonsLine + i);
+        for (let j = 0; j < keysLine.length; j++) {
+
+            let keyValue = keysLine[j];
+            let button = document.getElementById("keyboard-" + keyValue);
+            if ((button !== null) && ("" !== keyValue)) {
+
+                if (keyValue !== "NEW GAME") {
+                    button.setAttribute("onclick", functionNameOnclickPlayGameSnowman + "(this.id)");
+                } else {
+                    button.setAttribute("onclick", functionNameOnclickSetConfigurationForGameSnowman + "(this.id)");
+                }
+            }
+        }
+    }
 }
 
 // game snowman functions:
@@ -92,14 +117,21 @@ function disableKeyboardButtons() {
     }
 }
 
-function changeKeyboardButtonNewGameWhenGameOver(functionNameOnclickPlayGameSnowman) {
+function changeKeyboardButtonNewGameWhenGameOver(functionNameOnclick) {
     let element = document.getElementById("keyboard-NEW GAME");
-    // element.className += snowmanKeyboardButtonNewGameGameOver;
     element.classList.add(snowmanKeyboardButtonNewGameGameOver);
-    element.setAttribute("onclick", functionNameOnclickPlayGameSnowman+"(this.id)");
+    element.setAttribute("onclick", functionNameOnclick + "(this.id)");
 }
 
-function changeKeyboardButtonsGameOver() {
+function changeKeyboardButtonsGameOver(functionNameOnclick) {
     disableKeyboardButtons();
-    changeKeyboardButtonNewGameWhenGameOver(functionNameOnclickSetConfigurationForGameSnowmanBuild);
+    changeKeyboardButtonNewGameWhenGameOver(functionNameOnclick);
+}
+
+function changeKeyboardButtonsGameSnowmanBuildGameOver() {
+    changeKeyboardButtonsGameOver(functionNameOnclickSetConfigurationForGameSnowmanBuild)
+}
+
+function changeKeyboardButtonsGameSnowmanDestroyGameOver() {
+    changeKeyboardButtonsGameOver(functionNameOnclickSetConfigurationForGameSnowmanDestroy)
 }
