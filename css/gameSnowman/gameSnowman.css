@@ -1,212 +1,38 @@
-/*#containerSectionGameSnowman {*/
 #containerMainSectionGameSnowman {
     display: grid;
-    /*background-color: #824769;*/
-    /*grid-template-rows: 12fr 18fr 18fr 3fr 3fr 14fr 14fr 4fr;*/
-    /*grid-template-rows: 2fr 28fr 18fr 3fr 3fr 14fr 14fr 4fr;*/
     grid-row: 1 / 1;
     grid-column: 1 / 1;
     grid-template-rows: 2fr 28fr 24fr 1fr 1fr 14fr 14fr 4fr;
-    /*grid-template-columns: 10fr 3fr 13fr 21fr 3fr 3fr 21fr 13fr 3fr 10fr;*/
     grid-template-columns: 17fr 3fr 13fr 21fr 3fr 3fr 21fr 13fr 3fr 17fr;
 }
 
-/*#containerGameSnowman {*/
-/*    display: grid;*/
-/*    !*background-color: #824769;*!*/
-/*    !*grid-template-rows: 12fr 18fr 18fr 3fr 3fr 14fr 14fr 4fr;*!*/
-/*    !*grid-template-rows: 2fr 28fr 18fr 3fr 3fr 14fr 14fr 4fr;*!*/
-/*    grid-row: 1 / 1;*/
-/*    grid-column: 1 / 1;*/
-/*    grid-template-rows: 2fr 28fr 24fr 1fr 1fr 14fr 14fr 4fr;*/
-/*    !*grid-template-columns: 10fr 3fr 13fr 21fr 3fr 3fr 21fr 13fr 3fr 10fr;*!*/
-/*    grid-template-columns: 17fr 3fr 13fr 21fr 3fr 3fr 21fr 13fr 3fr 17fr;*/
-/*}*/
-
-/* animation figure */
+/* gameSnowmanFigure.css */
 #containerGameSnowmanAnimation {
     display: grid;
-    /*background-color: #412E47;*/
-    /*grid-row: 2 / 4;*/
-    /*grid-column: 3 / 5;*/
-
-    /*grid-row: 2 / 8;*/
-    /*grid-column: 3 / 5;*/
-
     grid-row: 2 / 8;
     grid-column: 2 / 6;
-
-    /*grid-template-rows: 1fr;*/
-    /*grid-template-columns: 1fr;*/
-
     box-shadow: 0 2px 10px 0 #621735;
-
     grid-template-rows: 1fr;
     grid-template-columns:  minmax( 400px, 1fr);
-
-
 }
 
-#containerGameSnowmanAnimationElements {
-    display: grid;
-    /*background-color: #412E47;*/
-    grid-row: 1 / 1;
-    grid-column: 1 / 1;
-    grid-template-rows: 1fr repeat(4, 6fr) 1fr;
-    grid-template-columns: 1fr 4fr 8fr 8fr 4fr 1fr;
-}
-
-#containerSnowmanFigureAction {
-    /*background-color: #A05880;*/
-    display: grid;
-    /*grid-row: 2 / 6;*/
-    /*grid-column: 3 / 5;*/
-
-    grid-row: 2 / 6;
-    grid-column: 3 / 5;
-
-
-    /*grid-template-rows: 1fr;*/
-    /*grid-template-columns: 1fr;*/
-
-    border: none;
-    border-radius: 0.45rem;
-    /*box-shadow: 0 2px 10px 0 #621735;*/
-
-
-
-    /*grid-template-rows:  minmax( 100px, 680px);*/
-    /*grid-template-columns:  minmax( 250px, 450px);*/
-
-    grid-template-rows: 1fr;
-    grid-template-columns:  minmax( 400px, 500px);
-
-    /*align-items: center;*/
-    justify-content: center;
-
-    /*grid-template-rows: 1fr;*/
-    /*grid-template-columns: minmax( 450px, 600px);*/
-
-}
-
-/* keyboard */
+/* gameSnowmanWordElements.js */
 #containerGameSnowmanWord {
     display: grid;
-    /*background-color: coral;*/
-    /*grid-row: 2 / 4;*/
-    /*grid-column: 7 / 9;*/
-
     grid-row: 2 / 4;
     grid-column: 6 / 10;
-
-    /*grid-template-rows: 1fr;*/
-    /*grid-template-columns: 1fr;*/
-
     grid-template-rows: 1fr;
-    /*grid-template-columns:  minmax( 400px, 500px);*/
     grid-template-columns:  minmax( 400px, 1fr);
-
-
-    /*align-items: center;*/
     justify-content: center;
 }
 
-#containerGameSnowmanWordElements {
-    display: grid;
-    grid-row: 1 / 1;
-    grid-column: 1 / 1;
-    /*grid-template-rows: 1fr 6fr 6fr 2fr 1fr;*/
-    grid-template-rows: 1fr 7fr 5fr 2fr 1fr;
-    grid-template-columns: 1fr 24fr 1fr;
-}
-
-#containerGameSnowmanWordToDiscover {
-    /*display: grid;*/
-    /*background-color: #412E47;*/
-    /*grid-row: 2 / 2;*/
-    /*grid-column: 2 / 3;*/
-    /*!*grid-template-rows: 1fr repeat(3, 8fr) 1fr;*!*/
-    /*grid-template-rows: 1fr repeat(3, 10fr) 1fr;*/
-    /*grid-template-columns: 1fr 80fr 1fr;*/
-}
-
-
-/* keyboard */
+/* gameSnowmanKeyboard.js */
 #containerGameSnowmanKeyboard {
     display: grid;
-    /*background-color: coral;*/
-    /*grid-row: 6 / 8;*/
-    /*grid-column: 3 / 9;*/
-
     grid-row: 6 / 8;
     grid-column: 6 / 10;
-
-    /*grid-row: 6 / 8;*/
-    /*grid-column: 4 / 8;*/
-    /*grid-template-rows: 1fr;*/
-    /*grid-template-columns: 1fr;*/
-
     grid-template-rows: 1fr;
     grid-template-columns: minmax(400px, 1fr);
 }
 
-#containerGameSnowmanKeyboardElements {
-    display: grid;
-    /*background-color: #412E47;*/
-    grid-row: 1 / 1;
-    grid-column: 1 / 1;
-    /*grid-template-rows: 5fr repeat(4, 25fr) 5fr;*/
-    /* for containerSnowmanKeyboard-line-0 remove "repeat(3, 0.0005fr)" + repeat 5 instead of 4*/
-
-    /*grid-template-rows: 5fr repeat(3, 0.0005fr) repeat(4, 0.5fr 25fr 0.5fr) 5fr;*/
-    /*grid-template-columns: 5fr 90fr 5fr;*/
-
-    grid-template-rows: 14fr repeat(3, 0.0005fr) repeat(4, 0.5fr 25fr 0.5fr) 14fr;
-    grid-template-columns: 1fr 24fr 1fr;
-}
-
-#containerSnowmanKeyboard-line-0 {
-    display: grid;
-    /*background-color: red;*/
-    grid-row: 3 / 3;
-    grid-column: 2 / 3;
-    grid-template-rows: 5fr 40fr 5fr;
-    grid-template-columns: repeat(13, 1fr 10fr 1fr)  1fr 20fr 1fr;
-}
-
-#containerSnowmanKeyboard-line-1 {
-    display: grid;
-    /*background-color: forestgreen;*/
-    grid-row: 6 / 7;
-    grid-column: 2 / 3;
-    grid-template-rows: 1fr 40fr 1fr;
-    grid-template-columns: 0.5fr 15fr 0.5fr repeat(12, 0.5fr 10fr 0.5fr)  0.5fr 15fr 0.5fr;
-}
-
-#containerSnowmanKeyboard-line-2 {
-    display: grid;
-    /*background-color: darkslategrey;*/
-    grid-row: 9 / 10;
-    grid-column: 2 / 3;
-    grid-template-rows: 1fr 40fr 1fr;
-    grid-template-columns: 0.5fr 17.5fr 0.5fr repeat(12, 0.5fr 10fr 0.5fr)  0.5fr 20fr 0.5fr;
-}
-
-#containerSnowmanKeyboard-line-3 {
-    display: grid;
-    /*background-color: forestgreen;*/
-    grid-row: 12 / 13;
-    grid-column: 2 / 3;
-    grid-template-rows: 1fr 40fr 1fr;
-    grid-template-columns: 0.3fr 20fr 0.3fr repeat(10, 0.3fr 10fr 0.3fr)  0.3fr 30fr 0.3fr;
-}
-
-#containerSnowmanKeyboard-line-4 {
-    display: grid;
-    /*background-color: darkslategrey;*/
-    grid-row: 15 / 16;
-    grid-column: 2 / 3;
-    grid-template-rows: 1fr 40fr 1fr;
-    grid-template-columns:  0.3fr 15fr 0.3fr 0.3fr 10fr 0.3fr 0.3fr 15fr 0.3fr 0.3fr 60fr 0.3fr repeat(4, 0.3fr 16.75fr 0.3fr);
-}
 

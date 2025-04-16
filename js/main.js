@@ -7,5 +7,4 @@ function setContainerMainSection() {
 setContainerMainSection();
 createMenu();
 createSubpageHome();
-// setConfigurationForGameSnowmanBuild();
 createFooter();

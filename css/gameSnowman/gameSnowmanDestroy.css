@@ -1,19 +1,18 @@
-#tempGameSnowmanDestroyText {
-    /*text-shadow: 4px -1px 20px #621735;*/
-    text-shadow: 4px -1px 20px #ac4a71;
-    color: #000000;
-    margin: auto;
-    text-align: center;
-    font-size: 4rem;
-    font-weight: 700;
-    padding: 0;
-}
+/*#tempGameSnowmanDestroyText {*/
+/*    text-shadow: 4px -1px 20px #ac4a71;*/
+/*    color: #000000;*/
+/*    margin: auto;*/
+/*    text-align: center;*/
+/*    font-size: 4rem;*/
+/*    font-weight: 700;*/
+/*    padding: 0;*/
+/*}*/
 
-#tempContainerGameSnowmanDestroy {
-    display: grid;
-    grid-row: 2 / 8;
-    grid-column: 2 / 10;
-    grid-template-rows: 1fr;
-    grid-template-columns: minmax(400px, 1fr);
-}
+/*#tempContainerGameSnowmanDestroy {*/
+/*    display: grid;*/
+/*    grid-row: 2 / 8;*/
+/*    grid-column: 2 / 10;*/
+/*    grid-template-rows: 1fr;*/
+/*    grid-template-columns: minmax(400px, 1fr);*/
+/*}*/
 

@@ -1,0 +1,12 @@
+.gameSnowmanElementWordToDiscover{
+    background-color: #e9a610;
+    color: #000000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 900;
+    border: none;
+    border-radius: 0.45rem;
+    box-shadow: 0px 0px 1px 1px #2a1e1e;
+}

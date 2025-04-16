@@ -19,20 +19,12 @@ function createContainerFooterAuthor() {
 
 function createContainerFooterEnvelope() {
 
-    createElementDiv(containerMainFooter, containerMainFooterEnvelope);
-    setElementClassName(containerMainFooterEnvelope, containerMainFooterEnvelope);
+    createElementDiv(containerMainFooter, containerFooterEnvelope);
+    setElementClassName(containerFooterEnvelope, containerFooterEnvelope);
 
-    createElementDiv(containerMainFooterEnvelope, containerFooterEnvelopeText);
-    setElementClassName(containerFooterEnvelopeText, containerFooterEnvelope);
-    setElementClassName(containerFooterEnvelopeText, containerFooterEnvelopeText);
-    setElementTextById(containerFooterEnvelopeText, footerIconEnvelope);
-
-    createElementDiv(containerMainFooterEnvelope, containerFooterButtonEnvelope);
-    setElementClassName(containerFooterButtonEnvelope, containerFooterEnvelope);
-    setElementClassName(containerFooterButtonEnvelope, containerFooterButtonEnvelope);
-
-    createElementButton(containerFooterButtonEnvelope, footerButtonEnvelope);
-    // setFunctionOnclick(footerButtonEnvelope, functionNameOnclickCreateSubpageFormContact);
+    createElementButton(containerFooterEnvelope, footerButtonEnvelope);
+    setElementTextById(footerButtonEnvelope, footerIconEnvelope);
     setElementClassName(footerButtonEnvelope, footerButtonEnvelope);
+    // setFunctionOnclick(footerButtonEnvelope, functionNameOnclickCreateSubpageFormContact);
 }
 

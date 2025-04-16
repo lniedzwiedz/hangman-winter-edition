@@ -1,7 +1,6 @@
 function setConfigurationForGameSnowmanDestroy(){
 
     removeContainerMainSection();
-    // createElementDiv(containerMainSectionActions, containerMainSectionGameSnowman);
     // temp -> to remove
     let temContainer = "tempContainerGameSnowmanDestroy"
     let tempIdClass = "tempGameSnowmanDestroyText"

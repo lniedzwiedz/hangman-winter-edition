@@ -13,15 +13,14 @@ const containerMainHome = "containerMainHome";
 const containerHomeGamesButtons = "containerHomeGamesButtons";
 
 const containerGameSnowmanDescription = "containerGameSnowmanDescription";
-const containerGameSnowmanWordElementText = "containerGameSnowmanWordElementText";
-const gameSnowmanWordElementText = "gameSnowmanWordElementText";
+const containerGameSnowmanDescriptionElementText = "containerGameSnowmanDescriptionElementText";
+const gameSnowmanDescriptionElementText = "gameSnowmanDescriptionElementText";
 const gameSnowmanDescriptionTextBuild = ["BUILD SNOWMAN", "discover colour name", "WIN GAME", "&", "snowman will change colour"];
 const gameSnowmanDescriptionTextDestroy = ["SAVE SNOWMAN", "discover colour name", "WIN GAME", "&", "snowman will rise again"];
 
 const gameNameSnowmanBuild = "SnowmanBuild";
 const gameNameSnowmanDestroy = "SnowmanDestroy";
 const homeButtonGameSnowman = "homeButtonGameSnowman";
-
 
 // game
 const functionNameOnclickPlayGameSnowmanBuild = "playGameSnowmanBuild";
@@ -56,7 +55,6 @@ const snowmanFigureStartGameElement1goodbyeText = "snowmanFigureStartGameElement
 const snowmanFigureStartGameElementSetAnimationToShowColor = "snowmanFigureStartGameElement-setAnimationToShowColor";
 const snowmanFigureStartGameElementSetAnimationToRemoveColor = "snowmanFigureStartGameElement-setAnimationToRemoveColor";
 
-
 // snowman figure
 const snowmanFigureElementActionFinalSnowballs = "snowmanFigureElementActionFinalSnowballs";
 const snowmanFigureElementActionFinalSnowballsColor = "snowmanFigureElementActionFinalSnowballsColor";
@@ -67,7 +65,6 @@ const handInitialPositionForShape = "-handInitialPositionForShape";
 const hatElementInitialPositionForAnimation = "-hatElementInitialPositionForAnimation";
 const setAnimationHatFinalColor = "-setAnimationHatFinalColor";
 const setHatFinalColor = "-setHatFinalColor";
-
 
 //eyes
 const snowmanFigureElementEyes = "snowmanFigureElementEyes";
@@ -89,21 +86,17 @@ const snowmanFigureElementButtonFinal = "snowmanFigureElementButtonFinal";
 const snowmanFigureElementActionAddShapeHands = "snowmanFigureElementActionAddShapeHands";
 const handInitialPositionForAnimation = "handInitialPositionForAnimation";
 
-
 //game description
-const gameSnowmanWordElementTextBuild = "gameSnowmanWordElementTextBuild";
 const gameSnowmanDescriptionTextGameOverLoser = "GAME OVER";
 const gameSnowmanDescriptionTextGameOverLoserGiveHope = "You did well!";
 const gameSnowmanDescriptionTextGameOverWinner = "YOU WIN";
 const gameSnowmanDescriptionTextGameOverWinnerCongratulations = "Congratulations!";
 
-const gameSnowmanDescription = "gameSnowmanDescription";
-
 // word to discover
 const containerGameSnowmanWord = "containerGameSnowmanWord";
-const containerGameSnowmanWordElements = "containerGameSnowmanWordElements";
+const containerGameSnowmanDescriptionElements = "containerGameSnowmanDescriptionElements";
 const containerGameSnowmanWordToDiscover = "containerGameSnowmanWordToDiscover";
-const gameSnowmanWordElementToDiscover = "gameSnowmanWordElementToDiscover";
+const gameSnowmanElementWordToDiscover = "gameSnowmanElementWordToDiscover";
 
 // game lives
 const containerGameSnowmanLives = "containerGameSnowmanLives";
@@ -153,7 +146,6 @@ const menuButtonGameSnowmanDestroyClick = "menuButtonGameSnowmanDestroyClick";
 const menuButtonGameSnowmanDestroyText = "menuButtonGameSnowmanDestroyText";
 // const menuButtonGameSnowmanDestroyTextDisplay = "DESTROY SNOWMAN";
 const menuButtonGameSnowmanDestroyTextDisplay = 'SAVE <i class=\"fa-solid fa-snowman\"></i>';
-
 
 //footer
 const containerSectionFooter = "containerSectionFooter";

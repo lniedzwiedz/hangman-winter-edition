@@ -30,7 +30,7 @@ function createContainerMenuButtons(){
     createContainerMenuButtonGameSnowmanDestroy();
 }
 
-function createContainerMenuButtonHome(){
+function createContainerMenuButtonHome1(){
     createElementDiv(containerMenuButtonsMainParts, containerMenuButtonHomeMain);
     createElementDiv(containerMenuButtonHomeMain, containerMenuButtonHomeText);
     setElementClassName(containerMenuButtonHomeMain, containerMenuButtonHome)
@@ -50,45 +50,44 @@ function createContainerMenuButtonHome(){
     setFunctionOnclick(menuButtonHomeClick, functionNameOnclickCreateSubpageHome);
 }
 
+function createContainerMenuButtonHome(){
+    createElementDiv(containerMenuButtonsMainParts, containerMenuButtonHomeMain);
+
+    createElementButton(containerMenuButtonHomeMain, menuButtonHomeClick);
+    setElementClassName(menuButtonHomeClick, containerMenuButtonHome)
+    setElementClassName(menuButtonHomeClick, menuButtonClick)
+    setFunctionOnclick(menuButtonHomeClick, functionNameOnclickCreateSubpageHome);
+
+    createElementP(menuButtonHomeClick, menuButtonHomeText);
+    setElementClassName(menuButtonHomeText, menuButtonText)
+    setElementTextById(menuButtonHomeText, menuButtonHomeTextDisplay);
+}
+
 function createContainerMenuButtonGameSnowmanBuild(){
     createElementDiv(containerMenuButtonsMainParts, containerMenuButtonGameSnowmanBuildMain);
-    createElementDiv(containerMenuButtonGameSnowmanBuildMain, containerMenuButtonGameSnowmanBuildText);
-    setElementClassName(containerMenuButtonGameSnowmanBuildMain, containerMenuButtonGameSnowmanBuild)
-    setElementClassName(containerMenuButtonGameSnowmanBuildText, containerMenuButtonGameSnowmanBuild)
-    setElementClassName(containerMenuButtonGameSnowmanBuildText, containerMenuButtonText)
 
-    createElementP(containerMenuButtonGameSnowmanBuildText, menuButtonGameSnowmanBuildText);
-    setElementClassName(menuButtonGameSnowmanBuildText, menuButtonText);
-    setElementTextById(menuButtonGameSnowmanBuildText, menuButtonGameSnowmanBuildTextDisplay);
-
-    createElementDiv(containerMenuButtonGameSnowmanBuildMain, containerMenuButtonGameSnowmanBuildClick);
-    setElementClassName(containerMenuButtonGameSnowmanBuildClick, containerMenuButtonGameSnowmanBuild);
-
-    createElementButton(containerMenuButtonGameSnowmanBuildClick, menuButtonGameSnowmanBuildClick);
+    createElementButton(containerMenuButtonGameSnowmanBuildMain, menuButtonGameSnowmanBuildClick);
     setElementClassName(menuButtonGameSnowmanBuildClick, containerMenuButtonGameSnowmanBuild);
     setElementClassName(menuButtonGameSnowmanBuildClick, menuButtonClick);
     setFunctionOnclick(menuButtonGameSnowmanBuildClick, functionNameOnclickSetConfigurationForGameSnowmanBuild);
+
+    createElementP(menuButtonGameSnowmanBuildClick, menuButtonGameSnowmanBuildText);
+    setElementClassName(menuButtonGameSnowmanBuildText, menuButtonText);
+    setElementTextById(menuButtonGameSnowmanBuildText, menuButtonGameSnowmanBuildTextDisplay);
+
 }
 
 function createContainerMenuButtonGameSnowmanDestroy(){
     createElementDiv(containerMenuButtonsMainParts, containerMenuButtonGameSnowmanDestroyMain);
-    createElementDiv(containerMenuButtonGameSnowmanDestroyMain, containerMenuButtonGameSnowmanDestroyText);
-    setElementClassName(containerMenuButtonGameSnowmanDestroyMain, containerMenuButtonGameSnowmanDestroy);
-    setElementClassName(containerMenuButtonGameSnowmanDestroyText, containerMenuButtonGameSnowmanDestroy);
-    setElementClassName(containerMenuButtonGameSnowmanDestroyText, containerMenuButtonText);
 
-    createElementP(containerMenuButtonGameSnowmanDestroyText, menuButtonGameSnowmanDestroyText);
-    setElementClassName(menuButtonGameSnowmanDestroyText, menuButtonText);
-    setElementTextById(menuButtonGameSnowmanDestroyText, menuButtonGameSnowmanDestroyTextDisplay);
-
-    createElementDiv(containerMenuButtonGameSnowmanDestroyMain, containerMenuButtonGameSnowmanDestroyClick);
-    setElementClassName(containerMenuButtonGameSnowmanDestroyClick, containerMenuButtonGameSnowmanDestroy);
-
-    createElementButton(containerMenuButtonGameSnowmanDestroyClick, menuButtonGameSnowmanDestroyClick);
+    createElementButton(containerMenuButtonGameSnowmanDestroyMain, menuButtonGameSnowmanDestroyClick);
     setElementClassName(menuButtonGameSnowmanDestroyClick, containerMenuButtonGameSnowmanDestroy);
     setElementClassName(menuButtonGameSnowmanDestroyClick, menuButtonClick);
     setFunctionOnclick(menuButtonGameSnowmanDestroyClick, functionNameOnclickSetConfigurationForGameSnowmanDestroy);
 
+    createElementP(menuButtonGameSnowmanDestroyClick, menuButtonGameSnowmanDestroyText);
+    setElementClassName(menuButtonGameSnowmanDestroyText, menuButtonText);
+    setElementTextById(menuButtonGameSnowmanDestroyText, menuButtonGameSnowmanDestroyTextDisplay);
 }
 
 

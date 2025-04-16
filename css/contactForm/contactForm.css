@@ -1,8 +1,5 @@
 .containerSectionContactForm {
     display: grid;
-    /*grid-template-rows: 6fr 17fr 17fr 3fr 3fr 17fr 17fr 6fr;*/
-    /*grid-template-columns: 10fr 3fr 17fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 17fr 3fr 10fr;*/
-
     grid-template-rows: 6fr 17fr 17fr 3fr 3fr 17fr 17fr 6fr;
     grid-template-columns: 10fr 3fr 17fr 3fr 7fr 7fr 3fr 3fr 7fr 7fr 3fr 17fr 3fr 10fr;
 }

@@ -1,7 +1,5 @@
 function createSubpageFormContact (){
     console.log("> createSubpageFormContact");
-    // removeContainerSectionContactForm();
-    // removeContainerSectionHome();
     removeContainerMainSection();
     createContainerMainFormContact();
 }
@@ -19,7 +17,6 @@ function createContainerMainFormContact(){
     mainElem.append(newDiv2);
     newDiv2.setAttribute("id", containerMainContactForm);
     newDiv2.classList.add((containerMainContactForm));
-
 }
 
 function removeContainerSectionContactForm() {

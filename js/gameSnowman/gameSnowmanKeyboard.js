@@ -129,7 +129,6 @@ function changeKeyboardButtonsGameOver(functionNameOnclick) {
     setTimeout(function(){
         changeKeyboardButtonNewGameWhenGameOver(functionNameOnclick)
     }, 9000)
-
 }
 
 function changeKeyboardButtonsGameSnowmanBuildGameOver() {
