@@ -45,7 +45,8 @@
         /*grid-template-rows: 1fr 20fr 55fr 0fr 0fr 14fr 14fr 0fr;*/
         /*grid-template-rows: 1fr 20fr 66fr 0fr 0fr 14fr 14fr 0fr;*/
         /*grid-template-rows: 0fr 20fr 67fr 0fr 0fr 14fr 14fr 0fr;*/
-        grid-template-rows: 0fr 15fr 65fr 0fr 0fr 20fr 0fr 0fr;
+        /*grid-template-rows: 0fr 15fr 65fr 0fr 0fr 20fr 0fr 0fr;*/
+        grid-template-rows: 0fr 20fr 60fr 0fr 0fr 20fr 0fr 0fr;
 
         grid-template-columns: 5fr 15fr 13fr 21fr 3fr 3fr 21fr 13fr 15fr 5fr;
     }
