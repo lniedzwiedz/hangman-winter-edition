@@ -88,7 +88,10 @@
 
     #containerGameSnowmanDescriptionElements {
         /*grid-template-rows: 0fr 1fr 6fr 2fr 1fr;*/
-        grid-template-rows: 0fr 0fr 7fr 3fr 0fr;
+        /*grid-template-rows: 0fr 0fr 7fr 3fr 0fr;*/
+        /*grid-template-rows: 1fr 2fr 3fr 2fr 1fr;*/
+        grid-template-rows: 0fr 2fr 2fr 2fr 1fr;
+
         grid-template-columns: 0fr 3.5fr 6.5fr 0fr;
     }
 
