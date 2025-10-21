@@ -87,45 +87,28 @@
 @media (max-width: 1200px) {
 
     #containerGameSnowmanDescriptionElements {
-        /*grid-template-rows: 0fr 1fr 6fr 2fr 1fr;*/
-        /*grid-template-rows: 0fr 0fr 7fr 3fr 0fr;*/
-        /*grid-template-rows: 1fr 2fr 3fr 2fr 1fr;*/
         grid-template-rows: 0fr 2fr 2fr 2fr 1fr;
-
         grid-template-columns: 0fr 3.5fr 6.5fr 0fr;
     }
 
     .gameSnowmanDescriptionElementText-0 {
-        /*font-size: 1.2rem;*/
         font-size: 1.5rem;
-        /*font-weight: 400;*/
-        /*margin: auto;*/
-        /*margin-bottom: 0;*/
     }
 
     .gameSnowmanDescriptionElementText-1 {
         font-size: 0.9rem;
-        /*font-weight: 200;*/
-        /*margin-top: 0;*/
     }
 
     .gameSnowmanDescriptionElementText-2 {
         font-size: 1.3rem;
-        /*font-weight: 200;*/
-        /*margin: auto;*/
-        /*margin-bottom: 0;*/
     }
 
     .gameSnowmanDescriptionElementText-3 {
         font-size: 0.7rem;
-        /*font-weight: 200;*/
-        /*margin: auto;*/
     }
 
     .gameSnowmanDescriptionElementText-4 {
         font-size: 0.9rem;
-        /*font-weight: 200;*/
-        /*margin-top: 0;*/
     }
 
 }

@@ -160,7 +160,6 @@
 
     #containerSectionMenu {
         display: grid;
-        /*grid-template-rows: 1fr 6fr 0fr;*/
         grid-template-rows: 2fr 8fr 0fr;
         grid-template-columns: 1fr 6fr 12fr 1fr;
     }
@@ -171,25 +170,6 @@
         grid-column: 1 / 1;
         grid-template-rows: 1fr;
         grid-template-columns: 4fr 6fr;
-    }
-
-    .menuTitleText {
-        /*font-size: 3.7rem;*/
-    }
-
-    .menuButtonText {
-        /*color: #ac4a71;*/
-        /*font-size: 1.5rem;*/
-        /*font-weight: 600;*/
-        /*margin: 0;*/
-    }
-
-    .fa-igloo {
-        /*font-size: 4rem;*/
-    }
-
-    .fa-snowman {
-        /*font-size: 4rem;*/
     }
 
 }
