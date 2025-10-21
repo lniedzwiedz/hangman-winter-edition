@@ -991,3 +991,19 @@
         top: -116%;
     }
 }
+
+@media (max-width: 1200px) {
+    #snowmanFigureStartGameElement-1-welcomeText {
+        /*text-shadow: 4px -1px 20px #ac4a71;*/
+        /*color: #000000;*/
+        /*margin: auto;*/
+        /*text-align: center;*/
+
+        /*font-size: 13.7rem;*/
+        font-size: 8.5rem;
+
+        /*font-weight: 700;*/
+        /*padding: 0;*/
+    }
+
+}
