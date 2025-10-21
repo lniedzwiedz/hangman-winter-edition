@@ -39,11 +39,20 @@
 
 #containerGameSnowmanAnimation {
     display: grid;
-    grid-row: 2 / 4;
-    grid-column: 2 / 6;
+    grid-row: 1 / 4;
+    grid-column: 1 / 7;
 /*    box-shadow: 0 2px 10px 0 #621735;
     grid-template-rows: 1fr;
     grid-template-columns:  minmax( 400px, 1fr);*/
+}
+
+#containerGameSnowmanWord {
+    display: grid;
+    grid-row: 2 / 4;
+    grid-column: 7 / 11;
+    grid-template-rows: 1fr;
+    grid-template-columns:  minmax( 400px, 1fr);
+    justify-content: center;
 }
 
 #containerGameSnowmanKeyboard {
