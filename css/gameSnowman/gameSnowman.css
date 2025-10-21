@@ -41,7 +41,9 @@
         display: grid;
         grid-row: 1 / 1;
         grid-column: 1 / 1;
-        grid-template-rows: 1fr 20fr 51fr 0fr 0fr 14fr 14fr 0fr;
+        /*grid-template-rows: 1fr 20fr 51fr 0fr 0fr 14fr 14fr 0fr;*/
+        grid-template-rows: 1fr 20fr 55fr 0fr 0fr 14fr 14fr 0fr;
+
         grid-template-columns: 5fr 15fr 13fr 21fr 3fr 3fr 21fr 13fr 15fr 5fr;
     }
 
