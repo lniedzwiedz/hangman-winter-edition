@@ -637,7 +637,7 @@ function createContainersForGameDescription(gameName, gameSnowmanDescriptionText
 
 function createContainerGameSnowmanWordElements111(gameNameSnowmanBuild, gameSnowmanDescriptionTextBuild) {
     createContainersForGameDescription(gameNameSnowmanBuild, gameSnowmanDescriptionTextBuild);
-    // createContainersForWord();
+    createContainersForWord();
     createContainersForLives();
 }
 
