@@ -11,7 +11,8 @@ body {
     background-color: black;
     height: 100%;
     width: 100%;
-    grid-template-rows: 12fr 85fr 3fr;
+    /*grid-template-rows: 12fr 85fr 3fr;*/
+    grid-template-rows: 8fr 90fr 3fr;
     grid-template-columns: 1fr;
 
 'header';
@@ -47,6 +48,8 @@ body {
     grid-template-columns: 1fr;
     background-color: #000000;
 }
+
+
 
 
 

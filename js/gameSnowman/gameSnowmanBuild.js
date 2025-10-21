@@ -530,17 +530,25 @@ function createContainersForWord() {
     createElementDiv(containerGameSnowmanDescriptionElements, containerGameSnowmanWordToDiscover);
     let parentElement = document.getElementById(containerGameSnowmanWordToDiscover)
 
-    let rowStart = 3;
-    let columnStart = 2;
-    let rowEnd = 4;
-    let columnEnd = 3;
+    // let rowStart = 3;
+    // let columnStart = 2;
+    // let rowEnd = 4;
+    // let columnEnd = 3;
 
-    parentElement.style.display = "grid";
-    parentElement.style.backgroundColor = "black";
-    parentElement.style.gridRow = rowStart;
-    parentElement.style.gridColumn = columnStart;
-    parentElement.style.gridRowEnd = rowEnd;
-    parentElement.style.gridColumnEnd = columnEnd;
+    // let rowStart = 2;
+    // let columnStart = 3;
+    // let rowEnd = 4;
+    // let columnEnd = 4;
+
+    // parentElement.style.display = "grid";
+    // parentElement.style.backgroundColor = "black";
+    // parentElement.style.gridRow = rowStart;
+    // parentElement.style.gridColumn = columnStart;
+    // parentElement.style.gridRowEnd = rowEnd;
+    // parentElement.style.gridColumnEnd = columnEnd;
+
+    parentElement.classList.add(containerGameSnowmanWordToDiscover)
+
     parentElement.style.gridTemplateRows = " repeat(1, 70fr 100fr 10fr) ";
     parentElement.style.gridTemplateColumns = " repeat(" + word.length + ", 5fr 100fr 5fr)";
 
@@ -578,17 +586,20 @@ function createContainersForLives() {
     createElementDiv(containerGameSnowmanDescriptionElements, containerGameSnowmanLives);
     let parentElement = document.getElementById(containerGameSnowmanLives)
 
-    let rowStart = 4;
-    let columnStart = 2;
-    let rowEnd = 5;
-    let columnEnd = 3;
+    // let rowStart = 4;
+    // let columnStart = 2;
+    // let rowEnd = 5;
+    // let columnEnd = 3;
+    //
+    // parentElement.style.display = "grid";
+    // parentElement.style.backgroundColor = "black";
+    // parentElement.style.gridRow = rowStart;
+    // parentElement.style.gridColumn = columnStart;
+    // parentElement.style.gridRowEnd = rowEnd;
+    // parentElement.style.gridColumnEnd = columnEnd;
 
-    parentElement.style.display = "grid";
-    parentElement.style.backgroundColor = "black";
-    parentElement.style.gridRow = rowStart;
-    parentElement.style.gridColumn = columnStart;
-    parentElement.style.gridRowEnd = rowEnd;
-    parentElement.style.gridColumnEnd = columnEnd;
+    parentElement.classList.add(containerGameSnowmanLives)
+
     parentElement.style.gridTemplateRows = " repeat(1, 50fr 40fr 10fr) ";
     parentElement.style.gridTemplateColumns = " repeat(" + maxWrongShots + ", 5fr 100fr 5fr)";
 

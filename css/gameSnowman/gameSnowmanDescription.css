@@ -84,5 +84,25 @@
     margin-top: 0;
 }
 
+@media(max-width: 1200px){
+
+#containerGameSnowmanDescriptionElements {
+/*    display: grid;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;*/
+    /*grid-template-rows: 1fr 4fr 4fr 4fr 1fr;*/
+    /*grid-template-rows: 1fr 2fr 7fr 3fr 1fr;*/
+    /*grid-template-rows: 0fr 2fr 7fr 3fr 3fr;*/
+    grid-template-rows: 0fr 1fr 6fr 2fr 1fr;
+
+
+    /*grid-template-columns: 1fr 12fr 12fr 1fr;*/
+    /*grid-template-columns: 1fr 8fr 16fr 1fr;*/
+    /*grid-template-columns: 0fr 8fr 16fr 0fr;*/
+    grid-template-columns: 0fr 3.5fr 6.5fr 0fr;
+}
+
+}
+
 
 

@@ -16,3 +16,21 @@
     font-size: 1rem;
     font-weight: 900;
 }
+
+.containerGameSnowmanLives{
+    display: grid;
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+    background-color: black;
+}
+
+@media(max-width: 1200px){
+
+    .containerGameSnowmanLives{
+        display: grid;
+        grid-row: 4 / 5;
+        grid-column: 3 / 3;
+        background-color: black;
+    }
+
+}
