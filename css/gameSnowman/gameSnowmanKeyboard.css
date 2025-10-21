@@ -90,7 +90,9 @@
         display: grid;
         grid-row: 1 / 1;
         grid-column: 1 / 1;
-        grid-template-rows: 14fr repeat(3, 0.0005fr) repeat(4, 0.5fr 25fr 0.5fr) 14fr;
+        /*grid-template-rows: 14fr repeat(3, 0.0005fr) repeat(4, 0.5fr 25fr 0.5fr) 14fr;*/
+        grid-template-rows: 14fr repeat(3, 0.0005fr) repeat(4, 0.5fr 25fr 0.5fr) 0fr;
+
         grid-template-columns: 0fr 24fr 0fr;
     }
 
