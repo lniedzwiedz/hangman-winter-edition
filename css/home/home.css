@@ -1,10 +1,6 @@
-:root{
-    /*--homeButtoGameBnoxShadow: 0 2px 13px 0px #621735;*/
+:root {
     --homeButtoGameBnoxShadow: 0 0px 5px 0px #621735;
-    /*--homeButtoGameBnoxShadow: 0 2px 13px 0px #2c3e3a;*/
-    /*--homeButtoGameBnoxShadow: 0 2px 13px 0px #2a1e1e;*/
     --homeButtoGameBnoxShadowHover: 0 2px 13px 0px #621735;
-    /*--homeButtoGameBnoxShadowHover: 0 2px 13px 0px #2a1e1e;*/
 }
 
 #containerMainSectionHome {
@@ -29,7 +25,7 @@
     grid-template-columns: 1fr 1fr;
 }
 
-#containerGameSnowmanDescriptionSnowmanBuild{
+#containerGameSnowmanDescriptionSnowmanBuild {
     display: grid;
     grid-row: 1 / 2;
     grid-column: 1 / 3;
@@ -37,7 +33,7 @@
     grid-template-columns: 1fr;
 }
 
-#containerGameSnowmanDescriptionSnowmanDestroy{
+#containerGameSnowmanDescriptionSnowmanDestroy {
     display: grid;
     grid-row: 2 / 2;
     grid-column: 1 / 3;
@@ -45,7 +41,7 @@
     grid-template-columns: 1fr;
 }
 
-.containerGameSnowmanDescription-gameButton{
+.containerGameSnowmanDescription-gameButton {
     display: grid;
     grid-row: 1 / 2;
     grid-column: 1 / 2;
@@ -53,7 +49,7 @@
     grid-template-columns: 30fr 40fr 30fr;
 }
 
-.containerGameSnowmanDescription-gameButtonField{
+.containerGameSnowmanDescription-gameButtonField {
     display: grid;
     grid-row: 2 / 3;
     grid-column: 2 / 3;
@@ -64,12 +60,12 @@
     opacity: 0.9;
 }
 
-.containerGameSnowmanDescription-gameButtonField:hover{
+.containerGameSnowmanDescription-gameButtonField:hover {
     box-shadow: var(--homeButtoGameBnoxShadowHover);
     opacity: 1;
 }
 
-.containerGameSnowmanDescription-gameOn{
+.containerGameSnowmanDescription-gameOn {
     display: grid;
     grid-row: 2 / 3;
     grid-column: 2 / 3;
@@ -77,7 +73,7 @@
     grid-template-columns: 1fr;
 }
 
-.containerGameSnowmanDescription-gameButtonClick{
+.containerGameSnowmanDescription-gameButtonClick {
     display: grid;
     grid-row: 1 / 2;
     grid-column: 1 / 2;
@@ -86,7 +82,7 @@
     z-index: 1;
 }
 
-.containerGameSnowmanDescription-gameButtonText{
+.containerGameSnowmanDescription-gameButtonText {
     display: grid;
     grid-row: 1 / 2;
     grid-column: 1 / 2;
@@ -94,7 +90,7 @@
     grid-template-columns: 1fr;
 }
 
-.homeButtonGameSnowman{
+.homeButtonGameSnowman {
     background-color: #000000;
     opacity: 0.2;
     margin: 0;
@@ -102,22 +98,28 @@
     border: 0;
 }
 
-.homeButtonGameSnowman:hover{
+.homeButtonGameSnowman:hover {
     opacity: 0.1;
 }
 
+@media (max-width: 1200px) {
 
+    .containerGameSnowmanDescription-gameOn {
+        display: grid;
+        grid-row: 1 / 5;
+        grid-column: 2 / 3;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
 
+    .containerGameSnowmanDescription-gameButton {
+        /*display: grid;*/
+        /*grid-row: 1 / 2;*/
+        /*grid-column: 1 / 2;*/
+        /*grid-template-rows: 1fr 8fr 1fr;*/
+        /*grid-template-columns: 1fr 8fr 1fr;*/
 
-@media(max-width: 1200px){
-
-.containerGameSnowmanDescription-gameOn {
-    display: grid;
-    grid-row: 1 / 5;
-    grid-column: 2 / 3;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
+    }
 }
 
 

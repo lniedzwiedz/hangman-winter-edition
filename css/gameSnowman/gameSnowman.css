@@ -35,57 +35,33 @@
     grid-template-columns: minmax(400px, 1fr);
 }
 
-@media(max-width: 1200px){
+@media (max-width: 1200px) {
 
-#containerMainSectionGameSnowman {
-    display: grid;
-    grid-row: 1 / 1;
-    grid-column: 1 / 1;
-    /*grid-template-rows: 2fr 8fr 34fr 1fr 1fr 10fr 10fr 2fr;*/
-    /*grid-template-rows: 0fr 8fr 38fr 1fr 1fr 8fr 8fr 2fr;*/
-    /*grid-template-rows: 0fr 18fr 50fr 0fr 0fr 10fr 10fr 2fr;*/
-    /*grid-template-rows: 2fr 20fr 50fr 0fr 0fr 14fr 14fr 0fr;*/
-    grid-template-rows: 1fr 20fr 51fr 0fr 0fr 14fr 14fr 0fr;
+    #containerMainSectionGameSnowman {
+        display: grid;
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        grid-template-rows: 1fr 20fr 51fr 0fr 0fr 14fr 14fr 0fr;
+        grid-template-columns: 5fr 15fr 13fr 21fr 3fr 3fr 21fr 13fr 15fr 5fr;
+    }
 
-    /*grid-template-columns: 17fr 3fr 13fr 21fr 3fr 3fr 21fr 13fr 3fr 17fr;*/
-    grid-template-columns: 5fr 15fr 13fr 21fr 3fr 3fr 21fr 13fr 15fr 5fr;
-}
+    #containerGameSnowmanAnimation {
+        display: grid;
+        grid-row: 3 / 6;
+        grid-column: 2 / 10;
+    }
 
+    #containerGameSnowmanWord {
+        display: grid;
+        grid-row: 2 / 3;
+        grid-column: 2 / 10;
+        border-top: 1px solid #621735;
+    }
 
-
-
-
-#containerGameSnowmanAnimation {
-    display: grid;
-    grid-row: 3 / 6;
-    grid-column: 2 / 10;
-/*    box-shadow: 0 2px 10px 0 #621735;
-    grid-template-rows: 1fr;
-    grid-template-columns:  minmax( 400px, 1fr);*/
-}
-
-#containerGameSnowmanWord {
-    display: grid;
-    /*grid-row: 1 / 3;*/
-    grid-row: 2 / 3;
-    grid-column: 2 / 10;
-/*    grid-template-rows: 1fr;
-    grid-template-columns:  minmax( 400px, 1fr);
-    justify-content: center;*/
-    /*box-shadow: 0 2px 10px 0 #621735;*/
-    /*box-shadow: inset 0px 0px 1px 0px #621735;*/
-    border-top: 1px solid #621735;
-}
-
-#containerGameSnowmanKeyboard {
-    display: grid;
-    grid-row: 6 / 9;
-    grid-column: 2 / 10;
-/*    grid-template-rows: 1fr;
-    grid-template-columns: minmax(400px, 1fr);*/
-}
-
+    #containerGameSnowmanKeyboard {
+        display: grid;
+        grid-row: 6 / 9;
+        grid-column: 2 / 10;
+    }
 
 }
-
-

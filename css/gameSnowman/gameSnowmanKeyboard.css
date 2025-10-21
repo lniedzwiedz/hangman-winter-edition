@@ -73,10 +73,10 @@
 }
 
 @keyframes animationKeyboardButtonNewGameGameOver {
-    from{
+    from {
         color: var(--snowmanKeyboardButtonColor);
     }
-    to{
+    to {
         color: #FFDEADFF;
         opacity: 0.7;
     }

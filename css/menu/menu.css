@@ -173,23 +173,22 @@
     }
 
     .menuTitleText {
-        font-size: 3.7rem;
+        /*font-size: 3.7rem;*/
     }
 
     .menuButtonText {
-        color: #ac4a71;
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin: 0;
-
+        /*color: #ac4a71;*/
+        /*font-size: 1.5rem;*/
+        /*font-weight: 600;*/
+        /*margin: 0;*/
     }
 
     .fa-igloo {
-        font-size: 4rem;
+        /*font-size: 4rem;*/
     }
 
     .fa-snowman {
-        font-size: 4rem;
+        /*font-size: 4rem;*/
     }
 
 }
