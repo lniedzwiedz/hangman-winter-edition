@@ -160,7 +160,8 @@
 
     #containerSectionMenu {
         display: grid;
-        grid-template-rows: 1fr 6fr 0fr;
+        /*grid-template-rows: 1fr 6fr 0fr;*/
+        grid-template-rows: 2fr 8fr 0fr;
         grid-template-columns: 1fr 6fr 12fr 1fr;
     }
 
