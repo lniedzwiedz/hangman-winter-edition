@@ -877,7 +877,7 @@ function createStartContainersGameSnowmanMain() {
 function createStartContainersGameSnowman() {
     createStartContainersGameSnowmanMain();
     createContainersForGameSnowmanFigureMessageWelcomeText();
-    createContainerGameSnowmanBuildWordElements();
+    // createContainerGameSnowmanBuildWordElements();
     createKeyboardButtonsGameSnowmanBuild();
 }
 
