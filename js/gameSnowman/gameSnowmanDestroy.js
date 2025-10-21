@@ -1,4 +1,4 @@
-function setConfigurationForGameSnowmanDestroy(){
+function setConfigurationForGameSnowmanDestroy() {
 
     removeContainerMainSection();
     // temp -> to remove
@@ -9,7 +9,7 @@ function setConfigurationForGameSnowmanDestroy(){
     createElementDiv(temContainer, containerGameSnowmanAnimationElements);
     createElementDiv(containerGameSnowmanAnimationElements, containerSnowmanFigureMessage1welcomeText);
     createNewP(containerSnowmanFigureMessage1welcomeText, tempIdClass);
-    document.getElementById(tempIdClass).innerHTML= "game\nunder\nconstruction";
+    document.getElementById(tempIdClass).innerHTML = "game\nunder\nconstruction";
     document.getElementById(tempIdClass).classList.add(snowmanFigureStartGameElementSetAnimationToShowColor);
 }
 

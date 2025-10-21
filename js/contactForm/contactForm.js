@@ -1,10 +1,10 @@
-function createSubpageFormContact (){
+function createSubpageFormContact() {
     console.log("> createSubpageFormContact");
     removeContainerMainSection();
     createContainerMainFormContact();
 }
 
-function createContainerMainFormContact(){
+function createContainerMainFormContact() {
     let mainElement = document.getElementsByClassName(containerMain)[0];
     let newDiv = document.createElement("div");
     mainElement.append(newDiv);

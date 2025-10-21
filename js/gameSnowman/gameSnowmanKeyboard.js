@@ -98,7 +98,6 @@ function setKeyboardGameSnowmanFunctionNameOnclick(functionNameOnclickPlayGameSn
 }
 
 // game snowman functions:
-
 function getKeyboardChar(clickedId) {
     let getKeyElementPressedByUSer = document.getElementById(clickedId);
     return getKeyElementPressedByUSer.getAttribute("value");
@@ -126,7 +125,7 @@ function changeKeyboardButtonNewGameWhenGameOver(functionNameOnclick) {
 // time === setColorForSnowman(), gameSnowmanBuild.js
 function changeKeyboardButtonsGameOver(functionNameOnclick) {
     disableKeyboardButtons();
-    setTimeout(function(){
+    setTimeout(function () {
         changeKeyboardButtonNewGameWhenGameOver(functionNameOnclick)
     }, 9000)
 }
