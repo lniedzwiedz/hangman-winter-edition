@@ -139,9 +139,17 @@
     text-shadow: 4px -1px 20px #FFFFFF;
 }
 
-/*.menuButtonClick:hover .fa-igloo {*/
+.menuButtonClick:hover .fa-igloo {
 /*.menuButtonClick:active .fa-igloo {*/
-.menuButtonClick:is(:hover, :active) .fa-igloo {
+/*.menuButtonClick:is(:hover, :active) .fa-igloo {*/
+    color: #FFFFFF;
+    opacity: 0.7;
+    text-shadow: none;
+}
+
+/*.menuButtonClick:hover .fa-igloo {*/
+.menuButtonClick:active .fa-igloo {
+/*.menuButtonClick:is(:hover, :active) .fa-igloo {*/
     color: #FFFFFF;
     opacity: 0.7;
     text-shadow: none;
@@ -153,9 +161,17 @@
     text-shadow: 4px -1px 20px #FFFFFF;
 }
 
-/*.menuButtonClick:hover .fa-snowman {*/
+.menuButtonClick:hover .fa-snowman {
 /*.menuButtonClick:active .fa-snowman {*/
-.menuButtonClick:is(:hover, :active) .fa-snowman {
+/*.menuButtonClick:is(:hover, :active) .fa-snowman {*/
+    color: #FFFFFF;
+    opacity: 0.7;
+    text-shadow: none;
+}
+
+/*.menuButtonClick:hover .fa-snowman {*/
+.menuButtonClick:active .fa-snowman {
+/*.menuButtonClick:is(:hover, :active) .fa-snowman {*/
     color: #FFFFFF;
     opacity: 0.7;
     text-shadow: none;
