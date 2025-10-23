@@ -128,9 +128,9 @@
     text-align: center;
 }
 
-/*.menuButtonClick:hover {*/
-/*    opacity: 1;*/
-/*}*/
+.menuButtonClick:hover {
+    opacity: 1;
+}
 
 .fa-igloo {
     font-size: 2.1rem;
@@ -138,11 +138,11 @@
     text-shadow: 4px -1px 20px #FFFFFF;
 }
 
-/*.menuButtonClick:hover .fa-igloo {*/
-/*    color: #FFFFFF;*/
-/*    opacity: 0.7;*/
-/*    text-shadow: none;*/
-/*}*/
+.menuButtonClick:hover .fa-igloo {
+    color: #FFFFFF;
+    opacity: 0.7;
+    text-shadow: none;
+}
 
 .fa-snowman {
     font-size: 2.1rem;
@@ -150,11 +150,11 @@
     text-shadow: 4px -1px 20px #FFFFFF;
 }
 
-/*.menuButtonClick:hover .fa-snowman {*/
-/*    color: #FFFFFF;*/
-/*    opacity: 0.7;*/
-/*    text-shadow: none;*/
-/*}*/
+.menuButtonClick:hover .fa-snowman {
+    color: #FFFFFF;
+    opacity: 0.7;
+    text-shadow: none;
+}
 
 @media (max-width: 1200px) {
 
@@ -170,22 +170,6 @@
         grid-column: 1 / 1;
         grid-template-rows: 1fr;
         grid-template-columns: 4fr 6fr;
-    }
-
-    .menuButtonClick:active {
-        opacity: 1;
-    }
-
-    .menuButtonClick:active .fa-igloo {
-        color: #FFFFFF;
-        opacity: 0.7;
-        text-shadow: none;
-    }
-
-    .menuButtonClick:active .fa-snowman {
-        color: #FFFFFF;
-        opacity: 0.7;
-        text-shadow: none;
     }
 
 }
