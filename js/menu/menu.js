@@ -92,7 +92,7 @@ function createContainerMenuButtonGameSnowmanDestroy() {
 document.addEventListener('click', e => {
     const btn = e.target.closest('.menuButtonClick');
     if (btn) {
-        btn.classList.remove('hoverable');
+        btn.classList.remove('hover-effect');
     }
 })
 
