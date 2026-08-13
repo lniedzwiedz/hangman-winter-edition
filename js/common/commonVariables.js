@@ -153,7 +153,7 @@ const containerMainFooter = "containerMainFooter";
 const containerMainFooterParts = "containerMainFooterParts";
 const containerFooterAuthor = "containerFooterAuthor";
 const footerAuthor = "footerAuthor";
-const footerAuthorData = "Copyright &copy 2025 Liliana Niedźwiedź";
+const footerAuthorData = "Copyright &copy 2026 Liliana Niedźwiedź";
 const containerMainFooterEnvelope = "containerMainFooterEnvelope";
 // const footerIconEnvelope = "IvI";
 const footerIconEnvelope = '<i class="fa-solid fa-envelope"></i>';
