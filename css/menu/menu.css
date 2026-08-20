@@ -33,6 +33,7 @@
     padding: 0;
     /*color: #FFDEADFF;*/
     color: #FFF5EE;
+    /*color: #F0EAD6;*/
     opacity: 0.8;
     font-size: 2.1rem;
     font-weight: 400;
@@ -131,7 +132,7 @@
 
 .fa-igloo {
     font-size: 2.1rem;
-    color: #FFDEADFF;
+    /*color: #FFDEADFF;*/
     color: #FFFFFF;
     text-shadow: 4px -1px 20px #FFFFFF;
 }
@@ -139,6 +140,7 @@
 .fa-snowman {
     font-size: 2.1rem;
     /*color: #FFDEADFF;*/
+    color: #FFFFFF;
     text-shadow: 4px -1px 20px #FFFFFF;
 
 }
