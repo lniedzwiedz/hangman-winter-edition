@@ -29,7 +29,7 @@ body {
     background-color: #000000;
 }
 
-#containerMainSectionActions{
+#containerMainSectionActions {
     /*grid-area: main;*/
     display: grid;
     grid-row: 2 / 3;

@@ -1,7 +1,8 @@
 function createFooter() {
     createContainerMainFooter();
     createContainerFooterAuthor();
-    createContainerFooterEnvelope();
+    // do not remove this comment / function !!!
+    // createContainerFooterEnvelope();
 }
 
 function createContainerMainFooter() {
@@ -17,14 +18,14 @@ function createContainerFooterAuthor() {
     setElementTextById(footerAuthor, footerAuthorData);
 }
 
-function createContainerFooterEnvelope() {
-
-    createElementDiv(containerMainFooter, containerFooterEnvelope);
-    setElementClassName(containerFooterEnvelope, containerFooterEnvelope);
-
-    createElementButton(containerFooterEnvelope, footerButtonEnvelope);
-    setElementTextById(footerButtonEnvelope, footerIconEnvelope);
-    setElementClassName(footerButtonEnvelope, footerButtonEnvelope);
-    // setFunctionOnclick(footerButtonEnvelope, functionNameOnclickCreateSubpageFormContact);
-}
-
+// do not remove this comment / function !!!
+// function createContainerFooterEnvelope() {
+//
+//     createElementDiv(containerMainFooter, containerFooterEnvelope);
+//     setElementClassName(containerFooterEnvelope, containerFooterEnvelope);
+//
+//     createElementButton(containerFooterEnvelope, footerButtonEnvelope);
+//     setElementTextById(footerButtonEnvelope, footerIconEnvelope);
+//     setElementClassName(footerButtonEnvelope, footerButtonEnvelope);
+//     // setFunctionOnclick(footerButtonEnvelope, functionNameOnclickCreateSubpageFormContact);
+// }
