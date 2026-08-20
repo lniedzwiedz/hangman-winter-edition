@@ -1,5 +1,6 @@
 :root {
-    --snowmanKeyboardButtonColor: #ac4a71;
+    /*--snowmanKeyboardButtonColor: #ac4a71;*/
+    --snowmanKeyboardButtonColor: #4CE5F9;
 }
 
 #containerGameSnowmanKeyboardElements {
@@ -65,7 +66,9 @@
     font-weight: 700;
     border: none;
     border-radius: 0.45rem;
-    box-shadow: 0px 0px 1px 1px #2a1e1e;
+    /*box-shadow: 0px 0px 1px 1px #2a1e1e;*/
+    box-shadow: 0px 0px 1px 1px #0077b6;
+
 }
 
 .snowmanKeyboardButtonNewGameGameOver {
@@ -93,5 +96,4 @@
         grid-template-rows: 14fr repeat(3, 0.0005fr) repeat(4, 0.5fr 25fr 0.5fr) 0fr;
         grid-template-columns: 0fr 24fr 0fr;
     }
-
 }

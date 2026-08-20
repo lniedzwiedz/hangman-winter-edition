@@ -1,6 +1,8 @@
 :root {
-    --homeButtoGameBnoxShadow: 0 0px 5px 0px #621735;
-    --homeButtoGameBnoxShadowHover: 0 2px 13px 0px #621735;
+    /*--homeButtoGameBnoxShadow: 0 0px 5px 0px #621735;*/
+    --homeButtoGameBnoxShadow: 0 0px 5px 0px #1c7293;
+    /*--homeButtoGameBnoxShadowHover: 0 2px 13px 0px #621735;*/
+    --homeButtoGameBnoxShadowHover: 0 2px 13px 0px #1c7293;
 }
 
 #containerMainSectionHome {
@@ -120,5 +122,3 @@
         grid-template-columns: 1fr 8fr 1fr;
     }
 }
-
-

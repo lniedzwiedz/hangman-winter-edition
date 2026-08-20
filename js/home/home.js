@@ -64,7 +64,3 @@ function createSubpageHome() {
 function removeContainerSectionHome() {
     removeElementsById(containerMainSectionHome);
 }
-
-
-
-

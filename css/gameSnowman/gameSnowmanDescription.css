@@ -12,7 +12,8 @@
 .gameSnowmanDescriptionElementText {
     position: relative;
     bottom: 0;
-    color: #ac4a71;
+    /*color: #ac4a71;*/
+    color: #00B7B5;
     text-align: center;
     margin-top: 0;
     margin-bottom: 0;
@@ -110,5 +111,4 @@
     .gameSnowmanDescriptionElementText-4 {
         font-size: 0.9rem;
     }
-
 }

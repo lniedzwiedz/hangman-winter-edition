@@ -377,10 +377,10 @@ function playGameSnowmanDestroy(clickedId) {
 
     if (isCharExist) {
         countedCorrectShots += 1;
-        console.log("1  ");
+        // console.log("1  ");
 
         if (countedCorrectShots >= wordCharsWithoutDuplicate.length) {
-            console.log("1  a");
+            // console.log("1  a");
             setGameOverTextWinner();
             changeKeyboardButtonsGameSnowmanDestroyGameOver()
             disableKeyboardButton(clickedId);
@@ -388,7 +388,7 @@ function playGameSnowmanDestroy(clickedId) {
             setColorForSnowman();
             console.log("YOU WIN !!!");
         } else {
-            console.log("1  b");
+            // console.log("1  b");
             setDiscoveredChar(keyValue);
             disableKeyboardButton(clickedId);
         }
@@ -396,9 +396,9 @@ function playGameSnowmanDestroy(clickedId) {
         changeLivesNumberVisible();
         removeShapeGameSnowmanDestroyFigureElements();
         countedWrongShots += 1;
-        console.log("2  ");
+        // console.log("2  ");
         if (countedWrongShots < maxWrongShots) {
-            console.log("2  a");
+            // console.log("2  a");
 
         } else {
             console.log("2  b");
@@ -944,4 +944,3 @@ function createContainersSnowmanFigureMainElements() {
         div1.append(innerDiv);
     }
 }
-

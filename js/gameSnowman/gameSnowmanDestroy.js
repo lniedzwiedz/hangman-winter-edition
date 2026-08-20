@@ -16,6 +16,3 @@ function setConfigurationForGameSnowmanDestroy() {
 function removeMainContainerGameSnowmanDestroy() {
     removeElementsById(containerMainSectionGameSnowman);
 }
-
-
-

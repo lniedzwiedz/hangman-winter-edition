@@ -31,8 +31,9 @@
 .menuTitleText {
     margin: 0;
     padding: 0;
-    color: #FFDEADFF;
-    opacity: 0.9;
+    /*color: #FFDEADFF;*/
+    color: #FFF5EE;
+    opacity: 0.8;
     font-size: 2.1rem;
     font-weight: 400;
 }
@@ -104,7 +105,8 @@
 }
 
 .menuButtonText {
-    color: #ac4a71;
+    /*color: #ac4a71;*/
+    color: #1c7293;
     font-size: 1rem;
     font-weight: 600;
     margin: 0;
@@ -123,38 +125,23 @@
     margin: 0;
     padding: 0;
     border: 0;
-    opacity: 0.6;
     align-items: center;
     text-align: center;
 }
 
-/*.menuButtonClick:hover {*/
-/*    opacity: 1;*/
-/*}*/
-
 .fa-igloo {
     font-size: 2.1rem;
     color: #FFDEADFF;
+    color: #FFFFFF;
     text-shadow: 4px -1px 20px #FFFFFF;
 }
-
-/*.menuButtonClick:hover .fa-igloo {*/
-/*    color: #FFFFFF;*/
-/*    opacity: 0.7;*/
-/*    text-shadow: none;*/
-/*}*/
 
 .fa-snowman {
     font-size: 2.1rem;
-    color: #FFDEADFF;
+    /*color: #FFDEADFF;*/
     text-shadow: 4px -1px 20px #FFFFFF;
-}
 
-/*.menuButtonClick:hover .fa-snowman {*/
-/*    color: #FFFFFF;*/
-/*    opacity: 0.7;*/
-/*    text-shadow: none;*/
-/*}*/
+}
 
 @media (hover: hover) and (pointer: fine) {
 
@@ -164,13 +151,11 @@
 
     .menuButtonClick:hover .fa-igloo {
         color: #FFFFFF;
-        opacity: 0.7;
         text-shadow: none;
     }
 
     .menuButtonClick:hover .fa-snowman {
         color: #FFFFFF;
-        opacity: 0.7;
         text-shadow: none;
     }
 }

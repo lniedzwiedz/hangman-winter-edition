@@ -1,6 +1,6 @@
 .gameSnowmanLives {
-    background-color: #2c3e3a;
-    color: #232323;
+    /*background-color: #2c3e3a;*/
+    color: #1b3b6f;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -12,7 +12,7 @@
 }
 
 .gameSnowmanLivesNumber {
-    color: #c18ead;
+    color: #d00000;
     font-size: 1rem;
     font-weight: 900;
 }
