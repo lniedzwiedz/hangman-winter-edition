@@ -36,6 +36,18 @@
     grid-template-columns: minmax(400px, 1fr);
 }
 
+@media (max-width: 1500px) {
+
+    #containerMainSectionGameSnowman {
+        display: grid;
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        grid-template-rows: 2fr 28fr 24fr 1fr 1fr 14fr 14fr 4fr;
+        grid-template-columns: 5fr 2fr    15fr 20fr    3fr 3fr    20fr 10fr   18fr 5fr;
+    }
+
+}
+
 @media (max-width: 1200px) {
 
     #containerMainSectionGameSnowman {
@@ -64,5 +76,4 @@
         grid-row: 6 / 9;
         grid-column: 2 / 10;
     }
-
 }

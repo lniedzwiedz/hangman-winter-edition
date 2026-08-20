@@ -3,11 +3,10 @@
     grid-row: 1 / 1;
     grid-column: 1 / 1;
     grid-template-rows: 1fr;
-    grid-template-columns: 10fr 80fr 10fr;
+    grid-template-columns: 15fr 70fr 15fr;
 }
 
 .containerSectionFooter {
-    /*color: #000000;*/
     color: #FFF5EE;
     opacity: 0.8;
 }
@@ -79,4 +78,32 @@
     font-size: 0.8rem;
     font-weight: 500;
     opacity: 0.8;
+}
+
+@media (max-width: 1200px) {
+
+    #containerSectionFooter {
+        display: grid;
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        grid-template-rows: 1fr;
+        grid-template-columns: 5fr 90fr 5fr;
+    }
+}
+
+@media (max-width: 1500px) {
+
+    #containerSectionFooter {
+        display: grid;
+        grid-template-rows: 2fr 8fr 0fr;
+        grid-template-columns: 5fr 90fr 5fr;
+    }
+
+    #containerMenuMainParts {
+        display: grid;
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        grid-template-rows: 1fr;
+        grid-template-columns: 4fr 6fr;
+    }
 }

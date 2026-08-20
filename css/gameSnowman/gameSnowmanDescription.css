@@ -12,11 +12,10 @@
 .gameSnowmanDescriptionElementText {
     position: relative;
     bottom: 0;
-    /*color: #ac4a71;*/
     color: #00B7B5;
     text-align: center;
-    margin-top: 0;
-    margin-bottom: 0;
+    /*margin-top: 0;*/
+    /*margin-bottom: 0;*/
     margin: 0;
     padding: 0;
 }
@@ -87,28 +86,31 @@
 
 @media (max-width: 1200px) {
 
-    #containerGameSnowmanDescriptionElements {
-        grid-template-rows: 0fr 2fr 2fr 2fr 1fr;
-        grid-template-columns: 0fr 3.5fr 6.5fr 0fr;
-    }
+    @media (max-width: 1200px) {
 
-    .gameSnowmanDescriptionElementText-0 {
-        font-size: 1.5rem;
-    }
+        #containerGameSnowmanDescriptionElements {
+            grid-template-rows: 0fr 2fr 2fr 2fr 1fr;
+            grid-template-columns: 0fr 3.5fr 6.5fr 0fr;
+        }
 
-    .gameSnowmanDescriptionElementText-1 {
-        font-size: 0.9rem;
-    }
+        .gameSnowmanDescriptionElementText-0 {
+            font-size: 1.5rem;
+        }
 
-    .gameSnowmanDescriptionElementText-2 {
-        font-size: 1.3rem;
-    }
+        .gameSnowmanDescriptionElementText-1 {
+            font-size: 0.9rem;
+        }
 
-    .gameSnowmanDescriptionElementText-3 {
-        font-size: 0.7rem;
-    }
+        .gameSnowmanDescriptionElementText-2 {
+            font-size: 1.3rem;
+        }
 
-    .gameSnowmanDescriptionElementText-4 {
-        font-size: 0.9rem;
+        .gameSnowmanDescriptionElementText-3 {
+            font-size: 0.7rem;
+        }
+
+        .gameSnowmanDescriptionElementText-4 {
+            font-size: 0.9rem;
+        }
     }
 }

@@ -3,23 +3,14 @@
     --justifyContent: center;
     --alignItems: center;
     --borderRadius: 1.7rem;
-    /*--snowmanFigureColor: #ac4a71;*/
+
     --snowmanFigureColor: #4cc9f0;
-
-    /*--snowmanFigureShapeInitialColor: #ac4a71;*/
     --snowmanFigureShapeInitialColor: #4cc9f0;
-
-    /*--snowmanFigureShapeInitialBorderColor: #ac4a71;*/
     --snowmanFigureShapeInitialBorderColor: #4cc9f0;
 
-    /*--snowmanFigureShapeAnimationDisapperColor: #000000;*/
-    --snowmanFigureShapeAnimationDisapperColor: #1b3b6f;
-
-    /*--snowmanFigureShapAnimationDisapperBorderColor: #000000;*/
-    --snowmanFigureShapAnimationDisapperBorderColor: #1b3b6f;
-
-    /*--snowmanFigureElementHatBackgroundColor: #000000;*/
-    --snowmanFigureElementHatBackgroundColor: #1b3b6f;
+    --snowmanFigureShapeAnimationDisapperColor: #000000;
+    --snowmanFigureShapAnimationDisapperBorderColor: #000000;
+    --snowmanFigureElementHatBackgroundColor: #000000;
 }
 
 #containerGameSnowmanAnimationElements {
@@ -67,8 +58,6 @@
 }
 
 #snowmanFigureStartGameElement-1-welcomeText {
-    text-shadow: 4px -1px 20px #ac4a71;
-    text-shadow: 4px -1px 20px #889CEA;
     text-shadow: 4px -1px 20px #4cc9f0;
     color: #000000;
     margin: auto;
@@ -88,8 +77,6 @@
 }
 
 #snowmanFigureStartGameElement-1-goodbyeText {
-    text-shadow: 4px -1px 20px #ac4a71;
-    text-shadow: 4px -1px 20px #889CEA;
     text-shadow: 4px -1px 20px #4cc9f0;
     color: #000000;
     margin: auto;
@@ -118,8 +105,6 @@
         text-shadow: 4px -1px 20px #000000;
     }
     to {
-        text-shadow: 4px -1px 20px #ac4a71;
-        text-shadow: 4px -1px 20px #889CEA;
         text-shadow: 4px -1px 20px #4cc9f0;
     }
 }
@@ -131,11 +116,9 @@
 
 @keyframes animationStartGameElement-1-remove {
     from {
-        text-shadow: 4px -1px 20px #889CEA;
         text-shadow: 4px -1px 20px #4cc9f0;
     }
     to {
-        text-shadow: 4px -1px 20px #000000;
         text-shadow: 4px -1px 20px #1c7293;
     }
 }
@@ -314,7 +297,6 @@
     }
     100% {
         background-color: var(--snowmanFigureElementHatBackgroundColor);
-        /*box-shadow: -5px -1px 19px 4px #390B1E;*/
         box-shadow: -5px -1px 19px 4px #2FCED9;
     }
 }
@@ -374,7 +356,7 @@
     100% {
         background-color: var(--snowmanFigureElementHatBackgroundColor);;
         box-shadow: -5px -1px 19px 1px #390B1E,
-           -4px -1px 20px 1px var(--snowmanFigureShapeInitialColor) inset;
+        -4px -1px 20px 1px var(--snowmanFigureShapeInitialColor) inset;
     }
 }
 

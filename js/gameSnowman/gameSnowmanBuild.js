@@ -7,8 +7,7 @@ let wordCharsWithoutDuplicate;
 // 14/15 - left - hand
 // 16/17 - right - hand
 
-const indexGroups1 = [
-    [12, 11], // cut 6 -> 2
+const indexGroups1 = [[12, 11], // cut 6 -> 2
     [10, 9], // cut 4 -> 2
     [8, 7, 6], // cut 1 -> 3 ---------------- 1
     [5, 4], // cut 7 -> 9
@@ -19,32 +18,12 @@ const indexGroups1 = [
 ];
 
 // remove - more polite
-const indexGroups3GameSnowmanDestroy = [
-    [13, 14],
-    [15, 16],
-    [3, 2, 1, 0],
-    [12, 11],
-    [10, 9],
-    [8, 7, 6],
-    [5, 4]
-];
+const indexGroups3GameSnowmanDestroy = [[13, 14], [15, 16], [3, 2, 1, 0], [12, 11], [10, 9], [8, 7, 6], [5, 4]];
 
 // remove - from top
-const indexGroups3GameSnowmanDestroy1 = [
-    [3, 2, 1, 0],
-    [13, 14],
-    [15, 16],
-    [5, 4],
-    [8, 7, 6],
-    [10, 9],
-    [12, 11]
-];
+const indexGroups3GameSnowmanDestroy1 = [[3, 2, 1, 0], [13, 14], [15, 16], [5, 4], [8, 7, 6], [10, 9], [12, 11]];
 
-const indexGroups2 = [
-    [12, 11, 10, 9, 8, 7, 6],
-    [5, 4, 13, 15],
-    [16, 14, 3, 2, 1, 0],
-];
+const indexGroups2 = [[12, 11, 10, 9, 8, 7, 6], [5, 4, 13, 15], [16, 14, 3, 2, 1, 0],];
 
 let indexGroups;
 let cutDirection;
@@ -125,8 +104,7 @@ function getCharsNumberWithoutDuplicate() {
         let char = temWord.substring(i, i + 1);
 
         if (char !== " ") {
-            if (!finalChar.includes(char))
-                finalChar = finalChar + char;
+            if (!finalChar.includes(char)) finalChar = finalChar + char;
         }
     }
     return finalChar.split("");
@@ -134,8 +112,7 @@ function getCharsNumberWithoutDuplicate() {
 
 function checkCharacter(keyValue) {
     for (let i = 0; i < wordChar.length; i++) {
-        if (keyValue === wordChar[i])
-            return true;
+        if (keyValue === wordChar[i]) return true;
     }
     return false;
 }
@@ -177,44 +154,27 @@ function getNewIndexGroups(tempCutIndexGroups) {
             }
         }
     }
-
-    // console.log("newIndexGroups " + newIndexGroups);
-    // indexGroups = newIndexGroups;
     return newIndexGroups;
 }
 
 function getAnimationIndexGroupWhenWordCharsNumberWithoutDuplicateIsLowerThanBaseCutDirectionNumber(cutNumber) {
-    // console.log("168");
     let tempCutIndexGroups = [[]];
-    // let indnexCut = 0;
-    let count = 0;
 
-    // console.log("cutDirection.length " + cutDirection.length);
-    // console.log("indexGroups.length " + indexGroups.length);
+    let count = 0;
 
     for (let i = 0; i < cutDirection.length; i++) {
 
         let tempMiddleIndexGroups = indexGroups[cutDirection[i]];
         let tempCutMiddleIndexGroups = [[]];
 
-
-        // if (count < cutNumber) {
         if (count < cutNumber) {
 
             for (let j = 0; j < tempMiddleIndexGroups.length; j++) {
 
-
-                // if (count < cutNumber) {
                 if (count < cutNumber) {
 
-                    // let index = tempMiddleIndexGroups.slice(indnexCut, indnexCut + 2);
                     let index = tempMiddleIndexGroups.slice(j, j + 1);
-                    // indnexCut += 2;
-                    // console.log("A indnexCut = " + indnexCut);
                     tempCutMiddleIndexGroups[j] = index;
-                    // console.log("A tempCutMiddleIndexGroups[j] = " + tempCutMiddleIndexGroups[j]);
-
-
                     count = count + 1;
                 } else {
 
@@ -225,29 +185,18 @@ function getAnimationIndexGroupWhenWordCharsNumberWithoutDuplicateIsLowerThanBas
                     break;
 
                 }
-
-                // console.log(tempCutIndexGroups[j]);
             }
-
             tempCutIndexGroups[i] = tempCutMiddleIndexGroups;
         }
-
     }
-
     return tempCutIndexGroups;
 }
 
 function getAnimationIndexGroupWhenWordCharsNumberWithoutDuplicateIsBiggerThanBaseCutDirectionNumber() {
 
-
-    // console.log("getAnimationIndexGroupWhenWordCharsNumberWithoutDuplicateIsBiggerThanBaseCutDirectionNumber");
     let cutNumber = wordCharsWithoutDuplicate.length - cutDirection.length;
     let wordCharsLength = wordCharsWithoutDuplicate.length;
-    // let wordCharsLength = maxWrongShotsGameSnowmanToDestroy;
-    // let cutNumber = wordCharsLength - cutDirection.length;
     let count = 1;
-    // let tempCutMiddleIndexGroups = [];
-    // let tempStart = [];
     let tempCutIndexGroups = [[]];
 
     for (let i = 0; i < cutDirection.length; i++) {
@@ -277,7 +226,6 @@ function getAnimationIndexGroupWhenWordCharsNumberWithoutDuplicateIsBiggerThanBa
                     tempCutMiddleIndexGroups[j] = index;
                     count = count + 100;
                     break;
-
                 }
             }
 
@@ -291,14 +239,9 @@ function getAnimationIndexGroupWhenWordCharsNumberWithoutDuplicateIsBiggerThanBa
 function getAnimationIndexGroups() {
 
     let wordCharsWithoutDuplicateLength = wordCharsWithoutDuplicate.length;
-    // let wordCharsLength = maxWrongShotsGameSnowmanToDestroy;
-    // if (wordCharsWithoutDuplicate.length < cutDirection.length) {
     if (wordCharsWithoutDuplicateLength < cutDirection.length) {
-        // console.log(" 1 wordCharsWithoutDuplicate.length " + wordCharsWithoutDuplicate.length + "   ?  "+cutDirection.length+"  wordCharsWithoutDuplicate.length"  );
 
         indexGroups = indexGroups2;
-
-        // let cutNumber = wordCharsWithoutDuplicate.length - indexGroups.length;
         let cutNumber = wordCharsWithoutDuplicateLength - indexGroups.length;
 
         cutDirection = cutDirection2;
@@ -306,21 +249,17 @@ function getAnimationIndexGroups() {
         if (cutNumber > 0 && cutNumber <= indexGroups.length) {
 
             let tempCutIndexGroups = getAnimationIndexGroupWhenWordCharsNumberWithoutDuplicateIsLowerThanBaseCutDirectionNumber(cutNumber);
-            // let tempCutIndexGroups = getAnimationIndexGroupWhenWordCharsNumberWithoutDuplicateIsBiggerThanBaseCutDirectionNumber(cutNumber);
-            // console.log("tempCutIndexGroups " + tempCutIndexGroups);
             indexGroups = getNewIndexGroups(tempCutIndexGroups);
         }
 
-        // } else if (wordCharsWithoutDuplicate.length > cutDirection.length) {
+
     } else if (wordCharsWithoutDuplicateLength > cutDirection.length) {
 
-        // console.log("2 wordCharsWithoutDuplicate.length " + wordCharsWithoutDuplicate.length + "   ?  "+cutDirection.length+"  wordCharsWithoutDuplicate.length"  );
         indexGroups = indexGroups1;
         let tempCutIndexGroups = getAnimationIndexGroupWhenWordCharsNumberWithoutDuplicateIsBiggerThanBaseCutDirectionNumber();
 
         indexGroups = getNewIndexGroups(tempCutIndexGroups);
     } else {
-        // console.log("3 wordCharsWithoutDuplicate.length " + wordCharsWithoutDuplicate.length + "   ?  "+cutDirection.length+"  wordCharsWithoutDuplicate.length"  );
         indexGroups = indexGroups1;
     }
 }
@@ -377,10 +316,8 @@ function playGameSnowmanDestroy(clickedId) {
 
     if (isCharExist) {
         countedCorrectShots += 1;
-        // console.log("1  ");
 
         if (countedCorrectShots >= wordCharsWithoutDuplicate.length) {
-            // console.log("1  a");
             setGameOverTextWinner();
             changeKeyboardButtonsGameSnowmanDestroyGameOver()
             disableKeyboardButton(clickedId);
@@ -388,7 +325,6 @@ function playGameSnowmanDestroy(clickedId) {
             setColorForSnowman();
             console.log("YOU WIN !!!");
         } else {
-            // console.log("1  b");
             setDiscoveredChar(keyValue);
             disableKeyboardButton(clickedId);
         }
@@ -396,12 +332,11 @@ function playGameSnowmanDestroy(clickedId) {
         changeLivesNumberVisible();
         removeShapeGameSnowmanDestroyFigureElements();
         countedWrongShots += 1;
-        // console.log("2  ");
+
         if (countedWrongShots < maxWrongShots) {
-            // console.log("2  a");
+
 
         } else {
-            console.log("2  b");
             createContainersForGameSnowmanFigureMessageGameOver();
             setGameOverTextLoser();
             changeKeyboardButtonsGameSnowmanDestroyGameOver()
