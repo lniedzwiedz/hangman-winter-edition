@@ -18,9 +18,9 @@ function createKeyboardLines() {
 function createKeyboardButtonsForOneLine(elementId, keysLine) {
 
     let rowStart = 2;
-    let columntStart = 2;
+    let columnStart = 2;
     let rowEnd = 3;
-    let columntEnd = 3;
+    let columnEnd = 3;
     let keysNumber = keysLine.length;
 
     for (let i = 0; i < keysNumber; i++) {
@@ -30,21 +30,20 @@ function createKeyboardButtonsForOneLine(elementId, keysLine) {
         newButton.style.display = "grid";
         // newButton.style.backgroundColor = "black";
         newButton.style.gridRow = rowStart;
-        newButton.style.gridColumn = columntStart;
+        newButton.style.gridColumn = columnStart;
         newButton.style.gridRowEnd = rowEnd;
-        newButton.style.gridColumnEnd = columntEnd;
+        newButton.style.gridColumnEnd = columnEnd;
         newButton.style.gridTemplateRows = "1fr";
         newButton.style.gridTemplateColumns = "1fr";
 
-        if ((keysLine[i] !== "") && (keysLine[i] !== "NEW GAME")) {
+        if ((keysLine[i] !== "") && (keysLine[i] !== "NEW GAME"))
             newButton.value = keysLine[i];
-        }
 
         newButton.innerHTML += keysLine[i];
         newButton.setAttribute("id", "keyboard-" + keysLine[i]);
         newButton.classList.add(snowmanKeyboardButtons);
-        columntStart += 3;
-        columntEnd += 3;
+        columnStart += 3;
+        columnEnd += 3;
     }
 }
 
@@ -81,18 +80,19 @@ function createKeyboardButtonsGameSnowmanDestroy() {
 function setKeyboardGameSnowmanFunctionNameOnclick(functionNameOnclickPlayGameSnowman, functionNameOnclickSetConfigurationForGameSnowman) {
 
     for (let i = 1; i <= lines; i++) {
+
         let keysLine = eval(buttonsLine + i);
         for (let j = 0; j < keysLine.length; j++) {
 
             let keyValue = keysLine[j];
             let button = document.getElementById("keyboard-" + keyValue);
+
             if ((button !== null) && ("" !== keyValue)) {
 
-                if (keyValue !== "NEW GAME") {
+                if (keyValue !== "NEW GAME")
                     button.setAttribute("onclick", functionNameOnclickPlayGameSnowman + "(this.id)");
-                } else {
+                else
                     button.setAttribute("onclick", functionNameOnclickSetConfigurationForGameSnowman + "(this.id)");
-                }
             }
         }
     }

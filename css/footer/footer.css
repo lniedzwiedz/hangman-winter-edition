@@ -18,7 +18,7 @@
 
 #containerMainFooter {
     display: grid;
-    grid-row: 1 / 2;
+    grid-row: 2 / 3;
     grid-column: 2 / 3;
     grid-template-rows: 1fr;
     grid-template-columns: 9fr 1fr;
@@ -75,9 +75,9 @@
 .footerAuthor {
     margin: auto 0;
     padding: 0;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 500;
-    opacity: 0.8;
+    opacity: 0.4;
 }
 
 @media (max-width: 1200px) {
@@ -89,13 +89,20 @@
         grid-template-rows: 1fr;
         grid-template-columns: 5fr 90fr 5fr;
     }
+
+    .footerAuthor {
+        font-size: 0.8rem;
+    }
+
 }
 
 @media (max-width: 1500px) {
 
     #containerSectionFooter {
         display: grid;
-        grid-template-rows: 2fr 8fr 0fr;
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        grid-template-rows: 1fr;
         grid-template-columns: 5fr 90fr 5fr;
     }
 

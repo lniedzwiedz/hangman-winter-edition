@@ -45,7 +45,6 @@
         grid-template-rows: 2fr 28fr 24fr 1fr 1fr 14fr 14fr 4fr;
         grid-template-columns: 5fr 2fr    15fr 20fr    3fr 3fr    20fr 10fr   18fr 5fr;
     }
-
 }
 
 @media (max-width: 1200px) {
