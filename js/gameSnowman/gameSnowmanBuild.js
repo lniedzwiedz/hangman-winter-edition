@@ -123,6 +123,7 @@ function setDiscoveredChar(charToShow) {
     for (let i = 0; i < wordChar.length; i++) {
         if (charToShow === wordChar[i]) {
             document.getElementById("wordChar-" + i).innerHTML = charToShow;
+            document.getElementById("wordChar-" + i).classList.add("gameSnowmanElementWordToDiscoverVisibleColor");
         }
     }
 }
@@ -447,7 +448,10 @@ function removeShapeGameSnowmanDestroyFigureElements() {
 }
 
 function changeLivesNumberVisible() {
-    let tempChangeColor = "#292929";
+    // let tempChangeColor = "#292929";
+    let tempChangeColor = "#1c7293";
+
+    rootVariables.style.setProperty("--snowmanFigureColor", winColorSnowman);
     let elem = document.getElementById("gameLive-" + countedWrongShots);
     elem.style.backgroundColor = tempChangeColor;
 
@@ -455,29 +459,35 @@ function changeLivesNumberVisible() {
     elemEnd.innerHTML = ((gameLives.length - 1) - countedWrongShots).toString();
 }
 
+
+// TO DO - add new common variables !!!
 function createContainersForWord() {
-    createElementDiv(containerGameSnowmanDescriptionElements, containerGameSnowmanWordToDiscover);
+
+    createElementDiv(containerGameSnowmanDescriptionElements, containerGameSnowmanWordToDiscover + "Main");
+    let containerMain = document.getElementById(containerGameSnowmanWordToDiscover + "Main")
+    containerMain.classList.add(containerGameSnowmanWordToDiscover + "Main")
+
+    createElementDiv(containerGameSnowmanWordToDiscover + "Main", containerGameSnowmanWordToDiscover + "MainParts");
+    let containerMainParts = document.getElementById(containerGameSnowmanWordToDiscover + "MainParts")
+    containerMainParts.classList.add(containerGameSnowmanWordToDiscover + "MainParts")
+
+    createElementDiv(containerGameSnowmanWordToDiscover + "MainParts", containerGameSnowmanWordToDiscover);
     let parentElement = document.getElementById(containerGameSnowmanWordToDiscover)
     parentElement.classList.add(containerGameSnowmanWordToDiscover)
 
-    // parentElement.style.gridTemplateRows = " repeat(1, 70fr 100fr 10fr) ";
     parentElement.style.gridTemplateRows = " repeat(1,  25fr 70fr 5f) ";
     parentElement.style.gridTemplateColumns = " repeat(" + word.length + ", 5fr 100fr 5fr)";
 
-    let rowChildStart = 2;
+    let rowChildStart = 1;
     let columnChildStart = 2;
     let rowChildEnd = 2;
     let columnChildEnd = 3;
 
     for (let i = 0; i < word.length; i++) {
+
         let newDiv = document.createElement("div");
         parentElement.append(newDiv);
         newDiv.style.display = "grid";
-
-        if (wordChar[i] === " ")
-            newDiv.style.backgroundColor = "#00000";
-        else
-            newDiv.classList.add(gameSnowmanElementWordToDiscover);
 
         newDiv.style.gridRow = rowChildStart.toString();
         newDiv.style.gridColumn = columnChildStart.toString();
@@ -485,7 +495,21 @@ function createContainersForWord() {
         newDiv.style.gridColumnEnd = columnChildEnd.toString();
         newDiv.style.gridTemplateRows = "1fr";
         newDiv.style.gridTemplateColumns = "1fr";
-        newDiv.setAttribute("id", "wordChar-" + i);
+
+        let tempClassAddToCommonVariable = "gameSnowmanElementWordToDiscoverBase";
+
+        let newP = document.createElement("p");
+        newDiv.append(newP);
+        // newP.innerHTML = "X";
+        newP.classList.add(tempClassAddToCommonVariable);
+
+        if (wordChar[i] === " ") {
+            newDiv.style.backgroundColor = "#00000";
+        } else {
+            newDiv.classList.add(gameSnowmanElementWordToDiscover);
+            newP.setAttribute("id", "wordChar-" + i);
+        }
+
         columnChildStart += 3;
         columnChildEnd += 3;
     }
@@ -493,12 +517,23 @@ function createContainersForWord() {
 
 gameLives = "" + "" + maxWrongShots;
 
+// TO DO - add new common variables !!!
 function createContainersForLives() {
-    createElementDiv(containerGameSnowmanDescriptionElements, containerGameSnowmanLives);
+
+    createElementDiv(containerGameSnowmanDescriptionElements, containerGameSnowmanLives + "Main");
+    let containerMain = document.getElementById(containerGameSnowmanLives + "Main")
+    containerMain.classList.add(containerGameSnowmanLives + "Main")
+
+    createElementDiv(containerGameSnowmanLives + "Main", containerGameSnowmanLives + "MainParts");
+    let containerMainParts = document.getElementById(containerGameSnowmanLives + "MainParts")
+    containerMainParts.classList.add(containerGameSnowmanLives + "MainParts")
+
+    createElementDiv(containerGameSnowmanLives + "MainParts", containerGameSnowmanLives);
     let parentElement = document.getElementById(containerGameSnowmanLives)
     parentElement.classList.add(containerGameSnowmanLives)
 
-    parentElement.style.gridTemplateRows = " repeat(1, 50fr 40fr 10fr) ";
+    // parentElement.style.gridTemplateRows = " repeat(1, 50fr 40fr 10fr) ";
+    parentElement.style.gridTemplateRows = " repeat(1, 20fr 70fr 20fr) ";
     parentElement.style.gridTemplateColumns = " repeat(" + maxWrongShots + ", 5fr 100fr 5fr)";
 
     let rowChildStart = 2;

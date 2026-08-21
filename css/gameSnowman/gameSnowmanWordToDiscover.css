@@ -1,35 +1,65 @@
+.containerGameSnowmanWordToDiscoverMain {
+    display: grid;
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    background-color: black;
+}
+
+.containerGameSnowmanWordToDiscoverMainParts {
+    display: grid;
+    grid-row: 1 / 1;
+    grid-column: 1 / 2;
+    grid-template-rows: 2fr 6fr 2fr;
+    grid-template-columns: 0fr 10fr 0fr;
+    background-color: black;
+}
+
+.containerGameSnowmanWordToDiscover {
+    display: grid;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
 .gameSnowmanElementWordToDiscover {
-    /*background-color: #e9a610;*/
     background-color: #FFF5EE;
-    color: #1a759f;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 1.3rem;
-    font-weight: 1000;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*text-align: center;*/
     border: none;
     border-radius: 0.45rem;
     box-shadow: 0px 0px 1px 1px #2a1e1e;
 }
 
-.containerGameSnowmanWordToDiscover {
-    display: grid;
-    grid-row: 3 / 4;
-    grid-column: 2 / 3;
-    background-color: black;
+.gameSnowmanElementWordToDiscoverBase {
+    margin: auto;
+    padding: 0;
+    font-size: 1.7rem;
+    font-weight: 1000;
+}
+
+.gameSnowmanElementWordToDiscoverVisibleColor{
+    color: #1a759f;
 }
 
 @media (max-width: 1200px) {
 
-    .containerGameSnowmanWordToDiscover {
+    .containerGameSnowmanWordToDiscoverMain {
         display: grid;
-        /*grid-row: 3 / 4;*/
         grid-row: 2 / 4;
         grid-column: 3 / 4;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
         background-color: black;
     }
 
-    .gameSnowmanElementWordToDiscover {
+    .gameSnowmanElementWordToDiscover {;
         font-size: 0.9rem;
         font-weight: 600;
     }

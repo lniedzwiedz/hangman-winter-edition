@@ -55,6 +55,8 @@
 .gameSnowmanDescriptionElementText-0 {
     font-size: 2.1rem;
     font-weight: 400;
+    /* do not remove this workaround/hardcode (margin + margin-bottom),
+    as it will break the display of game descriptions on the buttons !!!*/
     margin: auto;
     margin-bottom: 0;
 }
@@ -89,8 +91,9 @@
     @media (max-width: 1200px) {
 
         #containerGameSnowmanDescriptionElements {
-            grid-template-rows: 0fr 2fr 2fr 2fr 1fr;
-            grid-template-columns: 0fr 3.5fr 6.5fr 0fr;
+            grid-template-rows: 1fr 2fr 3fr 3fr 1fr;
+            /*grid-template-columns: 1fr 3fr 5fr 1fr;*/
+            grid-template-columns: 0fr 3fr 7fr 0fr;
         }
 
         .gameSnowmanDescriptionElementText-0 {
