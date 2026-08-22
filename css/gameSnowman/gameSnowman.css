@@ -14,7 +14,6 @@
     /*box-shadow: 0 2px 10px 0 #621735;*/
     box-shadow: 0 2px 10px 0 #4cc9f0;
     grid-template-rows: 1fr;
-    grid-template-columns:  minmax( 400px, 1fr);
 }
 
 /* gameSnowmanWordElements.js */
@@ -23,8 +22,6 @@
     grid-row: 2 / 4;
     grid-column: 6 / 10;
     grid-template-rows: 1fr;
-    grid-template-columns:  minmax( 400px, 1fr);
-    justify-content: center;
 }
 
 /* gameSnowmanKeyboard.js */
@@ -33,7 +30,6 @@
     grid-row: 6 / 8;
     grid-column: 6 / 10;
     grid-template-rows: 1fr;
-    grid-template-columns: minmax(400px, 1fr);
 }
 
 @media (max-width: 1500px) {

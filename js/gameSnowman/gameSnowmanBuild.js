@@ -41,48 +41,6 @@ const fileWithWordsH = "#FFDEAD, #F5F5DC, #FFF8DC, #EDEADE, #F0EAD6, #FFF5EE";
 const wordsH = fileWithWordsH.split(", ")
 let winColorSnowman;
 
-// function setConfigurationForGameSnowmanBuild() {
-//     word = getWord();
-//     // word = "JAVA";
-//     console.log("word: " + word);
-//     wordChar = getCharsNumber(word);
-//     wordCharsWithoutDuplicate = getCharsNumberWithoutDuplicate();
-//     cutDirection = [2, 6, 4, 1, 5, 0, 3]; // number index = indexGroups
-//     cutDirection2 = [0, 2];
-//     animationMaxNumber = cutDirection.length;
-//     countedCorrectShots = 0;
-//     countedWrongShots = 0;
-//     countedAnimationElements = 0;
-//     maxWrongShots = animationMaxNumber;
-//     getAnimationIndexGroups();
-//     gameLives = "LIVES " + maxWrongShots;
-//     gameLivesChars = getCharsNumber(gameLives);
-//     removeContainerMainSection();
-//     // getAnimationIndexGroups();
-//     createStartContainersGameSnowman();
-// }
-
-// function setConfigurationForGameSnowmanDestroy() {
-//     word = getWord();
-//     // word = "JAVA";
-//     console.log("word: " + word);
-//     wordChar = getCharsNumber(word);
-//     wordCharsWithoutDuplicate = getCharsNumberWithoutDuplicate();
-//     cutDirection = [2, 6, 4, 1, 5, 0, 3]; // number index = indexGroups
-//     cutDirection2 = [0, 2];
-//     animationMaxNumber = cutDirection.length;
-//     countedCorrectShots = 0;
-//     countedWrongShots = 0;
-//     countedAnimationElements = 0;
-//     maxWrongShots = animationMaxNumber;
-//     gameLives = "LIVES " + maxWrongShots;
-//     gameLivesChars = getCharsNumber(gameLives);
-//     removeContainerMainSection();
-//     indexGroups = indexGroups3GameSnowmanDestroy;
-//     createStartContainersGameSnowmanDestroy();
-// }
-
-
 function setConfigurationForGameCommon() {
     word = getWord();
     // word = "JAVA";
@@ -155,7 +113,7 @@ function setDiscoveredChar(charToShow) {
     for (let i = 0; i < wordChar.length; i++) {
         if (charToShow === wordChar[i]) {
             document.getElementById("wordChar-" + i).innerHTML = charToShow;
-            document.getElementById("wordChar-" + i).classList.add("gameSnowmanElementWordToDiscoverVisibleColor");
+            document.getElementById("wordChar-" + i).classList.add(gameSnowmanElementWordToDiscoverVisibleColor);
         }
     }
 }
@@ -293,7 +251,7 @@ function playGameSnowmanBuild(clickedId) {
 
         if (countedCorrectShots >= wordCharsWithoutDuplicate.length) {
             setGameOverTextWinner();
-            changeKeyboardButtonsGameSnowmanDestroyGameOver()
+            changeKeyboardButtonsGameSnowmanDestroyGameOver();
             disableKeyboardButton(clickedId);
             setDiscoveredChar(keyValue);
             setShapeGameSnowmanBuildFigureElements();
@@ -343,7 +301,7 @@ function playGameSnowmanDestroy(clickedId) {
 
         if (countedCorrectShots >= wordCharsWithoutDuplicate.length) {
             setGameOverTextWinner();
-            changeKeyboardButtonsGameSnowmanDestroyGameOver()
+            changeKeyboardButtonsGameSnowmanDestroyGameOver();
             disableKeyboardButton(clickedId);
             setDiscoveredChar(keyValue);
             setColorForSnowman();
@@ -362,7 +320,7 @@ function playGameSnowmanDestroy(clickedId) {
         } else {
             createContainersForGameSnowmanFigureMessageGameOver();
             setGameOverTextLoser();
-            changeKeyboardButtonsGameSnowmanDestroyGameOver()
+            changeKeyboardButtonsGameSnowmanDestroyGameOver();
             console.log("GAME OVER");
             countedWrongShots += 77;
         }

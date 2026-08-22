@@ -100,6 +100,7 @@ const containerGameSnowmanDescriptionElements = "containerGameSnowmanDescription
 const containerGameSnowmanWordToDiscover = "containerGameSnowmanWordToDiscover";
 const gameSnowmanElementWordToDiscover = "gameSnowmanElementWordToDiscover";
 const gameSnowmanElementWordToDiscoverBase = "gameSnowmanElementWordToDiscoverBase";
+const gameSnowmanElementWordToDiscoverVisibleColor = "gameSnowmanElementWordToDiscoverVisibleColor";
 
 // game lives
 const containerGameSnowmanLives = "containerGameSnowmanLives";

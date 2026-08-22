@@ -28,7 +28,8 @@
     border: none;
     border-radius: 0.45rem;
     grid-template-rows: 1fr;
-    grid-template-columns:  minmax( 400px, 500px);
+    /*grid-template-columns:  minmax( 400px, 500px);*/
+    grid-template-columns:  minmax( 400px, 400px);
     justify-content: center;
 }
 
