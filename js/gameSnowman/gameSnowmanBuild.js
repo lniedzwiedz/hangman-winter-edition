@@ -41,7 +41,49 @@ const fileWithWordsH = "#FFDEAD, #F5F5DC, #FFF8DC, #EDEADE, #F0EAD6, #FFF5EE";
 const wordsH = fileWithWordsH.split(", ")
 let winColorSnowman;
 
-function setConfigurationForGameSnowmanBuild() {
+// function setConfigurationForGameSnowmanBuild() {
+//     word = getWord();
+//     // word = "JAVA";
+//     console.log("word: " + word);
+//     wordChar = getCharsNumber(word);
+//     wordCharsWithoutDuplicate = getCharsNumberWithoutDuplicate();
+//     cutDirection = [2, 6, 4, 1, 5, 0, 3]; // number index = indexGroups
+//     cutDirection2 = [0, 2];
+//     animationMaxNumber = cutDirection.length;
+//     countedCorrectShots = 0;
+//     countedWrongShots = 0;
+//     countedAnimationElements = 0;
+//     maxWrongShots = animationMaxNumber;
+//     getAnimationIndexGroups();
+//     gameLives = "LIVES " + maxWrongShots;
+//     gameLivesChars = getCharsNumber(gameLives);
+//     removeContainerMainSection();
+//     // getAnimationIndexGroups();
+//     createStartContainersGameSnowman();
+// }
+
+// function setConfigurationForGameSnowmanDestroy() {
+//     word = getWord();
+//     // word = "JAVA";
+//     console.log("word: " + word);
+//     wordChar = getCharsNumber(word);
+//     wordCharsWithoutDuplicate = getCharsNumberWithoutDuplicate();
+//     cutDirection = [2, 6, 4, 1, 5, 0, 3]; // number index = indexGroups
+//     cutDirection2 = [0, 2];
+//     animationMaxNumber = cutDirection.length;
+//     countedCorrectShots = 0;
+//     countedWrongShots = 0;
+//     countedAnimationElements = 0;
+//     maxWrongShots = animationMaxNumber;
+//     gameLives = "LIVES " + maxWrongShots;
+//     gameLivesChars = getCharsNumber(gameLives);
+//     removeContainerMainSection();
+//     indexGroups = indexGroups3GameSnowmanDestroy;
+//     createStartContainersGameSnowmanDestroy();
+// }
+
+
+function setConfigurationForGameCommon() {
     word = getWord();
     // word = "JAVA";
     console.log("word: " + word);
@@ -54,29 +96,19 @@ function setConfigurationForGameSnowmanBuild() {
     countedWrongShots = 0;
     countedAnimationElements = 0;
     maxWrongShots = animationMaxNumber;
-    getAnimationIndexGroups();
     gameLives = "LIVES " + maxWrongShots;
     gameLivesChars = getCharsNumber(gameLives);
     removeContainerMainSection();
+}
+
+function setConfigurationForGameSnowmanBuild(){
+    setConfigurationForGameCommon();
+    getAnimationIndexGroups();
     createStartContainersGameSnowman();
 }
 
 function setConfigurationForGameSnowmanDestroy() {
-    word = getWord();
-    // word = "JAVA";
-    console.log("word: " + word);
-    wordChar = getCharsNumber(word);
-    wordCharsWithoutDuplicate = getCharsNumberWithoutDuplicate();
-    cutDirection = [2, 6, 4, 1, 5, 0, 3]; // number index = indexGroups
-    cutDirection2 = [0, 2];
-    animationMaxNumber = cutDirection.length;
-    countedCorrectShots = 0;
-    countedWrongShots = 0;
-    countedAnimationElements = 0;
-    maxWrongShots = animationMaxNumber;
-    gameLives = "LIVES " + maxWrongShots;
-    gameLivesChars = getCharsNumber(gameLives);
-    removeContainerMainSection();
+    setConfigurationForGameCommon();
     indexGroups = indexGroups3GameSnowmanDestroy;
     createStartContainersGameSnowmanDestroy();
 }
@@ -211,15 +243,11 @@ function getAnimationIndexGroupWhenWordCharsNumberWithoutDuplicateIsBiggerThanBa
             for (let j = 0; j < tempMiddleIndexGroups.length; j++) {
 
                 if (count < cutNumber) {
-                    let index = tempMiddleIndexGroups.slice(j, j + 1);
-
-                    tempCutMiddleIndexGroups[j] = index;
+                    tempCutMiddleIndexGroups[j] = tempMiddleIndexGroups.slice(j, j + 1);
                     count = count + 1;
+
                 } else {
-
-                    let index = tempMiddleIndexGroups.slice(j, tempMiddleIndexGroups.length);
-
-                    tempCutMiddleIndexGroups[j] = index;
+                    tempCutMiddleIndexGroups[j] = tempMiddleIndexGroups.slice(j, tempMiddleIndexGroups.length);
                     count = count + 100;
                     break;
                 }
@@ -459,21 +487,19 @@ function changeLivesNumberVisible() {
     elemEnd.innerHTML = ((gameLives.length - 1) - countedWrongShots).toString();
 }
 
-
-// TO DO - add new common variables !!!
 function createContainersForWord() {
 
-    createElementDiv(containerGameSnowmanDescriptionElements, containerGameSnowmanWordToDiscover + "Main");
-    let containerMain = document.getElementById(containerGameSnowmanWordToDiscover + "Main")
-    containerMain.classList.add(containerGameSnowmanWordToDiscover + "Main")
+    createElementDiv(containerGameSnowmanDescriptionElements, containerGameSnowmanWordToDiscoverMain);
+    let containerMain = document.getElementById(containerGameSnowmanWordToDiscoverMain);
+    containerMain.classList.add(containerGameSnowmanWordToDiscoverMain);
 
-    createElementDiv(containerGameSnowmanWordToDiscover + "Main", containerGameSnowmanWordToDiscover + "MainParts");
-    let containerMainParts = document.getElementById(containerGameSnowmanWordToDiscover + "MainParts")
-    containerMainParts.classList.add(containerGameSnowmanWordToDiscover + "MainParts")
+    createElementDiv(containerGameSnowmanWordToDiscoverMain, containerGameSnowmanWordToDiscoverMainParts);
+    let containerMainParts = document.getElementById(containerGameSnowmanWordToDiscoverMainParts);
+    containerMainParts.classList.add(containerGameSnowmanWordToDiscoverMainParts);
 
-    createElementDiv(containerGameSnowmanWordToDiscover + "MainParts", containerGameSnowmanWordToDiscover);
-    let parentElement = document.getElementById(containerGameSnowmanWordToDiscover)
-    parentElement.classList.add(containerGameSnowmanWordToDiscover)
+    createElementDiv(containerGameSnowmanWordToDiscoverMainParts, containerGameSnowmanWordToDiscover);
+    let parentElement = document.getElementById(containerGameSnowmanWordToDiscover);
+    parentElement.classList.add(containerGameSnowmanWordToDiscover);
 
     parentElement.style.gridTemplateRows = " repeat(1,  25fr 70fr 5f) ";
     parentElement.style.gridTemplateColumns = " repeat(" + word.length + ", 5fr 100fr 5fr)";
@@ -496,12 +522,9 @@ function createContainersForWord() {
         newDiv.style.gridTemplateRows = "1fr";
         newDiv.style.gridTemplateColumns = "1fr";
 
-        let tempClassAddToCommonVariable = "gameSnowmanElementWordToDiscoverBase";
-
         let newP = document.createElement("p");
         newDiv.append(newP);
-        // newP.innerHTML = "X";
-        newP.classList.add(tempClassAddToCommonVariable);
+        newP.classList.add(gameSnowmanElementWordToDiscoverBase);
 
         if (wordChar[i] === " ") {
             newDiv.style.backgroundColor = "#00000";
@@ -517,22 +540,20 @@ function createContainersForWord() {
 
 gameLives = "" + "" + maxWrongShots;
 
-// TO DO - add new common variables !!!
 function createContainersForLives() {
 
-    createElementDiv(containerGameSnowmanDescriptionElements, containerGameSnowmanLives + "Main");
-    let containerMain = document.getElementById(containerGameSnowmanLives + "Main")
-    containerMain.classList.add(containerGameSnowmanLives + "Main")
+    createElementDiv(containerGameSnowmanDescriptionElements, containerGameSnowmanLivesMain);
+    let containerMain = document.getElementById(containerGameSnowmanLivesMain);
+    containerMain.classList.add(containerGameSnowmanLivesMain);
 
-    createElementDiv(containerGameSnowmanLives + "Main", containerGameSnowmanLives + "MainParts");
-    let containerMainParts = document.getElementById(containerGameSnowmanLives + "MainParts")
-    containerMainParts.classList.add(containerGameSnowmanLives + "MainParts")
+    createElementDiv(containerGameSnowmanLivesMain, containerGameSnowmanLivesMainParts);
+    let containerMainParts = document.getElementById(containerGameSnowmanLivesMainParts);
+    containerMainParts.classList.add(containerGameSnowmanLivesMainParts);
 
-    createElementDiv(containerGameSnowmanLives + "MainParts", containerGameSnowmanLives);
-    let parentElement = document.getElementById(containerGameSnowmanLives)
-    parentElement.classList.add(containerGameSnowmanLives)
+    createElementDiv(containerGameSnowmanLivesMainParts, containerGameSnowmanLives);
+    let parentElement = document.getElementById(containerGameSnowmanLives);
+    parentElement.classList.add(containerGameSnowmanLives);
 
-    // parentElement.style.gridTemplateRows = " repeat(1, 50fr 40fr 10fr) ";
     parentElement.style.gridTemplateRows = " repeat(1, 20fr 70fr 20fr) ";
     parentElement.style.gridTemplateColumns = " repeat(" + maxWrongShots + ", 5fr 100fr 5fr)";
 
@@ -546,10 +567,10 @@ function createContainersForLives() {
         let newDiv = document.createElement("div");
         parentElement.append(newDiv);
         newDiv.style.display = "grid";
-        newDiv.classList.add("gameSnowmanLives");
+        newDiv.classList.add(gameSnowmanLives);
 
         if (i === maxWrongShots - 1)
-            newDiv.classList.add("gameSnowmanLivesNumber");
+            newDiv.classList.add(gameSnowmanLivesNumber);
 
         newDiv.style.gridRow = rowChildStart.toString();
         newDiv.style.gridColumn = columnChildStart.toString();

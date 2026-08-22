@@ -94,12 +94,19 @@ const gameSnowmanDescriptionTextGameOverWinnerCongratulations = "Congratulations
 
 // word to discover
 const containerGameSnowmanWord = "containerGameSnowmanWord";
+const containerGameSnowmanWordToDiscoverMain = "containerGameSnowmanWordToDiscoverMain";
+const containerGameSnowmanWordToDiscoverMainParts = "containerGameSnowmanWordToDiscoverMainParts";
 const containerGameSnowmanDescriptionElements = "containerGameSnowmanDescriptionElements";
 const containerGameSnowmanWordToDiscover = "containerGameSnowmanWordToDiscover";
 const gameSnowmanElementWordToDiscover = "gameSnowmanElementWordToDiscover";
+const gameSnowmanElementWordToDiscoverBase = "gameSnowmanElementWordToDiscoverBase";
 
 // game lives
 const containerGameSnowmanLives = "containerGameSnowmanLives";
+const containerGameSnowmanLivesMain = "containerGameSnowmanLivesMain";
+const containerGameSnowmanLivesMainParts = "containerGameSnowmanLivesMainParts";
+const gameSnowmanLives = "gameSnowmanLives";
+const gameSnowmanLivesNumber = "gameSnowmanLivesNumber";
 
 // CSS variable
 let cssSnowmanFigureColor = "--snowmanFigureColor"
