@@ -8,3 +8,5 @@ setContainerMainSection();
 createMenu();
 createSubpageHome();
 createFooter();
+
+console.log("Hangman - Winter Edition: version 20260824v107");

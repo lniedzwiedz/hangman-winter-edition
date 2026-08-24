@@ -59,7 +59,7 @@ function setConfigurationForGameCommon() {
     removeContainerMainSection();
 }
 
-function setConfigurationForGameSnowmanBuild(){
+function setConfigurationForGameSnowmanBuild() {
     setConfigurationForGameCommon();
     getAnimationIndexGroups();
     createStartContainersGameSnowman();
@@ -68,7 +68,7 @@ function setConfigurationForGameSnowmanBuild(){
 function setConfigurationForGameSnowmanDestroy() {
     setConfigurationForGameCommon();
     indexGroups = indexGroups3GameSnowmanDestroy;
-    createStartContainersGameSnowmanDestroy();
+    createStartContainersGameSnowmanSave();
 }
 
 const words = fileWithWords.split(", ")
@@ -489,8 +489,8 @@ function createContainersForWord() {
         } else {
             newDiv.classList.add(gameSnowmanElementWordToDiscover);
             newP.setAttribute("id", "wordChar-" + i);
+            newP.setAttribute("id", "wordChar-" + i);
         }
-
         columnChildStart += 3;
         columnChildEnd += 3;
     }
@@ -536,8 +536,12 @@ function createContainersForLives() {
         newDiv.style.gridColumnEnd = columnChildEnd.toString();
         newDiv.style.gridTemplateRows = "1fr";
         newDiv.style.gridTemplateColumns = "1fr";
-        newDiv.innerHTML += gameLivesChars[i];
-        newDiv.setAttribute("id", "gameLive-" + i);
+
+        let newP = document.createElement("p");
+        newDiv.append(newP);
+        newP.classList.add("gameSnowmanLivesBase");
+        newP.innerHTML += gameLivesChars[i];
+        newP.setAttribute("id", "gameLive-" + i);
 
         columnChildStart += 3;
         columnChildEnd += 3;
@@ -817,7 +821,7 @@ function createStartContainersGameSnowman() {
     createKeyboardButtonsGameSnowmanBuild();
 }
 
-function createStartContainersGameSnowmanDestroy() {
+function createStartContainersGameSnowmanSave() {
     createStartContainersGameSnowmanMain();
     createContainersSnowmanFigureMainElements();
     setShapeGameSnowmanDestroyFigureElements();

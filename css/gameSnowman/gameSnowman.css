@@ -49,9 +49,7 @@
         display: grid;
         grid-row: 1 / 1;
         grid-column: 1 / 1;
-        /*grid-template-rows: 0fr 19fr 66fr 0fr 0fr 17fr 0fr 0fr;*/
-        grid-template-rows: 0fr 20fr 50fr 0fr 0fr 30fr 0fr 0fr;
-        /*grid-template-rows: 0fr 20fr 60fr 0fr 0fr 20fr 0fr 0fr;*/
+        grid-template-rows: 0fr 15fr 60fr 0fr 0fr 25fr 0fr 0fr;
         grid-template-columns: 5fr 15fr 13fr 21fr 3fr 3fr 21fr 13fr 15fr 5fr;
     }
 

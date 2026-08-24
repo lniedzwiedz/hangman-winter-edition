@@ -29,9 +29,6 @@
 
 .gameSnowmanElementWordToDiscover {
     background-color: #FFF5EE;
-    /*justify-content: center;*/
-    /*align-items: center;*/
-    /*text-align: center;*/
     border: none;
     border-radius: 0.45rem;
     box-shadow: 0px 0px 1px 1px #2a1e1e;
@@ -44,7 +41,7 @@
     font-weight: 1000;
 }
 
-.gameSnowmanElementWordToDiscoverVisibleColor{
+.gameSnowmanElementWordToDiscoverVisibleColor {
     color: #1a759f;
 }
 

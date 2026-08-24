@@ -15,8 +15,8 @@ const containerHomeGamesButtons = "containerHomeGamesButtons";
 const containerGameSnowmanDescription = "containerGameSnowmanDescription";
 const containerGameSnowmanDescriptionElementText = "containerGameSnowmanDescriptionElementText";
 const gameSnowmanDescriptionElementText = "gameSnowmanDescriptionElementText";
-const gameSnowmanDescriptionTextBuild = ["BUILD SNOWMAN", "discover colour name", "WIN GAME", "&", "snowman will change colour"];
-const gameSnowmanDescriptionTextDestroy = ["SAVE SNOWMAN", "discover colour name", "WIN GAME", "&", "snowman will rise again"];
+const gameSnowmanDescriptionTextBuild = ["BUILD SNOWMAN", "discover color name", "WIN GAME", "&", "snowman will change colour"];
+const gameSnowmanDescriptionTextDestroy = ["SAVE SNOWMAN", "discover color name", "WIN GAME", "&", "snowman will rise again"];
 
 const gameNameSnowmanBuild = "SnowmanBuild";
 const gameNameSnowmanDestroy = "SnowmanDestroy";
@@ -118,15 +118,29 @@ const containerSectionMenu = "containerSectionMenu";
 const containerMenuMain = "containerMenuMain";
 const containerMenuMainParts = "containerMenuMainParts";
 const containerMenuTitleMain = "containerMenuTitleMain";
-const menuTitle = "menuTitle";
+const containerMenuTitleMainPairs = "containerMenuTitleMainPairs";
+
+const containerMenuTitleText = "containerMenuTitleText";
 const menuTitleText = "menuTitleText";
-const menuTitleTextDisplay = "Simply Games";
+const menuTitleTextDisplay = "HANGMAN";
+
+const containerMenuTitleDescription = "containerMenuTitleDescription";
+const menuTitleDescriptionText = "menuTitleDescriptionText";
+const menuTitleDescriptionTextDisplay = "&nbsp &nbsp WINTER EDITI <i class=\"fa-regular fa-snowflake\"></i> N";
 
 const containerMenuButtonsMain = "containerMenuButtonsMain";
 const containerMenuButtonsMainParts = "containerMenuButtonsMainParts";
 const containerMenuButtonHomeMain = "containerMenuButtonHomeMain";
-const containerMenuButtonHomeClick = "containerMenuButtonHomeClick";
-const menuButtonHomeClick = "menuButtonHomeClick";
+const containerMenuButtonHomeMainParts = "containerMenuButtonHomeMainParts";
+
+const containerMenuButtonHomeTextDisplay = "containerMenuButtonHomeTextDisplay";
+const menuButtonHomeTextDisplay = "HOME &nbsp ";
+
+const containerMenuButtonHomeIconDisplay = "containerMenuButtonHomeIconDisplay";
+const menuButtonHomeIcon = "menuButtonHomeIcon";
+const menuButtonHomeIconName = "fa-igloo";
+const menuButtonHomeIconStyle = "fa-solid";
+
 const menuButtonClick = "menuButtonClick";
 const functionNameOnclickCreateSubpageHome = "createSubpageHome";
 const containerMenuButtonHome = "containerMenuButtonHome";
@@ -134,8 +148,7 @@ const containerMenuButtonHomeText = "containerMenuButtonHomeText";
 const containerMenuButtonText = "containerMenuButtonText";
 const menuButtonHomeText = "menuButtonHomeText";
 const menuButtonText = "menuButtonText";
-const menuButtonHomeTextDisplay = "HOME <i class=\"fa-solid fa-igloo\"></i>";
-// const menuButtonHomeTextDisplay = "SWEET<i class=\"fa-solid fa-igloo\"></i>";
+
 
 const containerMenuButtonGameSnowmanBuildMain = "containerMenuButtonGameSnowmanBuildMain";
 const containerMenuButtonGameSnowmanBuildText = "containerMenuButtonGameSnowmanBuildText";
@@ -143,8 +156,14 @@ const containerMenuButtonGameSnowmanBuild = "containerMenuButtonGameSnowmanBuild
 const containerMenuButtonGameSnowmanBuildClick = "containerMenuButtonGameSnowmanBuildClick";
 const menuButtonGameSnowmanBuildClick = "menuButtonGameSnowmanBuildClick";
 const menuButtonGameSnowmanBuildText = "menuButtonGameSnowmanBuildText";
-// const menuButtonGameSnowmanBuildTextDisplay = "SAVE SNOWMAN";
-const menuButtonGameSnowmanBuildTextDisplay = "BUILD <i class=\"fa-solid fa-snowman\"></i>";
+
+const containerMenuButtonGameSnowmanBuildTextDisplay = "containerMenuButtonGameSnowmanBuildTextDisplay";
+const menuButtonGameSnowmanBuildTextDisplay = "BUILD";
+
+const containerMenuButtonGameSnowmanBuildIconDisplay = "containerMenuButtonGameSnowmanBuildIconDisplay";
+const menuButtonGameSnowmanBuildIcon = "menuButtonGameSnowmanBuildIcon";
+const menuButtonGameSnowmanBuildIconName = "fa-snowman";
+const menuButtonGameSnowmanBuildIconStyle = "fa-solid";
 
 const containerMenuButtonGameSnowmanDestroyMain = "containerMenuButtonGameSnowmanDestroyMain";
 const containerMenuButtonGameSnowmanDestroyText = "containerMenuButtonGameSnowmanDestroyText";
@@ -152,8 +171,15 @@ const containerMenuButtonGameSnowmanDestroy = "containerMenuButtonGameSnowmanDes
 const containerMenuButtonGameSnowmanDestroyClick = "containerMenuButtonGameSnowmanDestroyClick";
 const menuButtonGameSnowmanDestroyClick = "menuButtonGameSnowmanDestroyClick";
 const menuButtonGameSnowmanDestroyText = "menuButtonGameSnowmanDestroyText";
-// const menuButtonGameSnowmanDestroyTextDisplay = "DESTROY SNOWMAN";
-const menuButtonGameSnowmanDestroyTextDisplay = 'SAVE <i class=\"fa-solid fa-snowman\"></i>';
+
+const containerMenuButtonGameSnowmanDestroyTextDisplay = "containerMenuButtonGameSnowmanDestroyTextDisplay";
+const menuButtonGameSnowmanDestroyTextDisplay = 'SAVE';
+
+const containerMenuButtonGameSnowmanDestroyIconDisplay = "containerMenuButtonGameSnowmanDestroyIconDisplay";
+const menuButtonGameSnowmanDestroyIcon = "menuButtonGameSnowmanDestroyIcon";
+const menuButtonGameSnowmanDestroyIconName = "fa-snowman";
+const menuButtonGameSnowmanDestroyIconStyle = "fa-solid";
+
 
 //footer
 const containerSectionFooter = "containerSectionFooter";

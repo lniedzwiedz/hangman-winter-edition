@@ -14,8 +14,8 @@ function createContainerMainElements(containerMainSectionName, sectionName, cont
 
 function createElement(parentId, childId, elementKind) {
     let newElement = document.createElement(elementKind);
-    let mainElement = document.getElementById(parentId);
-    mainElement.append(newElement);
+    let parentElement = document.getElementById(parentId);
+    parentElement.append(newElement);
     newElement.setAttribute("id", childId);
 }
 
@@ -29,6 +29,12 @@ function createElementButton(parentId, childId) {
 
 function createElementP(parentId, childId) {
     createElement(parentId, childId, "p");
+}
+
+function createElementI(parentId, childId, iconStyle, iconClass ) {
+    createElement(parentId, childId, "i");
+    let element = document.getElementById(childId);
+    element.classList.add(iconStyle, iconClass);
 }
 
 function setElementClassName(elementId, className) {

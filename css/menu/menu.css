@@ -28,10 +28,23 @@
     grid-template-columns: 1fr;
 }
 
-.menuTitle {
+.containerMenuTitleMainPairs {
+    display: grid;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    grid-template-rows: 7fr 3fr;
+    /*grid-template-columns: 1fr;*/
+    /*grid-template-columns: 1fr 1fr;*/
+    /*grid-template-columns: 3fr 7fr;*/
+    grid-template-columns: 9fr 1fr;
+}
+
+.containerMenuTitleText {
     display: grid;
     grid-row: 1 / 2;
     grid-column: 1 / 2;
+    /*grid-row: 1 / 3;*/
+    /*grid-column: 1 / 2;*/
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
     margin: 0;
@@ -41,11 +54,37 @@
 .menuTitleText {
     margin-top: auto;
     margin-bottom: auto;
+    margin-bottom: 0;
+    margin-left: 0;
     padding: 0;
+    /*font-size: 1.4rem;*/
+    font-size: 1.7rem;
+    font-weight: 900;
     color: #FFF5EE;
     opacity: 0.8;
-    font-size: 1.7rem;
-    font-weight: 400;
+}
+
+.containerMenuTitleDescription {
+    display: grid;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    /*grid-row: 1 / 3;*/
+    /*grid-column: 2 / 3;*/
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    margin: 0;
+    padding: 0;
+}
+
+.menuTitleDescriptionText {
+    margin: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    font-weight: 900;
+    color: #00B7B5;
+    opacity: 0.9;
 }
 
 #containerMenuButtonsMain {
@@ -80,45 +119,107 @@
     grid-template-columns: 1fr;
 }
 
+/* home */
 .containerMenuButtonHome {
     display: grid;
     grid-row: 1 / 1;
     grid-column: 1 / 2;
+    /*grid-template-rows: 1fr;*/
+    grid-template-rows: 7fr 3fr;
+    /*grid-template-columns: 1fr;*/
+    grid-template-columns: 1fr 1fr;
+}
+
+.containerMenuButtonHomeTextDisplay {
+    display: grid;
+    grid-row: 1 / 1;
+    grid-column: 1 / 2;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
 }
 
+.containerMenuButtonHomeIconDisplay {
+    display: grid;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+/*build*/
 .containerMenuButtonGameSnowmanBuild {
     display: grid;
     grid-row: 1 / 1;
     grid-column: 1 / 2;
+    /*grid-template-rows: 1fr;*/
+    grid-template-rows: 7fr 3fr;
+    /*grid-template-columns: 1fr;*/
+    grid-template-columns: 1fr 1fr;
+}
+
+.containerMenuButtonGameSnowmanBuildTextDisplay {
+    display: grid;
+    grid-row: 1 / 1;
+    grid-column: 1 / 2;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
 }
 
+.containerMenuButtonGameSnowmanBuildIconDisplay {
+    display: grid;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+
+/*destroy*/
 .containerMenuButtonGameSnowmanDestroy {
     display: grid;
     grid-row: 1 / 1;
     grid-column: 1 / 2;
+    /*grid-template-rows: 1fr;*/
+    grid-template-rows: 7fr 3fr;
+    /*grid-template-columns: 1fr;*/
+    grid-template-columns: 1fr 1fr;
+}
+
+.containerMenuButtonGameSnowmanDestroyTextDisplay {
+    display: grid;
+    grid-row: 1 / 1;
+    grid-column: 1 / 2;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.containerMenuButtonGameSnowmanDestroyIconDisplay {
+    display: grid;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
 }
 
 .containerMenuButtonText {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    align-items: center;
-    text-align: center;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*border: 0;*/
+    /*align-items: center;*/
+    /*text-align: center;*/
 }
 
 .menuButtonText {
+    margin: auto;
+    margin-bottom: 0;
+    margin-right: 0;
+    /*color: #1c7293;*/
     color: #1c7293;
+    opacity: 0.8;
     font-size: 1rem;
     font-weight: 600;
-    margin: 0;
 }
 
 #containerMenuButtonHomeMain {
@@ -131,24 +232,32 @@
 
 .menuButtonClick {
     background-color: #000000;
-    margin: 0;
-    padding: 0;
     border: 0;
-    align-items: center;
-    text-align: center;
 }
 
 .fa-igloo {
-    font-size: 2.1rem;
+    margin: auto;
+    margin-bottom: 0;
+    margin-left: 0;
+    font-size: 1.9rem;
     /*color: #FFDEADFF;*/
     color: #FFFFFF;
     text-shadow: 4px -1px 20px #FFFFFF;
 }
 
 .fa-snowman {
+    margin: auto;
+    margin-bottom: 0;
+    margin-left: 0;
     font-size: 2.1rem;
     color: #FFFFFF;
     text-shadow: 4px -1px 20px #FFFFFF;
+}
+
+.fa-snowflake {
+    color: #FFF5EE;
+    opacity: 0.8;
+    font-size: 0.8rem;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -168,23 +277,6 @@
     }
 }
 
-@media (max-width: 1200px) {
-
-    #containerSectionMenu {
-        display: grid;
-        grid-template-rows: 2fr 8fr 0fr;
-        grid-template-columns: 1fr 6fr 12fr 1fr;
-    }
-
-    #containerMenuMainParts {
-        display: grid;
-        grid-row: 1 / 1;
-        grid-column: 1 / 1;
-        grid-template-rows: 1fr;
-        grid-template-columns: 4fr 6fr;
-    }
-}
-
 @media (max-width: 1500px) {
 
     #containerSectionMenu {
@@ -199,5 +291,23 @@
         grid-column: 1 / 1;
         grid-template-rows: 1fr;
         grid-template-columns: 4fr 6fr;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    #containerSectionMenu {
+        display: grid;
+        /*grid-template-rows: 2fr 8fr 0fr;*/
+        grid-template-rows: 0fr 8fr 0fr;
+        grid-template-columns: 1fr 6fr 12fr 1fr;
+    }
+
+    #containerMenuMainParts {
+        display: grid;
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        grid-template-rows: 1fr;
+        grid-template-columns: 3fr 7fr;
     }
 }
