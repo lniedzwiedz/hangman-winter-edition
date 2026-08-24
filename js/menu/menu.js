@@ -42,26 +42,6 @@ function createContainerMenuButtons() {
     createContainerMenuButtonGameSnowmanDestroy();
 }
 
-// function createContainerMenuButtonHome1() {
-//     createElementDiv(containerMenuButtonsMainParts, containerMenuButtonHomeMain);
-//     createElementDiv(containerMenuButtonHomeMain, containerMenuButtonHomeText);
-//     setElementClassName(containerMenuButtonHomeMain, containerMenuButtonHome)
-//     setElementClassName(containerMenuButtonHomeText, containerMenuButtonHome)
-//     setElementClassName(containerMenuButtonHomeText, containerMenuButtonText)
-//
-//     createElementP(containerMenuButtonHomeText, menuButtonHomeText);
-//     setElementClassName(menuButtonHomeText, menuButtonText)
-//     setElementTextById(menuButtonHomeText, menuButtonHomeTextDisplay);
-//
-//     createElementDiv(containerMenuButtonHomeMain, containerMenuButtonHomeClick);
-//     setElementClassName(containerMenuButtonHomeClick, containerMenuButtonHome)
-//
-//     createElementButton(containerMenuButtonHomeClick, menuButtonHomeClick);
-//     setElementClassName(menuButtonHomeClick, containerMenuButtonHome)
-//     setElementClassName(menuButtonHomeClick, menuButtonClick)
-//     setFunctionOnclick(menuButtonHomeClick, functionNameOnclickCreateSubpageHome);
-// }
-
 function createContainerMenuButtonHome() {
     createElementDiv(containerMenuButtonsMainParts, containerMenuButtonHomeMain);
 

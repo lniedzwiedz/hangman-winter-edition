@@ -102,7 +102,8 @@
     opacity: 0.1;
 }
 
-@media (max-width: 1200px) {
+/*@media (max-width: 1200px) {*/
+@media (max-width: 1024px) {
 
     .containerGameSnowmanDescription-gameOn {
         display: grid;
@@ -118,5 +119,12 @@
         grid-column: 1 / 2;
         grid-template-rows: 2fr 6fr 2fr;
         grid-template-columns: 1fr 8fr 1fr;
+    }
+
+    .containerGameSnowmanDescription-gameButtonText {
+        display: grid;
+        grid-row: 1 / 2;
+        grid-template-rows: 25fr 20fr 20fr 10fr 25fr;
+        grid-template-columns: 1fr;
     }
 }

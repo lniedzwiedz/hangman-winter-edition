@@ -126,7 +126,7 @@ const menuTitleTextDisplay = "HANGMAN";
 
 const containerMenuTitleDescription = "containerMenuTitleDescription";
 const menuTitleDescriptionText = "menuTitleDescriptionText";
-const menuTitleDescriptionTextDisplay = "&nbsp &nbsp WINTER EDITI <i class=\"fa-regular fa-snowflake\"></i> N";
+const menuTitleDescriptionTextDisplay = "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp WINTER EDITI <i class=\"fa-regular fa-snowflake\"></i> N";
 
 const containerMenuButtonsMain = "containerMenuButtonsMain";
 const containerMenuButtonsMainParts = "containerMenuButtonsMainParts";

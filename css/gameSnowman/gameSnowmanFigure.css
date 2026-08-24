@@ -1003,12 +1003,26 @@
 
     #containerSnowmanFigureAction {
         display: grid;
-        grid-row: 2 / 6;
+        grid-row: 1 / 7;
         grid-column: 2 / 6;
         border: none;
         border-radius: 0.45rem;
+        justify-content: center;
         grid-template-rows:  minmax( 450px, 450px);
         grid-template-columns:  minmax( 300px, 300px);
+    }
+}
+
+@media (max-width: 1024px) {
+
+    #containerSnowmanFigureAction {
+        display: grid;
+        grid-row: 1 / 7;
+        grid-column: 2 / 6;
+        border: none;
+        border-radius: 0.45rem;
+        grid-template-rows:  minmax( 400px, 400px);
+        grid-template-columns:  minmax( 250px, 250px);
         justify-content: center;
     }
 }

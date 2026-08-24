@@ -43,7 +43,6 @@
     font-weight: 900;
     color: #1b3b6f;
     opacity: 0.8;
-
 }
 
 .gameSnowmanLivesNumber {
@@ -52,7 +51,7 @@
     font-weight: 900;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
 
     .containerGameSnowmanLivesMain {
         display: grid;
@@ -72,8 +71,13 @@
         display: grid;
         grid-row: 1 / 1;
         grid-column: 1 / 2;
-        grid-template-rows: 2fr 7fr 1fr;
+        /*grid-template-rows: 2fr 7fr 1fr;*/
+        grid-template-rows: 3fr 7fr 0fr;
         grid-template-columns: 0fr 10fr 0fr;
         background-color: black;
+    }
+
+    .gameSnowmanLivesBase {
+        font-size: 0.7rem;
     }
 }

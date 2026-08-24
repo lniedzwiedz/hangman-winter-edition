@@ -80,7 +80,19 @@
     opacity: 0.4;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
+
+    #containerSectionFooter {
+        display: grid;
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        grid-template-rows: 1fr;
+        grid-template-columns: 5fr 90fr 5fr;
+    }
+}
+
+/*@media (max-width: 1200px) {*/
+@media (max-width: 1024px) {
 
     #containerSectionFooter {
         display: grid;
@@ -92,16 +104,5 @@
 
     .footerAuthor {
         font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 1500px) {
-
-    #containerSectionFooter {
-        display: grid;
-        grid-row: 1 / 1;
-        grid-column: 1 / 1;
-        grid-template-rows: 1fr;
-        grid-template-columns: 5fr 90fr 5fr;
     }
 }

@@ -45,7 +45,7 @@
     color: #1a759f;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
 
     .containerGameSnowmanWordToDiscoverMain {
         display: grid;
