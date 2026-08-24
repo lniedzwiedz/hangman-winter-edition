@@ -490,7 +490,7 @@ function createContainersForWord() {
             newDiv.classList.add(gameSnowmanElementWordToDiscover);
             newP.setAttribute("id", "wordChar-" + i);
             newP.setAttribute("id", "wordChar-" + i);
-            newP.innerText = "X";
+            // newP.innerText = "X";
         }
         columnChildStart += 3;
         columnChildEnd += 3;
