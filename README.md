@@ -18,7 +18,7 @@ Classic Hangman with a snowy twist, redesigned in two fun ways. In both games, g
 
 ---
 
-## 👉 [Play the game](https://lniedzwiedz.github.io/website-simpleGames/)
+## 👉 [Play the game](https://lniedzwiedz.github.io/hangman-winter-edition/)
 
 
  
