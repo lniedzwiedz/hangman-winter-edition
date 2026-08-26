@@ -1,7 +1,7 @@
-.containerGameSnowmanLivesMain {
+#containerGameSnowmanLivesMain {
     display: grid;
-    grid-row: 4 / 4;
-    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+    grid-column: 8 / 11;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
     background-color: black;
@@ -38,7 +38,6 @@
 .gameSnowmanLivesBase {
     margin: auto;
     padding: 0;
-    /*font-size: 0.7rem;*/
     font-size: 0.8rem;
     font-weight: 900;
     color: #1b3b6f;
@@ -51,33 +50,27 @@
     font-weight: 900;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
 
-    .containerGameSnowmanLivesMain {
+    #containerGameSnowmanLivesMain {
         display: grid;
-        grid-row: 4 / 5;
-        grid-column: 3 / 4;
+        grid-row: 7 / 8;
+        grid-column: 8 / 11;
         grid-template-rows: 1fr;
         grid-template-columns: 1fr;
         background-color: black;
-    }
 
-    .gameSnowmanLivesNumber {
-        font-size: 0.8rem;
-        font-weight: 900;
     }
+}
 
-    .containerGameSnowmanLivesMainParts {
+@media (max-width: 1024px) {
+
+    #containerGameSnowmanLivesMain {
         display: grid;
-        grid-row: 1 / 1;
-        grid-column: 1 / 2;
-        /*grid-template-rows: 2fr 7fr 1fr;*/
-        grid-template-rows: 3fr 7fr 0fr;
-        grid-template-columns: 0fr 10fr 0fr;
+        grid-row: 5 / 6;
+        grid-column: 8 / 11;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
         background-color: black;
-    }
-
-    .gameSnowmanLivesBase {
-        font-size: 0.7rem;
     }
 }

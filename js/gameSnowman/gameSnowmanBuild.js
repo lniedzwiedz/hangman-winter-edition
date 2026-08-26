@@ -68,7 +68,7 @@ function setConfigurationForGameSnowmanBuild() {
 function setConfigurationForGameSnowmanDestroy() {
     setConfigurationForGameCommon();
     indexGroups = indexGroups3GameSnowmanDestroy;
-    createStartContainersGameSnowmanSave();
+    createStartContainersGameSnowmanDestroy();
 }
 
 const words = fileWithWords.split(", ")
@@ -445,13 +445,11 @@ function changeLivesNumberVisible() {
     elemEnd.innerHTML = ((gameLives.length - 1) - countedWrongShots).toString();
 }
 
-function createContainersForWord() {
+function createContainersForWordToDiscover() {
 
-    createElementDiv(containerGameSnowmanDescriptionElements, containerGameSnowmanWordToDiscoverMain);
-    let containerMain = document.getElementById(containerGameSnowmanWordToDiscoverMain);
-    containerMain.classList.add(containerGameSnowmanWordToDiscoverMain);
-
+    createElementDiv(containerMainSectionGameSnowman, containerGameSnowmanWordToDiscoverMain);
     createElementDiv(containerGameSnowmanWordToDiscoverMain, containerGameSnowmanWordToDiscoverMainParts);
+
     let containerMainParts = document.getElementById(containerGameSnowmanWordToDiscoverMainParts);
     containerMainParts.classList.add(containerGameSnowmanWordToDiscoverMainParts);
 
@@ -501,11 +499,9 @@ gameLives = "" + "" + maxWrongShots;
 
 function createContainersForLives() {
 
-    createElementDiv(containerGameSnowmanDescriptionElements, containerGameSnowmanLivesMain);
-    let containerMain = document.getElementById(containerGameSnowmanLivesMain);
-    containerMain.classList.add(containerGameSnowmanLivesMain);
-
+    createElementDiv(containerMainSectionGameSnowman, containerGameSnowmanLivesMain);
     createElementDiv(containerGameSnowmanLivesMain, containerGameSnowmanLivesMainParts);
+
     let containerMainParts = document.getElementById(containerGameSnowmanLivesMainParts);
     containerMainParts.classList.add(containerGameSnowmanLivesMainParts);
 
@@ -550,40 +546,40 @@ function createContainersForLives() {
 }
 
 function setClassNameGameSnowman(elementId, suffixText) {
-    let name = containerGameSnowmanDescription + "-" + suffixText;
+    let name = containerHomeGameSnowmanDescription + "-" + suffixText;
     document.getElementById(elementId).classList.add(name);
 }
 
 function createContainersForGameDescription(gameName, gameSnowmanDescriptionText) {
 
-    let containerGameSnowmanDescriptionSpecified = containerGameSnowmanDescription + gameName;
-    let containerButtonFiled = containerGameSnowmanDescriptionSpecified + "-gameOn";
-    createElementDiv(containerGameSnowmanDescriptionElements, containerButtonFiled);
-    setClassNameGameSnowman(containerButtonFiled, "gameOn");
+    createElementDiv(containerMainSectionGameSnowman, containerGameSnowmanDescription);
+    createElementDiv(containerGameSnowmanDescription, containerGameSnowmanDescriptionElements);
 
-    let containerDescription = containerGameSnowmanDescriptionSpecified + "-gameButtonText";
-    createElementDiv(containerButtonFiled, containerDescription);
-    setClassNameGameSnowman(containerDescription, "gameButtonText");
+    let rowChildStart = 2;
+    let columnChildStart = 2;
+    let rowChildEnd = 3;
+    let columnChildEnd = 3;
 
     for (let i = 0; i < gameSnowmanDescriptionText.length; i++) {
 
-        let elementId = gameSnowmanDescriptionElementText + gameName + "-" + i;
-        createElementDiv(containerDescription, elementId);
-
-        let elementClass = containerGameSnowmanDescriptionElementText + "-" + i;
-        setElementClassName(elementId, elementClass);
+        let elementId = containerGameSnowmanDescriptionElementText + "-" + i;
+        createElementDiv(containerGameSnowmanDescriptionElements, elementId);
+        setElementClassName(elementId, elementId);
 
         let newP = document.createElement("p");
         document.getElementById(elementId).append(newP);
         newP.innerHTML = gameSnowmanDescriptionText[i];
-        newP.classList.add(gameSnowmanDescriptionElementText);
-        newP.classList.add(gameSnowmanDescriptionElementText + "-" + i);
+        newP.classList.add(gameSnowmanDescriptionElementTextLine + "-" + i);
+        newP.classList.add("gameSnowmanDescriptionElementText");
+
+        columnChildStart += 2;
+        columnChildEnd += 2;
     }
 }
 
 function createContainerGameSnowmanWordElements111(gameNameSnowmanBuild, gameSnowmanDescriptionTextBuild) {
     createContainersForGameDescription(gameNameSnowmanBuild, gameSnowmanDescriptionTextBuild);
-    createContainersForWord();
+    createContainersForWordToDiscover();
     createContainersForLives();
 }
 
@@ -592,7 +588,7 @@ function createContainerGameSnowmanBuildWordElements() {
 }
 
 function createContainerGameSnowmanDestroyWordElements() {
-    createContainerGameSnowmanWordElements111(gameNameSnowmanBuild, gameSnowmanDescriptionTextDestroy);
+    createContainerGameSnowmanWordElements111(gameNameSnowmanDestroy, gameSnowmanDescriptionTextDestroy);
 }
 
 function removeElementsById(elementId) {
@@ -603,16 +599,16 @@ function removeElementsById(elementId) {
 
 function setGameOverTextColorName() {
     let text = "color: " + winColorSnowman;
-    let cn = gameSnowmanDescriptionElementText + "-1";
+    let cn = homeButtonDescriptionElementTextLine + "-1";
     setElementTextByClassName(cn, text);
 }
 
 function setGameOverEndText(textEnd) {
-    setElementTextByClassName(gameSnowmanDescriptionElementText + "-4", textEnd);
+    setElementTextByClassName(gameSnowmanDescriptionElementTextLine + "-4", textEnd);
 }
 
 function setGameOverTextGameResult(textIsWin) {
-    setElementTextByClassName(gameSnowmanDescriptionElementText + "-2", textIsWin);
+    setElementTextByClassName(gameSnowmanDescriptionElementTextLine + "-2", textIsWin);
 }
 
 function setGameOverTextLoser() {
@@ -798,11 +794,6 @@ function createContainersForGameSnowmanFigureMessageGoodbyeText() {
     document.getElementById(snowmanFigureStartGameElement1goodbyeText).classList.add(snowmanFigureStartGameElementSetAnimationToShowColor);
 }
 
-function createStartContainersForGameSnowmanWord() {
-    createElementDiv(containerMainSectionGameSnowman, containerGameSnowmanWord);
-    createElementDiv(containerGameSnowmanWord, containerGameSnowmanDescriptionElements);
-}
-
 function createStartContainersForGameSnowmanKeyboard() {
     createElementDiv(containerMainSectionGameSnowman, containerGameSnowmanKeyboard);
     createElementDiv(containerGameSnowmanKeyboard, containerGameSnowmanKeyboardElements);
@@ -811,7 +802,6 @@ function createStartContainersForGameSnowmanKeyboard() {
 function createStartContainersGameSnowmanMain() {
     createMainContainerForGameSnowman();
     createStartContainersForGameSnowmanAnimation();
-    createStartContainersForGameSnowmanWord();
     createStartContainersForGameSnowmanKeyboard();
 }
 
@@ -822,7 +812,7 @@ function createStartContainersGameSnowman() {
     createKeyboardButtonsGameSnowmanBuild();
 }
 
-function createStartContainersGameSnowmanSave() {
+function createStartContainersGameSnowmanDestroy() {
     createStartContainersGameSnowmanMain();
     createContainersSnowmanFigureMainElements();
     setShapeGameSnowmanDestroyFigureElements();

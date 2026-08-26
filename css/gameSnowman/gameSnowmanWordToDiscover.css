@@ -1,7 +1,8 @@
-.containerGameSnowmanWordToDiscoverMain {
+/*.containerGameSnowmanWordToDiscoverMain {*/
+#containerGameSnowmanWordToDiscoverMain {
     display: grid;
-    grid-row: 3 / 4;
-    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    grid-column: 8 / 11;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
     background-color: black;
@@ -45,19 +46,26 @@
     color: #1a759f;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
 
-    .containerGameSnowmanWordToDiscoverMain {
+    #containerGameSnowmanWordToDiscoverMain {
         display: grid;
-        grid-row: 2 / 4;
-        grid-column: 3 / 4;
+        grid-row: 6 / 7;
+        grid-column: 8 / 11;
         grid-template-rows: 1fr;
         grid-template-columns: 1fr;
         background-color: black;
     }
+}
 
-    .gameSnowmanElementWordToDiscover {;
-        font-size: 0.9rem;
-        font-weight: 600;
+@media (max-width: 1024px) {
+
+    #containerGameSnowmanWordToDiscoverMain {
+        display: grid;
+        grid-row: 7 / 8;
+        grid-column: 2 / 11;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        background-color: black;
     }
 }

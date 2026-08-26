@@ -13,6 +13,16 @@
     --snowmanFigureElementHatBackgroundColor: #000000;
 }
 
+/* gameSnowmanFigure.css */
+#containerGameSnowmanAnimation {
+    display: grid;
+    grid-row: 2 / 8;
+    grid-column: 2 / 6;
+    /*box-shadow: 0 2px 10px 0 #621735;*/
+    box-shadow: 0 2px 10px 0 #4cc9f0;
+    grid-template-rows: 1fr;
+}
+
 #containerGameSnowmanAnimationElements {
     display: grid;
     grid-row: 1 / 1;
@@ -1014,6 +1024,12 @@
 }
 
 @media (max-width: 1024px) {
+
+    #containerGameSnowmanAnimation {
+        display: grid;
+        grid-row: 2 / 6;
+        grid-column: 2 / 6;
+    }
 
     #containerSnowmanFigureAction {
         display: grid;

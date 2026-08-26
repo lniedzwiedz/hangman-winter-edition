@@ -1,0 +1,156 @@
+#containerHomeButtonSnowmanBuildMain {
+    display: grid;
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+#containerHomeButtonSnowmanDestroyMain {
+    display: grid;
+    grid-row: 4 / 4;
+    grid-column: 3 / 4;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.containerHomeButtonParts {
+    display: grid;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    grid-template-rows: repeat(1, 1fr 8fr 1fr);
+    grid-template-columns: 10fr 70fr 10fr;
+}
+
+.containerHomeButton-gameButtonClick {
+    display: grid;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+
+}
+
+.homeButtonGameSnowman {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.containerHomeButtonGameSnowmanGameText {
+    display: grid;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    grid-template-rows: 30fr 20fr 20fr 10fr 20fr;
+    grid-template-columns: 1fr;
+    border-radius: 2%;
+    box-shadow: var(--homeButtoGameBnoxShadow);
+    opacity: 0.9;
+}
+
+.containerHomeButtonGameSnowmanGameText:hover {
+    box-shadow: var(--homeButtoGameBnoxShadowHover);
+    opacity: 1;
+}
+
+
+.homeButtonGameSnowman-gameButtonField:hover {
+    box-shadow: var(--homeButtoGameBnoxShadowHover);
+    opacity: 1;
+}
+
+#containerDescriptionElements {
+    display: grid;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    grid-template-rows: 1fr 7fr 5fr 2fr 1fr;
+    grid-template-columns: 1fr 24fr 1fr;
+}
+
+#containerDescriptionToDiscover {
+}
+
+.homeButtonDescriptionElementTextLine {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    bottom: 0;
+    color: #83BED6;
+    /*opacity: 0.5;*/
+}
+
+.containerHomeButtonDescriptionElementText-0 {
+    display: grid;
+    grid-row: 1 / 2;
+    grid-column: 1 / 1;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.containerHomeButtonDescriptionElementText-1 {
+    display: grid;
+    grid-row: 2 / 3;
+    grid-column: 1 / 1;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.containerHomeButtonDescriptionElementText-2 {
+    display: grid;
+    grid-row: 3 / 4;
+    grid-column: 1 / 1;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.containerHomeButtonDescriptionElementText-3 {
+    display: grid;
+    grid-row: 4 / 5;
+    grid-column: 1 / 1;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.homeButtonDescriptionElementTextLine-0 {
+    font-size: 1.7rem;
+    font-weight: 400;
+    /* do not remove this workaround/hardcode (margin + margin-bottom),
+    as it will break the display of game descriptions on the buttons !!/*/
+    margin: auto;
+    margin-bottom: 0;
+}
+
+.homeButtonDescriptionElementTextLine-1 {
+    font-size: 1.1rem;
+    font-weight: 200;
+    margin-top: 0;
+}
+
+.homeButtonDescriptionElementTextLine-2 {
+    font-size: 1.4rem;
+    font-weight: 200;
+    margin: auto;
+    margin-bottom: 0;
+}
+
+.homeButtonDescriptionElementTextLine-3 {
+    font-size: 0.9rem;
+    font-weight: 200;
+    margin: auto;
+}
+
+.homeButtonDescriptionElementTextLine-4 {
+    font-size: 1.2rem;
+    font-weight: 200;
+    margin-top: 0;
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 1024px) {
+
+}
