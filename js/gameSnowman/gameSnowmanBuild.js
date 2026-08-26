@@ -487,7 +487,7 @@ function createContainersForWordToDiscover() {
         } else {
             newDiv.classList.add(gameSnowmanElementWordToDiscover);
             newP.setAttribute("id", "wordChar-" + i);
-            newP.setAttribute("id", "wordChar-" + i);
+            // newP.setAttribute("id", "wordChar-" + i);
             // newP.innerText = "X";
         }
         columnChildStart += 3;
@@ -523,6 +523,7 @@ function createContainersForLives() {
         parentElement.append(newDiv);
         newDiv.style.display = "grid";
         newDiv.classList.add(gameSnowmanLives);
+        newDiv.setAttribute("id", "gameLive-" + i);
 
         if (i === maxWrongShots - 1)
             newDiv.classList.add(gameSnowmanLivesNumber);
@@ -538,7 +539,7 @@ function createContainersForLives() {
         newDiv.append(newP);
         newP.classList.add("gameSnowmanLivesBase");
         newP.innerHTML += gameLivesChars[i];
-        newP.setAttribute("id", "gameLive-" + i);
+        // newP.setAttribute("id", "gameLive-" + i);
 
         columnChildStart += 3;
         columnChildEnd += 3;
