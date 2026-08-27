@@ -108,8 +108,8 @@
         display: grid;
         grid-row: 1 / 1;
         grid-column: 1 / 1;
-        /*grid-template-rows: 14fr repeat(3, 0.0005fr) repeat(4, 0.5fr 25fr 0.5fr) 0fr;*/
-        grid-template-rows: 0fr repeat(3, 0.0005fr) repeat(4, 0.5fr 25fr 0.5fr) 0fr;
+        grid-template-rows: 14fr repeat(3, 0.0005fr) repeat(4, 0.5fr 25fr 0.5fr) 0fr;
+        /*grid-template-rows: 5fr repeat(3, 0.0005fr) repeat(4, 0.5fr 25fr 0.5fr) 0fr;*/
         /*grid-template-columns: 1fr 24fr 1fr;*/
         grid-template-columns: 0fr 24fr 0fr;
     }
@@ -123,5 +123,15 @@
         /*grid-row: 7 / 9;*/
         grid-column: 2 / 11;
         grid-template-rows: 1fr;
+    }
+
+    #containerGameSnowmanKeyboardElements {
+        display: grid;
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        grid-template-rows: 0fr repeat(3, 0.0005fr) repeat(4, 0.5fr 25fr 0.5fr) 0fr;
+        /*grid-template-rows: 5fr repeat(3, 0.0005fr) repeat(4, 0.5fr 25fr 0.5fr) 0fr;*/
+        /*grid-template-columns: 1fr 24fr 1fr;*/
+        grid-template-columns: 0fr 24fr 0fr;
     }
 }
