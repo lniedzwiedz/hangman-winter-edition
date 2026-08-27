@@ -312,7 +312,8 @@
         display: grid;
         grid-template-rows: 0fr 8fr 0fr;
         /*grid-template-rows: 1fr 9fr 0fr;*/
-        grid-template-columns: 1fr 6fr 12fr 1fr;
+        /*grid-template-columns: 1fr 6fr 12fr 1fr;*/
+        grid-template-columns: 5fr 30fr 60fr 5fr;
     }
 
     #containerMenuMainParts {

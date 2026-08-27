@@ -69,3 +69,25 @@
         background-color: black;
     }
 }
+
+@media (max-width: 950px) {
+
+    /*v1*/
+    /*#containerGameSnowmanWordToDiscoverMain {*/
+    /*    display: grid;*/
+    /*    grid-row: 8 / 9;*/
+    /*    grid-column: 2 / 11;*/
+    /*    grid-template-rows: 1fr;*/
+    /*    grid-template-columns: 1fr;*/
+    /*    background-color: black;*/
+    /*}*/
+
+    #containerGameSnowmanWordToDiscoverMain {
+        display: grid;
+        grid-row: 6 / 7;
+        grid-column: 2 / 11;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        background-color: black;
+    }
+}

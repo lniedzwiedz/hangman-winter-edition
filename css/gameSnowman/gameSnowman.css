@@ -3,53 +3,61 @@
     grid-row: 1 / 1;
     grid-column: 1 / 1;
 
-    /*grid-template-rows:10fr 10fr*/
-    /*10fr 10fr*/
-    /*10fr 10fr*/
-    /*10fr 10fr*/
-    /*10fr 10fr;*/
-    /*grid-template-columns: 15fr 3fr*/
-    /*13fr 21fr*/
-    /*3fr 4fr 3fr*/
-    /*21fr 13fr*/
-    /*3fr 15fr;*/
+    /*Base: rows, columns — do not remove!!!*/
+    /*grid-template-rows:*/
+    /*        10fr 10fr*/
+    /*        10fr 10fr*/
+    /*        10fr 10fr*/
+    /*        10fr 10fr*/
+    /*        10fr 10fr;*/
 
+    /*grid-template-columns: */
+    /*        15fr 3fr*/
+    /*        13fr 21fr*/
+    /*        3fr 4fr */
+    /*        3fr*/
+    /*        21fr 13fr*/
+    /*        3fr 15fr;*/
 
     grid-template-rows:
             5fr 15fr
-    15fr 15fr
-    15fr 15fr
-    15fr 0fr
-    0fr 5fr;
+            15fr 15fr
+            15fr 15fr
+            15fr 0fr
+            0fr 5fr;
+
+
+
     grid-template-columns:
             15fr 3fr
-    10fr 20fr
-    2fr 0fr
+            10fr 20fr
+            2fr 0fr
             2fr
-    20fr 10fr
-    3fr 15fr;
+            20fr 10fr
+            3fr 15fr;
 }
 
 @media (max-width: 1600px) {
+
     #containerMainSectionGameSnowman {
         display: grid;
         grid-row: 1 / 1;
         grid-column: 1 / 1;
 
         grid-template-rows:
-            5fr 15fr
-    15fr 15fr
-    15fr 15fr
-    15fr 0fr
-    0fr 5fr;
+                5fr 15fr
+                15fr 15fr
+                15fr 15fr
+                15fr 0fr
+                0fr 5fr;
 
         grid-template-columns:
-            10fr 8fr
-    10fr 20fr
-    2fr 0fr
-            2fr
-    20fr 10fr
-    8fr 10fr;
+                10fr 8fr
+                10fr 20fr
+                2fr 0fr
+                2fr
+                20fr 10fr
+                8fr 10fr;
     }
 }
 
@@ -60,19 +68,19 @@
         grid-column: 1 / 1;
 
         grid-template-rows:
-            5fr 15fr
-    15fr 15fr
-    15fr 15fr
-    15fr 0fr
-    0fr 5fr;
+                5fr 15fr
+                15fr 15fr
+                15fr 15fr
+                15fr 0fr
+                0fr 5fr;
 
         grid-template-columns:
-            8fr 10fr
-    10fr 20fr
-    2fr 0fr
-            2fr
-    20fr 10fr
-    10fr 8fr;
+                8fr 10fr
+                10fr 20fr
+                2fr 0fr
+                2fr
+                20fr 10fr
+                10fr 8fr;
     }
 }
 
@@ -83,19 +91,19 @@
         grid-column: 1 / 1;
 
         grid-template-rows:
-            5fr 15fr
-    15fr 15fr
-    15fr 15fr
-    15fr 0fr
-    0fr 5fr;
+                5fr 15fr
+                15fr 15fr
+                15fr 15fr
+                15fr 0fr
+                0fr 5fr;
 
         grid-template-columns:
-            5fr 13fr
-    10fr 20fr
-    2fr 0fr
-            2fr
-    20fr 10fr
-    13fr 5fr;
+                5fr 13fr
+                10fr 20fr
+                2fr 0fr
+                2fr
+                20fr 10fr
+                13fr 5fr;
     }
 }
 
@@ -103,36 +111,57 @@
 
     #containerMainSectionGameSnowman {
         grid-template-rows:
-            5fr 15fr
-    15fr 0fr
-    0fr 15fr
-    15fr 15fr
-    15fr 5fr;
+                5fr 15fr
+                15fr 0fr
+                0fr 15fr
+                15fr 15fr
+                15fr 5fr;
 
         grid-template-columns:
-            5fr 13fr
-    10fr 20fr
-    2fr 0fr
-            2fr
-    20fr 10fr
-    13fr 5fr;
+                5fr 13fr
+                10fr 20fr
+                2fr 0fr
+                2fr
+                20fr 10fr
+                13fr 5fr;
     }
 }
 
 @media (max-width: 1024px) {
 
     #containerMainSectionGameSnowman {
-        grid-template-rows:3fr 15fr
-        16fr 1fr
-        18fr 1fr
-        10fr 1fr
-        30fr 3fr;
+        grid-template-rows:
+                3fr 15fr
+                16fr 1fr
+                18fr 1fr
+                10fr 1fr
+                30fr 3fr;
 
-        grid-template-columns:3fr 15fr
-        20fr 20fr
-        3fr 4fr 3fr
-        15fr 13fr
-        15fr 3fr;
+        grid-template-columns:
+                3fr 15fr
+                20fr 20fr
+                3fr 4fr
+                0fr
+                15fr 16fr
+                15fr 3fr;
     }
 }
 
+@media (max-width: 950px) {
+
+    #containerMainSectionGameSnowman {
+        grid-template-rows:
+                3fr 17fr
+                19fr 10fr
+                1fr 10fr
+                8fr 8fr
+                21fr 3fr;
+
+        grid-template-columns:
+                5fr 3fr
+                18fr 20fr
+                2fr 2fr 2fr
+                18fr 20fr
+                 5fr 5fr;
+    }
+}

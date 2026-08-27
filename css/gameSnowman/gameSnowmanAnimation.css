@@ -13,7 +13,7 @@
     --snowmanFigureElementHatBackgroundColor: #000000;
 }
 
-/* gameSnowmanFigure.css */
+/* gameSnowmanAnimation.css */
 #containerGameSnowmanAnimation {
     display: grid;
     grid-row: 2 / 8;
@@ -41,6 +41,15 @@
     border-radius: 0.45rem;
     grid-template-rows:  minmax( 650px, 650px);
     grid-template-columns:  minmax( 400px, 400px);
+
+
+    /*grid-template-rows:  minmax( 450px, 450px);*/
+    /*grid-template-columns:  minmax( 300px, 300px);*/
+
+
+    /*grid-template-rows:  minmax( 450px, 450px);*/
+    /*grid-template-columns:  minmax( 300px, 300px);*/
+
     justify-content: center;
 }
 
@@ -1009,6 +1018,20 @@
     }
 }
 
+@media (max-width: 1600px) {
+
+    #containerSnowmanFigureAction {
+        display: grid;
+        grid-row: 1 / 7;
+        grid-column: 2 / 6;
+        border: none;
+        border-radius: 0.45rem;
+        justify-content: center;
+        grid-template-rows:  minmax( 450px, 450px);
+        grid-template-columns:  minmax( 300px, 300px);
+    }
+}
+
 @media (max-width: 1200px) {
 
     #containerSnowmanFigureAction {
@@ -1037,7 +1060,49 @@
         grid-column: 2 / 6;
         border: none;
         border-radius: 0.45rem;
-        grid-template-rows:  minmax( 400px, 400px);
+        grid-template-rows: minmax(300px, 300px);
+        grid-template-columns:  minmax( 200px, 200px);
+        justify-content: center;
+    }
+}
+
+@media (max-width: 950px) {
+
+    /*v1*/
+    #containerGameSnowmanAnimation {
+        display: grid;
+        grid-row: 2 / 5;
+        grid-column: 2 / 11;
+    }
+
+    /*v2*/
+    /*#containerGameSnowmanAnimation {*/
+    /*    display: grid;*/
+    /*    grid-row: 5 / 8;*/
+    /*    grid-column: 2 / 11;*/
+    /*}*/
+
+    #containerSnowmanFigureAction {
+        display: grid;
+        grid-row: 1 / 7;
+        grid-column: 2 / 6;
+        border: none;
+        border-radius: 0.45rem;
+        grid-template-rows:  minmax( 450px, 450px);
+        grid-template-columns:  minmax( 300px, 300px);
+        justify-content: center;
+    }
+}
+
+@media (max-width: 800px) {
+
+    #containerSnowmanFigureAction {
+        display: grid;
+        grid-row: 1 / 7;
+        grid-column: 2 / 6;
+        border: none;
+        border-radius: 0.45rem;
+        grid-template-rows: minmax(350px, 350px);
         grid-template-columns:  minmax( 250px, 250px);
         justify-content: center;
     }

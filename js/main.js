@@ -9,4 +9,4 @@ createMenu();
 createSubpageHome();
 createFooter();
 
-console.log("Hangman - Winter Edition: version 20260827v116");
+console.log("Hangman - Winter Edition: version 20260827v117");

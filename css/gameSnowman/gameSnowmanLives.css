@@ -74,3 +74,39 @@
         background-color: black;
     }
 }
+
+@media (max-width: 950px) {
+
+    /*v1*/
+    /*#containerGameSnowmanLivesMain {*/
+    /*    display: grid;*/
+    /*!*    grid-row: 6 / 7;*!*/
+    /*    grid-column: 2 / 11;*/
+    /*grid-column: 8 / 11;*/
+    /*grid-template-rows: 1fr;*/
+    /*grid-template-columns: 1fr;*/
+    /*background-color: black;*/
+    /*}*/
+
+    /*v2a*/
+    /*#containerGameSnowmanLivesMain {*/
+    /*    display: grid;*/
+    /*    grid-row: 8 / 9;*/
+    /*grid-column: 2 / 11;*/
+    /*grid-column: 8 / 11;*/
+    /*grid-template-rows: 1fr;*/
+    /*grid-template-columns: 1fr;*/
+    /*background-color: black;*/
+    /*}*/
+
+    /*v2b*/
+    #containerGameSnowmanLivesMain {
+        display: grid;
+        grid-row: 7 / 8;
+        /* grid-column: 2 / 11; */
+        grid-column: 8 / 11;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        background-color: black;
+    }
+}

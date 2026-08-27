@@ -855,9 +855,8 @@ function removeContainerSnowmanFigureMessageActionsWelcomeText() {
 function createContainersForGameSnowmanFigureMessageGameOver() {
     removeContainerSnowmanFigureMessageActionsWelcomeText();
 
-    if (document.getElementById(containerSnowmanFigureElements) != null) {
+    if (document.getElementById(containerSnowmanFigureElements) != null)
         setAnimationSnowmanFigureElementsShapeRemoveColor();
-    }
 
     setTimeout(function () {
         createContainersForGameSnowmanFigureMessageGoodbyeText();
