@@ -31,7 +31,7 @@ function createElementP(parentId, childId) {
     createElement(parentId, childId, "p");
 }
 
-function createElementI(parentId, childId, iconStyle, iconClass ) {
+function createElementI(parentId, childId, iconStyle, iconClass) {
     createElement(parentId, childId, "i");
     let element = document.getElementById(childId);
     element.classList.add(iconStyle, iconClass);
@@ -66,4 +66,8 @@ function removeContainerMainSection() {
     removeMainContainerForGameSnowman();
     removeMainContainerGameSnowmanDestroy();
     removeContainerSectionContactForm();
+}
+
+function splitTextToArray(text, separator) {
+    return text.split(separator);
 }

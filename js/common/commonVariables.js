@@ -15,7 +15,6 @@ const containerHomeMainParts = "containerHomeMainParts";
 //game description
 const containerHomeGameSnowmanDescription = "containerHomeButton";
 const containerHomeButtonParts = "containerHomeButtonParts";
-// const containerGameSnowmanDescriptionElementText = "containerHomeButtonDescriptionElementText";
 const containerHomeButtonDescriptionElementText = "containerHomeButtonDescriptionElementText";
 
 const containerHomeButtonDescriptionGameSnowman = "containerHomeButtonGameSnowmanGameText";
@@ -100,11 +99,11 @@ const gameSnowmanDescriptionTextGameOverWinnerCongratulations = "Congratulations
 
 const containerGameSnowmanDescription = "containerGameSnowmanDescription";
 const containerGameSnowmanButtonParts = "containerGameSnowmanButtonParts";
-// const containerGameSnowmanDescriptionElementText = "containerHomeButtonDescriptionElementText";
 const containerGameSnowmanButtonDescriptionElementText = "containerHomeButtonDescriptionElementText";
 
 
 const containerGameSnowmanDescriptionElementText = "containerGameSnowmanDescriptionElementText";
+const gameSnowmanDescriptionElementText = "gameSnowmanDescriptionElementText";
 const gameSnowmanDescriptionElementTextLine = "gameSnowmanDescriptionElementTextLine";
 const gameSnowmanDescriptionTextBuild = ["BUILD SNOWMAN", "discover color name", "WIN GAME", "&", "snowman will change colour"];
 const gameSnowmanDescriptionTextDestroy = ["SAVE SNOWMAN", "discover color name", "WIN GAME", "&", "snowman will rise again"];
@@ -128,6 +127,7 @@ const containerGameSnowmanLives = "containerGameSnowmanLives";
 const containerGameSnowmanLivesMain = "containerGameSnowmanLivesMain";
 const containerGameSnowmanLivesMainParts = "containerGameSnowmanLivesMainParts";
 const gameSnowmanLives = "gameSnowmanLives";
+const gameSnowmanLivesBase = "gameSnowmanLivesBase";
 const gameSnowmanLivesNumber = "gameSnowmanLivesNumber";
 
 // CSS variable
@@ -187,9 +187,7 @@ const menuButtonGameSnowmanBuildIconName = "fa-snowman";
 const menuButtonGameSnowmanBuildIconStyle = "fa-solid";
 
 const containerMenuButtonGameSnowmanDestroyMain = "containerMenuButtonGameSnowmanDestroyMain";
-// const containerMenuButtonGameSnowmanDestroyText = "containerMenuButtonGameSnowmanDestroyText";
 const containerMenuButtonGameSnowmanDestroy = "containerMenuButtonGameSnowmanDestroy";
-// const containerMenuButtonGameSnowmanDestroyClick = "containerMenuButtonGameSnowmanDestroyClick";
 const menuButtonGameSnowmanDestroyClick = "menuButtonGameSnowmanDestroyClick";
 const menuButtonGameSnowmanDestroyText = "menuButtonGameSnowmanDestroyText";
 
@@ -210,7 +208,6 @@ const containerFooterAuthor = "containerFooterAuthor";
 const footerAuthor = "footerAuthor";
 const footerAuthorData = "Copyright &copy 2026 Liliana Niedźwiedź";
 const containerMainFooterEnvelope = "containerMainFooterEnvelope";
-// const footerIconEnvelope = "IvI";
 const footerIconEnvelope = '<i class="fa-solid fa-envelope"></i>';
 const sectionFooter = "sectionFooter";
 const functionNameOnclickCreateSubpageFormContact = "createSubpageFormContact";

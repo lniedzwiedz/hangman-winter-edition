@@ -1,5 +1,5 @@
 function createSubpageFormContact() {
-    console.log("> createSubpageFormContact");
+    // console.log("> createSubpageFormContact");
     removeContainerMainSection();
     createContainerMainFormContact();
 }

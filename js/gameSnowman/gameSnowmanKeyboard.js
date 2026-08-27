@@ -111,7 +111,6 @@ function disableKeyboardButton(clickedId) {
 
 function disableKeyboardButtons() {
     let keys = document.getElementsByClassName(snowmanKeyboardButtons);
-
     for (let i = 0; i < keys.length; i++) {
         keys[i].removeAttribute("onclick");
     }

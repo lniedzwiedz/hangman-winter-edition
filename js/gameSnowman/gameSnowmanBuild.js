@@ -36,16 +36,19 @@ let countedAnimationElements;
 let gameLives;
 let gameLivesChars;
 
-const fileWithWords = "NAVAJO WHITE, IVORY, BONE WHITE, ALABASTER, EGGSHELL, SEASHELL";
-const fileWithWordsH = "#FFDEAD, #F5F5DC, #FFF8DC, #EDEADE, #F0EAD6, #FFF5EE";
-const wordsH = fileWithWordsH.split(", ")
+const colorNamesList = "NAVAJO WHITE, IVORY, BONE WHITE, ALABASTER, EGGSHELL, SEASHELL";
+const colorHexCodesList = "#FFDEAD, #F5F5DC, #FFF8DC, #EDEADE, #F0EAD6, #FFF5EE";
+// const wordsH = colorHexCodes.split(", ")
+// const colorHexCodesArray = splitTextToArray(colorHexCodesList, ", ");
+const colorHexCodesArray = colorHexCodesToArray(colorHexCodesList);
 let winColorSnowman;
 
 function setConfigurationForGameCommon() {
-    word = getWord();
+    word = getRandomColorName();
     // word = "JAVA";
     console.log("word: " + word);
-    wordChar = getCharsNumber(word);
+    wordChar = wordToCharsArray(word);
+    // wordChar = getCharsNumber(word);
     wordCharsWithoutDuplicate = getCharsNumberWithoutDuplicate();
     cutDirection = [2, 6, 4, 1, 5, 0, 3]; // number index = indexGroups
     cutDirection2 = [0, 2];
@@ -55,7 +58,7 @@ function setConfigurationForGameCommon() {
     countedAnimationElements = 0;
     maxWrongShots = animationMaxNumber;
     gameLives = "LIVES " + maxWrongShots;
-    gameLivesChars = getCharsNumber(gameLives);
+    gameLivesChars = wordToCharsArray(gameLives);
     removeContainerMainSection();
 }
 
@@ -71,20 +74,25 @@ function setConfigurationForGameSnowmanDestroy() {
     createStartContainersGameSnowmanDestroy();
 }
 
-const words = fileWithWords.split(", ")
+// const words = colorNames.split(", ")
+const colorNamesArray = splitTextToArray(colorNamesList, ", ");
 
 function randomNumber() {
-    return Math.floor((Math.random() * (words.length)));
+    return Math.floor((Math.random() * (colorNamesArray.length)));
 }
 
-function getWord() {
+function colorHexCodesToArray(colorHexCodesList) {
+    return splitTextToArray(colorHexCodesList, ", ");
+}
+
+function getRandomColorName() {
     let index = randomNumber();
-    winColorSnowman = wordsH[index];
-    return words[index];
+    winColorSnowman = colorHexCodesArray[index];
+    return colorNamesArray[index];
 }
 
-function getCharsNumber(word) {
-    return word.split("");
+function wordToCharsArray(word) {
+    return splitTextToArray(word, "");
 }
 
 function getCharsNumberWithoutDuplicate() {
@@ -287,12 +295,13 @@ function playGameSnowmanBuild(clickedId) {
             setGameOverTextLoser();
             changeKeyboardButtonsGameSnowmanBuildGameOver();
             console.log("GAME OVER");
-            countedWrongShots += 77;
+            countedWrongShots += 20260306;
         }
     }
 }
 
 function playGameSnowmanDestroy(clickedId) {
+
     let keyValue = getKeyboardChar(clickedId);
     let isCharExist = checkCharacter(keyValue);
 
@@ -306,6 +315,7 @@ function playGameSnowmanDestroy(clickedId) {
             setDiscoveredChar(keyValue);
             setColorForSnowman();
             console.log("YOU WIN !!!");
+
         } else {
             setDiscoveredChar(keyValue);
             disableKeyboardButton(clickedId);
@@ -316,13 +326,14 @@ function playGameSnowmanDestroy(clickedId) {
         countedWrongShots += 1;
 
         if (countedWrongShots < maxWrongShots) {
+            // console.log("Oops! Well... something went wrong xD");
 
         } else {
             createContainersForGameSnowmanFigureMessageGameOver();
             setGameOverTextLoser();
             changeKeyboardButtonsGameSnowmanDestroyGameOver();
             console.log("GAME OVER");
-            countedWrongShots += 77;
+            countedWrongShots += 20260306;
         }
     }
 }
@@ -434,10 +445,9 @@ function removeShapeGameSnowmanDestroyFigureElements() {
 }
 
 function changeLivesNumberVisible() {
-    // let tempChangeColor = "#292929";
     let tempChangeColor = "#1c7293";
 
-    rootVariables.style.setProperty("--snowmanFigureColor", winColorSnowman);
+    // rootVariables.style.setProperty("--snowmanFigureColor", winColorSnowman);
     let elem = document.getElementById("gameLive-" + countedWrongShots);
     elem.style.backgroundColor = tempChangeColor;
 
@@ -537,7 +547,7 @@ function createContainersForLives() {
 
         let newP = document.createElement("p");
         newDiv.append(newP);
-        newP.classList.add("gameSnowmanLivesBase");
+        newP.classList.add(gameSnowmanLivesBase);
         newP.innerHTML += gameLivesChars[i];
         // newP.setAttribute("id", "gameLive-" + i);
 
@@ -571,7 +581,7 @@ function createContainersForGameDescription(gameName, gameSnowmanDescriptionText
         document.getElementById(elementId).append(newP);
         newP.innerHTML = gameSnowmanDescriptionText[i];
         newP.classList.add(gameSnowmanDescriptionElementTextLine + "-" + i);
-        newP.classList.add("gameSnowmanDescriptionElementText");
+        newP.classList.add(gameSnowmanDescriptionElementText);
 
         columnChildStart += 2;
         columnChildEnd += 2;
@@ -600,7 +610,7 @@ function removeElementsById(elementId) {
 
 function setGameOverTextColorName() {
     let text = "color: " + winColorSnowman;
-    let cn = homeButtonDescriptionElementTextLine + "-1";
+    let cn = gameSnowmanDescriptionElementTextLine + "-1";
     setElementTextByClassName(cn, text);
 }
 
@@ -619,6 +629,7 @@ function setGameOverTextLoser() {
 }
 
 function setGameOverTextWinner() {
+    ;
     setGameOverTextColorName()
     setGameOverTextGameResult(gameSnowmanDescriptionTextGameOverWinner);
     setGameOverEndText(gameSnowmanDescriptionTextGameOverWinnerCongratulations);
@@ -817,7 +828,6 @@ function createStartContainersGameSnowmanDestroy() {
     createStartContainersGameSnowmanMain();
     createContainersSnowmanFigureMainElements();
     setShapeGameSnowmanDestroyFigureElements();
-
     createContainerGameSnowmanDestroyWordElements();
     createKeyboardButtonsGameSnowmanDestroy();
 }
