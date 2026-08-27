@@ -20,7 +20,7 @@ function createContainerManuTitle() {
 
     // game menu title
     createElementDiv(containerMenuTitleMainPairs, containerMenuTitleText);
-    setElementClassName(containerMenuTitleText, containerMenuTitleText)
+    setElementClassName(containerMenuTitleText, containerMenuTitleText);
     createElementP(containerMenuTitleText, menuTitleText);
     setElementClassName(menuTitleText, menuTitleText)
     setElementTextById(menuTitleText, menuTitleTextDisplay);
@@ -28,10 +28,10 @@ function createContainerManuTitle() {
     // game menu title description
     createElementDiv(containerMenuTitleMainPairs, containerMenuTitleDescription);
     setElementClassName(containerMenuTitleMainPairs, containerMenuTitleMainPairs)
-    setElementClassName(containerMenuTitleDescription, containerMenuTitleDescription)
+    setElementClassName(containerMenuTitleDescription, containerMenuTitleDescription);
     createElementP(containerMenuTitleDescription, menuTitleDescriptionText);
     setElementClassName(menuTitleDescriptionText, menuTitleDescriptionText)
-    setElementTextById(menuTitleDescriptionText, menuTitleDescriptionTextDisplay);
+    setElementTextById(menuTitleDescriptionText, menuTitleDescriptionTextDisplayMediaQueryMaxWidthDefault)
 }
 
 function createContainerMenuButtons() {

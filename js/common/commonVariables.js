@@ -147,7 +147,11 @@ const menuTitleTextDisplay = "HANGMAN";
 
 const containerMenuTitleDescription = "containerMenuTitleDescription";
 const menuTitleDescriptionText = "menuTitleDescriptionText";
-const menuTitleDescriptionTextDisplay = "&nbsp &nbsp &nbsp  WINTER EDITI <i class=\"fa-regular fa-snowflake\"></i> N";
+
+const mediaQueryMaxWidth1200 = window.matchMedia("(max-width: 1200px)");
+const menuTitleDescriptionTextDisplayMediaQueryMaxWidth1200 = "&nbsp &nbsp &nbsp WINTER EDITI <i class=\"fa-regular fa-snowflake\"></i> N";
+// const menuTitleDescriptionTextDisplayMediaQueryMaxWidth1600  = "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp WINTER EDITI <i class=\"fa-regular fa-snowflake\"></i> N";
+const menuTitleDescriptionTextDisplayMediaQueryMaxWidthDefault  = "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp WINTER EDITI <i class=\"fa-regular fa-snowflake\"></i> N";
 
 const containerMenuButtonsMain = "containerMenuButtonsMain";
 const containerMenuButtonsMainParts = "containerMenuButtonsMainParts";
