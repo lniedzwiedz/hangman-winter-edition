@@ -25,8 +25,49 @@
     grid-template-columns: 10fr 15fr 50fr 15fr 10fr;
 }
 
+@media (max-width: 1600px) {
+
+    #containerHomeMainParts {
+        display: grid;
+        grid-template-rows: 5fr 40fr 10fr 40fr 5fr;
+        grid-template-columns: 10fr 15fr 50fr 15fr 10fr;
+    }
+}
+
+@media (max-width: 1500px) {
+
+    #containerHomeMainParts {
+        display: grid;
+        grid-template-rows: 5fr 40fr 10fr 40fr 5fr;
+        grid-template-columns: 10fr 10fr 60fr 10fr 10fr;
+    }
+}
+
+@media (max-width: 1400px) {
+
+    #containerHomeMainParts {
+        display: grid;
+        grid-template-rows: 5fr 40fr 10fr 40fr 5fr;
+        grid-template-columns: 5fr 15fr 70fr 15fr 5fr;
+    }
+}
+
+@media (max-width: 1300px) {
+
+    #containerHomeMainParts {
+        display: grid;
+        grid-template-rows: 5fr 40fr 10fr 40fr 5fr;
+        grid-template-columns: 5fr 1fr 80fr 5fr 5fr;
+    }
+}
+
 @media (max-width: 1200px) {
 
+    #containerHomeMainParts {
+        /*display: grid;*/
+        /*grid-template-rows: 5fr 40fr 10fr 40fr 5fr;*/
+        /*grid-template-columns: 10fr 15fr 50fr 15fr 10fr;*/
+    }
 }
 
 @media (max-width: 1024px) {
