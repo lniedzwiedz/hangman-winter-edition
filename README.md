@@ -1,4 +1,4 @@
-# ❄️ Hangman – Winter Edition ❄️
+# ❄️ Hangman – Winter Editi❆n ❄️
 
 Classic Hangman with a snowy twist, redesigned in two fun ways. In both games, guess the right **shade of white** to win.
 
@@ -31,3 +31,9 @@ The game is responsive and works smoothly on computers and tablets.
 * HTML
 * CSS
 * JavaScript
+
+---
+
+Here is a short preview of Hangman – Winter Editio❆: Save Snowman:
+  
+![Save snowman](docs/gif/HangmanWinterEditionSaveSnowman.gif)
