@@ -67,9 +67,14 @@ const snowmanFigureElementActionFinalSnowballsColor = "snowmanFigureElementActio
 // hat
 const hatElementInitialPositionForShape = "-hatElementInitialPositionForShape";
 const handInitialPositionForShape = "-handInitialPositionForShape";
-const hatElementInitialPositionForAnimation = "-hatElementInitialPositionForAnimation";
+// const hatElementInitialPositionForAnimation = "-hatElementInitialPositionForAnimation";
 const setAnimationHatFinalColor = "-setAnimationHatFinalColor";
 const setHatFinalColor = "-setHatFinalColor";
+const snowmanFigureElementActionHat = "snowmanFigureElementActionHat";
+const containerSnowmanFigureElementHatMain = "containerSnowmanFigureElement-HatMain";
+const containerSnowmanFigureElementHatMainParts = "containerSnowmanFigureElement-HatMainParts";
+const snowmanFigureElementActionInitialPositionHatMainShape = "snowmanFigureElementActionInitialPosition-HatMainShape";
+
 
 //eyes
 const snowmanFigureElementEyes = "snowmanFigureElementEyes";
@@ -96,11 +101,7 @@ const gameSnowmanDescriptionTextGameOverLoser = "GAME OVER";
 const gameSnowmanDescriptionTextGameOverLoserGiveHope = "You did well!";
 const gameSnowmanDescriptionTextGameOverWinner = "YOU WIN";
 const gameSnowmanDescriptionTextGameOverWinnerCongratulations = "Congratulations!";
-
 const containerGameSnowmanDescription = "containerGameSnowmanDescription";
-const containerGameSnowmanButtonParts = "containerGameSnowmanButtonParts";
-const containerGameSnowmanButtonDescriptionElementText = "containerHomeButtonDescriptionElementText";
-
 
 const containerGameSnowmanDescriptionElementText = "containerGameSnowmanDescriptionElementText";
 const gameSnowmanDescriptionElementText = "gameSnowmanDescriptionElementText";
@@ -110,7 +111,6 @@ const gameSnowmanDescriptionTextDestroy = ["SAVE SNOWMAN", "discover color name"
 
 const gameNameSnowmanBuild = "SnowmanBuild";
 const gameNameSnowmanDestroy = "SnowmanDestroy";
-const gameButtonGameSnowman = "gameButtonGameSnowman";
 
 // word to discover
 const containerGameSnowmanWord = "containerGameSnowmanWord";
@@ -127,8 +127,10 @@ const containerGameSnowmanLives = "containerGameSnowmanLives";
 const containerGameSnowmanLivesMain = "containerGameSnowmanLivesMain";
 const containerGameSnowmanLivesMainParts = "containerGameSnowmanLivesMainParts";
 const gameSnowmanLives = "gameSnowmanLives";
+const gameSnowmanLivesMinus = "gameSnowmanLives-";
 const gameSnowmanLivesBase = "gameSnowmanLivesBase";
 const gameSnowmanLivesNumber = "gameSnowmanLivesNumber";
+const gameLive = "gameLive-";
 
 // CSS variable
 let cssSnowmanFigureColor = "--snowmanFigureColor"
@@ -150,8 +152,7 @@ const menuTitleDescriptionText = "menuTitleDescriptionText";
 
 const mediaQueryMaxWidth1200 = window.matchMedia("(max-width: 1200px)");
 const menuTitleDescriptionTextDisplayMediaQueryMaxWidth1200 = "&nbsp &nbsp &nbsp WINTER EDITI <i class=\"fa-regular fa-snowflake\"></i> N";
-// const menuTitleDescriptionTextDisplayMediaQueryMaxWidth1600  = "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp WINTER EDITI <i class=\"fa-regular fa-snowflake\"></i> N";
-const menuTitleDescriptionTextDisplayMediaQueryMaxWidthDefault  = "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp WINTER EDITI <i class=\"fa-regular fa-snowflake\"></i> N";
+const menuTitleDescriptionTextDisplayMediaQueryMaxWidthDefault = "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp WINTER EDITI <i class=\"fa-regular fa-snowflake\"></i> N";
 
 const containerMenuButtonsMain = "containerMenuButtonsMain";
 const containerMenuButtonsMainParts = "containerMenuButtonsMainParts";
@@ -169,16 +170,12 @@ const menuButtonHomeIconStyle = "fa-solid";
 const menuButtonClick = "menuButtonClick";
 const functionNameOnclickCreateSubpageHome = "createSubpageHome";
 const containerMenuButtonHome = "containerMenuButtonHome";
-const containerMenuButtonHomeText = "containerMenuButtonHomeText";
-const containerMenuButtonText = "containerMenuButtonText";
 const menuButtonHomeText = "menuButtonHomeText";
 const menuButtonText = "menuButtonText";
 
 
 const containerMenuButtonGameSnowmanBuildMain = "containerMenuButtonGameSnowmanBuildMain";
-const containerMenuButtonGameSnowmanBuildText = "containerMenuButtonGameSnowmanBuildText";
 const containerMenuButtonGameSnowmanBuild = "containerMenuButtonGameSnowmanBuild";
-const containerMenuButtonGameSnowmanBuildClick = "containerMenuButtonGameSnowmanBuildClick";
 const menuButtonGameSnowmanBuildClick = "menuButtonGameSnowmanBuildClick";
 const menuButtonGameSnowmanBuildText = "menuButtonGameSnowmanBuildText";
 
@@ -207,18 +204,18 @@ const menuButtonGameSnowmanDestroyIconStyle = "fa-solid";
 //footer
 const containerSectionFooter = "containerSectionFooter";
 const containerMainFooter = "containerMainFooter";
-const containerMainFooterParts = "containerMainFooterParts";
+// const containerMainFooterParts = "containerMainFooterParts";
 const containerFooterAuthor = "containerFooterAuthor";
 const footerAuthor = "footerAuthor";
 const footerAuthorData = "Copyright &copy 2026 Liliana Niedźwiedź";
-const containerMainFooterEnvelope = "containerMainFooterEnvelope";
-const footerIconEnvelope = '<i class="fa-solid fa-envelope"></i>';
+// const containerMainFooterEnvelope = "containerMainFooterEnvelope";
+// const footerIconEnvelope = '<i class="fa-solid fa-envelope"></i>';
 const sectionFooter = "sectionFooter";
-const functionNameOnclickCreateSubpageFormContact = "createSubpageFormContact";
-const containerFooterButtonEnvelope = "containerFooterButtonEnvelope";
-const containerFooterEnvelopeText = "containerFooterEnvelopeText";
-const footerButtonEnvelope = "footerButtonEnvelope";
-const containerFooterEnvelope = "containerFooterEnvelope";
+// const functionNameOnclickCreateSubpageFormContact = "createSubpageFormContact";
+// const containerFooterButtonEnvelope = "containerFooterButtonEnvelope";
+// const containerFooterEnvelopeText = "containerFooterEnvelopeText";
+// const footerButtonEnvelope = "footerButtonEnvelope";
+// const containerFooterEnvelope = "containerFooterEnvelope";
 
 // contact form
 const sectionContactForm = "sectionContactForm";

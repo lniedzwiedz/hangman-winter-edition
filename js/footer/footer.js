@@ -7,14 +7,14 @@ function createFooter() {
 
 function createContainerMainFooter() {
     createContainerMainElements(containerMainSectionFooter, sectionFooter, containerSectionFooter, containerMainFooter);
-    setElementClassName(containerSectionFooter, containerSectionFooter);
+    setElementClassNameByElementId(containerSectionFooter, containerSectionFooter);
 }
 
 function createContainerFooterAuthor() {
     createElementDiv(containerMainFooter, containerFooterAuthor);
-    setElementClassName(containerFooterAuthor, containerFooterAuthor);
+    setElementClassNameByElementId(containerFooterAuthor, containerFooterAuthor);
     createElementP(containerFooterAuthor, footerAuthor);
-    setElementClassName(footerAuthor, footerAuthor);
+    setElementClassNameByElementId(footerAuthor, footerAuthor);
     setElementTextById(footerAuthor, footerAuthorData);
 }
 

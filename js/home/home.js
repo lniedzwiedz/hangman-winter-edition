@@ -18,7 +18,7 @@ function createContainersHomeButtonGameSnowman(gameName, gameSnowmanDescriptionT
 
     let containerButton = containerGameSnowmanDescriptionSpecified + "Parts";
     createElementDiv(containerGameSnowmanDescriptionSpecified, containerButton);
-    setElementClassName(containerButton, containerHomeButtonParts);
+    setElementClassNameByElementId(containerButton, containerHomeButtonParts);
 
     let containerClick = containerGameSnowmanDescriptionSpecified + "-gameButtonClick";
     createElementDiv(containerButton, containerClick);
@@ -27,8 +27,8 @@ function createContainersHomeButtonGameSnowman(gameName, gameSnowmanDescriptionT
     let buttonId = "homeButtonGame" + gameName;
     createElementButton(containerClick, buttonId);
     setFunctionOnclick(buttonId, functionNameOnclickSetConfigurationForGameSnowman);
-    setElementClassName(buttonId, homeButtonGameSnowman);
-    setElementClassName(buttonId, containerHomeButtonDescriptionGameSnowman);
+    setElementClassNameByElementId(buttonId, homeButtonGameSnowman);
+    setElementClassNameByElementId(buttonId, containerHomeButtonDescriptionGameSnowman);
 
     for (let i = 0; i < gameSnowmanDescriptionText.length; i++) {
 
@@ -36,7 +36,7 @@ function createContainersHomeButtonGameSnowman(gameName, gameSnowmanDescriptionT
         createElementDiv(buttonId, elementId);
 
         let elementClass = containerHomeButtonDescriptionElementText + "-" + i;
-        setElementClassName(elementId, elementClass);
+        setElementClassNameByElementId(elementId, elementClass);
 
         let newP = document.createElement("p");
         document.getElementById(elementId).append(newP);
