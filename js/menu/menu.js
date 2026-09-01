@@ -49,7 +49,7 @@ function createContainerMenuButtonHome() {
     createElementButton(containerMenuButtonHomeMain, containerMenuButtonHomeMainParts);
     setElementClassNameByElementId(containerMenuButtonHomeMainParts, containerMenuButtonHome);
     setElementClassNameByElementId(containerMenuButtonHomeMainParts, menuButtonClick);
-    setFunctionOnclick(containerMenuButtonHomeMainParts, functionNameOnclickCreateSubpageHome);
+    setFunctionOnclickByElementId(containerMenuButtonHomeMainParts, functionNameOnclickCreateSubpageHome);
 
     // text
     createElementDiv(containerMenuButtonHomeMainParts, containerMenuButtonHomeTextDisplay);
@@ -71,7 +71,7 @@ function createContainerMenuButtonGameSnowmanBuild() {
     createElementButton(containerMenuButtonGameSnowmanBuildMain, menuButtonGameSnowmanBuildClick);
     setElementClassNameByElementId(menuButtonGameSnowmanBuildClick, containerMenuButtonGameSnowmanBuild);
     setElementClassNameByElementId(menuButtonGameSnowmanBuildClick, menuButtonClick);
-    setFunctionOnclick(menuButtonGameSnowmanBuildClick, functionNameOnclickSetConfigurationForGameSnowmanBuild);
+    setFunctionOnclickByElementId(menuButtonGameSnowmanBuildClick, functionNameOnclickSetConfigurationForGameSnowmanBuild);
 
     // text
     createElementDiv(menuButtonGameSnowmanBuildClick, containerMenuButtonGameSnowmanBuildTextDisplay);
@@ -92,7 +92,7 @@ function createContainerMenuButtonGameSnowmanDestroy() {
     createElementButton(containerMenuButtonGameSnowmanDestroyMain, menuButtonGameSnowmanDestroyClick);
     setElementClassNameByElementId(menuButtonGameSnowmanDestroyClick, containerMenuButtonGameSnowmanDestroy);
     setElementClassNameByElementId(menuButtonGameSnowmanDestroyClick, menuButtonClick);
-    setFunctionOnclick(menuButtonGameSnowmanDestroyClick, functionNameOnclickSetConfigurationForGameSnowmanDestroy);
+    setFunctionOnclickByElementId(menuButtonGameSnowmanDestroyClick, functionNameOnclickSetConfigurationForGameSnowmanDestroy);
 
     // text
     createElementDiv(menuButtonGameSnowmanDestroyClick, containerMenuButtonGameSnowmanDestroyTextDisplay);

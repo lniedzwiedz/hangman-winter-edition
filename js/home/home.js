@@ -8,7 +8,7 @@ function createContainerButtonGameBuildSnowman() {
 
 function setClassNameHomeButtonGameSnowman(elementId, suffixText) {
     let name = containerHomeGameSnowmanDescription + "-" + suffixText;
-    document.getElementById(elementId).classList.add(name);
+    setElementClassNameByElementId(elementId, name);
 }
 
 function createContainersHomeButtonGameSnowman(gameName, gameSnowmanDescriptionText, functionNameOnclickSetConfigurationForGameSnowman) {
@@ -26,7 +26,7 @@ function createContainersHomeButtonGameSnowman(gameName, gameSnowmanDescriptionT
 
     let buttonId = "homeButtonGame" + gameName;
     createElementButton(containerClick, buttonId);
-    setFunctionOnclick(buttonId, functionNameOnclickSetConfigurationForGameSnowman);
+    setFunctionOnclickByElementId(buttonId, functionNameOnclickSetConfigurationForGameSnowman);
     setElementClassNameByElementId(buttonId, homeButtonGameSnowman);
     setElementClassNameByElementId(buttonId, containerHomeButtonDescriptionGameSnowman);
 
@@ -38,11 +38,11 @@ function createContainersHomeButtonGameSnowman(gameName, gameSnowmanDescriptionT
         let elementClass = containerHomeButtonDescriptionElementText + "-" + i;
         setElementClassNameByElementId(elementId, elementClass);
 
-        let newP = document.createElement("p");
-        document.getElementById(elementId).append(newP);
-        newP.innerHTML = gameSnowmanDescriptionText[i];
-        newP.classList.add(homeButtonDescriptionElementTextLine);
-        newP.classList.add(homeButtonDescriptionElementTextLine + "-" + i);
+        let pId = "homeButtonText" + gameName + "-" + i;
+        createElementP(elementId, pId);
+        setElementClassNameByElementId( pId, homeButtonDescriptionElementTextLine);
+        setElementClassNameByElementId( pId, homeButtonDescriptionElementTextLine + "-" + i);
+        setElementTextById(pId,  gameSnowmanDescriptionText[i]);
     }
 }
 

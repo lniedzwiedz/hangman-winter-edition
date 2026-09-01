@@ -78,7 +78,6 @@ function colorHexCodesToArray(colorHexCodesList) {
 }
 
 function getRandomColorName() {
-    // let index = randomNumber();
     let index = randomNumber(colorNamesArray.length);
     winColorSnowman = colorHexCodesArray[index];
     return colorNamesArray[index];
@@ -451,7 +450,7 @@ function createContainersForWordToDiscover() {
 
         let newDivId = gameSnowmanElementWordToDiscover + "-" + valueToString(i);
         createElementDiv(containerGameSnowmanWordToDiscover, newDivId);
-        setElementAsGrid(newDivId, rowChildStart, columnChildStart, rowChildEnd, columnChildEnd, "1fr", "1fr");
+        setElementStyletAsGrid(newDivId, rowChildStart, columnChildStart, rowChildEnd, columnChildEnd, "1fr", "1fr");
 
         if (wordChar[i] === " ") {
             setElementStyleBackgroundColorById(newDivId, "#00000");
@@ -495,7 +494,7 @@ function createContainersForLives() {
         if (i === maxWrongShots - 1)
             setElementClassNameByElementId(newDivId, gameSnowmanLivesNumber);
 
-        setElementAsGrid(newDivId, rowChildStart, columnChildStart, rowChildEnd, columnChildEnd, "1fr", "1fr");
+        setElementStyletAsGrid(newDivId, rowChildStart, columnChildStart, rowChildEnd, columnChildEnd, "1fr", "1fr");
 
         let newPId = gameLive + i;
         createElementP(newDivId, newPId);
@@ -657,9 +656,9 @@ function setAnimationInitialPositionsOfElementsAfterWinSnowmanFigureElementsHand
             removeElementClassNameByElement(element, snowmanFigureElementActionShapeRemoveColor);
         }
     }
-
     // hat
     setElementClassNameByElementId("snowmanFigureElementAction-1", "snowmanFigureElementAction-1-hatElementInitialPositionForAnimation");
+    setElementClassNameByElementId(containerSnowmanFigureElementHatMain, snowmanFigureElementActionInitialPositionHatMainShape);
 }
 
 function setAnimationsAfterWinSnowmanFigureElementsHandsAndHat() {

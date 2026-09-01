@@ -10,12 +10,16 @@ function getElementsByClassName(className) {
     return document.getElementsByClassName(className);
 }
 
-function setFunctionOnclick(elementId, functionNameOnclick) {
+function setFunctionOnclickByElement(element, functionNameOnclick) {
+    element.setAttribute("onclick", functionNameOnclick + "(this.id)");
+}
+
+function setFunctionOnclickByElementId(elementId, functionNameOnclick) {
     getElementById(elementId).setAttribute("onclick", functionNameOnclick + "(this.id)");
 }
 
 function createContainerMainElements(containerMainSectionName, sectionName, containerSectionName, containerSectionMainName) {
-    createElementDiv(containerMainSectionName, containerSectionName)
+    createElementDiv(containerMainSectionName, containerSectionName);
     let newDiv2 = document.createElement("div");
     getElementById(containerSectionName).append(newDiv2);
     newDiv2.setAttribute("id", containerSectionMainName);
@@ -33,7 +37,7 @@ function createElementButton(parentId, childId) {
 }
 
 function createElementDiv(parentId, childId) {
-    createElement(parentId, childId, "div")
+    createElement(parentId, childId, "div");
 }
 
 function createElementI(parentId, childId, iconStyle, iconClass) {
@@ -74,7 +78,11 @@ function setElementTextByClassName(className, text) {
 }
 
 function setElementTextById(elementId, text) {
-    getElementById(elementId).innerHTML = text;
+    getElementById(elementId).innerHTML = valueToString(text);
+}
+
+function splitTextToArray(text, separator) {
+    return text.split(separator);
 }
 
 function removeContainerMainSection() {
@@ -84,11 +92,7 @@ function removeContainerMainSection() {
     removeContainerSectionContactForm();
 }
 
-function splitTextToArray(text, separator) {
-    return text.split(separator);
-}
-
-function setElementAsGrid(elementId, gridRowStartNumber, gridColumnStartNumber, gridRowEndNumber, gridColumnEndNumber, gridTemplateRows, gridTemplateColumns) {
+function setElementStyletAsGrid(elementId, gridRowStartNumber, gridColumnStartNumber, gridRowEndNumber, gridColumnEndNumber, gridTemplateRows, gridTemplateColumns) {
     let element = getElementById(elementId);
     element.style.display = "grid";
 
@@ -99,7 +103,7 @@ function setElementAsGrid(elementId, gridRowStartNumber, gridColumnStartNumber, 
     element.style.gridColumnEnd = valueToString(gridColumnEndNumber);
 
     setElementStyleGridTemplateRows(elementId, gridTemplateRows);
-    setElementStyleGridTemplateColumns(elementId, gridTemplateColumns)
+    setElementStyleGridTemplateColumns(elementId, gridTemplateColumns);
 }
 
 function setElementStyleGridTemplateRows(elementId, gridTemplateRowsPattern) {
@@ -120,4 +124,20 @@ function setElementStyleProperty(cssVariableName, value) {
 
 function randomNumber(maxNumber) {
     return Math.floor(Math.random() * maxNumber);
+}
+
+function setElementValueById(elementId, value) {
+    getElementById(elementId).value = value;
+}
+
+function getElementAttributeValueById(clickedId) {
+    return getElementById(clickedId).getAttribute("value");
+}
+
+function removeElementAttributeOnclick(element) {
+    element.removeAttribute("onclick");
+}
+
+function removeElementAttributeOnclickById(clickedId) {
+    getElementById(clickedId).removeAttribute("onclick");
 }

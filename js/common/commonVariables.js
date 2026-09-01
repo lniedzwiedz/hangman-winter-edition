@@ -221,3 +221,11 @@ const sectionFooter = "sectionFooter";
 const sectionContactForm = "sectionContactForm";
 const containerSectionContactForm = "containerSectionContactForm";
 const containerMainContactForm = "containerMainContactForm";
+
+// keyboard
+const containerGameSnowmanKeyboard = "containerGameSnowmanKeyboard";
+const containerGameSnowmanKeyboardElements = "containerGameSnowmanKeyboardElements";
+const containerSnowmanKeyboardLine = "containerSnowmanKeyboard-line-";
+const snowmanKeyboardButtons = "snowmanKeyboardButtons";
+const snowmanKeyboardButtonNewGameGameOver = "snowmanKeyboardButtonNewGameGameOver";
+const buttonsLine = "buttonsLine";
