@@ -74,7 +74,7 @@ function removeElementsById(elementId) {
 }
 
 function setElementTextByClassName(className, text) {
-    document.getElementsByClassName(className)[0].innerHTML = valueToString(text);;
+    document.getElementsByClassName(className)[0].innerHTML = valueToString(text);
 }
 
 function setElementTextById(elementId, text) {

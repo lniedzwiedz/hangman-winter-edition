@@ -1,3 +1,8 @@
+function createStartContainersForGameSnowmanKeyboard() {
+    createElementDiv(containerMainSectionGameSnowman, containerGameSnowmanKeyboard);
+    createElementDiv(containerGameSnowmanKeyboard, containerGameSnowmanKeyboardElements);
+}
+
 function createKeyboardLines() {
     for (let i = 1; i <= 4; i++) {
         createElementDiv(containerGameSnowmanKeyboardElements, containerSnowmanKeyboardLinePrefix + valueToString(i));
@@ -100,7 +105,7 @@ function changeKeyboardButtonNewGameWhenGameOver(functionNameOnclick) {
     setFunctionOnclickByElementId(elementId, functionNameOnclick);
 }
 
-// time === setColorForSnowman(), gameSnowmanBuild.js
+// time === setColorForSnowman(), gameSnowmanConfiguration.js
 function changeKeyboardButtonsGameOver(functionNameOnclick) {
     disableKeyboardButtons();
     setTimeout(function () {
