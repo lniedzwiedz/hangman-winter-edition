@@ -8,7 +8,7 @@ function createContainerButtonGameBuildSnowman() {
 
 function setClassNameHomeButtonGameSnowman(elementId, suffixText) {
     let name = containerHomeGameSnowmanDescription + "-" + suffixText;
-    setElementClassNameByElementId(elementId, name);
+    addElementClassNameByElementId(elementId, name);
 }
 
 function createContainersHomeButtonGameSnowman(gameName, gameSnowmanDescriptionText, functionNameOnclickSetConfigurationForGameSnowman) {
@@ -18,7 +18,7 @@ function createContainersHomeButtonGameSnowman(gameName, gameSnowmanDescriptionT
 
     let containerButton = containerGameSnowmanDescriptionSpecified + "Parts";
     createElementDiv(containerGameSnowmanDescriptionSpecified, containerButton);
-    setElementClassNameByElementId(containerButton, containerHomeButtonParts);
+    addElementClassNameByElementId(containerButton, containerHomeButtonParts);
 
     let containerClick = containerGameSnowmanDescriptionSpecified + "-gameButtonClick";
     createElementDiv(containerButton, containerClick);
@@ -27,8 +27,8 @@ function createContainersHomeButtonGameSnowman(gameName, gameSnowmanDescriptionT
     let buttonId = "homeButtonGame" + gameName;
     createElementButton(containerClick, buttonId);
     setFunctionOnclickByElementId(buttonId, functionNameOnclickSetConfigurationForGameSnowman);
-    setElementClassNameByElementId(buttonId, homeButtonGameSnowman);
-    setElementClassNameByElementId(buttonId, containerHomeButtonDescriptionGameSnowman);
+    addElementClassNameByElementId(buttonId, homeButtonGameSnowman);
+    addElementClassNameByElementId(buttonId, containerHomeButtonDescriptionGameSnowman);
 
     for (let i = 0; i < gameSnowmanDescriptionText.length; i++) {
 
@@ -36,12 +36,12 @@ function createContainersHomeButtonGameSnowman(gameName, gameSnowmanDescriptionT
         createElementDiv(buttonId, elementId);
 
         let elementClass = containerHomeButtonDescriptionElementText + "-" + i;
-        setElementClassNameByElementId(elementId, elementClass);
+        addElementClassNameByElementId(elementId, elementClass);
 
         let pId = "homeButtonText" + gameName + "-" + i;
         createElementP(elementId, pId);
-        setElementClassNameByElementId( pId, homeButtonDescriptionElementTextLine);
-        setElementClassNameByElementId( pId, homeButtonDescriptionElementTextLine + "-" + i);
+        addElementClassNameByElementId( pId, homeButtonDescriptionElementTextLine);
+        addElementClassNameByElementId( pId, homeButtonDescriptionElementTextLine + "-" + i);
         setElementTextById(pId,  gameSnowmanDescriptionText[i]);
     }
 }

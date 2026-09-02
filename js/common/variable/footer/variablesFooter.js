@@ -1,0 +1,14 @@
+const containerSectionFooter = "containerSectionFooter";
+const containerMainFooter = "containerMainFooter";
+// const containerMainFooterParts = "containerMainFooterParts";
+const containerFooterAuthor = "containerFooterAuthor";
+const footerAuthor = "footerAuthor";
+const footerAuthorData = "Copyright &copy 2026 Liliana Niedźwiedź";
+// const containerMainFooterEnvelope = "containerMainFooterEnvelope";
+// const footerIconEnvelope = '<i class="fa-solid fa-envelope"></i>';
+const sectionFooter = "sectionFooter";
+// const functionNameOnclickCreateSubpageFormContact = "createSubpageFormContact";
+// const containerFooterButtonEnvelope = "containerFooterButtonEnvelope";
+// const containerFooterEnvelopeText = "containerFooterEnvelopeText";
+// const footerButtonEnvelope = "footerButtonEnvelope";
+// const containerFooterEnvelope = "containerFooterEnvelope";

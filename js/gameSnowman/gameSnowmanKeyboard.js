@@ -1,6 +1,6 @@
 function createKeyboardLines() {
     for (let i = 1; i <= 4; i++) {
-        createElementDiv(containerGameSnowmanKeyboardElements, containerSnowmanKeyboardLine + valueToString(i));
+        createElementDiv(containerGameSnowmanKeyboardElements, containerSnowmanKeyboardLinePrefix + valueToString(i));
     }
 }
 
@@ -13,16 +13,16 @@ function createKeyboardButtonsForOneLine(elementId, keysLine) {
     let keysNumber = keysLine.length;
 
     for (let i = 0; i < keysNumber; i++) {
-        let buttonId = "keyboard-" + keysLine[i];
+        let buttonId = keyboardKeyIdPrefix + keysLine[i];
 
         if (keysLine[i] === "") {
             buttonId = keysLine + i;
         }
         createElementButton(elementId, buttonId);
         setElementStyletAsGrid(buttonId, rowStart, columnStart, rowEnd, columnEnd, "1fr", "1fr");
-        setElementClassNameByElementId(buttonId, snowmanKeyboardButtons);
+        addElementClassNameByElementId(buttonId, snowmanKeyboardButtons);
 
-        if ((keysLine[i] !== "") && (keysLine[i] !== "NEW GAME"))
+        if ((keysLine[i] !== "") && (keysLine[i] !== keyboardKeyValueNewGame))
             setElementValueById(buttonId, keysLine[i]);
 
         setElementTextById(buttonId, keysLine[i]);
@@ -32,18 +32,10 @@ function createKeyboardButtonsForOneLine(elementId, keysLine) {
     }
 }
 
-const buttonsLine0 = [];
-const buttonsLine1 = ["", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "", "", ""];
-// const buttonsLine2 = ["", "A", "S", "D", "F", "G", "H", "I", "J", "K", "L", "", "", ""];
-const buttonsLine2 = ["", "A", "S", "D", "F", "G", "H", "J", "K", "L", "", "", "", ""];
-const buttonsLine3 = ["", "Z", "X", "C", "V", "B", "N", "M", "", "", "", ""];
-const buttonsLine4 = ["", "", "", "NEW GAME", "", "", "", ""];
-const lines = 4;
-
 function createKeyboardButtonsForLines() {
     for (let i = 1; i <= lines; i++) {
         let lineValues = eval(buttonsLine + i);
-        createKeyboardButtonsForOneLine(containerSnowmanKeyboardLine + i, lineValues);
+        createKeyboardButtonsForOneLine(containerSnowmanKeyboardLinePrefix + i, lineValues);
     }
 }
 
@@ -71,11 +63,12 @@ function setKeyboardGameSnowmanFunctionOnclick(functionNameOnclickPlayGameSnowma
         for (let j = 0; j < keysLine.length; j++) {
 
             let keyValue = keysLine[j]
-            let keyId = "keyboard-" + keyValue;
+            // let keyId = "keyboard-" + keyValue;
+            let keyId = keyboardKeyIdPrefix + keyValue;
             let button = getElementById(keyId);
 
             if ((button !== null) && ("" !== keyValue)) {
-                if (keyValue !== "NEW GAME")
+                if (keyValue !== keyboardKeyValueNewGame)
                     setFunctionOnclickByElement(button, functionNameOnclickPlayGameSnowman);
                 else
                     setFunctionOnclickByElement(button, functionNameOnclickSetConfigurationForGameSnowman);
@@ -101,8 +94,9 @@ function disableKeyboardButtons() {
 }
 
 function changeKeyboardButtonNewGameWhenGameOver(functionNameOnclick) {
-    let elementId = "keyboard-NEW GAME";
-    setElementClassNameByElementId(elementId, snowmanKeyboardButtonNewGameGameOver);
+    // let elementId = "keyboard-NEW GAME";
+    let elementId = keyboardKeyIdPrefix + keyboardKeyValueNewGame;
+    addElementClassNameByElementId(elementId, snowmanKeyboardButtonNewGameGameOver);
     setFunctionOnclickByElementId(elementId, functionNameOnclick);
 }
 

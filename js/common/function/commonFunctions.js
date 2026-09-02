@@ -49,11 +49,11 @@ function createElementP(parentId, childId) {
     createElement(parentId, childId, "p");
 }
 
-function setElementClassNameByElement(element, className) {
+function addElementClassNameByElement(element, className) {
     element.classList.add(className);
 }
 
-function setElementClassNameByElementId(elementId, className) {
+function addElementClassNameByElementId(elementId, className) {
     getElementById(elementId).classList.add(className);
 }
 
@@ -63,7 +63,7 @@ function removeElementClassNameByElement(element, className) {
 
 function createElementDivWithTheSameValueForIdAndClassName(parentId, elementIdAndClassName) {
     createElementDiv(parentId, elementIdAndClassName);
-    setElementClassNameByElementId(elementIdAndClassName, elementIdAndClassName);
+    addElementClassNameByElementId(elementIdAndClassName, elementIdAndClassName);
 }
 
 function removeElementsById(elementId) {
@@ -74,7 +74,7 @@ function removeElementsById(elementId) {
 }
 
 function setElementTextByClassName(className, text) {
-    document.getElementsByClassName(className)[0].innerHTML = text;
+    document.getElementsByClassName(className)[0].innerHTML = valueToString(text);;
 }
 
 function setElementTextById(elementId, text) {

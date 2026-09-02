@@ -114,7 +114,7 @@ function setDiscoveredChar(charToShow) {
         if (charToShow === wordChar[i]) {
             let wordCharId = wordChar + i;
             setElementTextById(wordCharId, charToShow);
-            setElementClassNameByElementId(wordCharId, gameSnowmanElementWordToDiscoverVisibleColor);
+            addElementClassNameByElementId(wordCharId, gameSnowmanElementWordToDiscoverVisibleColor);
         }
     }
 }
@@ -337,46 +337,46 @@ function setShapeSnowmanFigureElements(indexGroup) {
     for (let i = 0; i < indexGroup.length; i++) {
 
         let index = indexGroup[i];
-        let elementId = snowmanFigureElementAction + valueToString(index);
+        let elementId = snowmanFigureElementActionPrefix + valueToString(index);
         let element = getElementById(elementId);
 
         if (index < 4) {
-            setElementClassNameByElement(element, snowmanFigureElementAction + index + hatElementInitialPositionForShape);
-            setElementClassNameByElement(element, snowmanFigureElementActionAddShapeColor);
+            addElementClassNameByElement(element, snowmanFigureElementActionPrefix + index + hatElementInitialPositionForShape);
+            addElementClassNameByElement(element, snowmanFigureElementActionAddShapeColor);
         }
 
         if (index === 4) {
             for (let j = 0; j < 2; j++) {
                 let newDivEyeId = snowmanFigureElementEyes + valueToString(j)
                 createElementDiv(elementId, newDivEyeId);
-                setElementClassNameByElementId(newDivEyeId, snowmanFigureElementEyes);
-                setElementClassNameByElementId(newDivEyeId, snowmanFigureElementActionAddShapeColor);
+                addElementClassNameByElementId(newDivEyeId, snowmanFigureElementEyes);
+                addElementClassNameByElementId(newDivEyeId, snowmanFigureElementActionAddShapeColor);
             }
         }
 
         if (index === 5) {
             createElementDiv(elementId, snowmanFigureElementSmile);
-            setElementClassNameByElementId(snowmanFigureElementSmile, snowmanFigureElementActionAddShapeColor)
+            addElementClassNameByElementId(snowmanFigureElementSmile, snowmanFigureElementActionAddShapeColor)
         }
 
         if (index > 5 && index <= 12) {
-            let buttonIdMain = containerSnowmanFigureElementButtonNo + valueToString(index);
+            let buttonIdMain = containerSnowmanFigureElementButtonNoPrefix + valueToString(index);
             createElementDiv(elementId, buttonIdMain);
 
-            let buttonIdInner = snowmanFigureElementButtonNo + valueToString(index);
+            let buttonIdInner = snowmanFigureElementButtonNoPrefix + valueToString(index);
             createElementDiv(buttonIdMain, buttonIdInner);
-            setElementClassNameByElementId(buttonIdInner, snowmanFigureElementButton);
-            setElementClassNameByElementId(buttonIdInner, snowmanFigureElementActionAddShapeButton);
-            setElementClassNameByElementId(buttonIdInner, snowmanFigureElementActionAddShapeColor);
+            addElementClassNameByElementId(buttonIdInner, snowmanFigureElementButton);
+            addElementClassNameByElementId(buttonIdInner, snowmanFigureElementActionAddShapeButton);
+            addElementClassNameByElementId(buttonIdInner, snowmanFigureElementActionAddShapeColor);
 
         }
 
         if (index > 12 && index <= 16) {
-            setElementClassNameByElement(element, elementId + handInitialPositionForShape);
-            setElementClassNameByElement(element, snowmanFigureElementActionAddShapeColor);
-            setElementClassNameByElement(element, snowmanFigureElementActionAddShapeHands);
+            addElementClassNameByElement(element, elementId + handInitialPositionForShape);
+            addElementClassNameByElement(element, snowmanFigureElementActionAddShapeColor);
+            addElementClassNameByElement(element, snowmanFigureElementActionAddShapeHands);
         }
-        setElementClassNameByElement(element, snowmanFigureElementActionAddShapeColor);
+        addElementClassNameByElement(element, snowmanFigureElementActionAddShapeColor);
     }
     countedAnimationElements += 1;
 }
@@ -401,17 +401,17 @@ function removeShapeSnowmanFigureElements(indexGroup) {
 
         if (index === 4) {
             for (let j = 0; j < 2; j++) {
-                setElementClassNameByElementId(snowmanFigureElementEyes + valueToString(j), snowmanFigureElementActionShapeRemoveColor);
+                addElementClassNameByElementId(snowmanFigureElementEyes + valueToString(j), snowmanFigureElementActionShapeRemoveColor);
             }
         }
 
         if (index === 5)
-            setElementClassNameByElementId(snowmanFigureElementSmile, snowmanFigureElementActionShapeRemoveColor);
+            addElementClassNameByElementId(snowmanFigureElementSmile, snowmanFigureElementActionShapeRemoveColor);
 
         if (index > 5 && index <= 12)
-            setElementClassNameByElementId(snowmanFigureElementButtonNo + valueToString(index), snowmanFigureElementActionShapeRemoveColor);
+            addElementClassNameByElementId(snowmanFigureElementButtonNoPrefix + valueToString(index), snowmanFigureElementActionShapeRemoveColor);
 
-        setElementClassNameByElementId(snowmanFigureElementAction + valueToString(index), snowmanFigureElementActionShapeRemoveColor);
+        addElementClassNameByElementId(snowmanFigureElementActionPrefix + valueToString(index), snowmanFigureElementActionShapeRemoveColor);
     }
     countedAnimationElements -= 1;
 }
@@ -433,10 +433,10 @@ function createContainersForWordToDiscover() {
 
     createElementDiv(containerMainSectionGameSnowman, containerGameSnowmanWordToDiscoverMain);
     createElementDiv(containerGameSnowmanWordToDiscoverMain, containerGameSnowmanWordToDiscoverMainParts);
-    setElementClassNameByElementId(containerGameSnowmanWordToDiscoverMainParts, containerGameSnowmanWordToDiscoverMainParts);
+    addElementClassNameByElementId(containerGameSnowmanWordToDiscoverMainParts, containerGameSnowmanWordToDiscoverMainParts);
 
     createElementDiv(containerGameSnowmanWordToDiscoverMainParts, containerGameSnowmanWordToDiscover);
-    setElementClassNameByElementId(containerGameSnowmanWordToDiscover, containerGameSnowmanWordToDiscover);
+    addElementClassNameByElementId(containerGameSnowmanWordToDiscover, containerGameSnowmanWordToDiscover);
 
     setElementStyleGridTemplateRows(containerGameSnowmanWordToDiscover, "repeat(1,  25fr 70fr 5f)");
     setElementStyleGridTemplateColumns(containerGameSnowmanWordToDiscover, " repeat(" + word.length + ", 5fr 100fr 5fr)");
@@ -456,10 +456,10 @@ function createContainersForWordToDiscover() {
             setElementStyleBackgroundColorById(newDivId, "#00000");
 
         } else {
-            setElementClassNameByElementId(newDivId, gameSnowmanElementWordToDiscover);
+            addElementClassNameByElementId(newDivId, gameSnowmanElementWordToDiscover);
             let newPId = wordChar + valueToString(i);
             createElementP(newDivId, newPId);
-            setElementClassNameByElementId(newPId, gameSnowmanElementWordToDiscoverBase);
+            addElementClassNameByElementId(newPId, gameSnowmanElementWordToDiscoverBase);
 
         }
         columnChildStart += 3;
@@ -472,10 +472,10 @@ gameLives = "" + "" + maxWrongShots;
 function createContainersForLives() {
     createElementDiv(containerMainSectionGameSnowman, containerGameSnowmanLivesMain);
     createElementDiv(containerGameSnowmanLivesMain, containerGameSnowmanLivesMainParts);
-    setElementClassNameByElementId(containerGameSnowmanLivesMainParts, containerGameSnowmanLivesMainParts);
+    addElementClassNameByElementId(containerGameSnowmanLivesMainParts, containerGameSnowmanLivesMainParts);
 
     createElementDiv(containerGameSnowmanLivesMainParts, containerGameSnowmanLives);
-    setElementClassNameByElementId(containerGameSnowmanLives, containerGameSnowmanLives);
+    addElementClassNameByElementId(containerGameSnowmanLives, containerGameSnowmanLives);
 
     setElementStyleGridTemplateRows(containerGameSnowmanLives, "repeat(1, 20fr 70fr 20fr)");
     setElementStyleGridTemplateColumns(containerGameSnowmanLives, "repeat(" + maxWrongShots + ", 5fr 100fr 5fr)");
@@ -487,18 +487,18 @@ function createContainersForLives() {
 
     for (let i = 0; i < maxWrongShots; i++) {
 
-        let newDivId = gameSnowmanLivesMinus + i;
+        let newDivId = gameSnowmanLivesMinusPrefix + i;
         createElementDiv(containerGameSnowmanLives, newDivId);
-        setElementClassNameByElementId(newDivId, gameSnowmanLives);
+        addElementClassNameByElementId(newDivId, gameSnowmanLives);
 
         if (i === maxWrongShots - 1)
-            setElementClassNameByElementId(newDivId, gameSnowmanLivesNumber);
+            addElementClassNameByElementId(newDivId, gameSnowmanLivesNumber);
 
         setElementStyletAsGrid(newDivId, rowChildStart, columnChildStart, rowChildEnd, columnChildEnd, "1fr", "1fr");
 
-        let newPId = gameLive + i;
+        let newPId = gameLivePrefix + i;
         createElementP(newDivId, newPId);
-        setElementClassNameByElementId(newPId, gameSnowmanLivesBase);
+        addElementClassNameByElementId(newPId, gameSnowmanLivesBase);
         setElementTextById(newPId, gameLivesChars[i]);
 
         columnChildStart += 3;
@@ -513,12 +513,12 @@ function createContainersForGameDescription(gameName, gameSnowmanDescriptionText
     for (let i = 0; i < gameSnowmanDescriptionText.length; i++) {
         let elementId = containerGameSnowmanDescriptionElementText + "-" + i;
         createElementDiv(containerGameSnowmanDescriptionElements, elementId);
-        setElementClassNameByElementId(elementId, elementId);
+        addElementClassNameByElementId(elementId, elementId);
 
         let newPId = gameSnowmanDescriptionElementTextLine + "-" + i;
         createElementP(elementId, newPId);
-        setElementClassNameByElementId(newPId, newPId);
-        setElementClassNameByElementId(newPId, gameSnowmanDescriptionElementText);
+        addElementClassNameByElementId(newPId, newPId);
+        addElementClassNameByElementId(newPId, gameSnowmanDescriptionElementText);
         setElementTextById(newPId, gameSnowmanDescriptionText[i]);
     }
 }
@@ -567,19 +567,19 @@ function setAnimationAfterWinSnowmanFigureElementsSnowballs() {
     setElementStyleProperty(cssSnowmanFigureColor, winColorSnowman);
 
     for (let i = 0; i <= 16; i++) {
-        let element = getElementById(snowmanFigureElementAction + valueToString(i));
+        let element = getElementById(snowmanFigureElementActionPrefix + valueToString(i));
 
         if (i >= 4)
-            setElementClassNameByElement(element, snowmanFigureElementActionFinalSnowballs);
+            addElementClassNameByElement(element, snowmanFigureElementActionFinalSnowballs);
 
         if (i < 4)
-            setElementClassNameByElement(element, snowmanFigureElementAction + i + setAnimationHatFinalColor);
+            addElementClassNameByElement(element, snowmanFigureElementActionPrefix + i + setAnimationHatFinalColor);
 
         if (i === 4) {
             let eyes = getElementsByClassName(snowmanFigureElementEyes);
             for (let e = 0; e < eyes.length; e++) {
                 removeElementClassNameByElement(eyes[e], snowmanFigureElementActionAddShapeColor);
-                setElementClassNameByElement(eyes[e], snowmanFigureElementActionFinalEyes);
+                addElementClassNameByElement(eyes[e], snowmanFigureElementActionFinalEyes);
             }
         }
 
@@ -587,14 +587,14 @@ function setAnimationAfterWinSnowmanFigureElementsSnowballs() {
             let smile = getElementById(snowmanFigureElementSmile);
             removeElementClassNameByElement(smile, snowmanFigureElementActionAddShapeSmile);
             removeElementClassNameByElement(smile, snowmanFigureElementActionAddShapeColor);
-            setElementClassNameByElement(smile, snowmanFigureElementActionFinalSmile);
+            addElementClassNameByElement(smile, snowmanFigureElementActionFinalSmile);
         }
 
         if (i > 5 && i < 12) {
-            let button = getElementById(snowmanFigureElementButtonNo + valueToString(i));
+            let button = getElementById(snowmanFigureElementButtonNoPrefix + valueToString(i));
             removeElementClassNameByElement(button, snowmanFigureElementActionAddShapeButton);
             removeElementClassNameByElement(button, snowmanFigureElementActionAddShapeColor);
-            setElementClassNameByElement(button, snowmanFigureElementButtonFinal);
+            addElementClassNameByElement(button, snowmanFigureElementButtonFinal);
         }
 
         if (i > 12 && i <= 16)
@@ -606,17 +606,17 @@ function setAnimationSnowmanFigureElementsShapeRemoveColor() {
     setElementStyleProperty("--snowmanFigureColor", winColorSnowman);
 
     for (let i = 0; i <= 16; i++) {
-        let element = getElementById(snowmanFigureElementAction + valueToString(i));
+        let element = getElementById(snowmanFigureElementActionPrefix + valueToString(i));
 
         if (element != null) {
             if (i >= 0 || (i > 12 && i <= 16))
-                setElementClassNameByElement(element, snowmanFigureElementActionShapeRemoveColor);
+                addElementClassNameByElement(element, snowmanFigureElementActionShapeRemoveColor);
 
             if (i === 4) {
                 let eyes = getElementsByClassName(snowmanFigureElementEyes);
                 if (eyes != null) {
                     for (let e = 0; e < eyes.length; e++) {
-                        setElementClassNameByElement(eyes[e], snowmanFigureElementActionShapeRemoveColor);
+                        addElementClassNameByElement(eyes[e], snowmanFigureElementActionShapeRemoveColor);
                     }
                 }
             }
@@ -624,14 +624,14 @@ function setAnimationSnowmanFigureElementsShapeRemoveColor() {
             if (i === 5) {
                 let smile = getElementById(snowmanFigureElementSmile);
                 if (smile != null) {
-                    setElementClassNameByElement(smile, snowmanFigureElementActionShapeRemoveColor);
+                    addElementClassNameByElement(smile, snowmanFigureElementActionShapeRemoveColor);
                 }
             }
 
             if (i > 5 && i < 12) {
-                let button = getElementById(snowmanFigureElementButtonNo + valueToString(i));
+                let button = getElementById(snowmanFigureElementButtonNoPrefix + valueToString(i));
                 if (button != null) {
-                    setElementClassNameByElement(button, snowmanFigureElementActionShapeRemoveColor);
+                    addElementClassNameByElement(button, snowmanFigureElementActionShapeRemoveColor);
                 }
             }
         }
@@ -641,45 +641,45 @@ function setAnimationSnowmanFigureElementsShapeRemoveColor() {
 function setAnimationInitialPositionsOfElementsAfterWinSnowmanFigureElementsHandsAndHat() {
     // hands
     for (let i = 12; i <= 16; i++) {
-        let element = getElementById(snowmanFigureElementAction + valueToString(i));
+        let element = getElementById(snowmanFigureElementActionPrefix + valueToString(i));
         if (element != null) {
             removeElementClassNameByElement(element, snowmanFigureElementActionAddShapeColor);
             removeElementClassNameByElement(element, snowmanFigureElementActionShapeRemoveColor);
-            setElementClassNameByElement(element, snowmanFigureElementAction + i + handInitialPositionForAnimation);
+            addElementClassNameByElement(element, snowmanFigureElementActionPrefix + i + handInitialPositionForAnimation);
         }
     }
     // hat
     for (let i = 0; i <= 3; i++) {
-        let element = getElementById(snowmanFigureElementAction + valueToString(i));
+        let element = getElementById(snowmanFigureElementActionPrefix + valueToString(i));
         if (element != null) {
             removeElementClassNameByElement(element, snowmanFigureElementActionAddShapeColor);
             removeElementClassNameByElement(element, snowmanFigureElementActionShapeRemoveColor);
         }
     }
     // hat
-    setElementClassNameByElementId("snowmanFigureElementAction-1", "snowmanFigureElementAction-1-hatElementInitialPositionForAnimation");
-    setElementClassNameByElementId(containerSnowmanFigureElementHatMain, snowmanFigureElementActionInitialPositionHatMainShape);
+    addElementClassNameByElementId("snowmanFigureElementAction-1", "snowmanFigureElementAction-1-hatElementInitialPositionForAnimation");
+    addElementClassNameByElementId(containerSnowmanFigureElementHatMain, snowmanFigureElementActionInitialPositionHatMainShape);
 }
 
 function setAnimationsAfterWinSnowmanFigureElementsHandsAndHat() {
     for (let i = 13; i <= 16; i++) {
-        let element = getElementById(snowmanFigureElementAction + valueToString(i));
+        let element = getElementById(snowmanFigureElementActionPrefix + valueToString(i));
         if (element != null) {
             removeElementClassNameByElement(element, snowmanFigureElementActionFinalSnowballs);
-            setElementClassNameByElement(element, snowmanFigureElementActionFinalSnowballsColor);
-            setElementClassNameByElement(element, snowmanFigureElementAction + i + "");
+            addElementClassNameByElement(element, snowmanFigureElementActionFinalSnowballsColor);
+            addElementClassNameByElement(element, snowmanFigureElementActionPrefix + i + "");
         }
     }
 
     for (let i = 0; i <= 3; i++) {
-        let element = getElementById(snowmanFigureElementAction + valueToString(i));
+        let element = getElementById(snowmanFigureElementActionPrefix + valueToString(i));
         if (element != null) {
-            removeElementClassNameByElement(element, snowmanFigureElementAction + i + setAnimationHatFinalColor);
-            setElementClassNameByElement(element, snowmanFigureElementAction + i + setHatFinalColor);
+            removeElementClassNameByElement(element, snowmanFigureElementActionPrefix + i + setAnimationHatFinalColor);
+            addElementClassNameByElement(element, snowmanFigureElementActionPrefix + i + setHatFinalColor);
         }
     }
 
-    setElementClassNameByElementId(containerSnowmanFigureElementHatMain, snowmanFigureElementActionHat);
+    addElementClassNameByElementId(containerSnowmanFigureElementHatMain, snowmanFigureElementActionHat);
 }
 
 //// time === changeKeyboardButtonsGameOver(), gameSnowmanBuildKeyboard.js
@@ -719,14 +719,14 @@ function createContainersForGameSnowmanFigureMessageWelcomeText() {
     createElementDiv(containerGameSnowmanAnimationElements, containerSnowmanFigureMessage1welcomeText);
     createElementP(containerSnowmanFigureMessage1welcomeText, snowmanFigureStartGameElement1welcomeText);
     setElementTextById(snowmanFigureStartGameElement1welcomeText, welcomeText);
-    setElementClassNameByElementId(snowmanFigureStartGameElement1welcomeText, snowmanFigureStartGameElementSetAnimationToShowColor);
+    addElementClassNameByElementId(snowmanFigureStartGameElement1welcomeText, snowmanFigureStartGameElementSetAnimationToShowColor);
 }
 
 function createContainersForGameSnowmanFigureMessageGoodbyeText() {
     createElementDiv(containerGameSnowmanAnimationElements, containerSnowmanFigureMessage1goodbyeText);
     createElementP(containerSnowmanFigureMessage1goodbyeText, snowmanFigureStartGameElement1goodbyeText);
     setElementTextById(snowmanFigureStartGameElement1goodbyeText, goodbyeText);
-    setElementClassNameByElementId(snowmanFigureStartGameElement1goodbyeText, snowmanFigureStartGameElementSetAnimationToShowColor);
+    addElementClassNameByElementId(snowmanFigureStartGameElement1goodbyeText, snowmanFigureStartGameElementSetAnimationToShowColor);
 }
 
 function createStartContainersForGameSnowmanKeyboard() {
@@ -765,7 +765,7 @@ function setAnimationGameSnowmanFigureMessageToRemoveText() {
     let element = getElementById(snowmanFigureStartGameElement1welcomeText);
     if (element != null) {
         removeElementClassNameByElement(element, snowmanFigureStartGameElementSetAnimationToShowColor);
-        setElementClassNameByElement(element, snowmanFigureStartGameElementSetAnimationToRemoveColor);
+        addElementClassNameByElement(element, snowmanFigureStartGameElementSetAnimationToRemoveColor);
     }
 }
 
@@ -790,7 +790,7 @@ function createContainersSnowmanFigureMainElements() {
     createElementDiv(containerSnowmanFigureAction, containerSnowmanFigureElements);
 
     for (let i = 0; i <= 16; i++) {
-        let elementId = containerSnowmanFigureElement + valueToString(i);
+        let elementId = containerSnowmanFigureElementPrefix + valueToString(i);
 
         if (i < 4) {
             // container for hat elements
@@ -803,6 +803,6 @@ function createContainersSnowmanFigureMainElements() {
         } else {
             createElementDiv(containerSnowmanFigureElements, elementId);
         }
-        createElementDiv(elementId, snowmanFigureElementAction + valueToString(i));
+        createElementDiv(elementId, snowmanFigureElementActionPrefix + valueToString(i));
     }
 }

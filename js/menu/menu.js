@@ -16,21 +16,21 @@ function createContainerMainMenuParts() {
 function createContainerManuTitle() {
     createElementDivWithTheSameValueForIdAndClassName(containerMenuMainParts, containerMenuTitleMain);
     createElementDiv(containerMenuTitleMain, containerMenuTitleMainPairs);
-    setElementClassNameByElementId(containerMenuTitleMainPairs, containerMenuTitleMainPairs);
+    addElementClassNameByElementId(containerMenuTitleMainPairs, containerMenuTitleMainPairs);
 
     // game menu title
     createElementDiv(containerMenuTitleMainPairs, containerMenuTitleText);
-    setElementClassNameByElementId(containerMenuTitleText, containerMenuTitleText);
+    addElementClassNameByElementId(containerMenuTitleText, containerMenuTitleText);
     createElementP(containerMenuTitleText, menuTitleText);
-    setElementClassNameByElementId(menuTitleText, menuTitleText);
+    addElementClassNameByElementId(menuTitleText, menuTitleText);
     setElementTextById(menuTitleText, menuTitleTextDisplay);
 
     // game menu title description
     createElementDiv(containerMenuTitleMainPairs, containerMenuTitleDescription);
-    setElementClassNameByElementId(containerMenuTitleMainPairs, containerMenuTitleMainPairs);
-    setElementClassNameByElementId(containerMenuTitleDescription, containerMenuTitleDescription);
+    addElementClassNameByElementId(containerMenuTitleMainPairs, containerMenuTitleMainPairs);
+    addElementClassNameByElementId(containerMenuTitleDescription, containerMenuTitleDescription);
     createElementP(containerMenuTitleDescription, menuTitleDescriptionText);
-    setElementClassNameByElementId(menuTitleDescriptionText, menuTitleDescriptionText);
+    addElementClassNameByElementId(menuTitleDescriptionText, menuTitleDescriptionText);
     setElementTextById(menuTitleDescriptionText, menuTitleDescriptionTextDisplayMediaQueryMaxWidthDefault);
 }
 
@@ -47,20 +47,20 @@ function createContainerMenuButtonHome() {
 
     // button
     createElementButton(containerMenuButtonHomeMain, containerMenuButtonHomeMainParts);
-    setElementClassNameByElementId(containerMenuButtonHomeMainParts, containerMenuButtonHome);
-    setElementClassNameByElementId(containerMenuButtonHomeMainParts, menuButtonClick);
+    addElementClassNameByElementId(containerMenuButtonHomeMainParts, containerMenuButtonHome);
+    addElementClassNameByElementId(containerMenuButtonHomeMainParts, menuButtonClick);
     setFunctionOnclickByElementId(containerMenuButtonHomeMainParts, functionNameOnclickCreateSubpageHome);
 
     // text
     createElementDiv(containerMenuButtonHomeMainParts, containerMenuButtonHomeTextDisplay);
-    setElementClassNameByElementId(containerMenuButtonHomeTextDisplay, containerMenuButtonHomeTextDisplay);
+    addElementClassNameByElementId(containerMenuButtonHomeTextDisplay, containerMenuButtonHomeTextDisplay);
     createElementP(containerMenuButtonHomeTextDisplay, menuButtonHomeText);
-    setElementClassNameByElementId(menuButtonHomeText, menuButtonText);
+    addElementClassNameByElementId(menuButtonHomeText, menuButtonText);
     setElementTextById(menuButtonHomeText, menuButtonHomeTextDisplay);
 
     // icon
     createElementDiv(containerMenuButtonHomeMainParts, containerMenuButtonHomeIconDisplay);
-    setElementClassNameByElementId(containerMenuButtonHomeIconDisplay, containerMenuButtonHomeIconDisplay);
+    addElementClassNameByElementId(containerMenuButtonHomeIconDisplay, containerMenuButtonHomeIconDisplay);
     createElementI(containerMenuButtonHomeIconDisplay, menuButtonHomeIcon, menuButtonHomeIconStyle, menuButtonHomeIconName);
 }
 
@@ -69,19 +69,19 @@ function createContainerMenuButtonGameSnowmanBuild() {
 
     // button
     createElementButton(containerMenuButtonGameSnowmanBuildMain, menuButtonGameSnowmanBuildClick);
-    setElementClassNameByElementId(menuButtonGameSnowmanBuildClick, containerMenuButtonGameSnowmanBuild);
-    setElementClassNameByElementId(menuButtonGameSnowmanBuildClick, menuButtonClick);
+    addElementClassNameByElementId(menuButtonGameSnowmanBuildClick, containerMenuButtonGameSnowmanBuild);
+    addElementClassNameByElementId(menuButtonGameSnowmanBuildClick, menuButtonClick);
     setFunctionOnclickByElementId(menuButtonGameSnowmanBuildClick, functionNameOnclickSetConfigurationForGameSnowmanBuild);
 
     // text
     createElementDiv(menuButtonGameSnowmanBuildClick, containerMenuButtonGameSnowmanBuildTextDisplay);
-    setElementClassNameByElementId(containerMenuButtonGameSnowmanBuildTextDisplay, containerMenuButtonGameSnowmanBuildTextDisplay);
+    addElementClassNameByElementId(containerMenuButtonGameSnowmanBuildTextDisplay, containerMenuButtonGameSnowmanBuildTextDisplay);
     createElementP(containerMenuButtonGameSnowmanBuildTextDisplay, menuButtonGameSnowmanBuildText);
-    setElementClassNameByElementId(menuButtonGameSnowmanBuildText, menuButtonText);
+    addElementClassNameByElementId(menuButtonGameSnowmanBuildText, menuButtonText);
     setElementTextById(menuButtonGameSnowmanBuildText, menuButtonGameSnowmanBuildTextDisplay);
 
     createElementDiv(menuButtonGameSnowmanBuildClick, containerMenuButtonGameSnowmanBuildIconDisplay);
-    setElementClassNameByElementId(containerMenuButtonGameSnowmanBuildIconDisplay, containerMenuButtonGameSnowmanBuildIconDisplay);
+    addElementClassNameByElementId(containerMenuButtonGameSnowmanBuildIconDisplay, containerMenuButtonGameSnowmanBuildIconDisplay);
     createElementI(containerMenuButtonGameSnowmanBuildIconDisplay, menuButtonGameSnowmanBuildIcon, menuButtonGameSnowmanBuildIconStyle, menuButtonGameSnowmanBuildIconName);
 }
 
@@ -90,19 +90,19 @@ function createContainerMenuButtonGameSnowmanDestroy() {
 
     // button
     createElementButton(containerMenuButtonGameSnowmanDestroyMain, menuButtonGameSnowmanDestroyClick);
-    setElementClassNameByElementId(menuButtonGameSnowmanDestroyClick, containerMenuButtonGameSnowmanDestroy);
-    setElementClassNameByElementId(menuButtonGameSnowmanDestroyClick, menuButtonClick);
+    addElementClassNameByElementId(menuButtonGameSnowmanDestroyClick, containerMenuButtonGameSnowmanDestroy);
+    addElementClassNameByElementId(menuButtonGameSnowmanDestroyClick, menuButtonClick);
     setFunctionOnclickByElementId(menuButtonGameSnowmanDestroyClick, functionNameOnclickSetConfigurationForGameSnowmanDestroy);
 
     // text
     createElementDiv(menuButtonGameSnowmanDestroyClick, containerMenuButtonGameSnowmanDestroyTextDisplay);
-    setElementClassNameByElementId(containerMenuButtonGameSnowmanDestroyTextDisplay, containerMenuButtonGameSnowmanDestroyTextDisplay)
+    addElementClassNameByElementId(containerMenuButtonGameSnowmanDestroyTextDisplay, containerMenuButtonGameSnowmanDestroyTextDisplay)
     createElementP(containerMenuButtonGameSnowmanDestroyTextDisplay, menuButtonGameSnowmanDestroyText);
-    setElementClassNameByElementId(menuButtonGameSnowmanDestroyText, menuButtonText);
+    addElementClassNameByElementId(menuButtonGameSnowmanDestroyText, menuButtonText);
     setElementTextById(menuButtonGameSnowmanDestroyText, menuButtonGameSnowmanDestroyTextDisplay);
 
     // icon
     createElementDiv(menuButtonGameSnowmanDestroyClick, containerMenuButtonGameSnowmanDestroyIconDisplay);
-    setElementClassNameByElementId(containerMenuButtonGameSnowmanDestroyIconDisplay, containerMenuButtonGameSnowmanDestroyIconDisplay);
+    addElementClassNameByElementId(containerMenuButtonGameSnowmanDestroyIconDisplay, containerMenuButtonGameSnowmanDestroyIconDisplay);
     createElementI(containerMenuButtonGameSnowmanDestroyIconDisplay, menuButtonGameSnowmanDestroyIcon, menuButtonGameSnowmanDestroyIconStyle, menuButtonGameSnowmanDestroyIconName);
 }
